@@ -19,6 +19,7 @@ app.use("/avis", require("./routes/avis.routes"));
 app.use("/faqSection", require("./routes/faqSection.routes"));
 app.use("/faqQuestion", require("./routes/faqQuestion.routes"));
 app.use("/parent", require("./routes/parent.routes"));
+app.use("/admin", require("./routes/admin.routes"));
 
 //Lancer le serveur
 app.listen(port, () => console.log("le serveur a démaré au port " + port));
