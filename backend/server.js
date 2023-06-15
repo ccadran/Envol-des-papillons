@@ -20,6 +20,7 @@ app.use("/faqSection", require("./routes/faqSection.routes"));
 app.use("/faqQuestion", require("./routes/faqQuestion.routes"));
 app.use("/parent", require("./routes/parent.routes"));
 app.use("/admin", require("./routes/admin.routes"));
+app.use("/teacher", require("./routes/teacher.routes"));
 
 //Lancer le serveur
 app.listen(port, () => console.log("le serveur a démaré au port " + port));

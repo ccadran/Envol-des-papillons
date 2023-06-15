@@ -2,8 +2,8 @@ import React from "react";
 
 const RoleParentsInfos = () => {
   return (
-    <div>
-      <h1>Un des roles des parents</h1>
+    <div className="role-parent">
+      <h4>Un des roles</h4>
     </div>
   );
 };

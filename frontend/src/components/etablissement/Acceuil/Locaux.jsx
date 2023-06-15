@@ -3,7 +3,8 @@ import React from "react";
 const Locaux = () => {
   return (
     <div>
-      <h1>Des locaux au coeur de Bordeaux</h1>
+      <h2>L'école</h2>
+      <h2>Le collège</h2>
     </div>
   );
 };

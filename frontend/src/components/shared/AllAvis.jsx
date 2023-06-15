@@ -1,12 +1,19 @@
 import React from "react";
+import Avis from "./Avis";
 
 const AllAvis = () => {
   return (
-    <div>
-      <h1>Tous les avis</h1>
-    </div>
+    <sections className="avis">
+      <h3>Les parents en parlent le mieux</h3>
+      <div className="avis-container">
+        <Avis />
+        <Avis />
+        <Avis />
+        <Avis />
+        <Avis />
+      </div>
+    </sections>
   );
 };
 
 export default AllAvis;
-<h1>Tous les avis</h1>;

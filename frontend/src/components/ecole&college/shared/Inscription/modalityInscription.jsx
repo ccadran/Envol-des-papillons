@@ -1,11 +1,18 @@
 import React from "react";
 
-const modalityInscription = () => {
+const ModalityInscription = () => {
   return (
-    <div>
+    <section>
       <h1>Les modalités d'inscriptions</h1>
-    </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus cumque
+        est doloremque voluptate aliquam error ea magnam, fugiat laborum nihil
+        laboriosam voluptas ipsum veniam! Quaerat natus libero unde ducimus
+        repellendus inventore praesentium, officia necessitatibus eveniet non
+        cum doloremque corporis vero?
+      </p>
+    </section>
   );
 };
 
-export default modalityInscription;
+export default ModalityInscription;
