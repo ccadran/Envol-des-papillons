@@ -10,6 +10,7 @@ const AvisSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    //ecole ou college
   },
   {
     timestamps: true,
