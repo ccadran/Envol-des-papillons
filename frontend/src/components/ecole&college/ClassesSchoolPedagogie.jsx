@@ -1,6 +1,6 @@
 import React from "react";
 
-const ClassesPedagogie = () => {
+const ClassesSchoolPedagogie = () => {
   return (
     <div>
       <h1>Les classes de l'école</h1>
@@ -8,4 +8,4 @@ const ClassesPedagogie = () => {
   );
 };
 
-export default ClassesPedagogie;
+export default ClassesSchoolPedagogie;
