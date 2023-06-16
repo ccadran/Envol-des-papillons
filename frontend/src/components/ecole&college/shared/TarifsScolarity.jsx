@@ -3,7 +3,7 @@ import TarifElement from "./TarifElement";
 import Button from "../../shared/Button";
 const TarifsScolarity = () => {
   return (
-    <div>
+    <section className="tarifs">
       <h1>Les infos sur les tarifs</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id a fuga
@@ -24,7 +24,7 @@ const TarifsScolarity = () => {
         </p>
         <Button />
       </div>
-    </div>
+    </section>
   );
 };
 

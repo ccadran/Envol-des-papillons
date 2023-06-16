@@ -2,7 +2,7 @@ import React from "react";
 
 const ModalityInscription = () => {
   return (
-    <section>
+    <section className="inscription-modality">
       <h1>Les modalités d'inscriptions</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus cumque

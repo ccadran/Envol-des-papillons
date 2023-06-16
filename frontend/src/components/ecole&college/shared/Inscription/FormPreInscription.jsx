@@ -2,7 +2,7 @@ import React from "react";
 
 const FormPreInscription = () => {
   return (
-    <div>
+    <div className="inscription-form">
       <h1>Le formulaire de préInscription</h1>
     </div>
   );

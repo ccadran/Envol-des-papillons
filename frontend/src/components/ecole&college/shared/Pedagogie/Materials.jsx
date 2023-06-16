@@ -2,9 +2,9 @@ import React from "react";
 
 const Materials = () => {
   return (
-    <div>
-      <h1>le matériel utilisé </h1>
-    </div>
+    <section className="materials">
+      <h3>Un matériel adapté</h3>
+    </section>
   );
 };
 

@@ -2,9 +2,9 @@ import React from "react";
 
 const EnglishPedagogie = () => {
   return (
-    <div>
-      <h1>L'importance de l'anglais</h1>
-    </div>
+    <section className="english">
+      <h3>L'importance de l'anglais</h3>
+    </section>
   );
 };
 

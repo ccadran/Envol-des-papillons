@@ -3,7 +3,7 @@ import React from "react";
 const ClasseSchoolPedagogie = () => {
   return (
     <div>
-      <h1>Une classe</h1>
+      <h4>Une classe</h4>
     </div>
   );
 };

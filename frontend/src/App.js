@@ -8,6 +8,7 @@ import Contact from "./pages/etablissement/Contact";
 import CollegeRoutes from "./pages/college/CollegeRoutes";
 import ParentsRoutes from "./pages/parents/ParentsRoutes";
 import AdminRoutes from "./pages/admin/AdminRoutes";
+import About from "./pages/etablissement/About";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/college/*" element={<CollegeRoutes />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/qui-sommes-nous" element={<About />} />
         <Route path="/parents/*" element={<ParentsRoutes />} />
         <Route path="/admin/*" element={<AdminRoutes />} />
       </Routes>

@@ -6,24 +6,17 @@ import ClassesSchoolPedagogie from "../../components/ecole&college/ClassesSchool
 import EnglishPedagogie from "../../components/ecole&college/shared/Pedagogie/EnglishPedagogie";
 import AvantagePedagogie from "../../components/ecole&college/shared/Pedagogie/AvantagePedagogie";
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
+import AvantagesPedagogie from "../../components/ecole&college/shared/Pedagogie/AvantagesPedagogie";
 
 const Pedagogie = () => {
   return (
     <>
       <NavigationScolarity />
       <HeroPedagogie />
-      <section className="materials">
-        <h3>Un matériel adapté</h3>
-        <Materials />
-      </section>
+      <Materials />
       <ClassesSchoolPedagogie />
       <EnglishPedagogie />
-      <sections className="avantages">
-        <AvantagePedagogie />
-        <AvantagePedagogie />
-        <AvantagePedagogie />
-        <AvantagePedagogie />
-      </sections>
+      <AvantagesPedagogie />
       <FooterScolarity />
     </>
   );

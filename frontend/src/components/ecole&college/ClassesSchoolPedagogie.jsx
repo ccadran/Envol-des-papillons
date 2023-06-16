@@ -2,10 +2,12 @@ import React from "react";
 import ClasseSchoolPedagogie from "./ClasseSchoolPedagogie";
 const ClassesSchoolPedagogie = () => {
   return (
-    <div>
-      <h1>Les classes de l'école</h1>
-      <ClasseSchoolPedagogie />
-    </div>
+    <section className="classes">
+      <h3>Nos classes</h3>
+      <div className="classes-container">
+        <ClasseSchoolPedagogie />
+      </div>
+    </section>
   );
 };
 

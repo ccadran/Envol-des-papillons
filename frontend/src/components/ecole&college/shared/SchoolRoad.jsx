@@ -1,14 +1,10 @@
 import React from "react";
 
-const SchoolRoad = () => {
+const SchoolRoad = ({ text }) => {
   return (
     <section className="school-way">
       <h3>Se rendre à l'école</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-        eveniet, voluptatem libero quaerat doloremque molestiae, error
-        blanditiis tempore provident minima aliquid nam voluptates quidem velit!
-      </p>
+      <p>{text}</p>
       <img
         src=""
         alt="maps API

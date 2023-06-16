@@ -11,34 +11,34 @@ import SchoolRoad from "../../components/ecole&college/shared/SchoolRoad";
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
 
 const Presentation = () => {
+  const imagesLocaux = [
+    // les paths des images des locaux de l'école
+  ];
   return (
     <>
       <NavigationScolarity />
-      <HeroScolarity />
-      <VisionAndObjectifsScolarity />
-      <LocalScolarity />
-      <section className="type-day">
-        <h3>La journée type</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus
-          a nemo, dolor autem perferendis necessitatibus magni cum distinctio
-          minus ullam. Officiis delectus ipsam perferendis cupiditate
-          exercitationem nam sit animi qui.
-        </p>
-        <ScheduleScolarity />
-      </section>
-      <section className="pedagogic-team">
-        <h3>L'équipe pédagogique</h3>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque
-          saepe, tempora veniam, ab officiis, adipisci mollitia molestiae illum
-          dolores quibusdam laboriosam hic. Eligendi sapiente ipsam ab eos
-          explicabo? Totam, quia?
-        </p>
-        <PedagogicTeam />
-      </section>
+      <HeroScolarity
+        etablissement="École"
+        img=""
+        text="Qorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. 
+
+Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. 
+
+Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur ."
+        color="orange"
+      />
+      <VisionAndObjectifsScolarity
+        vision="La vision de l'école blablabfdjsbgfvcjdsnvc jdsfjcdshkfcdsnfcv dujfhcgdsichns"
+        objectif="Le sobjectifs de l'école blablabfdjsbgfvcjdsnvc jdsfjcdshkfcdsnfcv dujfhcgdsichns"
+      />
+      <LocalScolarity
+        text="Description du local de l'école blablabfdjsbgfvcjdsnvc jdsfjcdshkfcdsnfcv dujfhcgdsichns"
+        images={imagesLocaux}
+      />
+      <ScheduleScolarity textIntro="text intro du calendrier de l'école " />
+      <PedagogicTeam text="text de l'équipe pédagogique de l'école" />
       <AllAvis />
-      <SchoolRoad />
+      <SchoolRoad text="texte de se rendre a l'école" />
       <FooterScolarity />
     </>
   );
