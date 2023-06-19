@@ -1,10 +1,15 @@
 import React from "react";
+import StylizedH1 from "../../../shared/StylizedH1";
 
-const HeroFAQ = () => {
+const HeroFAQ = ({ subTitle, text }) => {
   return (
-    <div className="hero-FAQ">
-      <h1>Le hero de la FAQ</h1>
-    </div>
+    <section className="hero">
+      <div className="hero-FAQ">
+        <StylizedH1 h1="FAQ" />
+        <h4>{subTitle}</h4>
+        <p>{text}</p>
+      </div>
+    </section>
   );
 };
 
