@@ -1,19 +1,15 @@
 import React from "react";
 import TarifElement from "./TarifElement";
 import Button from "../../shared/Button";
-const TarifsScolarity = () => {
+const TarifsScolarity = ({ text, scolarity, inscription, association }) => {
   return (
     <section className="tarifs">
       <h1>Les infos sur les tarifs</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id a fuga
-        autem? Eos saepe corrupti sint architecto ab pariatur a dolores quas
-        velit aperiam, doloribus, magnam esse rem facilis quisquam.
-      </p>
+      <p>{text}</p>
       <div className="tarifs-container">
-        <TarifElement />
-        <TarifElement />
-        <TarifElement />
+        <TarifElement title=" Frais de scolarité " price={scolarity} />
+        <TarifElement title="Frais d'inscription " price={inscription} />
+        <TarifElement title="Adhésion association" price={association} />
       </div>
       <div className="modality">
         <h4>Modalités de paiement</h4>
@@ -22,7 +18,7 @@ const TarifsScolarity = () => {
           sequi? Sapiente nulla atque reprehenderit veniam amet veritatis quos
           provident.
         </p>
-        <Button />
+        <Button text="J'inscris mon enfant" color="orange" />
       </div>
     </section>
   );

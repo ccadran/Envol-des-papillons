@@ -1,6 +1,6 @@
 import React from "react";
 
-const EnglishPedagogie = () => {
+const EnglishPedagogie = ({ text }) => {
   return (
     <section className="english">
       <h3>L'importance de l'anglais</h3>

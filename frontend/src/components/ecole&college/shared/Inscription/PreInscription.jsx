@@ -12,8 +12,8 @@ const PreInscription = () => {
         libero eum.
       </p>
       <div className="download">
-        <Button />
-        <Button />
+        <Button color="orange" text="Fiche pré-inscription 3-6ans" />
+        <Button color="orange" text="Fiche pré-inscription 6-11ans" />
       </div>
       <FormPreInscription />
     </section>

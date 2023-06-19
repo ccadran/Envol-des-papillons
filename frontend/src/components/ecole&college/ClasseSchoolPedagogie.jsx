@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../assets/img/logo.svg";
+import logo from "../../assets/logos/papillon.svg";
 import Button from "../shared/Button";
 
 const ClasseSchoolPedagogie = ({ classe, teachers }) => {

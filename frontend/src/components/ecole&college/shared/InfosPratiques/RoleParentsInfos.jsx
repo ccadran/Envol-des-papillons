@@ -1,9 +1,10 @@
 import React from "react";
 
-const RoleParentsInfos = () => {
+const RoleParentsInfos = ({ title, text }) => {
   return (
     <div className="role-parent">
-      <h4>Un des roles</h4>
+      <h4>{title}</h4>
+      <p> {text}</p>
     </div>
   );
 };

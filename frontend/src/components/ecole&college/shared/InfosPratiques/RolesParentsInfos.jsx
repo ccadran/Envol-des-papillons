@@ -1,18 +1,24 @@
 import React from "react";
 import RoleParentsInfos from "./RoleParentsInfos";
 
-const RolesParentsInfos = () => {
+const RolesParentsInfos = ({ text }) => {
   return (
     <section className="roles-parents">
       <h2>Le role des parents</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit optio
-        qui recusandae eius labore quas excepturi eaque pariatur officia eos.
-      </p>
+      <p>{text}</p>
       <div className="roles-container">
-        <RoleParentsInfos />
-        <RoleParentsInfos />
-        <RoleParentsInfos />
+        <RoleParentsInfos
+          title="Les fêtes"
+          text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. "
+        />
+        <RoleParentsInfos
+          title="Nettoyage"
+          text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. "
+        />
+        <RoleParentsInfos
+          title="Sortie scolaire"
+          text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. "
+        />
       </div>
     </section>
   );

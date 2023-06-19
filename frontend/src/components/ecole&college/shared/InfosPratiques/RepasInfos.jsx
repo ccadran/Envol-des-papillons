@@ -11,8 +11,14 @@ const RepasInfos = () => {
         vitae corrupti!
       </p>
       <div className="repas-container">
-        <RepasCard />
-        <RepasCard />
+        <RepasCard
+          title="La lunch box"
+          text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.ti sociosq"
+        />
+        <RepasCard
+          title="Le traiteur"
+          text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.ti sociosq"
+        />
       </div>
     </div>
   );
