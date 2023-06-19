@@ -3,13 +3,13 @@ import Avis from "./Avis";
 import axios from "axios";
 import { set } from "mongoose";
 
-const AllAvis = () => {
+const AllAvis = ({ etablissement }) => {
   const [avis, setAvis] = useState([]);
   useEffect(() => {
     axios
       .get("http://localhost:5001/avis", {
         params: {
-          etablissement: "école",
+          etablissement: etablissement,
         },
       })
       .then((res) => {

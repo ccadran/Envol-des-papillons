@@ -6,9 +6,9 @@ import VisionAndObjectifsScolarity from "../../components/ecole&college/shared/P
 import LocalScolarity from "../../components/ecole&college/shared/Presentation/LocalScolarity";
 import ScheduleScolarity from "../../components/ecole&college/shared/Presentation/ScheduleScolarity";
 import PedagogicTeam from "../../components/ecole&college/shared/Presentation/PedagogicTeam";
-import AllAvis from "../../components/shared/AllAvis";
 import SchoolRoad from "../../components/ecole&college/shared/SchoolRoad";
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
+import AllAvis from "../../components/shared/AllAvis";
 
 const Presentation = () => {
   const imagesLocaux = [
@@ -37,7 +37,7 @@ Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur ."
       />
       <ScheduleScolarity textIntro="text intro du calendrier de l'école " />
       <PedagogicTeam text="text de l'équipe pédagogique de l'école" />
-      <AllAvis />
+      <AllAvis etablissement="école" />
       <SchoolRoad text="texte de se rendre a l'école" />
       <FooterScolarity />
     </>
