@@ -1,21 +1,35 @@
 const TeacherModel = require("../models/Teacher.model");
 
 module.exports.getTeacher = async (req, res) => {
-  const teacher = await TeacherModel.find();
-  res.status(200).json(teacher);
+  const etablissement = req.query.etablissement; // Récupérer la valeur de l'établissement depuis les paramètres de requête
+
+  let teachers;
+  if (etablissement) {
+    teachers = await TeacherModel.find({ etablissement: etablissement });
+  } else {
+    teachers = await TeacherModel.find();
+  }
+
+  res.status(200).json(teachers);
 };
 
 module.exports.setTeacher = async (req, res) => {
-  if (!req.body.classe) {
-    res.status(400).json({ message: "Le mot de passe est obligatoire" });
+  if (!req.body.classe || !req.body.etablissement) {
+    res
+      .status(400)
+      .json({ message: "La classe et l'établissement sont obligatoires" });
+    return;
   }
+
   const teacher = await TeacherModel.create({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     poste: req.body.poste,
     classe: req.body.classe,
+    formation: req.body.formation,
     etablissement: req.body.etablissement,
   });
+
   res.status(200).json(teacher);
 };
 

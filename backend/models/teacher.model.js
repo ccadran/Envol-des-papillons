@@ -18,6 +18,10 @@ const TeacherSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  formation: {
+    type: String,
+    required: true,
+  },
   etablissement: {
     type: String,
     required: true,

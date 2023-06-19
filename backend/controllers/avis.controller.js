@@ -1,17 +1,27 @@
 const AvisModel = require("../models/avis.model");
 
 module.exports.getAvis = async (req, res) => {
-  const avis = await AvisModel.find();
+  const etablissement = req.query.etablissement; // Récupérer la valeur de l'établissement depuis les paramètres de requête
+
+  let avis;
+  if (etablissement) {
+    avis = await AvisModel.find({ etablissement: etablissement });
+  } else {
+    avis = await AvisModel.find();
+  }
+
   res.status(200).json(avis);
 };
-
 module.exports.setAvis = async (req, res) => {
-  if (!req.body.message) {
-    res.status(400).json({ message: "Le message est obligatoire" });
+  if (!req.body.message || !req.body.etablissement) {
+    res
+      .status(400)
+      .json({ message: "Le message et l'établissement sont obligatoire" });
   }
   const avis = await AvisModel.create({
     message: req.body.message,
     author: req.body.author,
+    etablissement: req.body.etablissement,
   });
   res.status(200).json(avis);
 };
