@@ -1,9 +1,10 @@
 import React from "react";
 
-const AvantagePedagogie = () => {
+const AvantagePedagogie = ({ title, text }) => {
   return (
-    <div>
-      <h4>Un avantage de la pédagogie</h4>
+    <div className="avantage-card">
+      <h4>{title}</h4>
+      <p> {text}</p>
     </div>
   );
 };

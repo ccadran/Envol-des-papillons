@@ -5,7 +5,27 @@ const ClassesSchoolPedagogie = () => {
     <section className="classes">
       <h3>Nos classes</h3>
       <div className="classes-container">
-        <ClasseSchoolPedagogie />
+        <ClasseSchoolPedagogie
+          classe="3-6ans"
+          teachers="Micheline Vert
+Patricia Dose
+Thomas Taqueret
+Lucie Deuil"
+        />
+        <ClasseSchoolPedagogie
+          classe="6-8ans"
+          teachers="Micheline Vert
+Patricia Dose
+Thomas Taqueret
+Lucie Deuil"
+        />
+        <ClasseSchoolPedagogie
+          classe="8-11ans"
+          teachers="Micheline Vert
+Patricia Dose
+Thomas Taqueret
+Lucie Deuil"
+        />
       </div>
     </section>
   );

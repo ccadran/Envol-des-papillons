@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = ({ color }) => {
+const Button = ({ color, text }) => {
   let backgroundColor;
 
   if (color === "orange") {
@@ -13,7 +13,7 @@ const Button = ({ color }) => {
 
   return (
     <div>
-      <h4 style={{ background: backgroundColor }}>Bouton</h4>
+      <h4 style={{ background: backgroundColor }}>{text}</h4>
     </div>
   );
 };

@@ -1,10 +1,9 @@
 import React from "react";
 
-const StylizedH1 = (props) => {
-  const title = props.etablissement;
+const StylizedH1 = ({ h1 }) => {
   return (
     <div>
-      <h1>{title}</h1>
+      <h1>{h1}</h1>
     </div>
   );
 };
