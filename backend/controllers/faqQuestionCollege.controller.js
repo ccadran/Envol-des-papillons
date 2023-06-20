@@ -1,8 +1,10 @@
 const QuestionModel = require("../models/faqQuestionCollege.model");
 
 module.exports.getQuestion = async (req, res) => {
-  const question = await QuestionModel.find();
-  res.status(200).json(question);
+  const questions = await QuestionModel.find({
+    section_id: req.query.section_id,
+  });
+  res.status(200).json(questions);
 };
 
 module.exports.setQuestion = async (req, res) => {

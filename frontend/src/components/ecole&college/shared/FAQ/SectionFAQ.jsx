@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import QuestionFAQ from "./QuestionFAQ";
 import axios from "axios";
-import { set } from "mongoose";
 
-const SectionFAQ = ({ faqSection }) => {
+const SectionFAQ = ({ faqSection, etablissement }) => {
   const [faqQuestions, setFaqQuestions] = useState([]);
+
   useEffect(() => {
     axios
-      .get("http://localhost:5001/faqQuestionSchool", {
+      .get("http://localhost:5001/faqQuestion" + etablissement, {
         params: {
           section_id: faqSection._id,
         },
@@ -16,6 +16,7 @@ const SectionFAQ = ({ faqSection }) => {
         setFaqQuestions(res.data);
       });
   }, []);
+
   return (
     <div className="section-container">
       <h3>{faqSection.section_title}</h3>
