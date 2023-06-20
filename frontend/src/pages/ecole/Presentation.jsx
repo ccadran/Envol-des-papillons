@@ -36,7 +36,10 @@ Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur ."
         images={imagesLocaux}
       />
       <ScheduleScolarity textIntro="text intro du calendrier de l'école " />
-      <PedagogicTeam text="text de l'équipe pédagogique de l'école" />
+      <PedagogicTeam
+        text="text de l'équipe pédagogique de l'école"
+        etablissement="école"
+      />
       <AllAvis etablissement="école" />
       <SchoolRoad text="texte de se rendre a l'école" />
       <FooterScolarity />

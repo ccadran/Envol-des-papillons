@@ -1,9 +1,10 @@
 import React from "react";
 
-const QuestionFAQ = () => {
+const QuestionFAQ = ({ faqQuestion }) => {
+  console.log(faqQuestion);
   return (
-    <div>
-      <h2>Une des questions de la faq</h2>
+    <div className="question-container">
+      <h5>{faqQuestion.question}</h5>
     </div>
   );
 };

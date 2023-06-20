@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Teacher from "./Teacher";
 
-const PedagogicTeam = ({ text }) => {
+const PedagogicTeam = ({ text, etablissement }) => {
   const [teachers, setTeachers] = useState([]);
   useEffect(() => {
     axios
       .get("http://localhost:5001/teacher", {
         params: {
-          etablissement: "école",
+          etablissement: etablissement,
         },
       })
       .then((res) => {
