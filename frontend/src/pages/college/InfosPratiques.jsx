@@ -30,7 +30,7 @@ const InfosPratiques = () => {
         qui recusandae eius labore quas excepturi eaque pariatur officia eos."
       />
       <CollegeRoad text="texte de se rendre à l'école" />
-      <FooterScolarity />
+      <FooterScolarity etablissement="college" />
     </>
   );
 };

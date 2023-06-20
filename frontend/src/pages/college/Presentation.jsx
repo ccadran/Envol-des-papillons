@@ -42,7 +42,7 @@ Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur ."
       />
       <AllAvis etablissement="collège" />
       <CollegeRoad text="texte de se rendre a l'collège" />
-      <FooterScolarity />
+      <FooterScolarity etablissement="college" />
     </>
   );
 };

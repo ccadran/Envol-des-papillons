@@ -42,7 +42,7 @@ Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur ."
       />
       <AllAvis etablissement="école" />
       <SchoolRoad text="texte de se rendre a l'école" />
-      <FooterScolarity />
+      <FooterScolarity etablissement="ecole" />
     </>
   );
 };

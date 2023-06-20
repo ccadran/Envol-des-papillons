@@ -28,7 +28,7 @@ const Inscription = () => {
         delectus, deserunt sit iste animi quisquam perferendis earum ad sequi
         libero eum."
       />
-      <FooterScolarity />
+      <FooterScolarity etablissement="college" />
     </>
   );
 };

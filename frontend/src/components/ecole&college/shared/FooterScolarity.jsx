@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, Route } from "react-router-dom";
 import PapillonLogo from "../../shared/PapillonLogo";
 
-const FooterScolarity = () => {
+const FooterScolarity = ({ etablissement }) => {
   return (
     <footer className="footer-scolarity">
       <div className="main-nav">
