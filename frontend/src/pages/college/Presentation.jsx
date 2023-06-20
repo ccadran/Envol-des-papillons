@@ -16,7 +16,7 @@ const Presentation = () => {
   ];
   return (
     <>
-      <NavigationScolarity />
+      <NavigationScolarity etablissement="college" />
       <HeroScolarity
         h1="collège"
         img=""

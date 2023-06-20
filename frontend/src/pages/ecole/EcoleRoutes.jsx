@@ -9,7 +9,7 @@ import FAQ from "./FAQ";
 const EcoleRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Presentation />} />
+      <Route path="/presentation" element={<Presentation />} />
       <Route path="/pedagogie" element={<Pedagogie />} />
       <Route path="/infos-pratiques" element={<InfosPratiques />} />
       <Route path="/inscription" element={<Inscription />} />

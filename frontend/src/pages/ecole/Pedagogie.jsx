@@ -14,7 +14,7 @@ const Pedagogie = () => {
   ];
   return (
     <>
-      <NavigationScolarity />
+      <NavigationScolarity etablissement="ecole" />
       <HeroPedagogie
         h1="Notre pédagogie"
         title="Une pédagogie à l'écoute de l'enfant"

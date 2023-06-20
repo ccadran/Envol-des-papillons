@@ -8,7 +8,7 @@ import FooterScolarity from "../../components/ecole&college/shared/FooterScolari
 const Inscription = () => {
   return (
     <>
-      <NavigationScolarity />
+      <NavigationScolarity etablissement="college" />
       <H1HeroText
         h1="Inscription"
         text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.ti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis."

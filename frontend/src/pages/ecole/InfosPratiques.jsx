@@ -11,7 +11,7 @@ import FooterScolarity from "../../components/ecole&college/shared/FooterScolari
 const InfosPratiques = () => {
   return (
     <>
-      <NavigationScolarity />
+      <NavigationScolarity etablissement="ecole" />
       <H1HeroText
         h1="Infos pratiques"
         text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.ti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis."
