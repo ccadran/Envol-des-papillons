@@ -9,6 +9,7 @@ import CollegeRoutes from "./pages/college/CollegeRoutes";
 import ParentsRoutes from "./pages/parents/ParentsRoutes";
 import AdminRoutes from "./pages/admin/AdminRoutes";
 import About from "./pages/etablissement/About";
+import CGU from "./pages/etablissement/CGU";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/qui-sommes-nous" element={<About />} />
         <Route path="/parents/*" element={<ParentsRoutes />} />
         <Route path="/admin/*" element={<AdminRoutes />} />
+        <Route path="/CGU" element={<CGU />} />
       </Routes>
     </BrowserRouter>
   );
