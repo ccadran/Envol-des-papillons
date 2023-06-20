@@ -7,7 +7,7 @@ const SectionFAQ = ({ faqSection }) => {
   const [faqQuestions, setFaqQuestions] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5001/faqQuestion", {
+      .get("http://localhost:5001/faqQuestionSchool", {
         params: {
           section_id: faqSection._id,
         },

@@ -1,4 +1,4 @@
-const SectionModel = require("../models/faqSection.model");
+const SectionModel = require("../models/faqSectionCollege.model");
 
 module.exports.getSection = async (req, res) => {
   const section = await SectionModel.find();

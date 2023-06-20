@@ -4,7 +4,7 @@ const {
   setSection,
   editSection,
   deleteSection,
-} = require("../controllers/faqSection.controller");
+} = require("../controllers/faqSectionSchool.controller");
 
 const router = express.Router();
 router.get("/", getSection);

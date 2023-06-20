@@ -4,7 +4,7 @@ const {
   setQuestion,
   editQuestion,
   deleteQuestion,
-} = require("../controllers/faqQuestion.controller");
+} = require("../controllers/faqQuestionSchool.controller");
 
 const router = express.Router();
 router.get("/", getQuestion);

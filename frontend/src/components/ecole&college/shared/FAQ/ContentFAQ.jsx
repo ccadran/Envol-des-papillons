@@ -5,7 +5,7 @@ const ContentFAQ = () => {
   const [faqSections, setFaqSections] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5001/faqSection").then((res) => {
+    axios.get("http://localhost:5001/faqSectionSchool").then((res) => {
       setFaqSections(res.data);
     });
   }, []);

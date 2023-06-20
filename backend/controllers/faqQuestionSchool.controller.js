@@ -1,4 +1,4 @@
-const QuestionModel = require("../models/faqQuestion.model");
+const QuestionModel = require("../models/faqQuestionSchool.model");
 
 module.exports.getQuestion = async (req, res) => {
   const question = await QuestionModel.find();
