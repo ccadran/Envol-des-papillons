@@ -13,7 +13,6 @@ const Actualites = () => {
         h2="Les dernières actualités"
         text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
       />
-      <SearchFilter />
       <Actualities />
       <FooterParents />
     </>
