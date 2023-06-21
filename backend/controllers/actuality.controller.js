@@ -23,7 +23,7 @@ module.exports.setActualityPost = async (req, res) => {
     accroche: req.body.accroche,
     tags: req.body.tags,
     introduction: req.body.introduction,
-    subTitle: req.body.subTitle,
+    subTitle1: req.body.subTitle,
     content1: req.body.content1,
     subTitle2: req.body.subTitle2,
     content2: req.body.content2,
