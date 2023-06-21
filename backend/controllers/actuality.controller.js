@@ -5,6 +5,15 @@ module.exports.getActualityPost = async (req, res) => {
   res.status(200).json(actualityPosts);
 };
 
+module.exports.getActualityPostById = async (req, res) => {
+  const actualityPost = await ActualityPostModel.findById(req.params.id);
+  if (!actualityPost) {
+    res.status(404).json({ message: "Cet article d'actualité n'existe pas" });
+  } else {
+    res.status(200).json(actualityPost);
+  }
+};
+
 module.exports.setActualityPost = async (req, res) => {
   if (!req.body.title) {
     res.status(400).json({ title: "Le title est obligatoire" });

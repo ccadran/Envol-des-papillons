@@ -25,6 +25,7 @@ app.use(express.urlencoded({ extended: false }));
 // Importer les routes
 app.use("/blog", require("./routes/blog.routes"));
 app.use("/actuality", require("./routes/actuality.routes"));
+
 app.use("/avis", require("./routes/avis.routes"));
 app.use("/faqSectionSchool", require("./routes/faqSectionSchool.routes"));
 app.use("/faqQuestionSchool", require("./routes/faqQuestionSchool.routes"));

@@ -9,7 +9,9 @@ const Actualities = () => {
     axios.get("http://localhost:5001/actuality").then((res) => {
       setActualities(res.data);
     });
+    console.log(actualities);
   }, []);
+
   return (
     <section className="actualities">
       <SearchFilter />

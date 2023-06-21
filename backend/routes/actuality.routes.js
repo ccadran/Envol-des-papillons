@@ -4,11 +4,13 @@ const {
   setActualityPost,
   editActualityPost,
   deleteActualityPost,
+  getActualityPostById,
 } = require("../controllers/actuality.controller");
 
 const router = express.Router();
 
 router.get("/", getActualityPost);
+router.get("/:id", getActualityPostById);
 
 router.post("/", setActualityPost);
 
