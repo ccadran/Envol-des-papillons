@@ -13,14 +13,15 @@ module.exports.getAvis = async (req, res) => {
   res.status(200).json(avis);
 };
 module.exports.setAvis = async (req, res) => {
-  if (!req.body.message || !req.body.etablissement) {
+  if (!req.body.avis || !req.body.etablissement) {
     res
       .status(400)
       .json({ message: "Le message et l'établissement sont obligatoire" });
   }
   const avis = await AvisModel.create({
-    message: req.body.message,
-    author: req.body.author,
+    avis: req.body.avis,
+    prenom: req.body.prenom,
+    nom: req.body.nom,
     etablissement: req.body.etablissement,
   });
   res.status(200).json(avis);

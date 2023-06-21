@@ -2,17 +2,21 @@ const mongoose = require("mongoose");
 
 const AvisSchema = mongoose.Schema(
   {
-    message: {
+    avis: {
       type: String,
       required: true,
     },
-    author: {
+    prenom: {
+      type: String,
+      required: true,
+    },
+    nom: {
       type: String,
       required: true,
     },
     etablissement: {
       type: String,
-      required: true,
+      required: false,
     },
   },
   {
