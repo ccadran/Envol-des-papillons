@@ -6,17 +6,18 @@ module.exports.getActualityPost = async (req, res) => {
 };
 
 module.exports.setActualityPost = async (req, res) => {
-  if (!req.body.message) {
-    res.status(400).json({ message: "Le message est obligatoire" });
+  if (!req.body.title) {
+    res.status(400).json({ title: "Le title est obligatoire" });
   }
   const actualityPosts = await ActualityPostModel.create({
     title: req.body.title,
     accroche: req.body.accroche,
-    // tags: req.body.tags,
+    tags: req.body.tags,
     introduction: req.body.introduction,
     subTitle: req.body.subTitle,
     content1: req.body.content1,
-    message: req.body.message,
+    subTitle2: req.body.subTitle2,
+    content2: req.body.content2,
     author: req.body.author,
   });
   res.status(200).json(actualityPosts);

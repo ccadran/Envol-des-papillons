@@ -13,43 +13,43 @@ const NavigationScolarity = ({ etablissement }) => {
         <NavLink
           to={`/${etablissement}/presentation`}
           className="nav-link"
-          activeClassName="active"
+          activeclassname="active"
         >
           <li>Présentation</li>
         </NavLink>
         <NavLink
           to={`/${etablissement}/pedagogie`}
           className="nav-link"
-          activeClassName="active"
+          activeclassname="active"
         >
           <li>Pédagogie</li>
         </NavLink>
         <NavLink
           to={`/${etablissement}/infos-pratiques`}
           className="nav-link"
-          activeClassName="active"
+          activeclassname="active"
         >
           <li>Infos pratiques</li>
         </NavLink>
         <NavLink
           to={`/${etablissement}/inscription`}
           className="nav-link"
-          activeClassName="active"
+          activeclassname="active"
         >
           <li>Inscription</li>
         </NavLink>
         <NavLink
           to={`/${etablissement}/FAQ`}
           className="nav-link"
-          activeClassName="active"
+          activeclassname="active"
         >
           <li>FAQ</li>
         </NavLink>
 
-        <NavLink to="/contact" className="nav-link" activeClassName="active">
+        <NavLink to="/contact" className="nav-link" activeclassname="active">
           <li>Contact</li>
         </NavLink>
-        <NavLink to="/blog" className="nav-link" activeClassName="active">
+        <NavLink to="/blog" className="nav-link" activeclassname="active">
           <li>Blog</li>
         </NavLink>
       </div>
