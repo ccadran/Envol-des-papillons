@@ -3,6 +3,8 @@ import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import NavigationParents from "../../components/parents/NavigationParents";
 import PapillonLogo from "../../components/shared/PapillonLogo";
+import FooterGlobal from "../../components/shared/FooterGlobal";
+import NavigationGlobal from "../../components/shared/NavigationGlobal";
 
 const BlogArticle = () => {
   const [blogArticle, setBlogArticle] = useState([]);
@@ -20,7 +22,7 @@ const BlogArticle = () => {
 
   return (
     <>
-      <NavigationParents />
+      <NavigationGlobal />{" "}
       <section className="blog-article">
         <div className="back">
           <Link to="/blog">retour</Link>
@@ -56,6 +58,7 @@ const BlogArticle = () => {
           </div>
         </div>
       </section>
+      <FooterGlobal />
     </>
   );
 };
