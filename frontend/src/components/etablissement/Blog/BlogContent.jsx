@@ -8,7 +8,6 @@ const BlogContent = () => {
   useEffect(() => {
     axios.get("http://localhost:5001/blog").then((res) => {
       setBlogPost(res.data);
-      console.log(blogPost);
     });
   }, []);
   return (

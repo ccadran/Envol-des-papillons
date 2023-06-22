@@ -6,17 +6,18 @@ import InfosPratiques from "./InfosPratiques";
 import Inscription from "./Inscription";
 import FAQ from "./FAQ";
 import Contact from "../etablissement/Contact";
+import Blog from "../etablissement/Blog";
 
 const CollegeRoutes = () => {
   return (
     <Routes>
       <Route path="/presentation" element={<Presentation />} />
       <Route path="/pedagogie" element={<Pedagogie />} />
-      <Route path="/pedagogie" element={<Pedagogie />} />
       <Route path="/infos-pratiques" element={<InfosPratiques />} />
       <Route path="/inscription" element={<Inscription />} />
       <Route path="/FAQ" element={<FAQ />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/blog" element={<Blog />} />
     </Routes>
   );
 };

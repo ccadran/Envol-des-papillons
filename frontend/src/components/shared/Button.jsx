@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Button = ({ color, text }) => {
+const Button = ({ color, text, link }) => {
   let backgroundColor;
 
   if (color === "orange") {
@@ -12,9 +13,9 @@ const Button = ({ color, text }) => {
   }
 
   return (
-    <div>
+    <Link to={link}>
       <h4 style={{ background: backgroundColor }}>{text}</h4>
-    </div>
+    </Link>
   );
 };
 

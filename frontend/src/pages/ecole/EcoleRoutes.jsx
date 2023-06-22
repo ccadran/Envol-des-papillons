@@ -6,6 +6,7 @@ import InfosPratiques from "./InfosPratiques";
 import Inscription from "./Inscription";
 import FAQ from "./FAQ";
 import Contact from "../etablissement/Contact";
+import Blog from "../etablissement/Blog";
 
 const EcoleRoutes = () => {
   return (
@@ -16,6 +17,7 @@ const EcoleRoutes = () => {
       <Route path="/inscription" element={<Inscription />} />
       <Route path="/FAQ" element={<FAQ />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/blog" element={<Blog />} />
     </Routes>
   );
 };
