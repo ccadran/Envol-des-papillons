@@ -29,7 +29,7 @@ const BlogPostSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    subTitle: {
+    subTitle1: {
       type: String,
       required: true,
     },

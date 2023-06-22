@@ -9,15 +9,28 @@ module.exports.setBlogPost = async (req, res) => {
   if (!req.body.message) {
     res.status(400).json({ message: "Le message est obligatoire" });
   }
-  const blogPosts = await BlogPostModel.create({
-    title: req.body.title,
-    accroche: req.body.accroche,
-    // tags: req.body.tags,
-    introduction: req.body.introduction,
-    subTitle: req.body.subTitle,
-    content1: req.body.content1,
-    message: req.body.message,
-    author: req.body.author,
+  const {
+    title,
+    accroche,
+    tags,
+    introduction,
+    subTitle1,
+    content1,
+    subTitle2,
+    content2,
+    author,
+  } = req.body;
+
+  const blogPosts = await BlogPostModel({
+    title,
+    accroche,
+    tags: Array.isArray(tags) ? tags : [tags], // Assurez-vous que tags est un tableau
+    introduction,
+    subTitle1,
+    content1,
+    subTitle2,
+    content2,
+    author,
   });
   res.status(200).json(blogPosts);
 };

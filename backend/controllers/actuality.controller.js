@@ -18,18 +18,30 @@ module.exports.setActualityPost = async (req, res) => {
   if (!req.body.title) {
     res.status(400).json({ title: "Le title est obligatoire" });
   }
-  const actualityPosts = await ActualityPostModel.create({
-    title: req.body.title,
-    accroche: req.body.accroche,
-    tags: req.body.tags,
-    introduction: req.body.introduction,
-    subTitle1: req.body.subTitle,
-    content1: req.body.content1,
-    subTitle2: req.body.subTitle2,
-    content2: req.body.content2,
-    author: req.body.author,
+  const {
+    title,
+    accroche,
+    tags,
+    introduction,
+    subTitle1,
+    content1,
+    subTitle2,
+    content2,
+    author,
+  } = req.body;
+
+  const actualityPost = await ActualityPostModel({
+    title,
+    accroche,
+    tags: Array.isArray(tags) ? tags : [tags], // Assurez-vous que tags est un tableau
+    introduction,
+    subTitle1,
+    content1,
+    subTitle2,
+    content2,
+    author,
   });
-  res.status(200).json(actualityPosts);
+  res.status(200).json(actualityPost);
 };
 
 module.exports.editActualityPost = async (req, res) => {
