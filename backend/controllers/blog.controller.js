@@ -5,6 +5,15 @@ module.exports.getBlogPost = async (req, res) => {
   res.status(200).json(blogPosts);
 };
 
+module.exports.getBlogPostById = async (req, res) => {
+  const blogPost = await BlogPostModel.findById(req.params.id);
+  if (!blogPost) {
+    res.status(404).json({ message: "Cet article de blog n'existe pas" });
+  } else {
+    res.status(200).json(blogPost);
+  }
+};
+
 module.exports.setBlogPost = async (req, res) => {
   if (!req.body.message) {
     res.status(400).json({ message: "Le message est obligatoire" });

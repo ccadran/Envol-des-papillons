@@ -4,10 +4,12 @@ const {
   getBlogPost,
   editBlogPost,
   deleteBlogPost,
+  getBlogPostById,
 } = require("../controllers/blog.controller");
 const router = express.Router();
 
 router.get("/", getBlogPost);
+router.get("/:id", getBlogPostById);
 
 router.post("/", setBlogPost);
 

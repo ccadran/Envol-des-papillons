@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
 import SearchFilter from "../../parents/Actualités/SearchFilter";
 import axios from "axios";
-import BlogArticle from "./BlogArticle";
+import BlogPost from "./BlogPost";
 
 const BlogContent = () => {
-  const [blogArticles, setBlogArticles] = useState([]);
+  const [blogPost, setBlogPost] = useState([]);
   useEffect(() => {
     axios.get("http://localhost:5001/blog").then((res) => {
-      console.log(res.data);
+      setBlogPost(res.data);
+      console.log(blogPost);
     });
-    console.log(blogArticles);
   }, []);
   return (
     <section className="blog-content">
       <SearchFilter />
       <div className="blog -container">
-        {blogArticles.map((blogArticle) => (
-          <BlogArticle key={blogArticle._id} article={blogArticle} />
+        {blogPost.map((blogPost) => (
+          <BlogPost key={blogPost._id} article={blogPost} />
         ))}
       </div>
     </section>

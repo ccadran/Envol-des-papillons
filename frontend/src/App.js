@@ -10,7 +10,7 @@ import ParentsRoutes from "./pages/parents/ParentsRoutes";
 import AdminRoutes from "./pages/admin/AdminRoutes";
 import About from "./pages/etablissement/About";
 import CGU from "./pages/etablissement/CGU";
-
+import BlogArticle from "./pages/etablissement/BlogArticle";
 const App = () => {
   return (
     <BrowserRouter>
@@ -19,6 +19,7 @@ const App = () => {
         <Route path="/ecole/*" element={<EcoleRoutes />} />
         <Route path="/college/*" element={<CollegeRoutes />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogArticle />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/qui-sommes-nous" element={<About />} />
         <Route path="/parents/*" element={<ParentsRoutes />} />
