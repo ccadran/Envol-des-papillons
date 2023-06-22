@@ -49,7 +49,11 @@ const NavigationScolarity = ({ etablissement }) => {
             <li>FAQ</li>
           </NavLink>
 
-          <NavLink to="/contact" className="nav-link" activeclassname="active">
+          <NavLink
+            to={`/${etablissement}/contact`}
+            className="nav-link"
+            activeclassname="active"
+          >
             <li>Contact</li>
           </NavLink>
           <NavLink to="/blog" className="nav-link" activeclassname="active">

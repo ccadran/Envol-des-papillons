@@ -1,45 +1,36 @@
 import React from "react";
-import { NavLink, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes, useLocation } from "react-router-dom";
 import PapillonLogo from "../../shared/PapillonLogo";
 
 const FooterScolarity = ({ etablissement }) => {
+  const location = useLocation();
+
   return (
     <footer className="footer-scolarity">
       <div className="main-nav">
         <ul>
-          <Routes>
-            <Route
-              path="/"
-              exact
-              children={({ match }) => (
-                <li className={match ? "active" : ""}>
-                  <NavLink to="/" className="nav-link">
-                    <PapillonLogo /> Acceuil
-                  </NavLink>
-                </li>
-              )}
-            />
-            <Route
-              path="/ecole"
-              children={({ match }) => (
-                <li className={match ? "active" : ""}>
-                  <NavLink to="/ecole" className="nav-link">
-                    <PapillonLogo /> École
-                  </NavLink>
-                </li>
-              )}
-            />
-            <Route
-              path="/college"
-              children={({ match }) => (
-                <li className={match ? "active" : ""}>
-                  <NavLink to="/college" className="nav-link">
-                    <PapillonLogo /> Collège
-                  </NavLink>
-                </li>
-              )}
-            />
-          </Routes>
+          <NavLink
+            to="/ecole/presentation"
+            className={`nav-link ${
+              location.pathname.includes("/ecole") ? "active" : ""
+            }`}
+          >
+            <li>L'école</li>
+          </NavLink>
+          <NavLink
+            to="/college/presentation"
+            className={`nav-link ${
+              location.pathname.includes("/college") ? "active" : ""
+            }`}
+          >
+            <li>Le collège</li>
+          </NavLink>
+          <NavLink
+            to="/"
+            className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
+          >
+            <li>L'établissement</li>
+          </NavLink>
         </ul>
       </div>
       <div className="footer-content">

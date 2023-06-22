@@ -5,6 +5,7 @@ import Pedagogie from "./Pedagogie";
 import InfosPratiques from "./InfosPratiques";
 import Inscription from "./Inscription";
 import FAQ from "./FAQ";
+import Contact from "../etablissement/Contact";
 
 const EcoleRoutes = () => {
   return (
@@ -14,6 +15,7 @@ const EcoleRoutes = () => {
       <Route path="/infos-pratiques" element={<InfosPratiques />} />
       <Route path="/inscription" element={<Inscription />} />
       <Route path="/FAQ" element={<FAQ />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   );
 };

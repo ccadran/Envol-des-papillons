@@ -4,16 +4,30 @@ import StylizedH1 from "../../components/shared/StylizedH1";
 import ContactInfo from "../../components/etablissement/Contact/ContactInfo";
 import ContactForm from "../../components/etablissement/Contact/ContactForm";
 import FooterGlobal from "../../components/shared/FooterGlobal";
+import { useLocation } from "react-router-dom";
+import NavigationScolarity from "../../components/ecole&college/shared/NavigationScolarity";
+import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
 const Contact = () => {
+  const location = useLocation();
+  const isRootPath = location.pathname === "/contact";
+  const desiredPart = location.pathname.split("/")[1];
   return (
     <>
-      <NavigationGlobal />
+      {isRootPath ? (
+        <NavigationGlobal />
+      ) : (
+        <NavigationScolarity etablissement={desiredPart} />
+      )}{" "}
       <StylizedH1 />
       <section className="contact-container">
         <ContactInfo />
         <ContactForm />
       </section>
-      <FooterGlobal />
+      {isRootPath ? (
+        <FooterGlobal />
+      ) : (
+        <FooterScolarity etablissement={desiredPart} />
+      )}{" "}
     </>
   );
 };
