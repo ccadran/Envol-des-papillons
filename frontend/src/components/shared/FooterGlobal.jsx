@@ -27,6 +27,9 @@ const FooterGlobal = () => {
           >
             <li>Le collège</li>
           </NavLink>
+          <NavLink to="/" className={`nav-link ${isActive ? "active" : ""}`}>
+            <li>L'établissement</li>
+          </NavLink>
         </ul>
       </div>
       <div className="footer-content">
