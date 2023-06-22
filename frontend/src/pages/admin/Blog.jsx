@@ -1,10 +1,12 @@
 import React from "react";
+import NavigationAdmin from "../../components/admin/NavigationAdmin";
 
 const Blog = () => {
   return (
-    <div>
-      <h1>Blog Admin</h1>
-    </div>
+    <>
+      <NavigationAdmin />
+      <section className="content"></section>
+    </>
   );
 };
 

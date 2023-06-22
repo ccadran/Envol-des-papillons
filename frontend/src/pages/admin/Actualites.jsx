@@ -1,12 +1,13 @@
 import React from "react";
+import NavigationAdmin from "../../components/admin/NavigationAdmin";
 
 const Actualites = () => {
   return (
-    <div>
-      <h1>Actualités admin</h1>
-    </div>
+    <>
+      <NavigationAdmin />
+      <section className="content"></section>
+    </>
   );
 };
 
 export default Actualites;
-<h1>Actualités admin</h1>;
