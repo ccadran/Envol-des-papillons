@@ -5,7 +5,6 @@ const FAQ = () => {
   return (
     <>
       <NavigationAdmin />
-      <section className="content"></section>
     </>
   );
 };

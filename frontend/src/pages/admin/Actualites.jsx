@@ -5,7 +5,6 @@ const Actualites = () => {
   return (
     <>
       <NavigationAdmin />
-      <section className="content"></section>
     </>
   );
 };

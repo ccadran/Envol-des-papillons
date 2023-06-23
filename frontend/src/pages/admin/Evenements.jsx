@@ -5,7 +5,6 @@ const Evenements = () => {
   return (
     <>
       <NavigationAdmin />
-      <section className="content"></section>
     </>
   );
 };

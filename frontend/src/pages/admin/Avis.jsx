@@ -5,7 +5,6 @@ const Avis = () => {
   return (
     <>
       <NavigationAdmin />
-      <section className="content"></section>
     </>
   );
 };
