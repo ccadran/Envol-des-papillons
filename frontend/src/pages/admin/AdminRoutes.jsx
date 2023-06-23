@@ -7,6 +7,7 @@ import Actualites from "./Actualites";
 import Evenements from "./Evenements";
 import Avis from "./Avis";
 import ConnexionAdmin from "./ConnexionAdmin";
+import BlogArticle from "../etablissement/BlogArticle";
 const AdminRoutes = () => {
   return (
     <div>
@@ -14,6 +15,7 @@ const AdminRoutes = () => {
         <Route path="/" element={<ConnexionAdmin />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogArticle />} />
         <Route path="/FAQ" element={<FAQ />} />
         <Route path="/actualites" element={<Actualites />} />
         <Route path="/evenements" element={<Evenements />} />

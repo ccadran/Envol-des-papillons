@@ -100,11 +100,19 @@ module.exports.editBlogPost = async (req, res) => {
 };
 
 module.exports.deleteBlogPost = async (req, res) => {
-  const blogPost = await BlogPostModel.findById(req.params.id);
-  if (!blogPost) {
-    res.status(400).json({ message: "Ce post n'existe pas" });
-  }
+  try {
+    const blogPost = await BlogPostModel.findById(req.params.id);
+    if (!blogPost) {
+      return res.status(404).json({ message: "Ce post n'existe pas" });
+    }
 
-  await blogPost.deleteOne();
-  res.status(200).json("Message supprimé " + req.params.id);
+    await blogPost.deleteOne();
+    res.status(200).json({ message: "Message supprimé " + req.params.id });
+  } catch (error) {
+    res
+      .status(500)
+      .json({
+        message: "Une erreur s'est produite lors de la suppression du post.",
+      });
+  }
 };

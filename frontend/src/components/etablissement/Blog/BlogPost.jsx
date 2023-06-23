@@ -10,6 +10,7 @@ const BlogPost = ({ article }) => {
   const handleDelete = () => {
     axios.delete(`http://localhost:5001/blog/${article._id}`);
   };
+  console.log(article._id);
   return (
     <>
       {isRootPath && (
@@ -17,13 +18,15 @@ const BlogPost = ({ article }) => {
           <Link to={`/admin/blog/${article._id}/edit`}>
             <Button text="modifier" />{" "}
           </Link>
-          <Link onClick={handleDelete()}>
+          <Link onClick={handleDelete}>
             <Button text="Supprimer" />
           </Link>
         </div>
       )}
 
-      <Link to={`/blog/${article._id}`}>
+      <Link
+        to={isRootPath ? `/admin/blog/${article._id}` : `/blog/${article._id}`}
+      >
         <div className="article">
           <div className="article-info">
             <h4>{article.title}</h4>
