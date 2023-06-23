@@ -16,7 +16,7 @@ module.exports.getActualityPostById = async (req, res) => {
 
 module.exports.setActualityPost = async (req, res) => {
   if (!req.body.title) {
-    res.status(400).json({ title: "Le title est obligatoire" });
+    res.status(400).json({ title: "Le titre est obligatoire" });
   }
   const {
     title,
@@ -30,18 +30,26 @@ module.exports.setActualityPost = async (req, res) => {
     author,
   } = req.body;
 
-  const actualityPost = await ActualityPostModel({
-    title,
-    accroche,
-    tags: Array.isArray(tags) ? tags : [tags], // Assurez-vous que tags est un tableau
-    introduction,
-    subTitle1,
-    content1,
-    subTitle2,
-    content2,
-    author,
-  });
-  res.status(200).json(actualityPost);
+  try {
+    const actualityPost = await ActualityPostModel.create({
+      title,
+      accroche,
+      tags: Array.isArray(tags) ? tags : [tags], // Assurez-vous que tags est un tableau
+      introduction,
+      subTitle1,
+      content1,
+      subTitle2,
+      content2,
+      author,
+    });
+
+    res.status(200).json(actualityPost);
+  } catch (error) {
+    res.status(500).json({
+      message:
+        "Une erreur s'est produite lors de la création de l'article d'actualité",
+    });
+  }
 };
 
 module.exports.editActualityPost = async (req, res) => {

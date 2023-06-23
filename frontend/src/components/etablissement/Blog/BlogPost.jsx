@@ -2,10 +2,14 @@ import React from "react";
 // import Tags from "./Tags";
 import { Link, useLocation } from "react-router-dom";
 import Button from "../../shared/Button";
+import axios from "axios";
 
 const BlogPost = ({ article }) => {
   const location = useLocation();
   const isRootPath = location.pathname === "/admin/blog";
+  const handleDelete = () => {
+    axios.delete(`http://localhost:5001/blog/${article._id}`);
+  };
   return (
     <>
       {isRootPath && (
@@ -13,7 +17,7 @@ const BlogPost = ({ article }) => {
           <Link to={`/admin/blog/${article._id}/edit`}>
             <Button text="modifier" />{" "}
           </Link>
-          <Link to={`/admin/blog/${article._id}/delete`}>
+          <Link onClick={handleDelete()}>
             <Button text="Supprimer" />
           </Link>
         </div>
