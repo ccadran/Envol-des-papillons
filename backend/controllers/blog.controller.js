@@ -8,40 +8,10 @@ module.exports.getBlogPost = async (req, res) => {
 module.exports.getBlogPostById = async (req, res) => {
   const blogPost = await BlogPostModel.findById(req.params.id);
   if (!blogPost) {
-    res.status(404).json({ message: "Cet article de blog n'existe pas" });
+    res.status(404).json({ message: "Cet article d'actualité n'existe pas" });
   } else {
     res.status(200).json(blogPost);
   }
-};
-
-module.exports.setBlogPost = async (req, res) => {
-  if (!req.body.message) {
-    res.status(400).json({ message: "Le message est obligatoire" });
-  }
-  const {
-    title,
-    accroche,
-    tags,
-    introduction,
-    subTitle1,
-    content1,
-    subTitle2,
-    content2,
-    author,
-  } = req.body;
-
-  const blogPosts = await BlogPostModel({
-    title,
-    accroche,
-    tags: Array.isArray(tags) ? tags : [tags], // Assurez-vous que tags est un tableau
-    introduction,
-    subTitle1,
-    content1,
-    subTitle2,
-    content2,
-    author,
-  });
-  res.status(200).json(blogPosts);
 };
 
 module.exports.setBlogPost = async (req, res) => {
@@ -76,7 +46,8 @@ module.exports.setBlogPost = async (req, res) => {
     res.status(200).json(blogPost);
   } catch (error) {
     res.status(500).json({
-      message: error,
+      message:
+        "Une erreur s'est produite lors de la création de l'article d'actualité",
     });
   }
 };
@@ -95,24 +66,15 @@ module.exports.editBlogPost = async (req, res) => {
       new: true,
     }
   );
-
   res.status(200).json(updateBlogPost);
 };
 
 module.exports.deleteBlogPost = async (req, res) => {
-  try {
-    const blogPost = await BlogPostModel.findById(req.params.id);
-    if (!blogPost) {
-      return res.status(404).json({ message: "Ce post n'existe pas" });
-    }
-
-    await blogPost.deleteOne();
-    res.status(200).json({ message: "Message supprimé " + req.params.id });
-  } catch (error) {
-    res
-      .status(500)
-      .json({
-        message: "Une erreur s'est produite lors de la suppression du post.",
-      });
+  const blogPost = await BlogPostModel.findById(req.params.id);
+  if (!blogPost) {
+    res.status(400).json({ message: "Ce post n'existe pas" });
   }
+
+  await blogPost.deleteOne();
+  res.status(200).json("Message supprimé " + req.params.id);
 };

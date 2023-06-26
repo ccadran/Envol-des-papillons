@@ -1,7 +1,7 @@
 const express = require("express");
 const {
-  setBlogPost,
   getBlogPost,
+  setBlogPost,
   editBlogPost,
   deleteBlogPost,
   getBlogPostById,

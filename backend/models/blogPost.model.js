@@ -15,7 +15,6 @@ const BlogPostSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    // //img a upload
     tags: {
       type: [String], // Champ de type tableau contenant des chaînes de caractères
       enum: ["tag1", "tag2", "tag3", "tag4"], // Liste des tags disponibles
