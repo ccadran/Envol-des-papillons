@@ -7,17 +7,15 @@ import Button from "../../../shared/Button";
 const SectionFAQ = ({ faqSection, etablissement }) => {
   const [faqQuestions, setFaqQuestions] = useState([]);
   const location = useLocation();
+  const [fetchData, setFetchData] = useState(false);
+
   const isRootPath = location.pathname === "/admin/faq";
 
   const handleDeleteSection = (sectionId) => {
     axios
-      .delete(`http://localhost:5001/faqSection${etablissement}/${sectionId}`, {
-        // params: {
-        //   section_id: faqSection._id,
-        // },
-      })
+      .delete(`http://localhost:5001/faqSection${etablissement}/${sectionId}`)
       .then((res) => {
-        console.log(res.data);
+        setFetchData(true);
       });
   };
 
@@ -31,7 +29,7 @@ const SectionFAQ = ({ faqSection, etablissement }) => {
       .then((res) => {
         setFaqQuestions(res.data);
       });
-  }, []);
+  }, [fetchData]);
 
   return (
     <div className="section-container">

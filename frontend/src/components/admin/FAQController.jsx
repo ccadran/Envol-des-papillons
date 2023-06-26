@@ -38,7 +38,7 @@ const FAQController = () => {
           >
             <option value="">Sélectionnez l'établissement</option>
             <option value="College">Collège</option>
-            <option value="ecole">École</option>
+            <option value="School">École</option>
           </select>
         </div>
       </div>
