@@ -1,7 +1,11 @@
 import React from "react";
 import Tags from "./Tags";
+import Button from "../../shared/Button";
+import { useLocation } from "react-router-dom";
 
 const SearchFilter = () => {
+  const location = useLocation();
+  const isRootPath = location.pathname === "/admin/blog";
   return (
     <div className="search">
       <div className="search-filter">
@@ -12,7 +16,12 @@ const SearchFilter = () => {
           <p>Plus récent</p>
         </div>
       </div>
-      <Tags />
+      <div className="tags-addArticle">
+        <Tags />
+        {isRootPath && (
+          <Button text="Ajouter un article" link="/admin/blog/new-article" />
+        )}
+      </div>
     </div>
   );
 };
