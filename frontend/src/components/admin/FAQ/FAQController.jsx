@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Button from "../shared/Button";
+import Button from "../../shared/Button";
 import axios from "axios";
-import SectionFAQ from "../ecole&college/shared/FAQ/SectionFAQ";
+import SectionFAQ from "../../ecole&college/shared/FAQ/SectionFAQ";
 const FAQController = () => {
   const [selectedOption, setSelectedOption] = useState("");
   const [faqSections, setFaqSections] = useState([]);
@@ -26,7 +26,7 @@ const FAQController = () => {
     <>
       <div className="controller">
         <div className="new">
-          <Button text="Ajouter une section" />
+          <Button text="Ajouter une section" link="new-section" />
           <Button text="Ajouter une question" />
         </div>
         <div className="etablissement">

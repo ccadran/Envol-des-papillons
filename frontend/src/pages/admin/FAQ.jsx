@@ -1,7 +1,7 @@
 import React from "react";
 import NavigationAdmin from "../../components/admin/NavigationAdmin";
 import H1HeroText from "../../components/shared/H1HeroText";
-import FAQController from "../../components/admin/FAQController";
+import FAQController from "../../components/admin/FAQ/FAQController";
 
 const FAQ = () => {
   return (
