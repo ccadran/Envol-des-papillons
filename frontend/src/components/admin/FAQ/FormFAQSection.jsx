@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 const FormFAQSection = ({}) => {
+  const navigate = useNavigate();
+
   const [sectionTitle, setSectionTitle] = useState({
     section_title: "",
   });
@@ -20,6 +22,7 @@ const FormFAQSection = ({}) => {
       .post(`http://localhost:5001/faqSection${selectedOption}`, newSection)
       .then((res) => {
         console.log(res.data);
+        navigate("/admin/FAQ");
         // Effectuer les actions supplémentaires si nécessaire, comme la mise à jour de l'état des sections
       })
       .catch((error) => {
