@@ -62,11 +62,12 @@ const SectionFAQ = ({ faqSection, etablissement }) => {
       <div className="section-title">
         {isRootPath && (
           <>
-            <Link onClick={() => handleDeleteSection(faqSection._id)}>
-              Supprimer
-            </Link>
-            {!isEditing && <Link onClick={handleEditSection}>Modifier</Link>}
-            {/* <Button text="Supprimer" /> */}
+            <div className="controller">
+              <Link onClick={() => handleDeleteSection(faqSection._id)}>
+                Supprimer
+              </Link>
+              {!isEditing && <Link onClick={handleEditSection}>Modifier</Link>}
+            </div>
           </>
         )}
         {isEditing ? (
@@ -82,7 +83,11 @@ const SectionFAQ = ({ faqSection, etablissement }) => {
         )}
       </div>
       {faqQuestions.map((faqQuestion) => (
-        <QuestionFAQ key={faqQuestion._id} faqQuestion={faqQuestion} />
+        <QuestionFAQ
+          key={faqQuestion._id}
+          faqQuestion={faqQuestion}
+          etablissement={etablissement}
+        />
       ))}
     </div>
   );
