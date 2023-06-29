@@ -10,6 +10,7 @@ import ConnexionAdmin from "./ConnexionAdmin";
 import BlogArticle from "../etablissement/BlogArticle";
 import NewArticle from "./NewArticle";
 import NewFAQSection from "./NewFAQSection";
+import NewFAQQuestion from "./NewFAQQuestion";
 const AdminRoutes = () => {
   return (
     <div>
@@ -21,6 +22,7 @@ const AdminRoutes = () => {
         <Route path="/blog/new-article" element={<NewArticle />} />
         <Route path="/FAQ" element={<FAQ />} />
         <Route path="/FAQ/new-section" element={<NewFAQSection />} />
+        <Route path="/FAQ/new-question" element={<NewFAQQuestion />} />
         <Route path="/actualites" element={<Actualites />} />
         <Route path="/evenements" element={<Evenements />} />
         <Route path="/avis" element={<Avis />} />

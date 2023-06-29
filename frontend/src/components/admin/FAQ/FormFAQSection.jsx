@@ -33,7 +33,7 @@ const FormFAQSection = ({}) => {
   };
   console.log(sectionTitle);
   return (
-    <div>
+    <div className="form-faq-section">
       <div className="etablissement-select">
         <select
           id="SelectOption"

@@ -6,8 +6,8 @@ const FAQController = () => {
   const [selectedOption, setSelectedOption] = useState("");
   const [faqSections, setFaqSections] = useState([]);
 
-  const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
+  const handleOptionChange = (e) => {
+    setSelectedOption(e.target.value);
   };
   useEffect(() => {
     if (selectedOption) {
@@ -27,7 +27,7 @@ const FAQController = () => {
       <div className="controller">
         <div className="new">
           <Button text="Ajouter une section" link="new-section" />
-          <Button text="Ajouter une question" />
+          <Button text="Ajouter une question" link="new-question" />
         </div>
         <div className="etablissement">
           <label htmlFor="selectOption">Choisissez une option :</label>
@@ -42,13 +42,21 @@ const FAQController = () => {
           </select>
         </div>
       </div>
-      {faqSections.map((faqSection) => (
-        <SectionFAQ
-          key={faqSection._id}
-          faqSection={faqSection}
-          etablissement={selectedOption}
-        />
-      ))}
+
+      {selectedOption ? (
+        faqSections.map((faqSection) => (
+          <SectionFAQ
+            key={faqSection._id}
+            faqSection={faqSection}
+            etablissement={selectedOption}
+          />
+        ))
+      ) : (
+        <p>
+          Veuillez séléctionner l'établissement dont vous voulez voir les
+          questions !
+        </p>
+      )}
     </>
   );
 };
