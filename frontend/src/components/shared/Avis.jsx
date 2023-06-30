@@ -25,12 +25,14 @@ const Avis = ({ avi }) => {
       <div className="avis-header">
         <PapillonLogo />
         <div className="avis-header-info">
-          <h5>{avi.author}</h5>
+          <h5>
+            {avi.prenom} {avi.nom}
+          </h5>
           <p>{dateFormated(avi.createdAt)}</p>
         </div>
       </div>
       <div className="avis-content">
-        <p>{avi.message}</p>
+        <p>{avi.avis}</p>
       </div>
     </div>
   );
