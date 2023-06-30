@@ -5,7 +5,8 @@ import { useLocation } from "react-router-dom";
 
 const SearchFilter = () => {
   const location = useLocation();
-  const isRootPath = location.pathname === "/admin/blog";
+  const isRootPathBlog = location.pathname === "/admin/blog";
+  const isRootPathActuality = location.pathname === "/admin/actualites";
   return (
     <div className="search">
       <div className="search-filter">
@@ -18,8 +19,14 @@ const SearchFilter = () => {
       </div>
       <div className="tags-addArticle">
         <Tags />
-        {isRootPath && (
+        {isRootPathBlog && (
           <Button text="Ajouter un article" link="/admin/blog/new-article" />
+        )}
+        {isRootPathActuality && (
+          <Button
+            text="Ajouter un article"
+            link="/admin/actualites/new-article"
+          />
         )}
       </div>
     </div>

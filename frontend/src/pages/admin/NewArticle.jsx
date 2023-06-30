@@ -1,8 +1,12 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const NewArticle = () => {
+  const location = useLocation();
+  const isRootPathBlog = location.pathname === "/admin/blog";
+  const isRootPathActuality = location.pathname === "/admin/actualites";
+  const [page = isRootPathBlog ? "blog" : "actuality", setPage] = useState();
   const [articleData, setArticleData] = useState({
     title: "",
     accroche: "",
@@ -26,13 +30,17 @@ const NewArticle = () => {
   const handleAddArticle = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5001/blog",
+        `http://localhost:5001/${page}`,
         articleData
       );
       console.log("Article ajouté avec succès !");
       console.log("Nouvel article :", response.data);
       // Rediriger vers la page de l'article nouvellement créé
-      navigate(`/admin/blog`);
+      {
+        page === "actuality"
+          ? navigate(`/admin/actualites`)
+          : navigate(`/admin/blog`);
+      }
     } catch (error) {
       console.error("Erreur lors de l'ajout de l'article :", error);
     }
