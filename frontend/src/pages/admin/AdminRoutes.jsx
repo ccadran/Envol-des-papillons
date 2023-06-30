@@ -11,6 +11,7 @@ import BlogArticle from "../etablissement/BlogArticle";
 import NewArticle from "./NewArticle";
 import NewFAQSection from "./NewFAQSection";
 import NewFAQQuestion from "./NewFAQQuestion";
+import ActualityArticle from "../parents/ActualityArticle";
 const AdminRoutes = () => {
   return (
     <div>
@@ -24,6 +25,8 @@ const AdminRoutes = () => {
         <Route path="/FAQ/new-section" element={<NewFAQSection />} />
         <Route path="/FAQ/new-question" element={<NewFAQQuestion />} />
         <Route path="/actualites" element={<Actualites />} />
+        <Route path="/actualites/:id" element={<ActualityArticle />} />
+        <Route path="/actualites/new-article" element={<NewArticle />} />
         <Route path="/evenements" element={<Evenements />} />
         <Route path="/avis" element={<Avis />} />
       </Routes>

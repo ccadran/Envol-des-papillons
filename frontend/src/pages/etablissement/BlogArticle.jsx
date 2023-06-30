@@ -127,7 +127,7 @@ const BlogArticle = () => {
               </div>
             </div>
           </section>
-          <button onClick={handleUpdateArticle}>Mettre à jour</button>
+          <Link onClick={handleUpdateArticle}>Mettre à jour</Link>
         </>
       ) : (
         <>
