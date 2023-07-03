@@ -1,1 +1,64 @@
-@import "./settings.scss";
+@font-face {
+  font-family: "general-sans-bold";
+  src: url("../assets/fonts/GENERALSANS-BOLD.OTF");
+}
+@font-face {
+  font-family: "general-sans-semibold";
+  src: url("../assets/fonts/GENERALSANS-SEMIBOLD.OTF");
+}
+@font-face {
+  font-family: "silka-regular";
+  src: url("../assets/fonts/SILKA-REGULAR.OTF");
+}
+@font-face {
+  font-family: "silka-bold";
+  src: url("../assets/fonts/SILKA-BOLD-WEBFONT.TTF");
+}
+
+$title-font: "general-sans-bold", sans-serif;
+$subtitle-font: "general-sans-semibold", sans-serif;
+$body-font: "silka-regular", sans-serif;
+$body-bold: "silka-bold", sans-serif;
+
+$violet: #853894;
+$corail: #f37a6a;
+$blue: #5ec3b5;
+$black: #000000;
+$white: #ffffff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: $black;
+}
+
+$minFontSize: 2.5em;
+$maxFontSize: 3.5em;
+
+// @mixin responsiveTextSize {
+//   @media (min-width: 480px) {
+//     font-size: calc(
+//       #{$minFontSize} + (#{$maxFontSize} - #{$minFontSize}) * (100vw - 480px) / (1200 -
+//             480)
+//     );
+//   }
+
+//   @media (min-width: 1200px) {
+//     font-size: #{$maxFontSize};
+//   }
+
+//   @media (max-width: 480px) {
+//     font-size: #{$minFontSize};
+//   }
+// }
+
+h1 {
+  font-size: clamp(40px, 7vw, 68px);
+}
+
+p {
+  font-size: clamp(16px, 2vw, 18px);
+}
