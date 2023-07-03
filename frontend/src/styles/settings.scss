@@ -35,30 +35,40 @@ $white: #ffffff;
   color: $black;
 }
 
-$minFontSize: 2.5em;
-$maxFontSize: 3.5em;
-
-// @mixin responsiveTextSize {
-//   @media (min-width: 480px) {
-//     font-size: calc(
-//       #{$minFontSize} + (#{$maxFontSize} - #{$minFontSize}) * (100vw - 480px) / (1200 -
-//             480)
-//     );
-//   }
-
-//   @media (min-width: 1200px) {
-//     font-size: #{$maxFontSize};
-//   }
-
-//   @media (max-width: 480px) {
-//     font-size: #{$minFontSize};
-//   }
-// }
-
 h1 {
   font-size: clamp(40px, 7vw, 68px);
+  font-family: $title-font;
+}
+h2 {
+  font-size: clamp(30px, 5vw, 48px);
+  font-family: $title-font;
+}
+h3 {
+  font-size: clamp(24px, 4vw, 38px);
+  margin-bottom: clamp(20px, 4vw, 30px);
+  font-family: $subtitle-font;
+}
+h4 {
+  font-size: clamp(24px, 5vw, 48px);
+  font-family: $subtitle-font;
+}
+h5 {
+  font-size: clamp(14px, 2vw, 18px);
+  font-family: $subtitle-font;
 }
 
 p {
   font-size: clamp(16px, 2vw, 18px);
+  font-family: $body-font;
+}
+body {
+  margin: 0 clamp(30px, 6vw, 60px);
+}
+
+section {
+  margin-top: clamp(100px, 20vw, 200px);
+}
+
+footer {
+  margin-top: clamp(200px, 26vw, 260px);
 }
