@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import PapillonLogo from "./PapillonLogo";
+import "../../styles/settings.scss";
+import "../../styles/shared/_navigationGlobal.scss";
 
 const NavigationGlobal = () => {
   return (

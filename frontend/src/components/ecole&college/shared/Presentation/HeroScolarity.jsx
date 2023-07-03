@@ -1,6 +1,8 @@
 import React from "react";
 import StylizedH1 from "../../../shared/StylizedH1";
 import Button from "../../../shared/Button";
+import "styles/ecole&college/Presentation/_heroScolarity.scss";
+
 const HeroScolarity = ({ h1, img, text, color }) => {
   return (
     <section className="hero">
