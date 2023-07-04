@@ -37,7 +37,13 @@ const FooterScolarity = ({ etablissement }) => {
           >
             {" "}
             <PapillonLogo />
-            <h5>L'établissement</h5>
+            <h5
+              className={`nav-link ${
+                location.pathname.includes("/etablissement") ? "active" : ""
+              }`}
+            >
+              L'établissement
+            </h5>
           </NavLink>
         </ul>
       </div>

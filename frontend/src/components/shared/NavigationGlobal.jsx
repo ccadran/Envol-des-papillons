@@ -29,13 +29,19 @@ const NavigationGlobal = () => {
           >
             <li>Le collège</li>
           </NavLink>
-          <NavLink to="/blog" className="nav-link" activeclassname="active">
+          <NavLink
+            to="/etablissement/blog"
+            className="nav-link"
+            activeclassname="active"
+          >
             <li>Le blog</li>
           </NavLink>
-          <NavLink to="/FAQ" className="nav-link" activeclassname="active">
-            <li>FAQ</li>
-          </NavLink>
-          <NavLink to="/contact" className="nav-link" activeclassname="active">
+
+          <NavLink
+            to="/etablissement/contact"
+            className="nav-link"
+            activeclassname="active"
+          >
             <li>Contactez-nous</li>
           </NavLink>
           <NavLink to="/parents" className="nav-link" activeclassname="active">

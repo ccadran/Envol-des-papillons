@@ -8,7 +8,7 @@ import H1HeroText from "../../components/shared/H1HeroText";
 import BlogContent from "../../components/etablissement/Blog/BlogContent";
 const Blog = () => {
   const location = useLocation();
-  const isRootPath = location.pathname === "/contact";
+  const isRootPath = location.pathname === "/etablissement/blog";
   const desiredPart = location.pathname.split("/")[1];
   return (
     <>

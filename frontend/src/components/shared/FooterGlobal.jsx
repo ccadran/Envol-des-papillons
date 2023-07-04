@@ -35,15 +35,13 @@ const FooterGlobal = () => {
           </NavLink>
           <NavLink
             to="/etablissement"
-            className={`nav-link ${
-              location.pathname === "/etablissement" ? "active" : ""
-            }`}
+            //
           >
             {" "}
             <PapillonLogo />
             <h5
               className={`nav-link ${
-                location.pathname === "/etablissement" ? "active" : ""
+                location.pathname.includes("/etablissement") ? "active" : ""
               }`}
             >
               L'établissement
@@ -68,12 +66,16 @@ const FooterGlobal = () => {
             >
               <li>Le collège</li>
             </NavLink>
-            <NavLink to="/blog" className="nav-link" activeclassname="active">
+            <NavLink
+              to="/etablissement/blog"
+              className="nav-link"
+              activeclassname="active"
+            >
               <li>Le blog</li>
             </NavLink>
 
             <NavLink
-              to="/contact"
+              to="/etablissement/contact"
               className="nav-link"
               activeclassname="active"
             >

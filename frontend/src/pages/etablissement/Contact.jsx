@@ -9,7 +9,7 @@ import NavigationScolarity from "../../components/ecole&college/shared/Navigatio
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
 const Contact = () => {
   const location = useLocation();
-  const isRootPath = location.pathname === "/contact";
+  const isRootPath = location.pathname === "/etablissement/contact";
   const desiredPart = location.pathname.split("/")[1];
   return (
     <>

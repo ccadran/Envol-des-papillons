@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "styles/shared/_button.scss";
+import vector from "assets/logos/Vector.svg";
+import arrow from "assets/logos/arrow.svg";
 
 const Button = ({ color, text, link }) => {
   let backgroundColor;
@@ -14,7 +17,11 @@ const Button = ({ color, text, link }) => {
 
   return (
     <Link to={link}>
-      <h5 style={{ background: backgroundColor, width: 180 }}>{text}</h5>
+      <button style={{ background: backgroundColor }}>
+        <img src={vector} alt="" />
+        <h5>{text}</h5>
+        <img src={arrow} alt="" id="arrow" />
+      </button>
     </Link>
   );
 };
