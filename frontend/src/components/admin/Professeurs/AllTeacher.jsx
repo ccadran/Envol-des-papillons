@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import TeacherAdmin from "./TeacherAdmin";
+import { Link } from "react-router-dom";
 
 const AllTeacher = () => {
   const [selectedEtablissement, setSelectedEtablissement] = useState("");
@@ -25,6 +26,7 @@ const AllTeacher = () => {
 
   return (
     <section className="teachers">
+      <Link to="/admin/teachers/new-teacher">Ajouter un professeur</Link>
       <div className="etablissement">
         <select
           id="selectedEtablissement"
