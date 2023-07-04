@@ -12,6 +12,7 @@ import NewArticle from "./NewArticle";
 import NewFAQSection from "./NewFAQSection";
 import NewFAQQuestion from "./NewFAQQuestion";
 import ActualityArticle from "../parents/ActualityArticle";
+import PedagogicTeamAdmin from "./PedagogicTeamAdmin";
 const AdminRoutes = () => {
   return (
     <div>
@@ -29,6 +30,7 @@ const AdminRoutes = () => {
         <Route path="/actualites/new-article" element={<NewArticle />} />
         <Route path="/evenements" element={<Evenements />} />
         <Route path="/avis" element={<Avis />} />
+        <Route path="/teachers" element={<PedagogicTeamAdmin />} />
       </Routes>
     </div>
   );

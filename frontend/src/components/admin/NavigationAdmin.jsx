@@ -48,6 +48,13 @@ const NavigationAdmin = () => {
           >
             <li>Avis</li>
           </NavLink>
+          <NavLink
+            to="/admin/teachers"
+            className="nav-link"
+            activeclassname="active"
+          >
+            <li>Professeurs</li>
+          </NavLink>
         </ul>
       </div>
     </nav>
