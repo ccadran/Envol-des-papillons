@@ -2,10 +2,10 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "@styles/*": ["styles/*"],
-      "@components/*": ["components/*"],
-      "@shared/*": ["components/shared/*"],
-      "@assets/*": ["assets/*"]
+      "styles/*": ["styles/*"],
+      "components/*": ["components/*"],
+      "shared/*": ["components/shared/*"],
+      "assets/*": ["assets/*"]
     }
   },
   "include": ["src"]
