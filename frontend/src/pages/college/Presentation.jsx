@@ -9,10 +9,19 @@ import PedagogicTeam from "../../components/ecole&college/shared/Presentation/Pe
 import CollegeRoad from "../../components/ecole&college/shared/CollegeRoad";
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
 import AllAvis from "../../components/shared/AllAvis";
+import "styles/ecole&college/Presentation/_presentation.scss";
 
 const Presentation = () => {
   const imagesLocaux = [
     // les paths des images des locaux de l'collège
+  ];
+  const visionPoints = [
+    "Viser le développement de l’enfant dans sa globalité",
+    "Donner les meilleurs chances de réussir",
+  ];
+  const objectifPoints = [
+    "Viser le développement de l’enfant dans sa",
+    "Donner les meilleurs chances de ",
   ];
   return (
     <>
@@ -28,8 +37,8 @@ Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur ."
         color="orange"
       />
       <VisionAndObjectifsScolarity
-        vision="La vision de l'collège blablabfdjsbgfvcjdsnvc jdsfjcdshkfcdsnfcv dujfhcgdsichns"
-        objectif="Le sobjectifs de l'collège blablabfdjsbgfvcjdsnvc jdsfjcdshkfcdsnfcv dujfhcgdsichns"
+        vision={visionPoints}
+        objectif={objectifPoints}
       />
       <LocalScolarity
         text="Description du local de l'collège blablabfdjsbgfvcjdsnvc jdsfjcdshkfcdsnfcv dujfhcgdsichns"

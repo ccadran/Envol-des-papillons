@@ -14,7 +14,7 @@ const Button = ({ color, text, link }) => {
 
   return (
     <Link to={link}>
-      <h4 style={{ background: backgroundColor }}>{text}</h4>
+      <h5 style={{ background: backgroundColor, width: 180 }}>{text}</h5>
     </Link>
   );
 };

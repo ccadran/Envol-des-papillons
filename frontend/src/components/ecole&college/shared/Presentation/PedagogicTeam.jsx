@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Teacher from "./Teacher";
+import "styles/ecole&college/Presentation/_pedagogicTeam.scss";
 
 const PedagogicTeam = ({ text, etablissement }) => {
   const [teachers, setTeachers] = useState([]);

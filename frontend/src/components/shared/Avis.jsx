@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../assets/logos/papillon.svg";
 import PapillonLogo from "./PapillonLogo";
+import "styles/shared/_avis.scss";
 
 const Avis = ({ avi }) => {
   const [papillonColor, setPapillonColor] = useState("orange");
@@ -21,7 +22,7 @@ const Avis = ({ avi }) => {
   };
 
   return (
-    <div className="avis card">
+    <div className="avis-card">
       <div className="avis-header">
         <PapillonLogo />
         <div className="avis-header-info">
@@ -34,6 +35,7 @@ const Avis = ({ avi }) => {
       <div className="avis-content">
         <p>{avi.avis}</p>
       </div>
+      <p id="show-more">Voir +</p>
     </div>
   );
 };

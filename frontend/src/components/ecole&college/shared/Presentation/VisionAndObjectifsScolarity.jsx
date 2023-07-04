@@ -1,15 +1,24 @@
 import React from "react";
+// import "styles/ecole&college/Presentation/_visionAndObjectifs.scss";
 
 const VisionAndObjectifsScolarity = ({ vision, objectif }) => {
   return (
     <section className="visions-objectifs">
-      <div className="vision">
+      <div className="vision-objectifs-container">
         <h3>Notre vision</h3>
-        <p>{vision}</p>
+        <ul>
+          {vision.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
       </div>
-      <div className="objectifs">
-        <h3>Nos objectifs</h3>
-        <p>{objectif}</p>
+      <div className="vision-objectifs-container">
+        <h3>Notre vision</h3>
+        <ul>
+          {objectif.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
       </div>
     </section>
   );

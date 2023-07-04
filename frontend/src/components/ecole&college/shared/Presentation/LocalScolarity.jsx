@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "../../../shared/Slider";
 import Button from "../../../shared/Button";
+// import "styles/ecole&college/Presentation/_local.scss";
 
 const LocalScolarity = ({ text, images }) => {
   return (

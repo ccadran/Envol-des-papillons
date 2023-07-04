@@ -11,6 +11,11 @@ const ScheduleScolarity = () => {
         nisi.
       </p>
       <div className="schedule-container">
+        <div className="schedule-class">
+          <h4>3-6ans</h4>
+          <h4>6-8ans</h4>
+          <h4>8-11ans</h4>
+        </div>
         <div className="schedule-moment">
           <h4>Horraire</h4>
           <p>Description de l'activité durant la période</p>

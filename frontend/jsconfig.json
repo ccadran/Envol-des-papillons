@@ -4,7 +4,8 @@
     "paths": {
       "@styles/*": ["styles/*"],
       "@components/*": ["components/*"],
-      "@shared/*": ["components/shared/*"]
+      "@shared/*": ["components/shared/*"],
+      "@assets/*": ["assets/*"]
     }
   },
   "include": ["src"]

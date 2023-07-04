@@ -5,15 +5,16 @@ const Teacher = ({ teacher }) => {
   return (
     <div className="teacher-card">
       <PapillonLogo />
-      <h4>
-        {teacher.firstName} {teacher.lastName}
-      </h4>
-      <p>{teacher.classe}</p>
+      <div className="name-class">
+        <h5>
+          {teacher.firstName} {teacher.lastName}
+        </h5>
+        <p>{teacher.classe}</p>
+      </div>
       <h5>{teacher.poste}</h5>
       <p>
         Formation Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Fuga, fugit. Dignissimos, dolores. Nulla tempore quidem, quas
-        necessitatibus nobis cupiditate? Illo?
+        Fuga, fugit. Dignissimos, dolores.
       </p>
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Avis from "./Avis";
 import axios from "axios";
 import { set } from "mongoose";
+import "styles/shared/_avis.scss";
 
 const AllAvis = ({ etablissement }) => {
   const [avis, setAvis] = useState([]);

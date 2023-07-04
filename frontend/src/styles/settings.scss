@@ -38,23 +38,28 @@ $white: #ffffff;
 h1 {
   font-size: clamp(40px, 7vw, 68px);
   font-family: $title-font;
+  line-height: 100%;
 }
 h2 {
   font-size: clamp(30px, 5vw, 48px);
   font-family: $title-font;
+  line-height: 100%;
 }
 h3 {
   font-size: clamp(24px, 4vw, 38px);
   margin-bottom: clamp(20px, 4vw, 30px);
   font-family: $subtitle-font;
+  line-height: 100%;
 }
 h4 {
-  font-size: clamp(24px, 5vw, 48px);
+  font-size: clamp(18px, 3vw, 28px);
   font-family: $subtitle-font;
+  line-height: 100%;
 }
 h5 {
   font-size: clamp(14px, 2vw, 18px);
   font-family: $subtitle-font;
+  line-height: 100%;
 }
 
 p {
@@ -63,6 +68,7 @@ p {
 }
 body {
   margin: 0 clamp(30px, 6vw, 60px);
+  font-family: $body-font;
 }
 
 section {
