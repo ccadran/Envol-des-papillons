@@ -9,6 +9,9 @@ footer {
       color: $white;
     }
   }
+  li {
+    color: $white;
+  }
   p {
     color: $white;
   }
@@ -45,6 +48,37 @@ footer {
       a:nth-child(2) {
         margin: 0 42px;
       }
+    }
+  }
+  .footer-content {
+    display: flex;
+    gap: 120px;
+    margin: 40px 60px;
+    .secondary-nav {
+      width: 50%;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        li {
+          margin-right: 40px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .footer-contact {
+      p {
+        font-family: $subtitle-font;
+        margin-bottom: 18px;
+      }
+    }
+  }
+  .under-footer {
+    border-top: 2px solid $white;
+    text-align: center;
+    li {
+      padding: 4px 0;
+      font-family: $body-font;
     }
   }
 }

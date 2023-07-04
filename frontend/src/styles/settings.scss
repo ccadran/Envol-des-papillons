@@ -61,7 +61,11 @@ h5 {
   font-family: $subtitle-font;
   line-height: 100%;
 }
-
+li {
+  font-size: clamp(14px, 2vw, 18px);
+  font-family: $subtitle-font;
+  line-height: 100%;
+}
 p {
   font-size: clamp(16px, 2vw, 18px);
   font-family: $body-font;

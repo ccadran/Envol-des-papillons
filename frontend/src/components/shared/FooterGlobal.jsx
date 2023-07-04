@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes, NavLink, useLocation } from "react-router-dom";
 import PapillonLogo from "./PapillonLogo";
+import "styles/shared/_footerGlobal.scss";
 
 const FooterGlobal = () => {
   const location = useLocation();
@@ -11,24 +12,34 @@ const FooterGlobal = () => {
     <footer className="footer-global">
       <div className="main-nav">
         <ul>
-          <NavLink
-            to="/ecole/presentation"
-            className={`nav-link ${
-              location.pathname.includes("/ecole") ? "active" : ""
-            }`}
-          >
-            <li>L'école</li>
+          <NavLink to="/ecole/presentation">
+            <PapillonLogo />
+            <h5
+              className={`nav-link ${
+                location.pathname.includes("/ecole") ? "active" : ""
+              }`}
+            >
+              L'école
+            </h5>
+          </NavLink>
+          <NavLink to="/college/presentation">
+            {" "}
+            <PapillonLogo />
+            <h5
+              className={`nav-link ${
+                location.pathname.includes("/college") ? "active" : ""
+              }`}
+            >
+              Le collège
+            </h5>
           </NavLink>
           <NavLink
-            to="/college/presentation"
-            className={`nav-link ${
-              location.pathname.includes("/college") ? "active" : ""
-            }`}
+            to="/"
+            className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
           >
-            <li>Le collège</li>
-          </NavLink>
-          <NavLink to="/" className={`nav-link ${isActive ? "active" : ""}`}>
-            <li>L'établissement</li>
+            {" "}
+            <PapillonLogo />
+            <h5>L'établissement</h5>
           </NavLink>
         </ul>
       </div>

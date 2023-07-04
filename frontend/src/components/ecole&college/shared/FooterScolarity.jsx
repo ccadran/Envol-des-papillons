@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Route, Routes, useLocation } from "react-router-dom";
+import { Link, NavLink, Route, Routes, useLocation } from "react-router-dom";
 import PapillonLogo from "../../shared/PapillonLogo";
 import "styles/shared/_footerGlobal.scss";
 
@@ -96,8 +96,8 @@ const FooterScolarity = ({ etablissement }) => {
           <p>lenvoldespapillons@gmail.com</p>
           <p>06 01 44 17 72</p>
           <div className="socials-logo">
-            <p>insta</p>
-            <p>facebook</p>
+            <Link to="https://www.instagram.com/">insta </Link>
+            <Link to="https://www.facebook.com/">facebook </Link>
           </div>
         </div>
       </div>
