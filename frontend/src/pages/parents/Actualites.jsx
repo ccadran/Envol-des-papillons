@@ -9,11 +9,13 @@ const Actualites = () => {
   return (
     <>
       <NavigationParents />
-      <H2HeroText
-        h2="Les dernières actualités"
-        text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
-      />
-      <Actualities />
+      <main>
+        <H2HeroText
+          h2="Les dernières actualités"
+          text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
+        />
+        <Actualities />
+      </main>
       <FooterParents />
     </>
   );

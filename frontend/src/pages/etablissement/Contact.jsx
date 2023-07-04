@@ -18,11 +18,13 @@ const Contact = () => {
       ) : (
         <NavigationScolarity etablissement={desiredPart} />
       )}{" "}
-      <StylizedH1 />
-      <section className="contact-container">
-        <ContactInfo />
-        <ContactForm />
-      </section>
+      <main>
+        <StylizedH1 />
+        <section className="contact-container">
+          <ContactInfo />
+          <ContactForm />
+        </section>
+      </main>
       {isRootPath ? (
         <FooterGlobal />
       ) : (

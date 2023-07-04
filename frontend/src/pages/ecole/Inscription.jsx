@@ -9,25 +9,27 @@ const Inscription = () => {
   return (
     <>
       <NavigationScolarity etablissement="ecole" />
-      <H1HeroText
-        h1="Inscription"
-        text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.ti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis."
-      />
-      <ModalityInscription />
-      <TarifsScolarity
-        text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id a fuga
+      <main>
+        <H1HeroText
+          h1="Inscription"
+          text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.ti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis."
+        />
+        <ModalityInscription />
+        <TarifsScolarity
+          text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id a fuga
         autem? Eos saepe corrupti sint architecto ab pariatur a dolores quas
         velit aperiam, doloribus, magnam esse rem facilis quisquam."
-        scolarity="380€ /mois"
-        inscription="200€"
-        association="30€ /an"
-      />
-      <PreInscription
-        text=" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam
+          scolarity="380€ /mois"
+          inscription="200€"
+          association="30€ /an"
+        />
+        <PreInscription
+          text=" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam
         temporibus fugiat nemo labore debitis a fuga, aliquam possimus,
         delectus, deserunt sit iste animi quisquam perferendis earum ad sequi
         libero eum."
-      />
+        />
+      </main>
       <FooterScolarity etablissement="ecole" />
     </>
   );

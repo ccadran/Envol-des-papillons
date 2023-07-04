@@ -10,13 +10,15 @@ const Acceuil = () => {
   return (
     <>
       <NavigationGlobal />
-      <HeroHome />
+      <main>
+        <HeroHome />
 
-      <Etablissements />
+        <Etablissements />
 
-      <AllAvis />
+        <AllAvis />
 
-      <Locaux />
+        <Locaux />
+      </main>
       <FooterGlobal />
     </>
   );

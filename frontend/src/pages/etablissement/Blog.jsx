@@ -17,11 +17,13 @@ const Blog = () => {
       ) : (
         <NavigationScolarity etablissement={desiredPart} />
       )}{" "}
-      <H1HeroText
-        h1="Le blog"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad  diam sit amet lacinia. Aliquam in elementum tellus."
-      />
-      <BlogContent />
+      <main>
+        <H1HeroText
+          h1="Le blog"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad  diam sit amet lacinia. Aliquam in elementum tellus."
+        />
+        <BlogContent />
+      </main>
       {isRootPath ? (
         <FooterGlobal />
       ) : (
