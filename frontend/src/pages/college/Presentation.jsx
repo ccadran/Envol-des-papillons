@@ -26,31 +26,33 @@ const Presentation = () => {
   return (
     <>
       <NavigationScolarity etablissement="college" />
-      <HeroScolarity
-        h1="collège"
-        img=""
-        text="Qorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. 
-
+      <main>
+        <HeroScolarity
+          h1="collège"
+          img=""
+          text="Qorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. 
+        
 Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. 
 
 Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur ."
-        color="orange"
-      />
-      <VisionAndObjectifsScolarity
-        vision={visionPoints}
-        objectif={objectifPoints}
-      />
-      <LocalScolarity
-        text="Description du local de l'collège blablabfdjsbgfvcjdsnvc jdsfjcdshkfcdsnfcv dujfhcgdsichns"
-        images={imagesLocaux}
-      />
-      <ScheduleScolarity textIntro="text intro du calendrier de l'collège " />
-      <PedagogicTeam
-        text="text de l'équipe pédagogique de l'collège"
-        etablissement="collège"
-      />
-      <AllAvis etablissement="collège" />
-      <CollegeRoad text="texte de se rendre a l'collège" />
+          color="orange"
+        />
+        <VisionAndObjectifsScolarity
+          vision={visionPoints}
+          objectif={objectifPoints}
+        />
+        <LocalScolarity
+          text="Description du local de l'collège blablabfdjsbgfvcjdsnvc jdsfjcdshkfcdsnfcv dujfhcgdsichns"
+          images={imagesLocaux}
+        />
+        <ScheduleScolarity textIntro="text intro du calendrier de l'collège " />
+        <PedagogicTeam
+          text="text de l'équipe pédagogique de l'collège"
+          etablissement="collège"
+        />
+        <AllAvis etablissement="collège" />
+        <CollegeRoad text="texte de se rendre a l'collège" />
+      </main>
       <FooterScolarity etablissement="college" />
     </>
   );

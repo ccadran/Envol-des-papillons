@@ -67,14 +67,15 @@ p {
   font-family: $body-font;
 }
 body {
-  margin: 0 clamp(30px, 6vw, 60px);
   font-family: $body-font;
 }
-
-section {
-  margin-top: clamp(100px, 20vw, 200px);
+main {
+  margin: 0 clamp(30px, 6vw, 60px);
 }
 
 footer {
   margin-top: clamp(200px, 26vw, 260px);
+}
+section {
+  margin-top: clamp(100px, 20vw, 200px);
 }
