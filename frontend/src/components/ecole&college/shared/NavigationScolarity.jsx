@@ -6,7 +6,7 @@ const NavigationScolarity = ({ etablissement }) => {
   return (
     <nav className="nav-scolarity">
       <div className="nav-home">
-        <NavLink to="/">
+        <NavLink to="/etablissement">
           <PapillonLogo />
           <li>Acceuil</li>
         </NavLink>

@@ -15,16 +15,16 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/*" element={<Acceuil />} />
+        <Route path="/etablissement/*" element={<Acceuil />} />
         <Route path="/ecole/*" element={<EcoleRoutes />} />
         <Route path="/college/*" element={<CollegeRoutes />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:id" element={<BlogArticle />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/qui-sommes-nous" element={<About />} />
+        <Route path="/etablissement/blog" element={<Blog />} />
+        <Route path="/etablissement/blog/:id" element={<BlogArticle />} />
+        <Route path="/etablissement/contact" element={<Contact />} />
+        <Route path="/etablissement/qui-sommes-nous" element={<About />} />
         <Route path="/parents/*" element={<ParentsRoutes />} />
         <Route path="/admin/*" element={<AdminRoutes />} />
-        <Route path="/CGU" element={<CGU />} />
+        <Route path="/etablissement/CGU" element={<CGU />} />
       </Routes>
     </BrowserRouter>
   );

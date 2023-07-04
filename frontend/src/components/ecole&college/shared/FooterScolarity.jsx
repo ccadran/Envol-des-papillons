@@ -32,7 +32,7 @@ const FooterScolarity = ({ etablissement }) => {
             </h5>
           </NavLink>
           <NavLink
-            to="/"
+            to="/etablissement"
             className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
           >
             {" "}

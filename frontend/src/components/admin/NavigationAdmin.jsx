@@ -6,7 +6,7 @@ const NavigationAdmin = () => {
   return (
     <nav className="nav-admin">
       <div className="nav-home">
-        <NavLink to="/">
+        <NavLink to="/etablissement">
           <PapillonLogo />
           <li>Acceuil</li>
         </NavLink>

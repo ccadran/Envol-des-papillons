@@ -8,7 +8,7 @@ const NavigationGlobal = () => {
   return (
     <nav className="nav-global">
       <div className="nav-home">
-        <NavLink to="/">
+        <NavLink to="/etablissement">
           <PapillonLogo />
           <li>Acceuil</li>
         </NavLink>

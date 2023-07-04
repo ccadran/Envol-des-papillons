@@ -29,7 +29,11 @@ const BlogPost = ({ article }) => {
       )}
 
       <Link
-        to={isRootPath ? `/admin/blog/${article._id}` : `/blog/${article._id}`}
+        to={
+          isRootPath
+            ? `/admin/blog/${article._id}`
+            : `/etablissement/blog/${article._id}`
+        }
       >
         <div className="article">
           <div className="article-info">
