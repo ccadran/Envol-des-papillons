@@ -17,7 +17,9 @@ const HeroPedagogie = ({ h1, title, text, image }) => {
     <section className="hero">
       <StylizedH1 h1={h1} color={color} />
       <div className="hero-presentation">
-        <img src={image} alt="img de presentation" />
+        <div className="img-container">
+          <img src={image} alt="img de presentation" />
+        </div>
         <div className="hero-text">
           <h4>{title}</h4>
           <p>{text}</p>

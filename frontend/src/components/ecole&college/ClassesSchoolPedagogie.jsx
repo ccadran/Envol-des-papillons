@@ -1,5 +1,6 @@
 import React from "react";
 import ClasseSchoolPedagogie from "./ClasseSchoolPedagogie";
+
 const ClassesSchoolPedagogie = () => {
   return (
     <section className="classes">
@@ -7,24 +8,24 @@ const ClassesSchoolPedagogie = () => {
       <div className="classes-container">
         <ClasseSchoolPedagogie
           classe="3-6ans"
-          teachers="Micheline Vert
+          teachers={`Micheline Vert
 Patricia Dose
 Thomas Taqueret
-Lucie Deuil"
+Lucie Deuil`}
         />
         <ClasseSchoolPedagogie
           classe="6-8ans"
-          teachers="Micheline Vert
+          teachers={`Micheline Vert
 Patricia Dose
 Thomas Taqueret
-Lucie Deuil"
+Lucie Deuil`}
         />
         <ClasseSchoolPedagogie
           classe="8-11ans"
-          teachers="Micheline Vert
+          teachers={`Micheline Vert 
 Patricia Dose
 Thomas Taqueret
-Lucie Deuil"
+Lucie Deuil`}
         />
       </div>
     </section>

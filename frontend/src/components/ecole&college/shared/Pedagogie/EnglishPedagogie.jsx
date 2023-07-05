@@ -1,12 +1,14 @@
 import React from "react";
 
-const EnglishPedagogie = ({ text }) => {
+const EnglishPedagogie = ({ text, image }) => {
   return (
     <section className="english">
       <h3>L'importance de l'anglais</h3>
       <div className="english-container">
         <p>{text}</p>
-        <img src={Image} alt="" />
+        <div className="img-container">
+          <img src={image} alt="img" />
+        </div>
       </div>
     </section>
   );

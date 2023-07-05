@@ -4,12 +4,18 @@ import Button from "../shared/Button";
 import PapillonLogo from "../shared/PapillonLogo";
 
 const ClasseSchoolPedagogie = ({ classe, teachers }) => {
+  const teacherNames = teachers.split("\n");
+
   return (
     <div className="classe-card">
       <h4>{classe}</h4>
       <PapillonLogo />
-      <p>{teachers}</p>
-      <Button text="Les horraires" color="orange" />
+      <ul className="teacher-list">
+        {teacherNames.map((name, index) => (
+          <li key={index}>{name}</li>
+        ))}
+      </ul>
+      <Button text="Les horaires" color="orange" />
     </div>
   );
 };

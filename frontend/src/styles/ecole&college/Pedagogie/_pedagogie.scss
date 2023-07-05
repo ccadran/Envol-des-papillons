@@ -1,0 +1,109 @@
+@import "../../settings.scss";
+// @import "../../shared/button.scss";
+
+.hero-presentation {
+  margin-top: 200px;
+  display: flex;
+  gap: 30px;
+  .img-container {
+    flex: 50%;
+    height: 356px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .hero-text {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      margin-bottom: 26px;
+      line-height: 100%;
+    }
+  }
+}
+.materials {
+  .materials-container {
+    display: flex;
+    gap: 30px;
+    p {
+      width: 50%;
+    }
+  }
+}
+.classes {
+  .classes-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .classe-card {
+      margin-bottom: 24px;
+      box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.25);
+      display: flex;
+      padding: 10px 20px;
+      border-radius: 5px;
+      min-width: 300px;
+      min-height: 360px;
+      justify-content: space-between;
+
+      flex-direction: column;
+      h4 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      #papillon {
+        width: 90px;
+        margin: 0 auto;
+        margin-bottom: 22px;
+      }
+      .teacher-list {
+        margin-bottom: 24px;
+        li {
+          margin-bottom: 8px;
+          margin-left: 20px;
+          list-style-type: disc;
+          font-family: $body-font;
+        }
+      }
+      a {
+        margin-left: auto;
+      }
+    }
+  }
+}
+.english {
+  .english-container {
+    display: flex;
+    gap: 60px;
+    p {
+      width: 50%;
+    }
+    .img-container {
+      flex: 50%;
+      height: 356px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+.avantages {
+  .avantages-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .avantage-card {
+      max-width: 300px;
+      margin-bottom: 20px;
+      h4 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
