@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, NavLink, useLocation } from "react-router-dom";
+import { Route, Routes, NavLink, useLocation, Link } from "react-router-dom";
 import PapillonLogo from "./PapillonLogo";
 import "styles/shared/_footerGlobal.scss";
 
@@ -94,8 +94,8 @@ const FooterGlobal = () => {
           <p>lenvoldespapillons@gmail.com</p>
           <p>06 01 44 17 72</p>
           <div className="socials-logo">
-            <p>insta</p>
-            <p>facebook</p>
+            <Link to="https://www.instagram.com/">insta </Link>
+            <Link to="https://www.facebook.com/">facebook </Link>
           </div>
         </div>
       </div>

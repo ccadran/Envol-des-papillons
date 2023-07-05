@@ -1,0 +1,42 @@
+@import "../settings.scss";
+
+.stylizedH1 {
+  h1 {
+    position: relative;
+    margin-left: 50px;
+
+    &.orange::before {
+      content: "";
+      position: absolute;
+      top: 20%;
+      left: -50px;
+      width: 45px; /* Augmentez la largeur selon vos besoins */
+      height: 45px; /* Augmentez la hauteur selon vos besoins */
+      background-image: url("../../assets/logos/stars/OrangeStar.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &.blue::before {
+      content: "";
+      position: absolute;
+      top: 20%;
+      left: -50px;
+      width: 45px; /* Augmentez la largeur selon vos besoins */
+      height: 45px; /* Augmentez la hauteur selon vos besoins */
+      background-image: url("../../assets/logos/stars/BlueStar.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &.violet::before {
+      content: "";
+      position: absolute;
+      top: 20%;
+      left: -50px;
+      width: 45px; /* Augmentez la largeur selon vos besoins */
+      height: 45px; /* Augmentez la hauteur selon vos besoins */
+      background-image: url("../../assets/logos/stars/VioletStar.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
