@@ -4,7 +4,7 @@ import Button from "../../shared/Button";
 const TarifsScolarity = ({ text, scolarity, inscription, association }) => {
   return (
     <section className="tarifs">
-      <h1>Les infos sur les tarifs</h1>
+      <h3>Les infos sur les tarifs</h3>
       <p>{text}</p>
       <div className="tarifs-container">
         <TarifElement title=" Frais de scolarité " price={scolarity} />

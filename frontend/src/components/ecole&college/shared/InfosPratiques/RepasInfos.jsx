@@ -3,7 +3,7 @@ import RepasCard from "./RepasCard";
 
 const RepasInfos = () => {
   return (
-    <div>
+    <section className="repas">
       <h1>Les repas</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laudantium
@@ -20,7 +20,7 @@ const RepasInfos = () => {
           text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.ti sociosq"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

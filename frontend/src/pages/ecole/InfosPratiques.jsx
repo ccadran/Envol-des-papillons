@@ -7,6 +7,7 @@ import GarderieSchoolPedagogie from "../../components/ecole&college/GarderieScho
 import RolesParentsInfos from "../../components/ecole&college/shared/InfosPratiques/RolesParentsInfos";
 import SchoolRoad from "../../components/ecole&college/shared/SchoolRoad";
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
+import "styles/ecole&college/InfosPratiques/_infosPratiques.scss";
 
 const InfosPratiques = () => {
   return (
