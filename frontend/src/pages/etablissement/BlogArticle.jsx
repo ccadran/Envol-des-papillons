@@ -138,7 +138,7 @@ const BlogArticle = () => {
           <main>
             <section className="blog-article">
               <div className="back">
-                <Link to="/blog">retour</Link>
+                <Link to="/etablissement/blog">retour</Link>
               </div>
               <div className="article-container">
                 <div className="article-header">
