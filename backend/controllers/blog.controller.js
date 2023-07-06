@@ -18,6 +18,7 @@ module.exports.setBlogPost = async (req, res) => {
   if (!req.body.title) {
     res.status(400).json({ title: "Le titre est obligatoire" });
   }
+
   const {
     title,
     accroche,
@@ -31,10 +32,10 @@ module.exports.setBlogPost = async (req, res) => {
   } = req.body;
 
   try {
-    const blogPost = await BlogPostModel.create({
+    const blogPost = new BlogPostModel({
       title,
       accroche,
-      tags: Array.isArray(tags) ? tags : [tags], // Assurez-vous que tags est un tableau
+      tags: Array.isArray(tags) ? tags : [tags],
       introduction,
       subTitle1,
       content1,
@@ -43,11 +44,12 @@ module.exports.setBlogPost = async (req, res) => {
       author,
     });
 
+    await blogPost.save();
+
     res.status(200).json(blogPost);
   } catch (error) {
     res.status(500).json({
-      message:
-        "Une erreur s'est produite lors de la création de l'article d'actualité",
+      message: error,
     });
   }
 };

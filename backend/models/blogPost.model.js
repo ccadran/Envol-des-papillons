@@ -10,6 +10,7 @@ const BlogPostSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+
     accroche: {
       type: String,
       required: true,
