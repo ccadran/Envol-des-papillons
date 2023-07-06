@@ -13,7 +13,7 @@ const BlogContent = () => {
   return (
     <section className="blog-content">
       <SearchFilter />
-      <div className="blog -container">
+      <div className="blog-container">
         {blogPost.map((blogPost) => (
           <BlogPost key={blogPost._id} article={blogPost} />
         ))}

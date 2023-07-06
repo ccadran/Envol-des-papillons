@@ -6,6 +6,7 @@ import FooterGlobal from "../../components/shared/FooterGlobal";
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
 import H1HeroText from "../../components/shared/H1HeroText";
 import BlogContent from "../../components/etablissement/Blog/BlogContent";
+import "styles/etablissement/Blog/_blog.scss";
 const Blog = () => {
   const location = useLocation();
   const isRootPath = location.pathname === "/etablissement/blog";

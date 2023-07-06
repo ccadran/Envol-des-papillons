@@ -2,6 +2,7 @@ import React from "react";
 import Tags from "./Tags";
 import Button from "../../shared/Button";
 import { useLocation } from "react-router-dom";
+import chevron from "assets/logos/chevron.svg";
 
 const SearchFilter = () => {
   const location = useLocation();
@@ -11,10 +12,11 @@ const SearchFilter = () => {
     <div className="search">
       <div className="search-filter">
         <div className="search-bar">
-          <p>Barre de recherche</p>
+          <textarea placeholder="Rechercher"></textarea>
         </div>
         <div className="filter">
           <p>Plus récent</p>
+          <img src={chevron} alt="" />
         </div>
       </div>
       <div className="tags-addArticle">

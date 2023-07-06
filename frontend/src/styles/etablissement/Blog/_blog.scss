@@ -1,0 +1,64 @@
+@import "../../settings.scss";
+
+body {
+  height: 100vh;
+}
+.blog-content {
+  margin-top: 72px;
+  .search {
+    .search-filter {
+      display: flex;
+      justify-content: space-between;
+      .search-bar {
+        textarea {
+          border: 1px solid $black;
+          border-radius: $border-radius;
+          font-family: $body-font;
+          padding: 10px 40px 10px 20px;
+          display: flex;
+          align-items: center;
+          line-height: 100%;
+          margin: auto 0;
+        }
+      }
+      .filter {
+        display: flex;
+        align-items: center;
+        padding: 15px 20px;
+        border: 1px solid $black;
+        border-radius: $border-radius;
+        &:hover {
+          cursor: pointer;
+        }
+        img {
+          width: 16px;
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+  .blog-container {
+    margin-top: 72px;
+    .article {
+      border-top: 1px solid $black;
+      padding: 34px;
+      display: flex;
+      .article-info {
+        width: 70%;
+        h4 {
+          margin-bottom: 24px;
+        }
+        p {
+          margin-bottom: 42px;
+        }
+      }
+      .article-img {
+        width: 30%;
+        border-radius: $border-radius;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
