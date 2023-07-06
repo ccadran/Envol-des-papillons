@@ -72,7 +72,7 @@ const QuestionFAQ = ({ faqQuestion, etablissement }) => {
       ) : (
         !isEditing && (
           <>
-            <div className="question">
+            <div className={visible ? "question visible" : "question"}>
               <h5>{faqQuestion.question}</h5>
               <img src={chevron} alt="" />
             </div>
