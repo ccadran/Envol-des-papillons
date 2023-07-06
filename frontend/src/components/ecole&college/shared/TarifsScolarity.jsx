@@ -1,6 +1,7 @@
 import React from "react";
 import TarifElement from "./TarifElement";
 import Button from "../../shared/Button";
+import "styles/ecole&college/shared/_tarifs.scss";
 const TarifsScolarity = ({ text, scolarity, inscription, association }) => {
   return (
     <section className="tarifs">

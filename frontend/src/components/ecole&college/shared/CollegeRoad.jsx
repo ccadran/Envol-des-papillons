@@ -1,5 +1,5 @@
 import React from "react";
-import "styles/shared/_schoolRoad.scss";
+import "styles/ecole&college/shared/_schoolRoad.scss";
 
 const CollegeRoad = ({ text }) => {
   return (
