@@ -1,9 +1,9 @@
 import React from "react";
 
-const Tag = () => {
+const Tag = ({ tag }) => {
   return (
     <div>
-      <h5>un tag</h5>
+      <h5>{tag}</h5>
     </div>
   );
 };

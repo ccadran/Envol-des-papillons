@@ -7,6 +7,7 @@ import FooterGlobal from "../../components/shared/FooterGlobal";
 import NavigationGlobal from "../../components/shared/NavigationGlobal";
 import { useLocation } from "react-router-dom";
 import NavigationAdmin from "../../components/admin/NavigationAdmin";
+import Tags from "components/parents/Actualités/Tags";
 
 const BlogArticle = () => {
   const [blogArticle, setBlogArticle] = useState([]);
@@ -49,6 +50,7 @@ const BlogArticle = () => {
     return <div>Loading...</div>;
   }
 
+  console.log(blogArticle.tags);
   return (
     <>
       {isRootPath ? (
@@ -145,7 +147,8 @@ const BlogArticle = () => {
                   <div className="article-infos">
                     <h2>{blogArticle.title}</h2>
                     <p>{blogArticle.accroche} </p>
-                    {/* <Tags /> */}
+                    {/* <p>{blogArticle.tags} </p>
+                    <Tags tags={blogArticle.tags} /> */}
                   </div>
                   <div className="article-img">
                     <img src="" alt="image principal actualité" />

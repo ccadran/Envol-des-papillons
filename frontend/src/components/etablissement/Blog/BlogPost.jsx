@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import Button from "../../shared/Button";
 import axios from "axios";
+import Tags from "components/parents/Actualités/Tags";
 
 const BlogPost = ({ article }) => {
   const location = useLocation();
@@ -39,6 +40,7 @@ const BlogPost = ({ article }) => {
           <div className="article-info">
             <h4>{article.title}</h4>
             <p>{article.accroche}</p>
+            <Tags tags={article.tags} />
           </div>
           <div className="article-img">
             <img src="" alt="image principal actualité" />
