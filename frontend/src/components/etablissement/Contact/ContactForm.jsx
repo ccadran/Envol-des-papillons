@@ -2,8 +2,8 @@ import React from "react";
 
 const ContactForm = () => {
   return (
-    <div>
-      <h1>Formulaire de contact</h1>
+    <div className="contact-form">
+      <h1>Formulaire de contact(a faire plus tard )</h1>
     </div>
   );
 };

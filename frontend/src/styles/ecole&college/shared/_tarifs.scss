@@ -2,11 +2,11 @@
 
 .tarifs {
   .tarifs-container {
-    margin-top: 72px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     .tarif-card {
+      margin: 72px 12px 0 12px;
       max-width: 350px;
       max-height: 300px;
       display: flex;

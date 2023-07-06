@@ -1,9 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import test from "assets/img/test.JPG";
 
 const ContactInfo = () => {
   return (
-    <div>
-      <h1>Les infos de contact</h1>
+    <div className="contact-info">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta expedita
+        dolores in vero illo maiores perferendis, provident nobis, tempore
+        dolore incidunt suscipit alias non sint quibusdam nostrum id rem! Harum.
+      </p>
+      <div className="contact">
+        <p>lenvoldespapillons@gmail.com</p>
+        <p>06 01 44 17 72</p>
+        <div className="socials-logo">
+          <Link to="https://www.instagram.com/">insta </Link>
+          <Link to="https://www.facebook.com/">facebook </Link>
+        </div>
+      </div>
+      <div className="img-container">
+        <img src={test} alt="" />
+      </div>
     </div>
   );
 };
