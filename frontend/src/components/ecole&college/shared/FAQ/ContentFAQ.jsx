@@ -15,13 +15,15 @@ const ContentFAQ = ({ etablissement }) => {
 
   return (
     <>
-      {faqSections.map((faqSection) => (
-        <SectionFAQ
-          key={faqSection._id}
-          faqSection={faqSection}
-          etablissement={etablissement}
-        />
-      ))}
+      <section className="faq-content">
+        {faqSections.map((faqSection) => (
+          <SectionFAQ
+            key={faqSection._id}
+            faqSection={faqSection}
+            etablissement={etablissement}
+          />
+        ))}
+      </section>
     </>
   );
 };

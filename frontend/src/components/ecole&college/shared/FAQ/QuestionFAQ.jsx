@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import chevron from "assets/logos/chevron.svg";
 
 const QuestionFAQ = ({ faqQuestion, etablissement }) => {
   const location = useLocation();
@@ -9,6 +10,10 @@ const QuestionFAQ = ({ faqQuestion, etablissement }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [editedQuestion, setEditedQuestion] = useState(faqQuestion.question);
   const [editedAnswer, setEditedAnswer] = useState(faqQuestion.question_answer);
+  const [visible, setVisible] = useState(false);
+  const toggleVisvibility = () => {
+    setVisible(!visible);
+  };
 
   const isRootPath =
     location.pathname === "/admin/FAQ" || location.pathname === "/admin/faq";
@@ -42,7 +47,7 @@ const QuestionFAQ = ({ faqQuestion, etablissement }) => {
   };
 
   return (
-    <div className="question-container">
+    <div className="question-container" onClick={toggleVisvibility}>
       {isRootPath && (
         <div className="controller">
           <Link onClick={() => handleDeleteQuestion(faqQuestion._id)}>
@@ -69,8 +74,9 @@ const QuestionFAQ = ({ faqQuestion, etablissement }) => {
           <>
             <div className="question">
               <h5>{faqQuestion.question}</h5>
+              <img src={chevron} alt="" />
             </div>
-            <div className="answer visible">
+            <div className={visible ? "answer visible" : "answer"}>
               <p>{faqQuestion.question_answer}</p>
             </div>
           </>

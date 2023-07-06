@@ -5,6 +5,7 @@ import HeroFAQ from "../../components/ecole&college/shared/FAQ/HeroFAQ";
 import SectionFAQ from "../../components/ecole&college/shared/FAQ/SectionFAQ";
 import ContentFAQ from "../../components/ecole&college/shared/FAQ/ContentFAQ";
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
+import "styles/ecole&college/FAQ/_faq.scss";
 
 const FAQ = () => {
   return (
