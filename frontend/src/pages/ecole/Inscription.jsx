@@ -5,6 +5,7 @@ import ModalityInscription from "../../components/ecole&college/shared/Inscripti
 import TarifsScolarity from "../../components/ecole&college/shared/TarifsScolarity";
 import PreInscription from "../../components/ecole&college/shared/Inscription/PreInscription";
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
+import "styles/ecole&college/Inscription/_inscription.scss";
 const Inscription = () => {
   return (
     <>

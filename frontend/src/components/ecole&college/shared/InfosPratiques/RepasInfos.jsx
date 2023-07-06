@@ -4,7 +4,7 @@ import RepasCard from "./RepasCard";
 const RepasInfos = () => {
   return (
     <section className="repas">
-      <h1>Les repas</h1>
+      <h3>Les repas</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laudantium
         recusandae doloribus eveniet ipsa libero tempora voluptatem impedit

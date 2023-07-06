@@ -4,7 +4,7 @@ import FormPreInscription from "./FormPreInscription";
 const PreInscription = () => {
   return (
     <section className="pre-inscription">
-      <h2>Pré-inscription</h2>
+      <h3>Pré-inscription</h3>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam
         temporibus fugiat nemo labore debitis a fuga, aliquam possimus,
@@ -12,8 +12,11 @@ const PreInscription = () => {
         libero eum.
       </p>
       <div className="download">
-        <Button color="orange" text="Fiche pré-inscription 3-6ans" />
-        <Button color="orange" text="Fiche pré-inscription 6-11ans" />
+        <h4>Replissez ou téléchargez</h4>
+        <div className="buttons">
+          <Button color="orange" text="Fiche pré-inscription 3-6ans" />
+          <Button color="orange" text="Fiche pré-inscription 6-11ans" />
+        </div>
       </div>
       <FormPreInscription />
     </section>

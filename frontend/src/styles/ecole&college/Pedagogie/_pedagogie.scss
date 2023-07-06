@@ -41,10 +41,10 @@
     flex-wrap: wrap;
     .classe-card {
       margin-bottom: 24px;
-      box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.25);
+      box-shadow: $box-shadow;
       display: flex;
       padding: 10px 20px;
-      border-radius: 5px;
+      border-radius: $border-radius;
       min-width: 300px;
       min-height: 360px;
       justify-content: space-between;

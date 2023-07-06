@@ -1,0 +1,64 @@
+@import "../../settings.scss";
+
+.repas {
+  .repas-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .repas-card {
+      margin-top: 72px;
+      max-width: 500px;
+      max-height: 300px;
+      border-radius: $border-radius;
+      box-shadow: $box-shadow;
+      padding: 22px 30px;
+
+      display: flex;
+      flex-direction: column;
+      h4 {
+        margin-bottom: 32px;
+      }
+      a {
+        margin-left: auto;
+      }
+    }
+  }
+}
+.garderie {
+  .garderie-container {
+    margin-top: 72px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    grid-template-areas:
+      "card1 card2"
+      "card3 card3";
+    .garderie-element {
+      h4 {
+        margin-bottom: 34px;
+      }
+    }
+    .garderie-element:nth-child(3) {
+      margin-top: 34px;
+      grid-area: card3;
+    }
+  }
+}
+
+.roles-parents {
+  .roles-container {
+    display: flex;
+    justify-content: space-around;
+    .role-parent {
+      max-width: 330px;
+      margin-top: 72px;
+      padding: 16px 20px 26px;
+      box-shadow: $box-shadow;
+      border-radius: $border-radius;
+      h4 {
+        margin-bottom: 34px;
+      }
+    }
+  }
+}

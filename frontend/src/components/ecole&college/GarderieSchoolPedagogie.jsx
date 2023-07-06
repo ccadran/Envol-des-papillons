@@ -3,7 +3,7 @@ import React from "react";
 const GarderieSchoolPedagogie = () => {
   return (
     <section className="garderie">
-      <h2>La garderie</h2>
+      <h3>La garderie</h3>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo odit
         harum deleniti neque quae voluptates?
@@ -24,7 +24,10 @@ const GarderieSchoolPedagogie = () => {
         <div className="garderie-element">
           <h4>Modalité de facturation</h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, beatae.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
+            nesciunt dolore sint eaque laborum perspiciatis modi fuga blanditiis
+            praesentium cumque. Molestias laboriosam dolorem adipisci eius vel,
+            voluptate odio earum asperiores!
           </p>
         </div>
       </div>
