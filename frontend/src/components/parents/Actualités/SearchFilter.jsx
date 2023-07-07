@@ -15,6 +15,16 @@ const SearchFilter = () => {
   const [searchText, setSearchText] = useState("");
   const [isVisible, setIsVisible] = useState(false);
   const [sortBy, setSortBy] = useState("+ récent"); // État pour gérer le tri des articles
+  const [selectedTags, setSelectedTags] = useState([]); // État pour gérer les tags sélectionnés
+  const handleTagClick = (tag) => {
+    if (selectedTags.includes(tag)) {
+      setSelectedTags(selectedTags.filter((t) => t !== tag));
+      console.log(selectedTags);
+    } else {
+      setSelectedTags([...selectedTags, tag]);
+      console.log(selectedTags);
+    }
+  };
 
   const showFilter = () => {
     setIsVisible(!isVisible);
@@ -24,9 +34,20 @@ const SearchFilter = () => {
     setSearchText(e.target.value);
   };
 
-  const filteredBlogPosts = blogPost.filter((post) =>
-    post.title.toLowerCase().includes(searchText.toLowerCase())
-  );
+  const filteredBlogPosts = blogPost.filter((post) => {
+    const lowercaseTitle = post.title.toLowerCase();
+    const lowercaseSearchText = searchText.toLowerCase();
+
+    // Vérifier si le titre correspond au texte de recherche
+    const titleMatches = lowercaseTitle.includes(lowercaseSearchText);
+
+    // Vérifier si l'article possède l'un des tags sélectionnés
+    const hasSelectedTags =
+      selectedTags.length === 0 ||
+      post.tags.some((tag) => selectedTags.includes(tag));
+
+    return titleMatches && hasSelectedTags;
+  });
 
   let sortedBlogPosts = filteredBlogPosts;
 
@@ -34,7 +55,6 @@ const SearchFilter = () => {
     sortedBlogPosts = filteredBlogPosts.sort(
       (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
     );
-    console.log(sortedBlogPosts);
   } else if (sortBy === "+ ancien") {
     sortedBlogPosts = filteredBlogPosts.sort(
       (a, b) => new Date(a.createdAt) - new Date(b.createdAt)
@@ -82,7 +102,10 @@ const SearchFilter = () => {
         </div>
 
         <div className="tags-addArticle">
-          <BlogTags />
+          <BlogTags
+            handleTagClick={handleTagClick}
+            selectedTags={selectedTags}
+          />
           {isRootPathBlog && (
             <Button text="Ajouter un article" link="/admin/blog/new-article" />
           )}
@@ -99,7 +122,11 @@ const SearchFilter = () => {
           <p id="no-result">Aucun article ne correspond à votre recherche.</p>
         ) : (
           sortedBlogPosts.map((blogPost) => (
-            <BlogPost key={blogPost._id} article={blogPost} />
+            <BlogPost
+              key={blogPost._id}
+              article={blogPost}
+              selectedTags={selectedTags}
+            />
           ))
         )}
       </div>

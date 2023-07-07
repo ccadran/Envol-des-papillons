@@ -4,7 +4,7 @@ import Button from "../../shared/Button";
 import axios from "axios";
 import Tags from "components/parents/Actualités/Tags";
 
-const BlogPost = ({ article }) => {
+const BlogPost = ({ article, selectedTags }) => {
   const location = useLocation();
   const isRootPath = location.pathname === "/admin/blog";
 
@@ -19,6 +19,10 @@ const BlogPost = ({ article }) => {
       );
     }
   };
+
+  const hasSelectedTags = article.tags.some((tag) =>
+    selectedTags.includes(tag)
+  );
 
   return (
     <>
