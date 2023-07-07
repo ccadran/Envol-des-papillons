@@ -10,7 +10,7 @@ body {
       display: flex;
       justify-content: space-between;
       .search-bar {
-        textarea {
+        input {
           border: 1px solid $black;
           border-radius: $border-radius;
           font-family: $body-font;
@@ -19,6 +19,7 @@ body {
           align-items: center;
           line-height: 100%;
           margin: auto 0;
+          font-size: 18px;
         }
       }
       .filter {
@@ -39,8 +40,12 @@ body {
   }
   .blog-container {
     margin-top: 72px;
+    border-top: 1px solid $black;
+    #no-result {
+      font-size: 22px;
+    }
     .article {
-      border-top: 1px solid $black;
+      border-bottom: 1px solid $black;
       padding: 34px;
       display: flex;
       .article-info {
