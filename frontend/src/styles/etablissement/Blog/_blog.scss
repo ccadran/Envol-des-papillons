@@ -23,17 +23,33 @@ body {
         }
       }
       .filter {
-        display: flex;
-        align-items: center;
-        padding: 15px 20px;
-        border: 1px solid $black;
-        border-radius: $border-radius;
-        &:hover {
-          cursor: pointer;
+        position: relative;
+        .change-filter {
+          display: flex;
+          align-items: center;
+          padding: 15px 20px;
+          border: 1px solid $black;
+          border-radius: $border-radius;
+          &:hover {
+            cursor: pointer;
+          }
+          img {
+            width: 16px;
+            margin-left: 16px;
+            &.rotate {
+              transform: rotate(180deg);
+            }
+          }
         }
-        img {
-          width: 16px;
-          margin-left: 16px;
+        .filter-menu {
+          position: absolute;
+          display: block;
+          &.hidden {
+            display: none;
+          }
+          p.active {
+            color: red;
+          }
         }
       }
     }
@@ -43,6 +59,7 @@ body {
     border-top: 1px solid $black;
     #no-result {
       font-size: 22px;
+      margin-top: 34px;
     }
     .article {
       border-bottom: 1px solid $black;

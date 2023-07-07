@@ -12,18 +12,42 @@ const SearchFilter = () => {
   const isRootPathActuality = location.pathname === "/admin/actualites";
   const [blogPost, setBlogPost] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
+  const [sortBy, setSortBy] = useState(""); // État pour gérer le tri des articles
+
+  const showFilter = () => {
+    setIsVisible(!isVisible);
+    setSortBy(""); // Réinitialiser le tri lorsque le menu est fermé
+  };
+
   const handleSearchChange = (e) => {
     setSearchText(e.target.value);
   };
+
   const filteredBlogPosts = blogPost.filter((post) =>
     post.title.toLowerCase().includes(searchText.toLowerCase())
   );
+
+  let sortedBlogPosts = filteredBlogPosts;
+
+  if (sortBy === "+recent") {
+    console.log("récent");
+    sortedBlogPosts = filteredBlogPosts.sort(
+      (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+    );
+    console.log(sortedBlogPosts);
+  } else if (sortBy === "+ancien") {
+    sortedBlogPosts = filteredBlogPosts.sort(
+      (a, b) => new Date(a.createdAt) - new Date(b.createdAt)
+    );
+  }
 
   useEffect(() => {
     axios.get("http://localhost:5001/blog").then((res) => {
       setBlogPost(res.data);
     });
   }, []);
+
   return (
     <>
       <div className="search">
@@ -37,10 +61,27 @@ const SearchFilter = () => {
             ></input>
           </div>
           <div className="filter">
-            <p>Plus récent</p>
-            <img src={chevron} alt="" />
+            <div className="change-filter" onClick={showFilter}>
+              <p>Filtrer par</p>
+              <img src={chevron} alt="" className={isVisible ? "rotate" : ""} />
+            </div>
+            <div className={isVisible ? "filter-menu " : "filter-menu hidden"}>
+              <p
+                className={sortBy === "+recent" ? "active" : ""}
+                onClick={() => setSortBy("+recent")}
+              >
+                + récent
+              </p>
+              <p
+                className={sortBy === "+ancien" ? "active" : ""}
+                onClick={() => setSortBy("+ancien")}
+              >
+                + ancien
+              </p>
+            </div>
           </div>
         </div>
+
         <div className="tags-addArticle">
           <Tags />
           {isRootPathBlog && (
@@ -55,10 +96,10 @@ const SearchFilter = () => {
         </div>
       </div>
       <div className="blog-container">
-        {filteredBlogPosts.length === 0 ? (
+        {sortedBlogPosts.length === 0 ? (
           <p id="no-result">Aucun article ne correspond à votre recherche.</p>
         ) : (
-          filteredBlogPosts.map((blogPost) => (
+          sortedBlogPosts.map((blogPost) => (
             <BlogPost key={blogPost._id} article={blogPost} />
           ))
         )}

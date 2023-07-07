@@ -5,7 +5,6 @@ import axios from "axios";
 import Tags from "components/parents/Actualités/Tags";
 
 const BlogPost = ({ article }) => {
-  console.log(article.tags);
   const location = useLocation();
   const isRootPath = location.pathname === "/admin/blog";
 
