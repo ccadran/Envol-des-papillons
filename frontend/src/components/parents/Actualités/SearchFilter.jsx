@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 import chevron from "assets/logos/chevron.svg";
 import BlogPost from "components/etablissement/Blog/BlogPost";
 import axios from "axios";
+import BlogTags from "components/etablissement/Blog/BlogTags";
 
 const SearchFilter = () => {
   const location = useLocation();
@@ -81,7 +82,7 @@ const SearchFilter = () => {
         </div>
 
         <div className="tags-addArticle">
-          <Tags />
+          <BlogTags />
           {isRootPathBlog && (
             <Button text="Ajouter un article" link="/admin/blog/new-article" />
           )}

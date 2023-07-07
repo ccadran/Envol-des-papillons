@@ -17,7 +17,7 @@ const Tags = ({ tags }) => {
   };
 
   return (
-    <div className="search-tags">
+    <div className="tags">
       {tags && tags.map((tagId) => <Tag key={tagId} tag={getTagName(tagId)} />)}
       {!tags && <p>No tags available</p>}
     </div>
