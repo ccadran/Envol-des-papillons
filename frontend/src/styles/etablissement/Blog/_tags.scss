@@ -1,0 +1,29 @@
+@import "../../settings.scss";
+
+.tags {
+  display: flex;
+
+  .tag {
+    margin-right: 10px;
+    padding: 10px;
+    align-items: center;
+    border-radius: $border-radius;
+    border-radius: $border-radius;
+
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+
+    h5 {
+      color: $white;
+      margin-right: 12px;
+      font-family: $body-font;
+    }
+    p {
+      color: $white;
+      margin-bottom: 0 !important;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

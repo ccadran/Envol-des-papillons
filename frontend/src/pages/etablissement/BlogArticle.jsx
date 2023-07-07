@@ -8,6 +8,7 @@ import NavigationGlobal from "../../components/shared/NavigationGlobal";
 import { useLocation } from "react-router-dom";
 import NavigationAdmin from "../../components/admin/NavigationAdmin";
 import Tags from "components/parents/Actualités/Tags";
+import "styles/etablissement/Blog/_blogArticle.scss";
 
 const BlogArticle = () => {
   const [blogArticle, setBlogArticle] = useState([]);
@@ -147,8 +148,7 @@ const BlogArticle = () => {
                   <div className="article-infos">
                     <h2>{blogArticle.title}</h2>
                     <p>{blogArticle.accroche} </p>
-                    {/* <p>{blogArticle.tags} </p>
-                    <Tags tags={blogArticle.tags} /> */}
+                    <Tags tags={blogArticle.tags} />
                   </div>
                   <div className="article-img">
                     <img src="" alt="image principal actualité" />

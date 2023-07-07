@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Tag from "components/parents/Actualités/Tag";
+import "styles/etablissement/Blog/_tags.scss";
 
 const BlogTags = ({ handleTagClick, selectedTags }) => {
   const [blogTags, setBlogTags] = useState([]);
