@@ -13,11 +13,10 @@ const SearchFilter = () => {
   const [blogPost, setBlogPost] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [isVisible, setIsVisible] = useState(false);
-  const [sortBy, setSortBy] = useState(""); // État pour gérer le tri des articles
+  const [sortBy, setSortBy] = useState("+ récent"); // État pour gérer le tri des articles
 
   const showFilter = () => {
     setIsVisible(!isVisible);
-    setSortBy(""); // Réinitialiser le tri lorsque le menu est fermé
   };
 
   const handleSearchChange = (e) => {
@@ -30,13 +29,12 @@ const SearchFilter = () => {
 
   let sortedBlogPosts = filteredBlogPosts;
 
-  if (sortBy === "+recent") {
-    console.log("récent");
+  if (sortBy === "+ récent") {
     sortedBlogPosts = filteredBlogPosts.sort(
       (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
     );
     console.log(sortedBlogPosts);
-  } else if (sortBy === "+ancien") {
+  } else if (sortBy === "+ ancien") {
     sortedBlogPosts = filteredBlogPosts.sort(
       (a, b) => new Date(a.createdAt) - new Date(b.createdAt)
     );
@@ -62,19 +60,19 @@ const SearchFilter = () => {
           </div>
           <div className="filter">
             <div className="change-filter" onClick={showFilter}>
-              <p>Filtrer par</p>
+              <p>{sortBy}</p>
               <img src={chevron} alt="" className={isVisible ? "rotate" : ""} />
             </div>
-            <div className={isVisible ? "filter-menu " : "filter-menu hidden"}>
+            <div className={isVisible ? "filter-menu  " : "filter-menu hidden"}>
               <p
-                className={sortBy === "+recent" ? "active" : ""}
-                onClick={() => setSortBy("+recent")}
+                className={sortBy === "+ récent" ? "active" : ""}
+                onClick={() => setSortBy("+ récent")}
               >
                 + récent
               </p>
               <p
-                className={sortBy === "+ancien" ? "active" : ""}
-                onClick={() => setSortBy("+ancien")}
+                className={sortBy === "+ ancien" ? "active" : ""}
+                onClick={() => setSortBy("+ ancien")}
               >
                 + ancien
               </p>

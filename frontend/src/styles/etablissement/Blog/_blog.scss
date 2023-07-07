@@ -24,6 +24,7 @@ body {
       }
       .filter {
         position: relative;
+        min-width: 150px;
         .change-filter {
           display: flex;
           align-items: center;
@@ -36,6 +37,8 @@ body {
           img {
             width: 16px;
             margin-left: 16px;
+            transition: transform 0.15s ease-in-out;
+
             &.rotate {
               transform: rotate(180deg);
             }
@@ -43,12 +46,40 @@ body {
         }
         .filter-menu {
           position: absolute;
-          display: block;
-          &.hidden {
-            display: none;
+          border: 1px solid $black;
+          border-radius: $border-radius;
+          box-shadow: $box-shadow;
+          width: 100%;
+          padding: 6px 12px;
+          right: 10%;
+          opacity: 0;
+          visibility: hidden;
+          transition: 0.2s ease-in-out; /* Ajouter une transition pour l'opacité et la visibilité */
+          opacity: 1;
+          visibility: visible;
+          top: 100%;
+          p {
+            margin-top: 6px;
+            position: relative;
+
+            &:hover {
+              cursor: pointer;
+            }
           }
+
+          &.hidden {
+            opacity: 0;
+            visibility: hidden;
+            top: 70%;
+          }
+
           p.active {
-            color: red;
+            font-weight: bold;
+            &:after {
+              content: "✓";
+              position: absolute;
+              left: 80%;
+            }
           }
         }
       }
