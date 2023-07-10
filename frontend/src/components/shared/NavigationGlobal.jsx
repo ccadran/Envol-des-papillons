@@ -25,7 +25,7 @@ const NavigationGlobal = () => {
     <nav className={className}>
       <div className="nav-home">
         <NavLink
-          to="/etablissement/"
+          to="/etablissement"
           className="home-link"
           activeclassname="active"
         >

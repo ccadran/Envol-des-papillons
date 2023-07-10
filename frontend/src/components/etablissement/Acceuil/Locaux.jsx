@@ -18,15 +18,19 @@ const Locaux = () => {
                 Repudiandae tenetur architecto recusandae, alias asperiores
                 modi!
               </p>
-              <Button color="orange" />
+              <Button color="orange" text="Nos locaux" />
             </div>
-            <img src="" alt="maps API" />
+            <div className="img-container">
+              <img src="" alt="maps API" />
+            </div>
           </div>
         </div>
         <div className="locaux-college">
           <h4>Le collège</h4>
           <div className="local">
-            <img src="" alt="maps API" />
+            <div className="img-container">
+              <img src="" alt="maps API" />
+            </div>
             <div className="local-text">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
@@ -36,7 +40,7 @@ const Locaux = () => {
                 distinctio accusantium quidem dolor magni est a consequuntur
                 beatae explicabo voluptatibus! Quibusdam, animi.
               </p>
-              <Button color="blue" />
+              <Button color="blue" text=" Nos locaux" />
             </div>
           </div>
         </div>

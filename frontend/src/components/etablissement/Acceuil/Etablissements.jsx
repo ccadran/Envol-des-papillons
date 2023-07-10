@@ -10,11 +10,13 @@ const Etablissements = () => {
           title="École"
           text="Per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac sceleris nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.
 "
+          color="orange"
         />
         <Etablissement
           title="Collège"
           text="Per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac sceleris nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.
 "
+          color="blue"
         />
       </div>
     </section>

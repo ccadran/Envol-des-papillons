@@ -6,6 +6,7 @@ import AllAvis from "../../components/shared/AllAvis";
 import Locaux from "../../components/etablissement/Acceuil/Locaux";
 import FooterGlobal from "../../components/shared/FooterGlobal";
 import Etablissements from "../../components/etablissement/Acceuil/Etablissements";
+import "styles/etablissement/Acceuil/_acceuil.scss";
 const Acceuil = () => {
   return (
     <>

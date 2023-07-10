@@ -16,7 +16,9 @@ const HeroHome = () => {
         </div>
       </div>
       <div className="hero-presentation">
-        <img src="" alt="illu-presentation" />
+        <div className="img-container">
+          <img src="" alt="illu-presentation" />
+        </div>
         <div className="pres-text">
           <h4>Une méthodologie innovante</h4>
           <p>

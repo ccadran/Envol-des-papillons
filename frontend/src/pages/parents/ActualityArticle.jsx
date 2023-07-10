@@ -10,7 +10,9 @@ import BlogTags from "components/etablissement/Blog/BlogTags";
 
 const ActualityArticle = () => {
   const [actualityArticle, setActualityArticle] = useState([]);
-  const [updatedActualityArticle, setUpdatedActualityArticle] = useState({});
+  const [updatedActualityArticle, setUpdatedActualityArticle] = useState({
+    tags: [],
+  });
   const location = useLocation();
   const isRootPath = location.pathname.includes("admin");
   const navigate = useNavigate();

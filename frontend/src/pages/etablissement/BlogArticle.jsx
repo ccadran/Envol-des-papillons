@@ -14,7 +14,9 @@ import BlogTags from "components/etablissement/Blog/BlogTags";
 
 const BlogArticle = () => {
   const [blogArticle, setBlogArticle] = useState([]);
-  const [updatedBlogArticle, setUpdatedBlogArticle] = useState({});
+  const [updatedBlogArticle, setUpdatedBlogArticle] = useState({
+    tags: [],
+  });
   const location = useLocation();
   const isRootPath = location.pathname.includes("admin");
   const { id } = useParams();
