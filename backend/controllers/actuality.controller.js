@@ -14,10 +14,48 @@ module.exports.getActualityPostById = async (req, res) => {
   }
 };
 
+// module.exports.setActualityPost = async (req, res) => {
+//   if (!req.body.title) {
+//     res.status(400).json({ title: "Le titre est obligatoire" });
+//   }
+//   const {
+//     title,
+//     accroche,
+//     tags,
+//     introduction,
+//     subTitle1,
+//     content1,
+//     subTitle2,
+//     content2,
+//     author,
+//   } = req.body;
+
+//   try {
+//     const actualityPost = await ActualityPostModel.create({
+//       title,
+//       accroche,
+//       tags: Array.isArray(tags) ? tags : [tags], // Assurez-vous que tags est un tableau
+//       introduction,
+//       subTitle1,
+//       content1,
+//       subTitle2,
+//       content2,
+//       author,
+//     });
+
+//     res.status(200).json(actualityPost);
+//   } catch (error) {
+//     res.status(500).json({
+//       message:
+//         "Une erreur s'est produite lors de la création de l'article d'actualité",
+//     });
+//   }
+// };
 module.exports.setActualityPost = async (req, res) => {
   if (!req.body.title) {
     res.status(400).json({ title: "Le titre est obligatoire" });
   }
+
   const {
     title,
     accroche,
@@ -31,10 +69,10 @@ module.exports.setActualityPost = async (req, res) => {
   } = req.body;
 
   try {
-    const actualityPost = await ActualityPostModel.create({
+    const actualityPost = new ActualityPostModel({
       title,
       accroche,
-      tags: Array.isArray(tags) ? tags : [tags], // Assurez-vous que tags est un tableau
+      tags: Array.isArray(tags) ? tags : [tags],
       introduction,
       subTitle1,
       content1,
@@ -43,11 +81,12 @@ module.exports.setActualityPost = async (req, res) => {
       author,
     });
 
+    await actualityPost.save();
+
     res.status(200).json(actualityPost);
   } catch (error) {
     res.status(500).json({
-      message:
-        "Une erreur s'est produite lors de la création de l'article d'actualité",
+      message: error,
     });
   }
 };

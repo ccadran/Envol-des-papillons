@@ -6,6 +6,7 @@ import Tags from "../../components/parents/Actualités/Tags";
 import PapillonLogo from "../../components/shared/PapillonLogo";
 import NavigationAdmin from "../../components/admin/NavigationAdmin";
 import FooterParents from "components/parents/FooterParents";
+import BlogTags from "components/etablissement/Blog/BlogTags";
 
 const ActualityArticle = () => {
   const [actualityArticle, setActualityArticle] = useState([]);
@@ -41,6 +42,19 @@ const ActualityArticle = () => {
         navigate(`/admin/actualites`);
       });
   };
+  const handleTagClick = (tag) => {
+    setUpdatedActualityArticle((prevArticle) => {
+      const updatedTags = prevArticle.tags.includes(tag)
+        ? prevArticle.tags.filter((t) => t !== tag)
+        : [...prevArticle.tags, tag];
+      console.log("Updated tags:", updatedTags);
+
+      return {
+        ...prevArticle,
+        tags: updatedTags,
+      };
+    });
+  };
 
   return (
     <>
@@ -69,7 +83,11 @@ const ActualityArticle = () => {
                       value={updatedActualityArticle.accroche}
                       onChange={handleInputChange}
                     />
-                    {/* <Tags /> */}
+                    {/* <Tags tags={actualityArticle.tags} /> */}
+                    <BlogTags
+                      selectedTags={updatedActualityArticle.tags}
+                      handleTagClick={handleTagClick}
+                    />
                   </div>
                   <div className="article-img">
                     <img src="" alt="image principal actualité" />
@@ -138,7 +156,7 @@ const ActualityArticle = () => {
                   <div className="article-infos">
                     <h2>{actualityArticle.title}</h2>
                     <p>{actualityArticle.accroche}</p>
-                    <Tags />
+                    <Tags tags={actualityArticle.tags} />
                   </div>
                   <div className="article-img">
                     <img src="" alt="image principal actualité" />

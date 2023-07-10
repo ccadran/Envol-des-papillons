@@ -27,12 +27,18 @@ const Actuality = ({ actuality }) => {
           <Link onClick={() => handleDelete(actuality._id)}>Supprimer</Link>
         </div>
       )}
-      <Link to={`/parents/actualites/${actuality._id}`}>
+      <Link
+        to={
+          isRootPath
+            ? `/admin/actualites/${actuality._id}`
+            : `/parents/actualites/${actuality._id}`
+        }
+      >
         <div className="actuality">
           <div className="actuality-info">
             <h4>{actuality.title}</h4>
             <p>{actuality.accroche}</p>
-            <Tags />
+            <Tags tags={actuality.tags} />
           </div>
           <div className="actuality-img">
             <img src="" alt="image principal actualité" />

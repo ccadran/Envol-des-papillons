@@ -10,6 +10,7 @@ import NavigationAdmin from "../../components/admin/NavigationAdmin";
 import Tags from "components/parents/Actualités/Tags";
 import chevron from "assets/logos/chevron.svg";
 import "styles/etablissement/Blog/_blogArticle.scss";
+import BlogTags from "components/etablissement/Blog/BlogTags";
 
 const BlogArticle = () => {
   const [blogArticle, setBlogArticle] = useState([]);
@@ -40,6 +41,19 @@ const BlogArticle = () => {
       ...prevArticle,
       [name]: value,
     }));
+  };
+  const handleTagClick = (tag) => {
+    setUpdatedBlogArticle((prevArticle) => {
+      const updatedTags = prevArticle.tags.includes(tag)
+        ? prevArticle.tags.filter((t) => t !== tag)
+        : [...prevArticle.tags, tag];
+      console.log("Updated tags:", updatedTags);
+
+      return {
+        ...prevArticle,
+        tags: updatedTags,
+      };
+    });
   };
 
   const handleUpdateArticle = () => {
@@ -88,7 +102,10 @@ const BlogArticle = () => {
                       value={updatedBlogArticle.accroche}
                       onChange={handleInputChange}
                     />
-                    {/* <Tags /> */}
+                    <BlogTags
+                      selectedTags={updatedBlogArticle.tags}
+                      handleTagClick={handleTagClick}
+                    />
                   </div>
                   <div className="article-img">
                     <img src="" alt="image principal actualité" />

@@ -16,11 +16,12 @@ const ActualityPostSchema = mongoose.Schema(
       required: true,
     },
     // //img a upload
-    tags: {
-      type: [String], // Champ de type tableau contenant des chaînes de caractères
-      enum: ["tag1", "tag2", "tag3", "tag4"], // Liste des tags disponibles
-      required: true,
-    },
+    tags: [
+      {
+        type: mongoose.Schema.Types.ObjectId, // Type de référence à l'ID d'un document dans une autre collection
+        ref: "blogTag", // Nom du modèle de la table blogTag
+      },
+    ],
     introduction: {
       type: String,
       required: true,
