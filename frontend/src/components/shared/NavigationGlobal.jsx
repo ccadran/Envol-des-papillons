@@ -1,14 +1,34 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import PapillonLogo from "./PapillonLogo";
 import "../../styles/settings.scss";
 import "../../styles/shared/_navigationGlobal.scss";
 
 const NavigationGlobal = () => {
+  const [afterColor, setAfterColor] = useState("violet");
+  const className = `nav ${afterColor}`;
+  const location = useLocation();
+  const isRootPath = location.pathname.includes("ecole");
+
+  useEffect(() => {
+    if (isRootPath) {
+      setAfterColor("corail");
+    } else if (location.pathname.includes("college")) {
+      setAfterColor("blue");
+    } else {
+      setAfterColor("violet");
+    }
+    console.log(className);
+  }, [isRootPath, location.pathname]);
+
   return (
-    <nav className="nav-global">
+    <nav className={className}>
       <div className="nav-home">
-        <NavLink to="/etablissement">
+        <NavLink
+          to="/etablissement/"
+          className="home-link"
+          activeclassname="active"
+        >
           <PapillonLogo />
           <li>Acceuil</li>
         </NavLink>

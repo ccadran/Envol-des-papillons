@@ -8,6 +8,28 @@ nav {
     font-size: 16px;
     font-family: $subtitle-font;
   }
+  &.violet {
+    .active {
+      &:after {
+        background-color: $violet;
+      }
+    }
+  }
+  &.corail {
+    .active {
+      &:after {
+        background-color: $corail;
+      }
+    }
+  }
+  &.blue {
+    .active {
+      &:after {
+        background-color: $blue;
+      }
+    }
+  }
+
   .nav-home {
     a {
       img {
@@ -15,10 +37,22 @@ nav {
       }
       display: flex;
       align-items: center;
+
+      &.active {
+        li::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2.5px;
+          background-color: $violet; // Couleur du trait après le li
+        }
+      }
     }
   }
+
   .nav-links {
     align-items: center;
+
     ul {
       display: flex;
       a {
@@ -30,7 +64,6 @@ nav {
           display: block;
           width: 100%;
           height: 2.5px;
-          background-color: $violet;
         }
       }
     }
