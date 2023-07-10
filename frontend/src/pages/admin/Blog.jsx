@@ -7,8 +7,10 @@ const Blog = () => {
   return (
     <>
       <NavigationAdmin />
-      <H1HeroText h1="Blog" text="Gérez les articles de votre blog" />
-      <BlogContent />
+      <main>
+        <H1HeroText h1="Blog" text="Gérez les articles de votre blog" />
+        <BlogContent />
+      </main>
     </>
   );
 };

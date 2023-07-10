@@ -7,8 +7,10 @@ const Actualites = () => {
   return (
     <>
       <NavigationAdmin />
-      <H1HeroText h1="Actualités" text="Gérez les articles d'actualités" />
-      <Actualities />
+      <main>
+        <H1HeroText h1="Actualités" text="Gérez les articles d'actualités" />
+        <Actualities />
+      </main>
     </>
   );
 };

@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Tag from "components/parents/Actualités/Tag";
 import "styles/etablissement/Blog/_tags.scss";
+import { useLocation } from "react-router-dom";
 
 const BlogTags = ({ handleTagClick, selectedTags }) => {
   const [blogTags, setBlogTags] = useState([]);
+  const location = useLocation();
+  const isRootPath = location.pathname.includes("/etablissement/");
 
   useEffect(() => {
     axios.get("http://localhost:5001/blogTag").then((res) => {

@@ -7,8 +7,10 @@ const Avis = () => {
   return (
     <>
       <NavigationAdmin />
-      <H1HeroText h1="Avis" text="Gérez les avis de votre établissement" />
-      <AllAvisAdmin />
+      <main>
+        <H1HeroText h1="Avis" text="Gérez les avis de votre établissement" />
+        <AllAvisAdmin />
+      </main>
     </>
   );
 };

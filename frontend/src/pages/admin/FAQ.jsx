@@ -7,8 +7,10 @@ const FAQ = () => {
   return (
     <>
       <NavigationAdmin />
-      <H1HeroText h1="FAQ" text="Gérez les questions fréquemment posées" />
-      <FAQController />
+      <main>
+        <H1HeroText h1="FAQ" text="Gérez les questions fréquemment posées" />
+        <FAQController />
+      </main>
     </>
   );
 };

@@ -6,11 +6,13 @@ const Evenements = () => {
   return (
     <>
       <NavigationAdmin />
-      <H1HeroText
-        h1="Evenements"
-        text="Gérez les évènements de votre établissement"
-      />
-      <h1>API Google Agenda</h1>
+      <main>
+        <H1HeroText
+          h1="Evenements"
+          text="Gérez les évènements de votre établissement"
+        />
+        <h1>API Google Agenda</h1>
+      </main>
     </>
   );
 };

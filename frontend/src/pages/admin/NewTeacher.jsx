@@ -7,15 +7,17 @@ const NewTeacher = () => {
   return (
     <>
       <NavigationAdmin />
-      <Link to="/admin/teachers">Retour</Link>
-      <div className="intro">
-        <h4>Ajouter un professeur</h4>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque
-          adipisci iste perspiciatis pariatur, beatae corporis.
-        </p>
-      </div>
-      <FormTeacher />
+      <main>
+        <Link to="/admin/teachers">Retour</Link>
+        <div className="intro">
+          <h4>Ajouter un professeur</h4>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque
+            adipisci iste perspiciatis pariatur, beatae corporis.
+          </p>
+        </div>
+        <FormTeacher />
+      </main>
     </>
   );
 };

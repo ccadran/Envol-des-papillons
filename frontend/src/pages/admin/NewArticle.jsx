@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
+import BlogTags from "components/etablissement/Blog/BlogTags";
 
 const NewArticle = () => {
   const location = useLocation();
-  const isRootPathBlog = location.pathname === "/admin/blog";
-  const isRootPathActuality = location.pathname === "/admin/actualites";
+  const isRootPathBlog = location.pathname.includes("/blog");
   const [page = isRootPathBlog ? "blog" : "actuality", setPage] = useState();
+
   const [articleData, setArticleData] = useState({
     title: "",
     accroche: "",
+    tags: [],
     introduction: "",
     subTitle1: "",
     content1: "",
@@ -44,6 +46,21 @@ const NewArticle = () => {
     } catch (error) {
       console.error("Erreur lors de l'ajout de l'article :", error);
     }
+  };
+  const [blogTags, setBlogTags] = useState([]);
+  const handleTagClick = (tag) => {
+    setArticleData((prevData) => {
+      const updatedTags = prevData.tags.includes(tag)
+        ? prevData.tags.filter((t) => t !== tag)
+        : [...prevData.tags, tag];
+
+      console.log("Updated tags:", updatedTags);
+
+      return {
+        ...prevData,
+        tags: updatedTags,
+      };
+    });
   };
 
   return (
@@ -107,6 +124,11 @@ const NewArticle = () => {
           value={articleData.author}
           onChange={handleInputChange}
         ></textarea>
+        <label htmlFor="tags">Tags</label>
+        <BlogTags
+          handleTagClick={handleTagClick}
+          selectedTags={articleData.tags}
+        />
 
         <button type="button" onClick={handleAddArticle}>
           Ajouter

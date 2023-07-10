@@ -8,11 +8,13 @@ const PedagogicTeamAdmin = () => {
   return (
     <>
       <NavigationAdmin />
-      <H1HeroText
-        h1="Équipe pédagogique"
-        text="Gérez l'équipe pédagogique de votre établissement"
-      />
-      <AllTeacher />
+      <main>
+        <H1HeroText
+          h1="Équipe pédagogique"
+          text="Gérez l'équipe pédagogique de votre établissement"
+        />
+        <AllTeacher />
+      </main>
     </>
   );
 };

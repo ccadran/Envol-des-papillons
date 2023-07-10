@@ -5,7 +5,9 @@ const ConnexionAdmin = () => {
   return (
     <div>
       <NavigationGlobal />
-      <ConnexionFormAdmin />
+      <main>
+        <ConnexionFormAdmin />
+      </main>
     </div>
   );
 };
