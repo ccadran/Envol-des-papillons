@@ -49,47 +49,56 @@ const AvisForm = () => {
         </div>
       ) : (
         <form action="" className="avis" onSubmit={handleSubmit}>
-          <label htmlFor="prenom">Prénom</label>
-          <input
-            type="text"
-            name="prenom"
-            id="prenom"
-            placeholder="Entrez votre prénom"
-            value={prenom}
-            onChange={(event) => setPrenom(event.target.value)}
-          />
-          <label htmlFor="nom">Nom</label>
-          <input
-            type="text"
-            name="nom"
-            id="nom"
-            placeholder="Entrez votre nom"
-            value={nom}
-            onChange={(e) => setNom(e.target.value)}
-          />
-          <label htmlFor="etablissement">Etablissement</label>
-          <select
-            name="etablissement"
-            id="selectedEtablissement"
-            onChange={(e) => setEtablissement(e.target.value)}
-          >
-            <option value="">
-              Séléctionner l'établissement de votre enfant{" "}
-            </option>
-            <option value="école">École</option>
-            <option value="college">Collège</option>
-          </select>
+          <div className="form-part">
+            <label htmlFor="prenom">Prénom</label>
+            <input
+              type="text"
+              name="prenom"
+              id="prenom"
+              placeholder="Entrez votre prénom"
+              value={prenom}
+              onChange={(event) => setPrenom(event.target.value)}
+            />
+          </div>
+          <div className="form-part">
+            <label htmlFor="nom">Nom</label>
+            <input
+              type="text"
+              name="nom"
+              id="nom"
+              placeholder="Entrez votre nom"
+              value={nom}
+              onChange={(e) => setNom(e.target.value)}
+            />
+          </div>
 
-          <label htmlFor="message">Avis</label>
-          <textarea
-            name="message"
-            id="message"
-            ref={messageRef}
-            placeholder="Entrez votre avis"
-            value={avis}
-            onChange={(e) => setAvis(e.target.value)}
-          ></textarea>
-          <input type="submit" value="Laissez votre avis" />
+          <div className="form-part">
+            <label htmlFor="message">Avis</label>
+            <textarea
+              name="message"
+              id="message"
+              ref={messageRef}
+              placeholder="Entrez votre avis"
+              value={avis}
+              onChange={(e) => setAvis(e.target.value)}
+            ></textarea>
+          </div>
+          <div className="form-part">
+            <label htmlFor="etablissement">Etablissement</label>
+            <select
+              name="etablissement"
+              id="selectedEtablissement"
+              onChange={(e) => setEtablissement(e.target.value)}
+            >
+              <option value="">
+                Séléctionner l'établissement de votre enfant{" "}
+              </option>
+              <option value="école">École</option>
+              <option value="college">Collège</option>
+            </select>
+          </div>
+          {/* <input type="submit" value="Laissez votre avis" /> */}
+          <Button text="Laissez votre avis" color="violet" />
         </form>
       )}
     </>

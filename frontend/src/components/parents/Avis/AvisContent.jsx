@@ -3,8 +3,8 @@ import AvisForm from "./AvisForm";
 
 const AvisContent = () => {
   return (
-    <div>
-      <h1>Votre avis</h1>
+    <div className="avis-content">
+      <h3>Votre avis</h3>
       <AvisForm />
     </div>
   );

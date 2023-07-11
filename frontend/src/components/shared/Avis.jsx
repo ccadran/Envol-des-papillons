@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../assets/logos/papillon.svg";
 import PapillonLogo from "./PapillonLogo";
-import "styles/shared/_avis.scss";
+import "styles/shared/_avisCards.scss";
 
 const Avis = ({ avi }) => {
   const [papillonColor, setPapillonColor] = useState("orange");

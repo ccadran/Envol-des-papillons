@@ -3,6 +3,7 @@ import NavigationParents from "../../components/parents/NavigationParents";
 import FooterParents from "../../components/parents/FooterParents";
 import H2HeroText from "../../components/parents/H2HeroText";
 import AvisContent from "../../components/parents/Avis/AvisContent";
+import "styles/parents/Avis/_avis.scss";
 
 const Avis = () => {
   return (
