@@ -74,7 +74,7 @@ nav {
         left: 0;
         width: 100%;
         transform: scaleX(0);
-        height: 1.5px;
+        height: 2.5px;
 
         transition: transform 0.2s ease; /* Ajouter une transition pour l'animation */
         transform-origin: bottom right;
@@ -107,9 +107,9 @@ nav {
           left: 0;
           width: 100%;
           transform: scaleX(0);
-          height: 1.5px;
+          height: 2.5px;
 
-          transition: transform 0.2s ease; /* Ajouter une transition pour l'animation */
+          transition: transform 0.2s; /* Ajouter une transition pour l'animation */
           transform-origin: bottom right;
         }
 
