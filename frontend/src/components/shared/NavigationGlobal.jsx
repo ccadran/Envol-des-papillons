@@ -27,7 +27,7 @@ const NavigationGlobal = () => {
         <NavLink
           to="/etablissement"
           className="home-link"
-          activeclassname="active-home"
+          activeClassName="active-home"
         >
           <PapillonLogo />
           <li>Acceuil</li>
@@ -38,21 +38,21 @@ const NavigationGlobal = () => {
           <NavLink
             to="/ecole/presentation"
             className="nav-link"
-            activeclassname="active"
+            activeClassName="active"
           >
             <li>L'école</li>
           </NavLink>
           <NavLink
             to="/college/presentation"
             className="nav-link"
-            activeclassname="active"
+            activeClassName="active"
           >
             <li>Le collège</li>
           </NavLink>
           <NavLink
             to="/etablissement/blog"
             className="nav-link"
-            activeclassname="active"
+            activeClassName="active"
           >
             <li>Le blog</li>
           </NavLink>
@@ -60,11 +60,11 @@ const NavigationGlobal = () => {
           <NavLink
             to="/etablissement/contact"
             className="nav-link"
-            activeclassname="active"
+            activeClassName="active"
           >
             <li>Contactez-nous</li>
           </NavLink>
-          <NavLink to="/parents" className="nav-link" activeclassname="active">
+          <NavLink to="/parents" className="nav-link" activeClassName="active">
             <li>Parents d'élèves</li>
           </NavLink>
         </ul>
