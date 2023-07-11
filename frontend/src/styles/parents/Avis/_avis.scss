@@ -68,30 +68,5 @@ button[type="submit"] {
   transition: transform 0.2s ease-in-out;
   &:hover {
     transform: scale(1.05);
-    #arrow {
-      left: 85%;
-      opacity: 100%;
-      z-index: 1;
-      animation: animArrow 0.2s ease-in-out forwards;
-    }
-  }
-  #arrow {
-    position: absolute;
-    left: 70%;
-    opacity: 0;
-    z-index: 0;
-  }
-}
-
-@keyframes animArrow {
-  0% {
-    left: 70%;
-    opacity: 0;
-    z-index: 0;
-  }
-  100% {
-    left: 85%;
-    opacity: 100%;
-    z-index: 1;
   }
 }

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import BlogTags from "components/etablissement/Blog/BlogTags";
+import "styles/admin/Article/_newArticle.scss";
+import NavigationAdmin from "components/admin/NavigationAdmin";
 
 const NewArticle = () => {
   const location = useLocation();
@@ -64,77 +66,101 @@ const NewArticle = () => {
   };
 
   return (
-    <div className="add-article">
-      <h2>Ajouter un nouvel article</h2>
-      <form>
-        <label htmlFor="title">Titre :</label>
-        <input
-          type="text"
-          name="title"
-          value={articleData.title}
-          onChange={handleInputChange}
-        />
+    <>
+      <NavigationAdmin />
+      <main>
+        <div className="add-article">
+          <h2>Ajouter un nouvel article</h2>
+          <div className="form-content">
+            <Link to={isRootPathBlog ? "/admin/blog" : "/admin/actualites"}>
+              {" "}
+              Retour
+            </Link>
+            <form>
+              <div className="form-part">
+                <label htmlFor="title">Titre :</label>
+                <input
+                  type="text"
+                  name="title"
+                  value={articleData.title}
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className="form-part">
+                <label htmlFor="accroche">Accroche :</label>
+                <textarea
+                  name="accroche"
+                  value={articleData.accroche}
+                  onChange={handleInputChange}
+                ></textarea>
+              </div>
+              <div className="form-part">
+                <label htmlFor="introduction">Introduction :</label>
+                <textarea
+                  name="introduction"
+                  value={articleData.introduction}
+                  onChange={handleInputChange}
+                ></textarea>
+              </div>
+              <div className="form-part">
+                <label htmlFor="subTitle1">Sous-titre 1 :</label>
+                <input
+                  type="text"
+                  name="subTitle1"
+                  value={articleData.subTitle1}
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className="form-part">
+                <label htmlFor="content1">Contenu 1 :</label>
+                <textarea
+                  name="content1"
+                  value={articleData.content1}
+                  onChange={handleInputChange}
+                ></textarea>
+              </div>
+              <div className="form-part">
+                <label htmlFor="subTitle2">Sous-titre 2 :</label>
+                <input
+                  type="text"
+                  name="subTitle2"
+                  value={articleData.subTitle2}
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className="form-part">
+                <label htmlFor="content2">Contenu 2 :</label>
+                <textarea
+                  name="content2"
+                  value={articleData.content2}
+                  onChange={handleInputChange}
+                ></textarea>
+              </div>
 
-        <label htmlFor="accroche">Accroche :</label>
-        <textarea
-          name="accroche"
-          value={articleData.accroche}
-          onChange={handleInputChange}
-        ></textarea>
+              <div className="form-part">
+                <label htmlFor="author">Auteur :</label>
+                <textarea
+                  name="author"
+                  value={articleData.author}
+                  onChange={handleInputChange}
+                ></textarea>
+              </div>
+              <div className="form-part">
+                <label htmlFor="tags">Tags</label>
+                <BlogTags
+                  handleTagClick={handleTagClick}
+                  selectedTags={articleData.tags}
+                />
+              </div>
 
-        <label htmlFor="introduction">Introduction :</label>
-        <textarea
-          name="introduction"
-          value={articleData.introduction}
-          onChange={handleInputChange}
-        ></textarea>
-
-        <label htmlFor="subTitle1">Sous-titre 1 :</label>
-        <input
-          type="text"
-          name="subTitle1"
-          value={articleData.subTitle1}
-          onChange={handleInputChange}
-        />
-
-        <label htmlFor="content1">Contenu 1 :</label>
-        <textarea
-          name="content1"
-          value={articleData.content1}
-          onChange={handleInputChange}
-        ></textarea>
-
-        <label htmlFor="subTitle2">Sous-titre 2 :</label>
-        <input
-          type="text"
-          name="subTitle2"
-          value={articleData.subTitle2}
-          onChange={handleInputChange}
-        />
-
-        <label htmlFor="content2">Contenu 2 :</label>
-        <textarea
-          name="content2"
-          value={articleData.content2}
-          onChange={handleInputChange}
-        ></textarea>
-        <label htmlFor="author">Auteur :</label>
-        <textarea
-          name="author"
-          value={articleData.author}
-          onChange={handleInputChange}
-        ></textarea>
-        <label htmlFor="tags">Tags</label>
-        <BlogTags
-          handleTagClick={handleTagClick}
-          selectedTags={articleData.tags}
-        />
-
-        <button type="button" onClick={handleAddArticle}>
-          Ajouter
-        </button>
-      </form>
-    </div>
+              <button type="button" onClick={handleAddArticle}>
+                Ajouter
+              </button>
+            </form>
+          </div>
+        </div>
+      </main>
+    </>
   );
 };
 
