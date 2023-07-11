@@ -4,6 +4,7 @@ import SearchFilter from "../../components/parents/Actualités/SearchFilter";
 import NavigationParents from "../../components/parents/NavigationParents";
 import Actualities from "../../components/parents/Actualités/Actualities";
 import FooterParents from "../../components/parents/FooterParents";
+import "styles/etablissement/Blog/_blog.scss";
 
 const Actualites = () => {
   return (

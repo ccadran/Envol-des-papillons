@@ -6,7 +6,7 @@ const NavigationParents = ({ etablissement }) => {
   return (
     <nav className="nav-parents">
       <div className="nav-home">
-        <NavLink to="/">
+        <NavLink to="/etablissement">
           <PapillonLogo />
           <li>Acceuil</li>
         </NavLink>

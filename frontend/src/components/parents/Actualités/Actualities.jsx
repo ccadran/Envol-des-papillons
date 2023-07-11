@@ -2,24 +2,12 @@ import React, { useEffect, useState } from "react";
 import Actuality from "./Actuality";
 import SearchFilter from "./SearchFilter";
 import axios from "axios";
+import "styles/etablissement/Blog/_blog.scss";
 
 const Actualities = () => {
-  const [actualities, setActualities] = useState([]);
-  useEffect(() => {
-    axios.get("http://localhost:5001/actuality").then((res) => {
-      setActualities(res.data);
-    });
-    console.log(actualities);
-  }, []);
-
   return (
-    <section className="actualities">
+    <section className="actualities-content">
       <SearchFilter />
-      <div className="actualities-container">
-        {actualities.map((actuality) => (
-          <Actuality key={actuality._id} actuality={actuality} />
-        ))}
-      </div>
     </section>
   );
 };

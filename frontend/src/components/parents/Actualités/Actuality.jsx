@@ -34,13 +34,13 @@ const Actuality = ({ actuality }) => {
             : `/parents/actualites/${actuality._id}`
         }
       >
-        <div className="actuality">
-          <div className="actuality-info">
+        <div className="article">
+          <div className="article-info">
             <h4>{actuality.title}</h4>
             <p>{actuality.accroche}</p>
             <Tags tags={actuality.tags} />
           </div>
-          <div className="actuality-img">
+          <div className="article-img">
             <img src="" alt="image principal actualité" />
           </div>
         </div>

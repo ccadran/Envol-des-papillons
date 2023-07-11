@@ -6,12 +6,14 @@ import chevron from "assets/logos/chevron.svg";
 import BlogPost from "components/etablissement/Blog/BlogPost";
 import axios from "axios";
 import BlogTags from "components/etablissement/Blog/BlogTags";
+import Actuality from "./Actuality";
 
 const SearchFilter = () => {
   const location = useLocation();
   const isRootPathBlog = location.pathname === "/admin/blog";
   const isRootPathActuality = location.pathname === "/admin/actualites";
   const [blogPost, setBlogPost] = useState([]);
+  const [actualityPost, setActualityPost] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [isVisible, setIsVisible] = useState(false);
   const [sortBy, setSortBy] = useState("+ récent"); // État pour gérer le tri des articles
@@ -33,38 +35,58 @@ const SearchFilter = () => {
   const handleSearchChange = (e) => {
     setSearchText(e.target.value);
   };
+  const filteredPosts = location.pathname.includes("blog")
+    ? blogPost.filter((post) => {
+        const lowercaseTitle = post.title.toLowerCase();
+        const lowercaseSearchText = searchText.toLowerCase();
 
-  const filteredBlogPosts = blogPost.filter((post) => {
-    const lowercaseTitle = post.title.toLowerCase();
-    const lowercaseSearchText = searchText.toLowerCase();
+        const titleMatches = lowercaseTitle.includes(lowercaseSearchText);
 
-    // Vérifier si le titre correspond au texte de recherche
-    const titleMatches = lowercaseTitle.includes(lowercaseSearchText);
+        const hasSelectedTags =
+          selectedTags.length === 0 ||
+          post.tags.some((tag) => selectedTags.includes(tag));
 
-    // Vérifier si l'article possède l'un des tags sélectionnés
-    const hasSelectedTags =
-      selectedTags.length === 0 ||
-      post.tags.some((tag) => selectedTags.includes(tag));
+        return titleMatches && hasSelectedTags;
+      })
+    : location.pathname.includes("actualites")
+    ? actualityPost.filter((post) => {
+        const lowercaseTitle = post.title.toLowerCase();
+        const lowercaseSearchText = searchText.toLowerCase();
 
-    return titleMatches && hasSelectedTags;
-  });
+        const titleMatches = lowercaseTitle.includes(lowercaseSearchText);
 
-  let sortedBlogPosts = filteredBlogPosts;
+        const hasSelectedTags =
+          selectedTags.length === 0 ||
+          post.tags.some((tag) => selectedTags.includes(tag));
+
+        return titleMatches && hasSelectedTags;
+      })
+    : [];
+
+  let sortedPosts = filteredPosts;
 
   if (sortBy === "+ récent") {
-    sortedBlogPosts = filteredBlogPosts.sort(
+    sortedPosts = filteredPosts.sort(
       (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
     );
   } else if (sortBy === "+ ancien") {
-    sortedBlogPosts = filteredBlogPosts.sort(
+    sortedPosts = filteredPosts.sort(
       (a, b) => new Date(a.createdAt) - new Date(b.createdAt)
     );
   }
 
   useEffect(() => {
-    axios.get("http://localhost:5001/blog").then((res) => {
-      setBlogPost(res.data);
-    });
+    if (location.pathname.includes("blog")) {
+      axios.get("http://localhost:5001/blog").then((res) => {
+        setBlogPost(res.data);
+        console.log(blogPost);
+      });
+    } else if (location.pathname.includes("actualites")) {
+      axios.get("http://localhost:5001/actuality").then((res) => {
+        setActualityPost(res.data);
+        console.log(actualityPost);
+      });
+    }
   }, []);
 
   return (
@@ -117,19 +139,37 @@ const SearchFilter = () => {
           )}
         </div>
       </div>
-      <div className="blog-container">
-        {sortedBlogPosts.length === 0 ? (
-          <p id="no-result">Aucun article ne correspond à votre recherche.</p>
-        ) : (
-          sortedBlogPosts.map((blogPost) => (
-            <BlogPost
-              key={blogPost._id}
-              article={blogPost}
-              selectedTags={selectedTags}
-            />
-          ))
-        )}
-      </div>
+      {location.pathname.includes("blog") ? (
+        <div className="blog-container">
+          {sortedPosts.length === 0 ? (
+            <p id="no-result">Aucun article ne correspond à votre recherche.</p>
+          ) : (
+            sortedPosts.map((blogPost) => (
+              <BlogPost
+                key={blogPost._id}
+                article={blogPost}
+                selectedTags={selectedTags}
+              />
+            ))
+          )}
+        </div>
+      ) : location.pathname.includes("actualites") ? (
+        <div className="actuality-container">
+          {sortedPosts.length === 0 ? (
+            <p id="no-result">Aucun article ne correspond à votre recherche.</p>
+          ) : (
+            sortedPosts.map((actualityPost) => (
+              <Actuality
+                key={actualityPost._id}
+                actuality={actualityPost}
+                selectedTags={selectedTags}
+              />
+            ))
+          )}
+        </div>
+      ) : (
+        <div>Aucune correspondance de chemin d'accès trouvée.</div>
+      )}
     </>
   );
 };

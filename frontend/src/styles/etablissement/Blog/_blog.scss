@@ -3,7 +3,8 @@
 body {
   height: 100vh;
 }
-.blog-content {
+.blog-content,
+.actualities-content {
   margin-top: 72px;
   .search {
     .search-filter {
@@ -85,6 +86,7 @@ body {
       }
     }
     .tags-addArticle {
+      margin-top: 32px;
       .search-tags {
         display: flex;
         .tag {
@@ -115,7 +117,8 @@ body {
       }
     }
   }
-  .blog-container {
+  .blog-container,
+  .actuality-container {
     margin-top: 72px;
     border-top: 1px solid $black;
     #no-result {
