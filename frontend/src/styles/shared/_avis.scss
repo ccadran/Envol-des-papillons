@@ -5,24 +5,30 @@
   h3 {
     margin-bottom: 72px;
   }
-  .avis-card {
+  .avis-container {
     display: flex;
-    flex-direction: column;
-    width: 400px;
-    box-shadow: $box-shadow;
-    border-radius: 15px;
-    padding: 24px;
-    .avis-header {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .avis-card {
+      margin-right: 72px;
       display: flex;
-      margin-bottom: 24px;
-      img {
-        width: 30px;
-        margin-right: 15px;
+      flex-direction: column;
+      width: 400px;
+      box-shadow: $box-shadow;
+      border-radius: 15px;
+      padding: 24px;
+      .avis-header {
+        display: flex;
+        margin-bottom: 24px;
+        img {
+          width: 30px;
+          margin-right: 15px;
+        }
       }
-    }
-    #show-more {
-      margin-top: 12px;
-      text-align: right;
+      #show-more {
+        margin-top: 12px;
+        text-align: right;
+      }
     }
   }
 }

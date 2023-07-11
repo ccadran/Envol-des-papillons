@@ -5,7 +5,7 @@ const AvisForm = () => {
   const [prenom, setPrenom] = useState("");
   const [nom, setNom] = useState("");
   const [avis, setAvis] = useState("");
-  const [etablissement, setEtablissement] = useState("école");
+  const [etablissement, setEtablissement] = useState("");
   const [submited, setSubmited] = useState(false);
   const messageRef = useRef(null);
 
@@ -68,14 +68,18 @@ const AvisForm = () => {
             onChange={(e) => setNom(e.target.value)}
           />
           <label htmlFor="etablissement">Etablissement</label>
-          <input
-            type="text"
+          <select
             name="etablissement"
-            id="etablissement"
-            placeholder="Entrez votre etablissement"
-            value={etablissement}
+            id="selectedEtablissement"
             onChange={(e) => setEtablissement(e.target.value)}
-          />
+          >
+            <option value="">
+              Séléctionner l'établissement de votre enfant{" "}
+            </option>
+            <option value="école">École</option>
+            <option value="college">Collège</option>
+          </select>
+
           <label htmlFor="message">Avis</label>
           <textarea
             name="message"
