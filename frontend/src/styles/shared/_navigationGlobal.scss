@@ -38,7 +38,7 @@ nav {
       display: flex;
       align-items: center;
 
-      &.active {
+      &.active-home {
         li::after {
           content: "";
           display: block;

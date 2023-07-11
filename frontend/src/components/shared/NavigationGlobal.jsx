@@ -27,7 +27,7 @@ const NavigationGlobal = () => {
         <NavLink
           to="/etablissement"
           className="home-link"
-          activeclassname="active"
+          activeclassname="active-home"
         >
           <PapillonLogo />
           <li>Acceuil</li>
