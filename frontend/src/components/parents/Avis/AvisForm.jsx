@@ -45,7 +45,7 @@ const AvisForm = () => {
             seulement à cliquer sur le lien et a collé l'avis que nous avons
             copié pour vous dans votre presse papier
           </p>
-          <Button text="Laissez un avis sur Google" color="violet" />
+          <Button text="Mettre un avis Google " color="violet" />
         </div>
       ) : (
         <form action="" className="avis" onSubmit={handleSubmit}>
@@ -97,7 +97,7 @@ const AvisForm = () => {
               <option value="college">Collège</option>
             </select>
           </div>
-          {/* <input type="submit" value="Laissez votre avis" /> */}
+          <input type="submit" value="Laissez votre avis" />
           <Button text="Laissez votre avis" color="violet" />
         </form>
       )}

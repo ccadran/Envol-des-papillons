@@ -1,45 +1,51 @@
 import React from "react";
-import { NavLink, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes, useLocation } from "react-router-dom";
 import PapillonLogo from "../shared/PapillonLogo";
 
 const FooterParents = ({ etablissement }) => {
+  const location = useLocation();
+  const isActive =
+    location.pathname === "/" || location.pathname.split("/").length === 2;
+
   return (
     <footer className="footer-parents">
       <div className="main-nav">
         <ul>
-          <Routes>
-            <Route
-              path="/"
-              exact
-              children={({ match }) => (
-                <li className={match ? "active" : ""}>
-                  <NavLink to="/" className="nav-link">
-                    <PapillonLogo /> Acceuil
-                  </NavLink>
-                </li>
-              )}
-            />
-            <Route
-              path="/ecole"
-              children={({ match }) => (
-                <li className={match ? "active" : ""}>
-                  <NavLink to="/ecole" className="nav-link">
-                    <PapillonLogo /> École
-                  </NavLink>
-                </li>
-              )}
-            />
-            <Route
-              path="/college"
-              children={({ match }) => (
-                <li className={match ? "active" : ""}>
-                  <NavLink to="/college" className="nav-link">
-                    <PapillonLogo /> Collège
-                  </NavLink>
-                </li>
-              )}
-            />
-          </Routes>
+          <NavLink to="/ecole/presentation">
+            <PapillonLogo />
+            <h5
+              className={`nav-link ${
+                location.pathname.includes("/ecole") ? "active" : ""
+              }`}
+            >
+              L'école
+            </h5>
+          </NavLink>
+          <NavLink to="/college/presentation">
+            {" "}
+            <PapillonLogo />
+            <h5
+              className={`nav-link ${
+                location.pathname.includes("/college") ? "active" : ""
+              }`}
+            >
+              Le collège
+            </h5>
+          </NavLink>
+          <NavLink
+            to="/etablissement"
+            //
+          >
+            {" "}
+            <PapillonLogo />
+            <h5
+              className={`nav-link ${
+                location.pathname.includes("/etablissement") ? "active" : ""
+              }`}
+            >
+              L'établissement
+            </h5>
+          </NavLink>
         </ul>
       </div>
       <div className="footer-content">
