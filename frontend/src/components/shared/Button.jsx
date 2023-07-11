@@ -17,7 +17,7 @@ const Button = ({ color, text, link }) => {
 
   return (
     <Link to={link}>
-      <button type="submit" style={{ background: backgroundColor }}>
+      <button style={{ background: backgroundColor }}>
         <img src={vector} alt="" />
         <h5>{text}</h5>
         <img src={arrow} alt="" id="arrow" />

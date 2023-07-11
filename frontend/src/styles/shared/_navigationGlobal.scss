@@ -9,7 +9,10 @@ nav {
     font-family: $subtitle-font;
   }
   &.violet {
-    .active {
+    a.active {
+      li:after {
+        background-color: $violet;
+      }
       &:after {
         background-color: $violet;
       }
@@ -17,10 +20,8 @@ nav {
     .nav-links {
       ul {
         a {
-          &:not(.active):hover {
-            &:after {
-              background-color: $violet; /* Couleur du fond lors du survol */
-            }
+          &:after {
+            background-color: $violet; /* Couleur du fond lors du survol */
           }
         }
       }
@@ -38,11 +39,6 @@ nav {
           &:after {
             background-color: $corail; /* Couleur du fond lors du survol */
           }
-          // &:not(.active):hover {
-          //   &:after {
-          //     background-color: $corail; /* Couleur du fond lors du survol */
-          //   }
-          // }
         }
       }
     }
@@ -56,10 +52,8 @@ nav {
     .nav-links {
       ul {
         a {
-          &:not(.active):hover {
-            &:after {
-              background-color: $blue; /* Couleur du fond lors du survol */
-            }
+          &:after {
+            background-color: $blue; /* Couleur du fond lors du survol */
           }
         }
       }
@@ -73,9 +67,20 @@ nav {
       }
       display: flex;
       align-items: center;
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1.5px;
 
+        transition: transform 0.2s ease; /* Ajouter une transition pour l'animation */
+        transform-origin: bottom right;
+      }
       &.active-home {
-        li::after {
+        &::after {
           content: "";
           display: block;
           width: 100%;
@@ -102,7 +107,6 @@ nav {
           left: 0;
           width: 100%;
           transform: scaleX(0);
-          /* Initialiser la largeur à 0 */
           height: 1.5px;
 
           transition: transform 0.2s ease; /* Ajouter une transition pour l'animation */

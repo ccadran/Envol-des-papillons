@@ -87,6 +87,8 @@ body {
     }
     .tags-addArticle {
       margin-top: 32px;
+      display: flex;
+      justify-content: space-between;
       .search-tags {
         display: flex;
         .tag {
@@ -125,24 +127,39 @@ body {
       font-size: 22px;
       margin-top: 34px;
     }
-    .article {
-      border-bottom: 1px solid $black;
-      padding: 34px;
-      display: flex;
-      .article-info {
-        width: 70%;
-        h4 {
-          margin-bottom: 24px;
+    .post {
+      .admin-params {
+        padding: 34px 34px 0 34px;
+        display: flex;
+        justify-content: space-between;
+        .fa-sharp {
+          &:hover {
+            cursor: pointer;
+          }
         }
-        p {
-          margin-bottom: 42px;
+        a {
+          font-size: 1.2rem;
         }
       }
-      .article-img {
-        width: 30%;
-        border-radius: $border-radius;
-        img {
-          width: 100%;
+      .article {
+        border-bottom: 1px solid $black;
+        padding: 34px;
+        display: flex;
+        .article-info {
+          width: 70%;
+          h4 {
+            margin-bottom: 24px;
+          }
+          p {
+            margin-bottom: 42px;
+          }
+        }
+        .article-img {
+          width: 30%;
+          border-radius: $border-radius;
+          img {
+            width: 100%;
+          }
         }
       }
     }

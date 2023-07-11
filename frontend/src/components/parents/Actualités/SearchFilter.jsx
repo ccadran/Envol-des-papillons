@@ -129,12 +129,17 @@ const SearchFilter = () => {
             selectedTags={selectedTags}
           />
           {isRootPathBlog && (
-            <Button text="Ajouter un article" link="/admin/blog/new-article" />
+            <Button
+              text="Ajouter un article"
+              link="/admin/blog/new-article"
+              color="violet"
+            />
           )}
           {isRootPathActuality && (
             <Button
               text="Ajouter un article"
               link="/admin/actualites/new-article"
+              color="violet"
             />
           )}
         </div>

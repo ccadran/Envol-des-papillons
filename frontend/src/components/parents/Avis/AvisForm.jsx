@@ -97,8 +97,9 @@ const AvisForm = () => {
               <option value="college">Collège</option>
             </select>
           </div>
-          <input type="submit" value="Laissez votre avis" />
-          <Button text="Laissez votre avis" color="violet" />
+          <button type="submit" value="">
+            Laissez votre avis
+          </button>
         </form>
       )}
     </>

@@ -3,7 +3,7 @@ import Tag from "./Tag";
 import axios from "axios";
 import "styles/etablissement/Blog/_tags.scss";
 
-const Tags = ({ tags }) => {
+const Tags = ({ tags, isSelected }) => {
   const [blogTags, setBlogTags] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,10 @@ const Tags = ({ tags }) => {
 
   return (
     <div className="tags">
-      {tags && tags.map((tagId) => <Tag key={tagId} tag={getTagName(tagId)} />)}
+      {tags &&
+        tags.map((tagId) => (
+          <Tag key={tagId} tag={getTagName(tagId)} isSelected={isSelected} />
+        ))}
       {!tags && <p>No tags available</p>}
     </div>
   );

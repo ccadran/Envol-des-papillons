@@ -7,9 +7,7 @@ const DashboardCard = ({ title, text, link }) => {
       <h4>{title}</h4>
       <div className="card-content">
         <p>{text}</p>
-        <div className="card-info">
-          <Button text="voir plus" color="violet" link={link} />
-        </div>
+        <Button text="voir plus" color="violet" link={link} />
       </div>
     </div>
   );
