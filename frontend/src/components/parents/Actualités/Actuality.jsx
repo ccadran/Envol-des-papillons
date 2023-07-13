@@ -6,6 +6,7 @@ import axios from "axios";
 const Actuality = ({ actuality }) => {
   const location = useLocation();
   const isRootPath = location.pathname === "/admin/actualites";
+  const isSelected = true;
   const handleDelete = async (postId) => {
     try {
       await axios.delete(`http://localhost:5001/actuality/${postId}`);
@@ -21,30 +22,32 @@ const Actuality = ({ actuality }) => {
 
   return (
     <>
-      {isRootPath && (
-        <div className="admin-params">
-          <Link to={`/admin/actualites/${actuality._id}`}>modifier</Link>
-          <Link onClick={() => handleDelete(actuality._id)}>Supprimer</Link>
-        </div>
-      )}
-      <Link
-        to={
-          isRootPath
-            ? `/admin/actualites/${actuality._id}`
-            : `/parents/actualites/${actuality._id}`
-        }
-      >
-        <div className="article">
-          <div className="article-info">
-            <h4>{actuality.title}</h4>
-            <p>{actuality.accroche}</p>
-            <Tags tags={actuality.tags} />
+      <div className="post">
+        {isRootPath && (
+          <div className="admin-params">
+            <Link to={`/admin/actualites/${actuality._id}`}>modifier</Link>
+            <Link onClick={() => handleDelete(actuality._id)}>Supprimer</Link>
           </div>
-          <div className="article-img">
-            <img src="" alt="image principal actualité" />
+        )}
+        <Link
+          to={
+            isRootPath
+              ? `/admin/actualites/${actuality._id}`
+              : `/parents/actualites/${actuality._id}`
+          }
+        >
+          <div className="article">
+            <div className="article-info">
+              <h4>{actuality.title}</h4>
+              <p>{actuality.accroche}</p>
+              <Tags tags={actuality.tags} isSelected={isSelected} />
+            </div>
+            <div className="article-img">
+              <img src="" alt="image principal actualité" />
+            </div>
           </div>
-        </div>
-      </Link>
+        </Link>
+      </div>
     </>
   );
 };

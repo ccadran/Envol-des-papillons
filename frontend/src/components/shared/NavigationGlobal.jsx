@@ -25,9 +25,9 @@ const NavigationGlobal = () => {
     <nav className={className}>
       <div className="nav-home">
         <NavLink
-          to="/etablissement"
+          to="/etablissement/"
           className="home-link"
-          activeClassName="active-home"
+          activeClassName="active"
         >
           <PapillonLogo />
           <li>Acceuil</li>
@@ -41,6 +41,7 @@ const NavigationGlobal = () => {
             activeClassName="active"
           >
             <li>L'école</li>
+            {/* <div className="active-link"></div> */}
           </NavLink>
           <NavLink
             to="/college/presentation"
@@ -55,6 +56,7 @@ const NavigationGlobal = () => {
             activeClassName="active"
           >
             <li>Le blog</li>
+            <div className="active-link"></div>
           </NavLink>
 
           <NavLink
