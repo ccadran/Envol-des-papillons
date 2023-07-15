@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 const HeroScolarity = ({ h1, img, text, color }) => {
   return (
     <section className="hero">
-      <StylizedH1 h1={h1} color={color} />
+      <StylizedH1 h1={h1} />
       <div className="hero-presentation">
         <div className="img-container">
           <img src={img} alt="img de pres" />

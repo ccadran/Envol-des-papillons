@@ -12,13 +12,7 @@ const Contact = () => {
   const location = useLocation();
   const isRootPath = location.pathname === "/etablissement/contact";
   const desiredPart = location.pathname.split("/")[1];
-  const isRootPathColor = location.pathname.includes("/ecole");
 
-  const color = isRootPathColor
-    ? "orange"
-    : location.pathname.includes("/college")
-    ? "blue"
-    : "violet";
   return (
     <>
       {isRootPath ? (
@@ -27,7 +21,7 @@ const Contact = () => {
         <NavigationScolarity etablissement={desiredPart} />
       )}{" "}
       <main>
-        <StylizedH1 h1="Contactez Nous" color={color} />
+        <StylizedH1 h1="Contactez Nous" />
         <section className="contact-container">
           <ContactInfo />
           <ContactForm />
