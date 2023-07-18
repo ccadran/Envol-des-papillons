@@ -63,20 +63,20 @@ const SectionFAQ = ({ faqSection, etablissement }) => {
         {isRootPath && (
           <>
             <div className="controller">
-              <Link onClick={() => handleDeleteSection(faqSection._id)}>
-                Supprimer
-              </Link>
-              {!isEditing && <Link onClick={handleEditSection}>Modifier</Link>}
+              {!isEditing && (
+                <a className="fa-solid fa-pen" onClick={handleEditSection}></a>
+              )}
+              <a
+                className="fa-sharp fa-solid fa-trash"
+                onClick={() => handleDeleteSection(faqSection._id)}
+              ></a>
             </div>
           </>
         )}
         {isEditing ? (
           <>
-            <textarea
-              value={sectionTitle}
-              onChange={handleTextareaChange}
-            ></textarea>
-            <Link onClick={handleValidation}>Valider</Link>
+            <input value={sectionTitle} onChange={handleTextareaChange}></input>
+            <button onClick={handleValidation}>Valider</button>
           </>
         ) : (
           <h3>{faqSection.section_title}</h3>

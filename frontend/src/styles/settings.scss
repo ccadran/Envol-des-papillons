@@ -86,3 +86,8 @@ footer {
 section {
   margin-top: clamp(100px, 20vw, 200px);
 }
+
+textarea,
+input {
+  font-family: $body-font;
+}

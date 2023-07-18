@@ -81,6 +81,8 @@ const FormFAQQuestion = () => {
   return (
     <div className="form-faq-question">
       <div className="etablissement-select">
+        <label htmlFor="SelectOption">Établissement de la FAQ : </label>
+
         <select
           id="SelectEtablissement"
           value={selectedEtablissement}

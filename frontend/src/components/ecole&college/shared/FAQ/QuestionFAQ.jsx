@@ -50,10 +50,13 @@ const QuestionFAQ = ({ faqQuestion, etablissement }) => {
     <div className="question-container" onClick={toggleVisvibility}>
       {isRootPath && (
         <div className="controller">
-          <Link onClick={() => handleDeleteQuestion(faqQuestion._id)}>
-            Supprimer
-          </Link>
-          {!isEditing && <Link onClick={handleEditQuestion}>Modifier</Link>}
+          {!isEditing && (
+            <a className="fa-solid fa-pen" onClick={handleEditQuestion}></a>
+          )}
+          <a
+            className="fa-sharp fa-solid fa-trash"
+            onClick={() => handleDeleteQuestion(faqQuestion._id)}
+          ></a>
         </div>
       )}
       {isEditing ? (
@@ -67,7 +70,7 @@ const QuestionFAQ = ({ faqQuestion, etablissement }) => {
             value={editedAnswer}
             onChange={(e) => setEditedAnswer(e.target.value)}
           ></textarea>
-          <Link onClick={handleSaveQuestion}>Valider</Link>
+          <button onClick={handleSaveQuestion}>Valider</button>
         </>
       ) : (
         !isEditing && (

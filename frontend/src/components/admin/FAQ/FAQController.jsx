@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Button from "../../shared/Button";
 import axios from "axios";
 import SectionFAQ from "../../ecole&college/shared/FAQ/SectionFAQ";
+
 const FAQController = () => {
   const [selectedOption, setSelectedOption] = useState("");
   const [faqSections, setFaqSections] = useState([]);
@@ -26,11 +27,19 @@ const FAQController = () => {
     <>
       <div className="controller">
         <div className="new">
-          <Button text="Ajouter une section" link="new-section" />
-          <Button text="Ajouter une question" link="new-question" />
+          <Button
+            text="Ajouter une section"
+            link="new-section"
+            color="violet"
+          />
+          <Button
+            text="Ajouter une question"
+            link="new-question"
+            color="violet"
+          />
         </div>
         <div className="etablissement">
-          <label htmlFor="selectOption">Choisissez une option :</label>
+          <label htmlFor="selectOption">Choisissez la FAQ : </label>
           <select
             id="SelectOption"
             value={selectedOption}
@@ -43,20 +52,22 @@ const FAQController = () => {
         </div>
       </div>
 
-      {selectedOption ? (
-        faqSections.map((faqSection) => (
-          <SectionFAQ
-            key={faqSection._id}
-            faqSection={faqSection}
-            etablissement={selectedOption}
-          />
-        ))
-      ) : (
-        <p>
-          Veuillez séléctionner l'établissement dont vous voulez voir les
-          questions !
-        </p>
-      )}
+      <section className="faq-content">
+        {selectedOption ? (
+          faqSections.map((faqSection) => (
+            <SectionFAQ
+              key={faqSection._id}
+              faqSection={faqSection}
+              etablissement={selectedOption}
+            />
+          ))
+        ) : (
+          <p>
+            Veuillez séléctionner l'établissement dont vous voulez voir les
+            questions !
+          </p>
+        )}
+      </section>
     </>
   );
 };

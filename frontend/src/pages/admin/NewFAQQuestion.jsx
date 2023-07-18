@@ -2,13 +2,18 @@ import React from "react";
 import NavigationAdmin from "../../components/admin/NavigationAdmin";
 import { Link, useNavigate } from "react-router-dom";
 import FormFAQQuestion from "../../components/admin/FAQ/FormFAQQuestion";
+import chevron from "assets/logos/chevron.svg";
+import "styles/admin/FAQ/_newSection.scss";
 
 const NewFAQQuestion = () => {
   return (
     <>
       <NavigationAdmin />
       <main>
-        <Link to="/admin/faq">Retour</Link>
+        <div className="back">
+          <img src={chevron} alt="" />
+          <Link to="/admin/faq">Retour</Link>
+        </div>{" "}
         <div className="intro">
           <h4>Ajouter une question</h4>
           <p>

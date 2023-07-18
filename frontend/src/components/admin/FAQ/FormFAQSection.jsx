@@ -35,6 +35,7 @@ const FormFAQSection = ({}) => {
   return (
     <div className="form-faq-section">
       <div className="etablissement-select">
+        <label htmlFor="SelectOption">Établissement de la FAQ : </label>
         <select
           id="SelectOption"
           value={selectedOption}
