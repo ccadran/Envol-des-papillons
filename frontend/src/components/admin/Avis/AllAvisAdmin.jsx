@@ -2,6 +2,7 @@ import { set } from "mongoose";
 import React, { useState } from "react";
 import axios from "axios";
 import AvisAdmin from "./AvisAdmin";
+import "styles/admin/Avis/_avisAdmin.scss";
 
 const AllAvisAdmin = () => {
   const [selectedEtablissement, setSelectedEtablissement] = useState("");
@@ -24,8 +25,11 @@ const AllAvisAdmin = () => {
     }
   };
   return (
-    <section className="avis">
+    <section className="avis-admin">
       <div className="etablissement">
+        <label htmlFor="selectedEtablissement">
+          Les avis de l'établissement :
+        </label>
         <select
           id="selectedEtablissement"
           onChange={handleEtablissementChange}

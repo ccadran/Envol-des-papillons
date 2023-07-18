@@ -1,0 +1,39 @@
+@import "../../settings.scss";
+
+.avis-admin {
+  margin-top: 122px;
+  .etablissement {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    select {
+      width: fit-content;
+      margin: 12px 6px;
+      padding: 4px;
+      border-radius: $border-radius;
+      font-family: $body-font;
+    }
+  }
+  .avis-container {
+    display: flex;
+    flex-direction: column;
+    .avis-card-admin {
+      padding: 24px 0;
+      border-top: 1px solid $black;
+      .avis-header {
+        display: flex;
+        justify-content: space-between;
+        .author {
+          display: flex;
+          img {
+            width: 50px;
+            margin-right: 18px;
+          }
+        }
+      }
+      .avis-content {
+        margin-top: 18px;
+      }
+    }
+  }
+}

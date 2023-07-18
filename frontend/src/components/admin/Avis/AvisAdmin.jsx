@@ -18,7 +18,7 @@ const AvisAdmin = ({ avis }) => {
   };
 
   return (
-    <div>
+    <div className="avis-card-admin">
       <div className="avis-header">
         <div className="author">
           <PapillonLogo />
@@ -29,7 +29,7 @@ const AvisAdmin = ({ avis }) => {
             <p>{dateFormated(avis.createdAt)}</p>
           </div>
         </div>
-        <Link onClick={deleteAvis}>Supprimer</Link>
+        <a className="fa-sharp fa-solid fa-trash" onClick={deleteAvis}></a>
       </div>
       <div className="avis-content">
         <p>{avis.avis}</p>
