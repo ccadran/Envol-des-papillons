@@ -86,12 +86,14 @@ const TeachersAdmin = ({ teacher }) => {
           <p>{teacher.formation}</p>
         </>
       )}
-      <Link onClick={deleteTeacher}>Supprimer</Link>
-      {isEditing ? (
-        <Link onClick={handleSaveClick}>Enregistrer</Link>
-      ) : (
-        <Link onClick={handleEditClick}>Modifier</Link>
-      )}
+      <div className="controller">
+        <a className="fa-sharp fa-solid fa-trash" onClick={deleteTeacher}></a>
+        {isEditing ? (
+          <button onClick={handleSaveClick}>Enregistrer</button>
+        ) : (
+          <a className="fa-solid fa-pen" onClick={handleEditClick}></a>
+        )}
+      </div>
     </div>
   );
 };

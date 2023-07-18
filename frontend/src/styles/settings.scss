@@ -91,3 +91,32 @@ textarea,
 input {
   font-family: $body-font;
 }
+button {
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 12px 36px 12px 16px;
+  width: fit-content;
+  border-radius: $border-radius;
+  background-color: $violet;
+  color: $white;
+  font-family: $subtitle-font;
+  font-size: clamp(14px, 2vw, 18px);
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+a:hover {
+  cursor: pointer;
+}
+
+select {
+  width: fit-content;
+  margin: 12px 6px;
+  padding: 4px;
+  border-radius: $border-radius;
+  font-family: $body-font;
+}

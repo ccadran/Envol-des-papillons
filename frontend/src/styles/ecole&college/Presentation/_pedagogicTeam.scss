@@ -1,37 +1,42 @@
 @import "../../settings.scss";
 
-.pedagogic-team {
-  h3 {
-    margin-bottom: 48px;
-  }
-  .teachers-container {
-    margin-top: 78px;
-    display: flex;
-    .teacher-card {
-      margin-right: 120px;
-      width: 250px;
-      box-shadow: $box-shadow;
-      border-radius: $border-radius;
+.teachers-container {
+  margin-top: 78px;
+  display: flex;
+  .teacher-card {
+    margin-right: 120px;
+    width: 250px;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 18px 14px;
-      img {
-        width: 70px;
-        margin: 0 auto 16px auto;
-      }
-      .name-class {
-        margin-bottom: 8px;
-        p {
-          margin-top: 4px;
-          font-size: 14px;
-        }
-      }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 14px;
+    img {
+      width: 70px;
+      margin: 0 auto 16px auto;
+    }
+    .name-class {
+      margin-bottom: 8px;
       p {
-        margin-top: 14px;
-        text-align: center;
+        margin-top: 4px;
+        font-size: 14px;
       }
     }
+    p {
+      margin-top: 14px;
+      text-align: center;
+    }
   }
+}
+.controller {
+  margin-top: 24px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+input {
+  margin: 2px 0;
+  border-radius: $border-radius;
 }

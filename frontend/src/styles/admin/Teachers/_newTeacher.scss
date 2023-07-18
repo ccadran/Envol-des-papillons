@@ -1,0 +1,32 @@
+@import "../../settings.scss";
+
+.back {
+  margin-top: 122px;
+}
+.intro {
+  margin-top: 72px;
+}
+.form-teacher {
+  margin-top: 122px;
+  form {
+    display: flex;
+    flex-direction: column;
+    select {
+      margin-left: 0;
+    }
+    label {
+      margin-top: 16px;
+      font-family: $subtitle-font;
+      margin-bottom: 10px;
+    }
+    input {
+      font-family: $body-font;
+      padding: 14px;
+      border: 1px solid $black;
+      border-radius: $border-radius;
+    }
+    button {
+      margin-top: 24px;
+    }
+  }
+}

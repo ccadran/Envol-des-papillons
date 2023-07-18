@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import TeacherAdmin from "./TeacherAdmin";
 import { Link } from "react-router-dom";
+import Button from "components/shared/Button";
 
 const AllTeacher = () => {
   const [selectedEtablissement, setSelectedEtablissement] = useState("");
@@ -26,17 +27,23 @@ const AllTeacher = () => {
 
   return (
     <section className="teachers">
-      <Link to="/admin/teachers/new-teacher">Ajouter un professeur</Link>
-      <div className="etablissement">
-        <select
-          id="selectedEtablissement"
-          onChange={handleEtablissementChange}
-          value={selectedEtablissement}
-        >
-          <option value="">Sélectionner l'établissement</option>
-          <option value="collège">école</option>
-          <option value="école">collège</option>
-        </select>
+      <div className="controller-teacher">
+        <div className="etablissement">
+          <select
+            id="selectedEtablissement"
+            onChange={handleEtablissementChange}
+            value={selectedEtablissement}
+          >
+            <option value="">Sélectionner l'établissement</option>
+            <option value="école">école</option>
+            <option value="collège">collège</option>
+          </select>
+        </div>
+        <Button
+          link="/admin/teachers/new-teacher"
+          color="violet"
+          text="Ajouter un professeur"
+        ></Button>
       </div>
       <div className="teachers-container">
         {selectedEtablissement ? (

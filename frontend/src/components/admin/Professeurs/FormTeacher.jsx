@@ -58,39 +58,46 @@ const FormTeacher = () => {
             <option value="école">École</option>
           </select>
         </div>
+        <form action="">
+          <label>Prénom:</label>
+          <input
+            type="text"
+            placeholder="Prénom"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+          />
+          <label>Nom:</label>
+          <input
+            type="text"
+            placeholder="Nom"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+          />
+          <label>Classe:</label>
+          <input
+            type="text"
+            placeholder="Classe"
+            value={classe}
+            onChange={(e) => setClasse(e.target.value)}
+          />
 
-        <input
-          type="text"
-          placeholder="Prénom"
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Nom"
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Classe"
-          value={classe}
-          onChange={(e) => setClasse(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Poste"
-          value={poste}
-          onChange={(e) => setPoste(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Formation"
-          value={formation}
-          onChange={(e) => setFormation(e.target.value)}
-        />
+          <label>Poste:</label>
+          <input
+            type="text"
+            placeholder="Poste"
+            value={poste}
+            onChange={(e) => setPoste(e.target.value)}
+          />
+          <label>Formation:</label>
+          <input
+            type="text"
+            placeholder="Formation"
+            value={formation}
+            onChange={(e) => setFormation(e.target.value)}
+          />
 
-        <button type="submit">Ajouter</button>
+          <button type="submit">Ajouter</button>
+        </form>
       </form>
     </div>
   );
