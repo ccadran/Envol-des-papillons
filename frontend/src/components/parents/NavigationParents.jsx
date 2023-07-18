@@ -1,12 +1,31 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import PapillonLogo from "../shared/PapillonLogo";
 
 const NavigationParents = ({ etablissement }) => {
+  const [afterColor, setAfterColor] = useState("violet");
+  const className = `nav ${afterColor}`;
+  const location = useLocation();
+  const isRootPath = location.pathname.includes("ecole");
+
+  useEffect(() => {
+    if (isRootPath) {
+      setAfterColor("corail");
+    } else if (location.pathname.includes("college")) {
+      setAfterColor("blue");
+    } else {
+      setAfterColor("violet");
+    }
+    console.log(className);
+  }, [isRootPath, location.pathname]);
   return (
-    <nav className="nav-parents">
+    <nav className={className}>
       <div className="nav-home">
-        <NavLink to="/etablissement">
+        <NavLink
+          to="/etablissement/"
+          className="home-link"
+          activeClassName="active"
+        >
           <PapillonLogo />
           <li>Acceuil</li>
         </NavLink>
@@ -16,28 +35,28 @@ const NavigationParents = ({ etablissement }) => {
           <NavLink
             to={`/parents/actualites`}
             className="nav-link"
-            activeclassname="active"
+            activeClassName="active"
           >
             <li>Actualités</li>
           </NavLink>
           <NavLink
             to={`/parents/evenements`}
             className="nav-link"
-            activeclassname="active"
+            activeClassName="active"
           >
             <li>Événements</li>
           </NavLink>
           <NavLink
             to={`/parents/menus`}
             className="nav-link"
-            activeclassname="active"
+            activeClassName="active"
           >
             <li>Menus</li>
           </NavLink>
           <NavLink
             to={`/parents/avis`}
             className="nav-link"
-            activeclassname="active"
+            activeClassName="active"
           >
             <li>Avis</li>
           </NavLink>
