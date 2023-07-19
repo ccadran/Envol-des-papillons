@@ -96,9 +96,18 @@ const FooterScolarity = ({ etablissement }) => {
             <NavLink to="/blog" className="nav-link" activeclassname="active">
               <li>Blog</li>
             </NavLink>
+            <NavLink
+              to={`${etablissement}/qui-sommes-nous`}
+              className="nav-link"
+              activeclassname="active"
+            >
+              <li>Notre histoire</li>
+            </NavLink>
+            
           </ul>
         </div>
         <div className="footer-contact">
+          {/* <Link to={`${etablissement}/qui-sommes-nous`}>Notre histoire</Link> */}
           <p>lenvoldespapillons@gmail.com</p>
           <p>06 01 44 17 72</p>
           <div className="socials-logo">

@@ -88,6 +88,13 @@ const FooterGlobal = () => {
             >
               <li>Parents d'élèves</li>
             </NavLink>
+            <NavLink
+              to={`etablissement/qui-sommes-nous`}
+              className="nav-link"
+              activeclassname="active"
+            >
+              <li>Notre histoire</li>
+            </NavLink>
           </ul>
         </div>
         <div className="footer-contact">
