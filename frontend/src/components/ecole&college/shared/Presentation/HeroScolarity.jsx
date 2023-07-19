@@ -17,7 +17,11 @@ const HeroScolarity = ({ h1, img, text, color }) => {
             <h4>Présentation</h4>
             <p>{text}</p>
           </div>
-          <Button color={color} text="Découvrir l'histoire" />
+          <Button
+            color={color}
+            text="Découvrir l'histoire"
+            link="/etablissement/qui-sommes-nous"
+          />
         </div>
       </div>
     </section>

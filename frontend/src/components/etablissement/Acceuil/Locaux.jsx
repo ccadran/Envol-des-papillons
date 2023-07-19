@@ -18,7 +18,11 @@ const Locaux = () => {
                 Repudiandae tenetur architecto recusandae, alias asperiores
                 modi!
               </p>
-              <Button color="orange" text="Nos locaux" />
+              <Button
+                color="orange"
+                text="Nos locaux"
+                link="/ecole/presentation"
+              />
             </div>
             <div className="img-container">
               <img src="" alt="maps API" />
@@ -40,7 +44,11 @@ const Locaux = () => {
                 distinctio accusantium quidem dolor magni est a consequuntur
                 beatae explicabo voluptatibus! Quibusdam, animi.
               </p>
-              <Button color="blue" text=" Nos locaux" />
+              <Button
+                color="blue"
+                text=" Nos locaux"
+                link="college/presentation"
+              />
             </div>
           </div>
         </div>

@@ -45,7 +45,11 @@ const AvisForm = () => {
             seulement à cliquer sur le lien et a collé l'avis que nous avons
             copié pour vous dans votre presse papier
           </p>
-          <Button text="Mettre un avis Google " color="violet" />
+          <Button
+            text="Mettre un avis Google "
+            color="violet"
+            link="https://www.google.com/search?gs_ssp=eJzj4tVP1zc0TLcosDCOL0gyYLRSMahIMTU1sjAzTTNNTTRPNLG0MqhINE-zsEg0szBJTkkxMEq08BJOzSvLz1FISS1WKEgsyMzJyc8rBgAKqhZy&q=envol+des+papillons&rlz=1C1VDKB_frFR990FR990&oq=envol+des+&aqs=chrome.1.69i57j46i175i199i512j0i512j46i175i199i512j0i512j69i60l3.5780j0j7&sourceid=chrome&ie=UTF-8#lrd=0xd552865f5ea7a49:0xa7f88a684cdd02a8,3,,,,"
+          />
         </div>
       ) : (
         <form action="" className="avis" onSubmit={handleSubmit}>
