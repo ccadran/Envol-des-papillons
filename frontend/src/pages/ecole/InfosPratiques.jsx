@@ -25,6 +25,7 @@ const InfosPratiques = () => {
           scolarity="380€ /mois"
           inscription="200€"
           association="30€ /an"
+          etablissement="ecole"
         />
         <RepasInfos />
         <GarderieSchoolPedagogie />

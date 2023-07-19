@@ -15,7 +15,7 @@ const ClasseSchoolPedagogie = ({ classe, teachers }) => {
           <li key={index}>{name}</li>
         ))}
       </ul>
-      <Button text="Les horaires" color="orange" />
+      <Button text="Les horaires" color="orange" link="/ecole/presentation" />
     </div>
   );
 };

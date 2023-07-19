@@ -2,7 +2,16 @@ import React from "react";
 import TarifElement from "./TarifElement";
 import Button from "../../shared/Button";
 import "styles/ecole&college/shared/_tarifs.scss";
-const TarifsScolarity = ({ text, scolarity, inscription, association }) => {
+const TarifsScolarity = ({
+  text,
+  scolarity,
+  inscription,
+  association,
+  etablissement,
+}) => {
+  console.log(etablissement);
+  const link = `/${etablissement}/inscription`;
+  console.log(link);
   return (
     <section className="tarifs">
       <h3>Les infos sur les tarifs</h3>
@@ -19,7 +28,9 @@ const TarifsScolarity = ({ text, scolarity, inscription, association }) => {
           sequi? Sapiente nulla atque reprehenderit veniam amet veritatis quos
           provident.
         </p>
-        <Button text="J'inscris mon enfant" color="orange" />
+        {window.location.pathname.includes("infos-pratiques") && (
+          <Button text="J'inscris mon enfant" color="orange" link={link} />
+        )}
       </div>
     </section>
   );
