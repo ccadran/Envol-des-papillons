@@ -67,16 +67,26 @@
     .schedule-class {
       display: flex;
       margin-bottom: 36px;
-      h4 {
+      .classe {
         margin-right: 20px;
         background: $corail;
+        filter: brightness(0.6);
         color: $white;
         padding: 8px 26px;
         border-radius: $border-radius;
+        transition: 0.2s ease-in-out;
+        &.active {
+          filter: brightness(1);
+          transform: scale(1.05);
+        }
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.05);
+        }
       }
     }
     .schedule-moment {
-      margin-bottom: 24px;
+      margin-bottom: 32px;
       h4 {
         margin-bottom: 12px;
       }
