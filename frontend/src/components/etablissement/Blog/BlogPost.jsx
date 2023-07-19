@@ -39,8 +39,6 @@ const BlogPost = ({ article, selectedTags }) => {
               onClick={() => handleDelete(article._id)}
               className="fa-sharp fa-solid fa-trash"
             ></a>
-            {/* <Button text="modifier" link={`/admin/blog/${article._id}`} />
-          <Link onClick={() => handleDelete(article._id)}>Supprimer</Link> */}
           </div>
         )}
 

@@ -1,7 +1,8 @@
 @import "../../settings.scss";
 
 .teachers {
-  margin-top: 122px;
+  margin: 122px 0;
+  padding-bottom: 72px;
   .controller-teacher {
     display: flex;
     justify-content: space-between;
@@ -9,12 +10,16 @@
 }
 
 .controller {
-  margin-top: 24px;
-  width: 50%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 8px;
 }
 input {
   margin: 2px 0;
   border-radius: $border-radius;
+}
+button {
+  margin-top: 10px;
 }
