@@ -8,7 +8,7 @@ import Contact from "./pages/etablissement/Contact";
 import CollegeRoutes from "./pages/college/CollegeRoutes";
 import ParentsRoutes from "./pages/parents/ParentsRoutes";
 import AdminRoutes from "./pages/admin/AdminRoutes";
-import About from "./pages/etablissement/About";
+import About from "./pages/college/AboutCollege";
 import CGU from "./pages/etablissement/CGU";
 import BlogArticle from "./pages/etablissement/BlogArticle";
 const App = () => {

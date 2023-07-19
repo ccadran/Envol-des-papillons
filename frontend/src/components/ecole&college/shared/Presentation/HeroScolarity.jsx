@@ -4,7 +4,9 @@ import Button from "../../../shared/Button";
 import { useLocation } from "react-router-dom";
 // import "styles/ecole&college/Presentation/_heroScolarity.scss";
 
-const HeroScolarity = ({ h1, img, text, color }) => {
+const HeroScolarity = ({ h1, img, text, color, etablissement }) => {
+  console.log(etablissement);
+  const link = `/${etablissement}/qui-sommes-nous`;
   return (
     <section className="hero">
       <StylizedH1 h1={h1} />
@@ -17,11 +19,7 @@ const HeroScolarity = ({ h1, img, text, color }) => {
             <h4>Présentation</h4>
             <p>{text}</p>
           </div>
-          <Button
-            color={color}
-            text="Découvrir l'histoire"
-            link="/etablissement/qui-sommes-nous"
-          />
+          <Button color={color} text="Découvrir l'histoire" link={link} />
         </div>
       </div>
     </section>

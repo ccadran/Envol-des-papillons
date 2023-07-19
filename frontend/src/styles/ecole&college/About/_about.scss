@@ -1,0 +1,30 @@
+.about-us {
+  margin-top: 122px;
+  .history-episode {
+    margin-bottom: 122px;
+    h3 {
+      margin-bottom: 28px;
+    }
+    .episode-content {
+      display: flex;
+      gap: 30px;
+      p {
+        width: 50%;
+      }
+      .img-container {
+        width: 50%;
+        img {
+          width: 100%;
+          height: 350px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .next {
+      p {
+        width: 100%;
+      }
+    }
+  }
+}

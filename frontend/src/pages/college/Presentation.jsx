@@ -36,6 +36,7 @@ Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti so
 
 Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur ."
           color="blue"
+          etablissement="college"
         />
         <VisionAndObjectifsScolarity
           vision={visionPoints}

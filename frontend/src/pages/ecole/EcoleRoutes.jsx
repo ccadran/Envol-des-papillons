@@ -7,6 +7,7 @@ import Inscription from "./Inscription";
 import FAQ from "./FAQ";
 import Contact from "../etablissement/Contact";
 import Blog from "../etablissement/Blog";
+import AboutSchool from "./AboutSchool";
 
 const EcoleRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const EcoleRoutes = () => {
       <Route path="/FAQ" element={<FAQ />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/blog" element={<Blog />} />
+      <Route path="/qui-sommes-nous" element={<AboutSchool />} />
     </Routes>
   );
 };

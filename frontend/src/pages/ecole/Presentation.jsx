@@ -37,6 +37,7 @@ const Presentation = () => {
 
 Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur ."
           color="orange"
+          etablissement="ecole"
         />
         <VisionAndObjectifsScolarity
           // vision="La vision de l'école blablabfdjsbgfvcjdsnvc jdsfjcdshkfcdsnfcv dujfhcgdsichns.
