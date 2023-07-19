@@ -120,3 +120,7 @@ select {
   border-radius: $border-radius;
   font-family: $body-font;
 }
+
+main {
+  padding: clamp(72px, 12vw, 122px) 0 clamp(200px, 26vw, 260px) 0;
+}

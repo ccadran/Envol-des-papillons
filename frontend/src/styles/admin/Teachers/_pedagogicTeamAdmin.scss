@@ -8,18 +8,19 @@
     justify-content: space-between;
   }
 }
-
-.controller {
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0;
-  margin-bottom: 8px;
-}
-input {
-  margin: 2px 0;
-  border-radius: $border-radius;
-}
-button {
-  margin-top: 10px;
+.teacher-card {
+  .controller {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+  input {
+    margin: 2px 0;
+    border-radius: $border-radius;
+  }
+  button {
+    margin-top: 10px;
+  }
 }

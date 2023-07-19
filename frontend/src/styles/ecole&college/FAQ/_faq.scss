@@ -82,6 +82,7 @@
       transition-property: max-height;
       transition-duration: 0.2s;
       transition-timing-function: ease-in-out;
+      margin-top: 12px;
 
       &.visible {
         max-height: 300px;
