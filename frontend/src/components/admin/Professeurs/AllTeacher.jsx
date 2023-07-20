@@ -20,7 +20,6 @@ const AllTeacher = () => {
         })
         .then((res) => {
           setTeachers(res.data);
-          console.log(teachers);
         });
     }
   };

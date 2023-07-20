@@ -31,7 +31,6 @@ const SectionFAQ = ({ faqSection, etablissement }) => {
   };
 
   const handleValidation = () => {
-    console.log(faqSection._id);
     // Effectuer les actions de validation ici
     setIsEditing(false);
     axios
@@ -39,9 +38,7 @@ const SectionFAQ = ({ faqSection, etablissement }) => {
         `http://localhost:5001/faqSection${etablissement}/${faqSection._id}`,
         { section_title: sectionTitle }
       )
-      .then((res) => {
-        console.log(res.data);
-      });
+      .then((res) => {});
     // Envoyer les modifications au serveur si nécessaire
   };
 

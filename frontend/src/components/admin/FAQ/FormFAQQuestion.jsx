@@ -21,7 +21,6 @@ const FormFAQQuestion = () => {
         .get(`http://localhost:5001/faqSection${selectedValue}`)
         .then((res) => {
           setSectionTitles(res.data);
-          console.log(sectionTitles);
         })
         .catch((error) => {
           console.error("Erreur lors de la récupération des sections :", error);
@@ -46,7 +45,6 @@ const FormFAQQuestion = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(selectedSection);
     // Créez un objet contenant les données du formulaire
     const formData = {
       section_id: selectedSection,
@@ -62,7 +60,6 @@ const FormFAQQuestion = () => {
       )
       .then((res) => {
         // Traitez la réponse du backend si nécessaire
-        console.log(res.data);
 
         // Réinitialisez les valeurs du formulaire
         setSelectedEtablissement("");

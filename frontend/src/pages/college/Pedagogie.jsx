@@ -9,8 +9,17 @@ import AvantagesPedagogie from "../../components/ecole&college/shared/Pedagogie/
 
 const Pedagogie = () => {
   const imagesMaterials = [
-    // les paths des images des locaux de l'école
+    {
+      src: "https://picsum.photos/id/237/200/300",
+    },
+    {
+      src: "https://picsum.photos/seed/picsum/200/300",
+    },
+    {
+      src: "https://picsum.photos/id/1/200/300",
+    },
   ];
+  //ajouter un alt dans mon object
   return (
     <>
       <NavigationScolarity etablissement="college" />

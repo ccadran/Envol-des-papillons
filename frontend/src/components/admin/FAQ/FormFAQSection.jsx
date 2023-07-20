@@ -21,7 +21,6 @@ const FormFAQSection = ({}) => {
     axios
       .post(`http://localhost:5001/faqSection${selectedOption}`, newSection)
       .then((res) => {
-        console.log(res.data);
         navigate("/admin/FAQ");
         // Effectuer les actions supplémentaires si nécessaire, comme la mise à jour de l'état des sections
       })
@@ -31,7 +30,6 @@ const FormFAQSection = ({}) => {
       });
     setSectionTitle("");
   };
-  console.log(sectionTitle);
   return (
     <div className="form-faq-section">
       <div className="etablissement-select">

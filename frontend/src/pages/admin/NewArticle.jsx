@@ -4,6 +4,7 @@ import axios from "axios";
 import BlogTags from "components/etablissement/Blog/BlogTags";
 import "styles/admin/Article/_newArticle.scss";
 import NavigationAdmin from "components/admin/NavigationAdmin";
+import chevron from "assets/logos/chevron.svg";
 
 const NewArticle = () => {
   const location = useLocation();
@@ -72,10 +73,14 @@ const NewArticle = () => {
         <div className="add-article">
           <h2>Ajouter un nouvel article</h2>
           <div className="form-content">
-            <Link to={isRootPathBlog ? "/admin/blog" : "/admin/actualites"}>
-              {" "}
-              Retour
-            </Link>
+            <div className="back">
+              <img src={chevron} alt="" />
+
+              <Link to={isRootPathBlog ? "/admin/blog" : "/admin/actualites"}>
+                {" "}
+                Retour
+              </Link>
+            </div>
             <form>
               <div className="form-part">
                 <label htmlFor="title">Titre :</label>

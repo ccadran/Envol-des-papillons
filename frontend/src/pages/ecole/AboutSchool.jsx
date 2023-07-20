@@ -1,6 +1,7 @@
 import NavigationScolarity from "components/ecole&college/shared/NavigationScolarity";
 import React from "react";
 import StylizedH1 from "components/shared/StylizedH1";
+import FooterScolarity from "components/ecole&college/shared/FooterScolarity";
 
 const About = () => {
   return (
@@ -108,6 +109,7 @@ const About = () => {
           </div>
         </section>
       </main>
+      <FooterScolarity etablissement="ecole" />
     </>
   );
 };

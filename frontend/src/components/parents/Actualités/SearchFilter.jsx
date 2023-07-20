@@ -21,10 +21,8 @@ const SearchFilter = () => {
   const handleTagClick = (tag) => {
     if (selectedTags.includes(tag)) {
       setSelectedTags(selectedTags.filter((t) => t !== tag));
-      console.log(selectedTags);
     } else {
       setSelectedTags([...selectedTags, tag]);
-      console.log(selectedTags);
     }
   };
 
@@ -79,12 +77,10 @@ const SearchFilter = () => {
     if (location.pathname.includes("blog")) {
       axios.get("http://localhost:5001/blog").then((res) => {
         setBlogPost(res.data);
-        console.log(blogPost);
       });
     } else if (location.pathname.includes("actualites")) {
       axios.get("http://localhost:5001/actuality").then((res) => {
         setActualityPost(res.data);
-        console.log(actualityPost);
       });
     }
   }, []);

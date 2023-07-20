@@ -1,5 +1,5 @@
 import React from "react";
-import Slider from "../../../shared/Slider";
+import SingleCaroussel from "../../../shared/SingleCaroussel";
 
 const Materials = ({ text, images }) => {
   return (
@@ -7,7 +7,9 @@ const Materials = ({ text, images }) => {
       <h3>Un matériel adapté</h3>
       <div className="materials-container">
         <p>{text}</p>
-        <Slider images={images} />
+        <div className="caroussel-container">
+          <SingleCaroussel images={images} />
+        </div>
       </div>
     </section>
   );

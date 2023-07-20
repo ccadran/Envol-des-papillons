@@ -21,7 +21,7 @@ const Locaux = () => {
               <Button
                 color="orange"
                 text="Nos locaux"
-                link="/ecole/presentation"
+                link="/ecole/presentation/"
               />
             </div>
             <div className="img-container">
@@ -47,7 +47,7 @@ const Locaux = () => {
               <Button
                 color="blue"
                 text=" Nos locaux"
-                link="college/presentation"
+                link="/college/presentation"
               />
             </div>
           </div>

@@ -5,7 +5,6 @@ import { useLocation } from "react-router-dom";
 // import "styles/ecole&college/Presentation/_heroScolarity.scss";
 
 const HeroScolarity = ({ h1, img, text, color, etablissement }) => {
-  console.log(etablissement);
   const link = `/${etablissement}/qui-sommes-nous`;
   return (
     <section className="hero">

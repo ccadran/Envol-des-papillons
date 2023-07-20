@@ -7,6 +7,7 @@ import PapillonLogo from "../../components/shared/PapillonLogo";
 import NavigationAdmin from "../../components/admin/NavigationAdmin";
 import FooterParents from "components/parents/FooterParents";
 import BlogTags from "components/etablissement/Blog/BlogTags";
+import chevron from "assets/logos/chevron.svg";
 
 const ActualityArticle = () => {
   const [actualityArticle, setActualityArticle] = useState([]);
@@ -66,6 +67,8 @@ const ActualityArticle = () => {
           <main>
             <section className="actuality-article">
               <div className="back">
+                <img src={chevron} alt="" />
+
                 <Link to="/admin/actualites">retour</Link>
               </div>
               <div className="article-container">
@@ -151,6 +154,8 @@ const ActualityArticle = () => {
           <main>
             <section className="actuality-article">
               <div className="back">
+                <img src={chevron} alt="" />
+
                 <Link to="/parents/actualites">retour</Link>
               </div>
               <div className="article-container">

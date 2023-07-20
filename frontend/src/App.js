@@ -11,9 +11,11 @@ import AdminRoutes from "./pages/admin/AdminRoutes";
 import About from "./pages/college/AboutCollege";
 import CGU from "./pages/etablissement/CGU";
 import BlogArticle from "./pages/etablissement/BlogArticle";
+import ScrollToTop from "components/shared/ScrollToTop";
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/etablissement/*" element={<Acceuil />} />
         <Route path="/ecole/*" element={<EcoleRoutes />} />

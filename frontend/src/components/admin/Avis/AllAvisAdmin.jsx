@@ -20,7 +20,6 @@ const AllAvisAdmin = () => {
         })
         .then((res) => {
           setAvis(res.data);
-          console.log(avis);
         });
     }
   };

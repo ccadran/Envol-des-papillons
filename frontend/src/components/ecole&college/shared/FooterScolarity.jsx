@@ -97,13 +97,12 @@ const FooterScolarity = ({ etablissement }) => {
               <li>Blog</li>
             </NavLink>
             <NavLink
-              to={`${etablissement}/qui-sommes-nous`}
+              to={`/${etablissement}/qui-sommes-nous`}
               className="nav-link"
               activeclassname="active"
             >
               <li>Notre histoire</li>
             </NavLink>
-            
           </ul>
         </div>
         <div className="footer-contact">

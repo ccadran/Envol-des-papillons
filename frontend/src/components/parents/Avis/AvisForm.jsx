@@ -16,7 +16,6 @@ const AvisForm = () => {
     navigator.clipboard.writeText(avis);
 
     setSubmited(true);
-    console.log(formData);
     // Effectuez une requête HTTP (par exemple, avec axios) pour envoyer les données
     axios
       .post("http://localhost:5001/avis", formData)

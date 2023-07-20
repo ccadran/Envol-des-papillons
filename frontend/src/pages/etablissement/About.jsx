@@ -2,6 +2,7 @@ import NavigationScolarity from "components/ecole&college/shared/NavigationScola
 import React from "react";
 import StylizedH1 from "components/shared/StylizedH1";
 import NavigationGlobal from "components/shared/NavigationGlobal";
+import FooterGlobal from "components/shared/FooterGlobal";
 
 const About = () => {
   return (
@@ -109,6 +110,7 @@ const About = () => {
           </div>
         </section>
       </main>
+      <FooterGlobal />
     </>
   );
 };

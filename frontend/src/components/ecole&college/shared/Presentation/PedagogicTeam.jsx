@@ -15,7 +15,6 @@ const PedagogicTeam = ({ text, etablissement }) => {
       .then((res) => {
         setTeachers(res.data);
       });
-    console.log(teachers);
   }, []);
   return (
     <section className="pedagogic-team">

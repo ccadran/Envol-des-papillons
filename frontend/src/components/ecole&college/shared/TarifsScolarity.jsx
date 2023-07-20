@@ -9,9 +9,7 @@ const TarifsScolarity = ({
   association,
   etablissement,
 }) => {
-  console.log(etablissement);
   const link = `/${etablissement}/inscription`;
-  console.log(link);
   return (
     <section className="tarifs">
       <h3>Les infos sur les tarifs</h3>

@@ -85,6 +85,7 @@ const BlogArticle = () => {
           <main>
             <section className="blog-article">
               <div className="back">
+                <img src={chevron} alt="" />
                 <Link to="/admin/blog">retour</Link>
               </div>
               <div className="article-container">

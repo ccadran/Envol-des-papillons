@@ -1,0 +1,49 @@
+@import "../settings.scss";
+
+.caroussel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  .slide {
+    border-radius: $border-radius;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .slide-hidden {
+    display: none;
+  }
+  .chevron {
+    position: absolute;
+    font-size: 1.5rem;
+    color: $black;
+    transition: 0.1s ease-in;
+    &:hover {
+      cursor: pointer;
+      // font-size: 1.7rem;
+    }
+    &.chevron-left {
+      left: -1.5rem;
+    }
+    &.chevron-right {
+      right: -1.5rem;
+    }
+  }
+  .indicators {
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    .indicator {
+      font-size: 0.7rem;
+      margin: 0 0.2rem;
+      color: $white;
+      cursor: pointer;
+    }
+    .indicator-inactive {
+      color: grey;
+    }
+  }
+}

@@ -18,7 +18,6 @@ const NavigationGlobal = () => {
     } else {
       setAfterColor("violet");
     }
-    console.log(className);
   }, [isRootPath, location.pathname]);
 
   return (

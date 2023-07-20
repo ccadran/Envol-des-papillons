@@ -1,3 +1,4 @@
+import FooterScolarity from "components/ecole&college/shared/FooterScolarity";
 import NavigationScolarity from "components/ecole&college/shared/NavigationScolarity";
 import StylizedH1 from "components/shared/StylizedH1";
 import React from "react";
@@ -108,6 +109,7 @@ const About = () => {
           </div>
         </section>
       </main>
+      <FooterScolarity etablissement="college" />
     </>
   );
 };
