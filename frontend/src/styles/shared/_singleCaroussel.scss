@@ -7,6 +7,10 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  .slides-container {
+    width: 100%;
+    height: 100%;
+  }
   .slide {
     border-radius: $border-radius;
     width: 100%;

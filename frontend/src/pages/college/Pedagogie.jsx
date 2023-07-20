@@ -10,13 +10,13 @@ import AvantagesPedagogie from "../../components/ecole&college/shared/Pedagogie/
 const Pedagogie = () => {
   const imagesMaterials = [
     {
-      src: "https://picsum.photos/id/237/200/300",
+      src: "https://images.pexels.com/photos/5088021/pexels-photo-5088021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
-      src: "https://picsum.photos/seed/picsum/200/300",
+      src: "https://images.pexels.com/photos/6966323/pexels-photo-6966323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
-      src: "https://picsum.photos/id/1/200/300",
+      src: "https://images.pexels.com/photos/8409851/pexels-photo-8409851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
   ];
   //ajouter un alt dans mon object

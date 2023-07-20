@@ -13,7 +13,15 @@ import "styles/ecole&college/Presentation/_presentation.scss";
 
 const Presentation = () => {
   const imagesLocaux = [
-    // les paths des images des locaux de l'collège
+    {
+      src: "https://images.pexels.com/photos/5896843/pexels-photo-5896843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      src: "https://images.pexels.com/photos/1370296/pexels-photo-1370296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      src: "https://images.pexels.com/photos/6602623/pexels-photo-6602623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
   ];
   const visionPoints = [
     "Viser le développement de l’enfant dans sa globalité",

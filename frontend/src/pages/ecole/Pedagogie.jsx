@@ -12,7 +12,15 @@ import test from "assets/img/test.JPG";
 
 const Pedagogie = () => {
   const imagesMaterials = [
-    // les paths des images des locaux de l'école
+    {
+      src: "https://images.pexels.com/photos/5088021/pexels-photo-5088021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      src: "https://images.pexels.com/photos/6966323/pexels-photo-6966323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      src: "https://images.pexels.com/photos/8409851/pexels-photo-8409851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
   ];
   return (
     <>

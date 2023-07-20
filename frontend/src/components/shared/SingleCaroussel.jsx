@@ -3,32 +3,64 @@ import "styles/shared/_singleCaroussel.scss";
 
 const SingleCaroussel = ({ images }) => {
   const [slide, setSlide] = useState(0);
+  const [startX, setStartX] = useState(0);
+  const [endX, setEndX] = useState(0);
+
   const nextSlide = () => {
-    setSlide(slide === images.length - 1 ? 0 : slide + 1);
+    setSlide((slide) => (slide === images.length - 1 ? 0 : slide + 1));
   };
+
   const prevSlide = () => {
-    setSlide(slide === 0 ? images.length - 1 : slide - 1);
+    setSlide((slide) => (slide === 0 ? images.length - 1 : slide - 1));
   };
-  console.log(images);
+
+  const handleTouchStart = (e) => {
+    setStartX(e.touches[0].clientX);
+    setEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    const diff = startX - endX;
+
+    if (diff > 50) {
+      // Swiped to the left
+      nextSlide();
+    } else if (diff < -50) {
+      // Swiped to the right
+      prevSlide();
+    }
+  };
+
   return (
     <>
       <div className="caroussel">
         <i
-          class="fa-solid fa-chevron-left chevron chevron-left"
+          className="fa-solid fa-chevron-left chevron chevron-left"
           onClick={prevSlide}
         ></i>
-        {images.map((image, index) => {
-          return (
-            <img
-              key={index}
-              src={image.src}
-              alt="img"
-              className={slide === index ? "slide" : "slide-hidden"}
-            />
-          );
-        })}
+        <div
+          className="slides-container"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          {images.map((image, index) => {
+            return (
+              <img
+                key={index}
+                src={image.src}
+                alt="img"
+                className={slide === index ? "slide" : "slide-hidden"}
+              />
+            );
+          })}
+        </div>
         <i
-          class="fa-solid fa-chevron-right chevron chevron-right"
+          className="fa-solid fa-chevron-right chevron chevron-right"
           onClick={nextSlide}
         ></i>
         <span className="indicators">
@@ -38,8 +70,8 @@ const SingleCaroussel = ({ images }) => {
                 key={index}
                 className={
                   slide === index
-                    ? " fa-solid fa-circle indicator indicator"
-                    : " fa-solid fa-circle indicator indicator indicator-inactive"
+                    ? "fa-solid fa-circle indicator indicator"
+                    : "fa-solid fa-circle indicator indicator indicator-inactive"
                 }
                 onClick={() => setSlide(index)}
               ></i>
