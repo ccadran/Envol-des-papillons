@@ -14,43 +14,6 @@ module.exports.getActualityPostById = async (req, res) => {
   }
 };
 
-// module.exports.setActualityPost = async (req, res) => {
-//   if (!req.body.title) {
-//     res.status(400).json({ title: "Le titre est obligatoire" });
-//   }
-//   const {
-//     title,
-//     accroche,
-//     tags,
-//     introduction,
-//     subTitle1,
-//     content1,
-//     subTitle2,
-//     content2,
-//     author,
-//   } = req.body;
-
-//   try {
-//     const actualityPost = await ActualityPostModel.create({
-//       title,
-//       accroche,
-//       tags: Array.isArray(tags) ? tags : [tags], // Assurez-vous que tags est un tableau
-//       introduction,
-//       subTitle1,
-//       content1,
-//       subTitle2,
-//       content2,
-//       author,
-//     });
-
-//     res.status(200).json(actualityPost);
-//   } catch (error) {
-//     res.status(500).json({
-//       message:
-//         "Une erreur s'est produite lors de la création de l'article d'actualité",
-//     });
-//   }
-// };
 module.exports.setActualityPost = async (req, res) => {
   if (!req.body.title) {
     res.status(400).json({ title: "Le titre est obligatoire" });
@@ -69,6 +32,10 @@ module.exports.setActualityPost = async (req, res) => {
   } = req.body;
 
   try {
+    let mainImgPath = req.file ? req.file.filename : ""; // Obtenez uniquement le nom de fichier du fichier téléchargé s'il existe
+    // Concaténez le nom de fichier avec le chemin "uploads/" pour former le nouveau chemin de l'image
+    mainImgPath = "/uploads/" + mainImgPath;
+
     const actualityPost = new ActualityPostModel({
       title,
       accroche,
@@ -79,6 +46,7 @@ module.exports.setActualityPost = async (req, res) => {
       subTitle2,
       content2,
       author,
+      mainImg: mainImgPath, // Assurez-vous que mainImg contient le nouveau chemin modifié
     });
 
     await actualityPost.save();

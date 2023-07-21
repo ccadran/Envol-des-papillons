@@ -95,7 +95,10 @@ const ActualityArticle = () => {
                     />
                   </div>
                   <div className="article-img">
-                    <img src="" alt="image principal actualité" />
+                    <img
+                      src={updatedActualityArticle.mainImg}
+                      alt="image principal actualité"
+                    />
                   </div>
                 </div>
                 <div className="article-content">
@@ -166,7 +169,10 @@ const ActualityArticle = () => {
                     <Tags tags={actualityArticle.tags} />
                   </div>
                   <div className="article-img">
-                    <img src="" alt="image principal actualité" />
+                    <img
+                      src={actualityArticle.mainImg}
+                      alt="image principal actualité"
+                    />
                   </div>
                 </div>
                 <div className="article-content">

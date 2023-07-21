@@ -111,7 +111,10 @@ const BlogArticle = () => {
                     />
                   </div>
                   <div className="article-img">
-                    <img src="" alt="image principal actualité" />
+                    <img
+                      src={updatedBlogArticle.mainImg}
+                      alt="image principal actualité"
+                    />
                   </div>
                 </div>
                 <div className="article-content">
@@ -181,7 +184,10 @@ const BlogArticle = () => {
                     <Tags tags={blogArticle.tags} />
                   </div>
                   <div className="article-img">
-                    <img src="" alt="image principal actualité" />
+                    <img
+                      src={blogArticle.mainImg}
+                      alt="image principal actualité"
+                    />
                   </div>
                 </div>
                 <div className="article-content">

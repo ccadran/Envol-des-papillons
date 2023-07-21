@@ -1,6 +1,7 @@
 @import "../../settings.scss";
 
-.blog-article {
+.blog-article,
+.actuality-article {
   .back {
     display: flex;
     align-items: center;
@@ -30,6 +31,8 @@
         height: 300px;
         img {
           width: 100%;
+          height: 100%;
+          object-fit: cover;
           border-radius: $border-radius;
         }
       }

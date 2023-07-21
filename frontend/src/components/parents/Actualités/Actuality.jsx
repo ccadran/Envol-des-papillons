@@ -43,7 +43,7 @@ const Actuality = ({ actuality }) => {
               <Tags tags={actuality.tags} isSelected={isSelected} />
             </div>
             <div className="article-img">
-              <img src="" alt="image principal actualité" />
+              <img src={actuality.mainImg} alt="image principal actualité" />
             </div>
           </div>
         </Link>

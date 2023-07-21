@@ -6,13 +6,14 @@ const {
   deleteActualityPost,
   getActualityPostById,
 } = require("../controllers/actuality.controller");
+const upload = require("../middleware/upload");
 
 const router = express.Router();
 
 router.get("/", getActualityPost);
 router.get("/:id", getActualityPostById);
 
-router.post("/", setActualityPost);
+router.post("/", upload.single("mainImg"), setActualityPost);
 
 router.put("/:id", editActualityPost);
 
