@@ -13,11 +13,13 @@ module.exports.getActualityPostById = async (req, res) => {
     res.status(200).json(actualityPost);
   }
 };
-
 module.exports.setActualityPost = async (req, res) => {
   if (!req.body.title) {
     res.status(400).json({ title: "Le titre est obligatoire" });
   }
+
+  const mainImages = req.files["mainImg"];
+  const illustrationImages = req.files["illustrations"];
 
   const {
     title,
@@ -32,9 +34,15 @@ module.exports.setActualityPost = async (req, res) => {
   } = req.body;
 
   try {
-    let mainImgPath = req.file ? req.file.filename : ""; // Obtenez uniquement le nom de fichier du fichier téléchargé s'il existe
-    // Concaténez le nom de fichier avec le chemin "uploads/" pour former le nouveau chemin de l'image
-    mainImgPath = "/uploads/" + mainImgPath;
+    // Prepare the mainImgPaths array for saving in the database
+    const mainImgPaths = mainImages.map(
+      (image) => "/uploads/" + image.filename
+    );
+
+    // Prepare the illustrationPaths array for saving in the database
+    const illustrationPaths = illustrationImages.map(
+      (image) => "/uploads/" + image.filename
+    );
 
     const actualityPost = new ActualityPostModel({
       title,
@@ -46,7 +54,8 @@ module.exports.setActualityPost = async (req, res) => {
       subTitle2,
       content2,
       author,
-      mainImg: mainImgPath, // Assurez-vous que mainImg contient le nouveau chemin modifié
+      mainImg: mainImgPaths, // Save the array of main image paths in the database
+      illustrations: illustrationPaths, // Save the array of illustration paths in the database
     });
 
     await actualityPost.save();

@@ -77,6 +77,7 @@ const BlogArticle = () => {
   }
 
   console.log(blogArticle.tags);
+  console.log(blogArticle.mainImg);
   return (
     <>
       {isRootPath ? (
@@ -152,7 +153,13 @@ const BlogArticle = () => {
                       onChange={handleInputChange}
                     />
                   </div>
-                  <div className="article-images">{/* //Les images */}</div>
+                  <div className="article-images">
+                    {updatedBlogArticle.illustrations?.map((image, index) => {
+                      return (
+                        <img key={index} src={image} alt="image illustrative" />
+                      );
+                    })}
+                  </div>
                 </div>
                 <div className="artcile-author">
                   <PapillonLogo />
@@ -199,7 +206,13 @@ const BlogArticle = () => {
                     <p>{blogArticle.content2} </p>
                     <p id="conclusion">{blogArticle.conclusion} </p>
                   </div>
-                  <div className="article-images">{/* //Les images */}</div>
+                  <div className="article-images">
+                    {blogArticle.illustrations?.map((image, index) => {
+                      return (
+                        <img key={index} src={image} alt="image illustrative" />
+                      );
+                    })}
+                  </div>
                 </div>
                 <div className="article-author">
                   <PapillonLogo />

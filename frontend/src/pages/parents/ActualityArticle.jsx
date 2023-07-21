@@ -88,7 +88,6 @@ const ActualityArticle = () => {
                       value={updatedActualityArticle.accroche}
                       onChange={handleInputChange}
                     />
-                    {/* <Tags tags={actualityArticle.tags} /> */}
                     <BlogTags
                       selectedTags={updatedActualityArticle.tags}
                       handleTagClick={handleTagClick}
@@ -136,7 +135,20 @@ const ActualityArticle = () => {
                       onChange={handleInputChange}
                     />
                   </div>
-                  <div className="article-images">{/* Les images */}</div>
+                  <div className="article-images">
+                    {" "}
+                    {updatedActualityArticle.illustrations?.map(
+                      (image, index) => {
+                        return (
+                          <img
+                            key={index}
+                            src={image}
+                            alt="image illustrative"
+                          />
+                        );
+                      }
+                    )}
+                  </div>
                 </div>
                 <div className="artcile-author">
                   <PapillonLogo />
@@ -184,7 +196,14 @@ const ActualityArticle = () => {
                     <p>{actualityArticle.content2}</p>
                     <p>{actualityArticle.conclusion}</p>
                   </div>
-                  <div className="article-images">{/* Les images */}</div>
+                  <div className="article-images">
+                    {" "}
+                    {actualityArticle.illustrations?.map((image, index) => {
+                      return (
+                        <img key={index} src={image} alt="image illustrative" />
+                      );
+                    })}
+                  </div>
                 </div>
                 <div className="artcile-author">
                   <PapillonLogo />

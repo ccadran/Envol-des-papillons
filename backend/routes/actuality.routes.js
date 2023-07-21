@@ -13,8 +13,14 @@ const router = express.Router();
 router.get("/", getActualityPost);
 router.get("/:id", getActualityPostById);
 
-router.post("/", upload.single("mainImg"), setActualityPost);
-
+router.post(
+  "/",
+  upload.fields([
+    { name: "mainImg", maxCount: 1 },
+    { name: "illustrations", maxCount: 10 },
+  ]),
+  setActualityPost
+);
 router.put("/:id", editActualityPost);
 
 router.delete("/:id", deleteActualityPost);

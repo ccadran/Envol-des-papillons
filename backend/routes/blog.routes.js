@@ -15,7 +15,7 @@ router.post(
   "/",
   upload.fields([
     { name: "mainImg", maxCount: 1 },
-    { name: "illustrations", maxCount: 5 },
+    { name: "illustrations", maxCount: 10 },
   ]),
   setBlogPost
 );

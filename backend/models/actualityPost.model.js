@@ -45,6 +45,18 @@ const ActualityPostSchema = mongoose.Schema(
       type: String,
       required: false,
     },
+    mainImg: [
+      {
+        type: String, // Le type doit être String pour stocker les chemins d'URL complets
+        required: true,
+      },
+    ],
+    illustrations: [
+      {
+        type: String, // Le type doit être String pour stocker les chemins d'URL complets
+        required: true,
+      },
+    ],
   },
   {
     timestamps: true,
