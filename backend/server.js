@@ -1,6 +1,7 @@
 const express = require("express");
 const connectDB = require("./config/db");
 const dotenv = require("dotenv").config();
+const multer = require("multer");
 const cors = require("cors");
 port = 5001;
 
@@ -26,7 +27,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/actuality", require("./routes/actuality.routes"));
 app.use("/blog", require("./routes/blog.routes"));
 app.use("/blogTag", require("./routes/blogTag.routes"));
-
 app.use("/avis", require("./routes/avis.routes"));
 app.use("/faqSectionSchool", require("./routes/faqSectionSchool.routes"));
 app.use("/faqQuestionSchool", require("./routes/faqQuestionSchool.routes"));

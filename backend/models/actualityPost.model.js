@@ -15,7 +15,7 @@ const ActualityPostSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    // //img a upload
+
     tags: [
       {
         type: mongoose.Schema.Types.ObjectId, // Type de référence à l'ID d'un document dans une autre collection

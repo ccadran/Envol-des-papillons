@@ -43,6 +43,9 @@ module.exports.setBlogPost = async (req, res) => {
       content2,
       author,
     });
+    if (req.file) {
+      blogPost.mainImg = req.file.path;
+    }
 
     await blogPost.save();
 
