@@ -11,7 +11,14 @@ const upload = require("../middleware/upload");
 router.get("/", getBlogPost);
 router.get("/:id", getBlogPostById);
 
-router.post("/", upload.single("mainImg"), setBlogPost);
+router.post(
+  "/",
+  upload.fields([
+    { name: "mainImg", maxCount: 1 },
+    { name: "illustrations", maxCount: 5 },
+  ]),
+  setBlogPost
+);
 
 router.put("/:id", editBlogPost);
 
