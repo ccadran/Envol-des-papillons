@@ -27,6 +27,7 @@ body {
         position: relative;
         min-width: 150px;
         .change-filter {
+          z-index: 2;
           display: flex;
           align-items: center;
           padding: 15px 20px;

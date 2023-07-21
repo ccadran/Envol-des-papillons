@@ -32,6 +32,10 @@ module.exports.setBlogPost = async (req, res) => {
   } = req.body;
 
   try {
+    let mainImgPath = req.file ? req.file.filename : ""; // Obtenez uniquement le nom de fichier du fichier téléchargé s'il existe
+    // Concaténez le nom de fichier avec le chemin "uploads/" pour former le nouveau chemin de l'image
+    mainImgPath = "/uploads/" + mainImgPath;
+
     const blogPost = new BlogPostModel({
       title,
       accroche,
@@ -42,10 +46,8 @@ module.exports.setBlogPost = async (req, res) => {
       subTitle2,
       content2,
       author,
+      mainImg: mainImgPath, // Assurez-vous que mainImg contient le nouveau chemin modifié
     });
-    if (req.file) {
-      blogPost.mainImg = req.file.path;
-    }
 
     await blogPost.save();
 

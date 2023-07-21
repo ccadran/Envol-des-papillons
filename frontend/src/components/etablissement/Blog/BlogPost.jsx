@@ -56,7 +56,7 @@ const BlogPost = ({ article, selectedTags }) => {
               <Tags tags={article.tags} isSelected={isSelected} />
             </div>
             <div className="article-img">
-              <img src="" alt="image principal actualité" />
+              <img src={article.mainImg} alt="image principal actualité" />
             </div>
           </div>
         </Link>
