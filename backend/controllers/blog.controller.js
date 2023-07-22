@@ -21,7 +21,7 @@ module.exports.setBlogPost = async (req, res) => {
 
   const mainImages = req.files["mainImg"];
   const illustrationImages = req.files["illustrations"];
-
+  console.log("illustrations iamges :", illustrationImages);
   const {
     title,
     accroche,
@@ -64,7 +64,7 @@ module.exports.setBlogPost = async (req, res) => {
     res.status(200).json(blogPost);
   } catch (error) {
     res.status(500).json({
-      message: error,
+      message: error.message,
     });
   }
 };
