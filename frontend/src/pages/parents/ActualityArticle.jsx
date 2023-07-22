@@ -111,6 +111,12 @@ const ActualityArticle = () => {
       updatedActualityArticle.illustrations.forEach((illustration) => {
         formData.append("illustrations", illustration);
       });
+    } else {
+      // Si aucune nouvelle illustration n'a été sélectionnée,
+      // conserver les URLs des illustrations existantes dans le FormData
+      actualityArticle.illustrations.forEach((illustration) => {
+        formData.append("illustrations", illustration);
+      });
     }
     console.log("FORM DATA", formData);
     axios

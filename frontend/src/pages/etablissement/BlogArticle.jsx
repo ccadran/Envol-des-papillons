@@ -48,14 +48,14 @@ const BlogArticle = () => {
       const file0 = files[0];
       setUpdatedBlogArticle((prevArticle) => ({
         ...prevArticle,
-        [name]: file0,
+        mainImg: file0,
       }));
     } else if (name === "illustrations") {
       // If it's a file input for illustrations, use all selected files
       const fileList = Array.from(files); // Convert FileList to an array
       setUpdatedBlogArticle((prevArticle) => ({
         ...prevArticle,
-        [name]: fileList,
+        illustrations: fileList,
       }));
     } else {
       // For other inputs, set the value directly
@@ -64,6 +64,7 @@ const BlogArticle = () => {
         [name]: value,
       }));
     }
+    console.log("Updated article:", updatedBlogArticle);
   };
 
   const handleTagClick = (tag) => {
@@ -80,16 +81,7 @@ const BlogArticle = () => {
       };
     });
   };
-  // const handleMainImgChange = (e) => {
-  //   const { files } = e.target;
-  //   const newFile = files[0]; // Utiliser le premier fichier sélectionné
-  //   console.log("NEW FILE", newFile);
 
-  //   setUpdatedBlogArticle((prevArticle) => ({
-  //     ...prevArticle,
-  //     mainImg: newFile, // Remplace l'ancienne image par la nouvelle
-  //   }));
-  // };
   const handleUpdateArticle = () => {
     const formData = new FormData();
 
@@ -111,8 +103,17 @@ const BlogArticle = () => {
       formData.append("mainImg", blogArticle.mainImg);
     }
     // Vérifiez si de nouvelles illustrations ont été sélectionnées
-    if (updatedBlogArticle.illustrations instanceof Array) {
+    if (
+      Array.isArray(updatedBlogArticle.illustrations) &&
+      updatedBlogArticle.illustrations.length > 0
+    ) {
       updatedBlogArticle.illustrations.forEach((illustration) => {
+        formData.append("illustrations", illustration);
+      });
+    } else {
+      // Si aucune nouvelle illustration n'a été sélectionnée,
+      // conserver les URLs des illustrations existantes dans le FormData
+      blogArticle.illustrations.forEach((illustration) => {
         formData.append("illustrations", illustration);
       });
     }

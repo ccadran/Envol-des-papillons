@@ -92,14 +92,22 @@ module.exports.editActualityPost = async (req, res) => {
     const illustrationImages = req.files["illustrations"] || [];
 
     // Prepare the mainImgPaths array for saving in the database
-    const mainImgPaths = mainImages.map(
-      (image) => "/uploads/" + image.filename
-    );
+    let mainImgPaths = [];
+    if (mainImages.length > 0) {
+      mainImgPaths = mainImages.map((image) => "/uploads/" + image.filename);
+    } else {
+      mainImgPaths = actualityPost.mainImg; // Keep the existing main images
+    }
 
     // Prepare the illustrationPaths array for saving in the database
-    const illustrationPaths = illustrationImages.map(
-      (image) => "/uploads/" + image.filename
-    );
+    let illustrationPaths = [];
+    if (illustrationImages.length > 0) {
+      illustrationPaths = illustrationImages.map(
+        (image) => "/uploads/" + image.filename
+      );
+    } else {
+      illustrationPaths = actualityPost.illustrations; // Keep the existing illustrations
+    }
 
     // Update the blog post document
     actualityPost.title = title;
@@ -111,8 +119,8 @@ module.exports.editActualityPost = async (req, res) => {
     actualityPost.subTitle2 = subTitle2;
     actualityPost.content2 = content2;
     actualityPost.author = author;
-    actualityPost.mainImg = mainImgPaths; // Add new main images to existing ones
-    actualityPost.illustrations = illustrationPaths; // Add new illustrations to existing ones
+    actualityPost.mainImg = mainImgPaths;
+    actualityPost.illustrations = illustrationPaths;
 
     await actualityPost.save();
 

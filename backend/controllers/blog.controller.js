@@ -93,14 +93,22 @@ module.exports.editBlogPost = async (req, res) => {
     const illustrationImages = req.files["illustrations"] || [];
 
     // Prepare the mainImgPaths array for saving in the database
-    const mainImgPaths = mainImages.map(
-      (image) => "/uploads/" + image.filename
-    );
+    let mainImgPaths = [];
+    if (mainImages.length > 0) {
+      mainImgPaths = mainImages.map((image) => "/uploads/" + image.filename);
+    } else {
+      mainImgPaths = blogPost.mainImg; // Keep the existing main images
+    }
 
     // Prepare the illustrationPaths array for saving in the database
-    const illustrationPaths = illustrationImages.map(
-      (image) => "/uploads/" + image.filename
-    );
+    let illustrationPaths = [];
+    if (illustrationImages.length > 0) {
+      illustrationPaths = illustrationImages.map(
+        (image) => "/uploads/" + image.filename
+      );
+    } else {
+      illustrationPaths = blogPost.illustrations; // Keep the existing illustrations
+    }
 
     // Update the blog post document
     blogPost.title = title;
@@ -112,8 +120,8 @@ module.exports.editBlogPost = async (req, res) => {
     blogPost.subTitle2 = subTitle2;
     blogPost.content2 = content2;
     blogPost.author = author;
-    blogPost.mainImg = mainImgPaths; // Add new main images to existing ones
-    blogPost.illustrations = illustrationPaths; // Add new illustrations to existing ones
+    blogPost.mainImg = mainImgPaths;
+    blogPost.illustrations = illustrationPaths;
 
     await blogPost.save();
 
