@@ -20,7 +20,14 @@ router.post(
   setBlogPost
 );
 
-router.put("/:id", editBlogPost);
+router.put(
+  "/:id",
+  upload.fields([
+    { name: "mainImg", maxCount: 1 },
+    { name: "illustrations", maxCount: 10 },
+  ]),
+  editBlogPost
+);
 
 router.delete("/:id", deleteBlogPost);
 

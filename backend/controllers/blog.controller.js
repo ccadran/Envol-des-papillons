@@ -73,17 +73,56 @@ module.exports.editBlogPost = async (req, res) => {
   const blogPost = await BlogPostModel.findById(req.params.id);
 
   if (!blogPost) {
-    res.status(400).json({ message: "Ce post n'existe pas" });
+    return res.status(400).json({ message: "Ce post n'existe pas" });
   }
 
-  const updateBlogPost = await BlogPostModel.findByIdAndUpdate(
-    blogPost,
-    req.body,
-    {
-      new: true,
-    }
-  );
-  res.status(200).json(updateBlogPost);
+  const {
+    title,
+    accroche,
+    tags,
+    introduction,
+    subTitle1,
+    content1,
+    subTitle2,
+    content2,
+    author,
+  } = req.body;
+
+  try {
+    const mainImages = req.files["mainImg"] || [];
+    const illustrationImages = req.files["illustrations"] || [];
+
+    // Prepare the mainImgPaths array for saving in the database
+    const mainImgPaths = mainImages.map(
+      (image) => "/uploads/" + image.filename
+    );
+
+    // Prepare the illustrationPaths array for saving in the database
+    const illustrationPaths = illustrationImages.map(
+      (image) => "/uploads/" + image.filename
+    );
+
+    // Update the blog post document
+    blogPost.title = title;
+    blogPost.accroche = accroche;
+    blogPost.tags = Array.isArray(tags) ? tags : [tags];
+    blogPost.introduction = introduction;
+    blogPost.subTitle1 = subTitle1;
+    blogPost.content1 = content1;
+    blogPost.subTitle2 = subTitle2;
+    blogPost.content2 = content2;
+    blogPost.author = author;
+    blogPost.mainImg = mainImgPaths; // Add new main images to existing ones
+    blogPost.illustrations = illustrationPaths; // Add new illustrations to existing ones
+
+    await blogPost.save();
+
+    res.status(200).json(blogPost);
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
 };
 
 module.exports.deleteBlogPost = async (req, res) => {

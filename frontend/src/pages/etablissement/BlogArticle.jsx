@@ -17,6 +17,7 @@ const BlogArticle = () => {
   const [updatedBlogArticle, setUpdatedBlogArticle] = useState({
     tags: [],
   });
+
   const location = useLocation();
   const isRootPath = location.pathname.includes("admin");
   const { id } = useParams();
@@ -36,19 +37,41 @@ const BlogArticle = () => {
       setUpdatedBlogArticle(res.data);
     });
   }, [id]);
-
+  useEffect(() => {
+    console.log("Updated article:", updatedBlogArticle);
+  }, [updatedBlogArticle]);
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setUpdatedBlogArticle((prevArticle) => ({
-      ...prevArticle,
-      [name]: value,
-    }));
+    const { name, value, files } = e.target;
+
+    if (name === "mainImg") {
+      // If it's a file input for mainImg, use the first selected file
+      const file0 = files[0];
+      setUpdatedBlogArticle((prevArticle) => ({
+        ...prevArticle,
+        [name]: file0,
+      }));
+    } else if (name === "illustrations") {
+      // If it's a file input for illustrations, use all selected files
+      const fileList = Array.from(files); // Convert FileList to an array
+      setUpdatedBlogArticle((prevArticle) => ({
+        ...prevArticle,
+        [name]: fileList,
+      }));
+    } else {
+      // For other inputs, set the value directly
+      setUpdatedBlogArticle((prevArticle) => ({
+        ...prevArticle,
+        [name]: value,
+      }));
+    }
   };
+
   const handleTagClick = (tag) => {
     setUpdatedBlogArticle((prevArticle) => {
       const updatedTags = prevArticle.tags.includes(tag)
         ? prevArticle.tags.filter((t) => t !== tag)
         : [...prevArticle.tags, tag];
+
       console.log("Updated tags:", updatedTags);
 
       return {
@@ -57,10 +80,49 @@ const BlogArticle = () => {
       };
     });
   };
+  // const handleMainImgChange = (e) => {
+  //   const { files } = e.target;
+  //   const newFile = files[0]; // Utiliser le premier fichier sélectionné
+  //   console.log("NEW FILE", newFile);
 
+  //   setUpdatedBlogArticle((prevArticle) => ({
+  //     ...prevArticle,
+  //     mainImg: newFile, // Remplace l'ancienne image par la nouvelle
+  //   }));
+  // };
   const handleUpdateArticle = () => {
+    const formData = new FormData();
+
+    formData.append("title", updatedBlogArticle.title);
+    formData.append("accroche", updatedBlogArticle.accroche);
+    formData.append("introduction", updatedBlogArticle.introduction);
+    formData.append("subTitle1", updatedBlogArticle.subTitle1);
+    formData.append("content1", updatedBlogArticle.content1);
+    formData.append("subTitle2", updatedBlogArticle.subTitle2);
+    formData.append("content2", updatedBlogArticle.content2);
+    formData.append("author", blogArticle.author);
+
+    // Vérifiez si une nouvelle image principale a été sélectionnée
+    if (updatedBlogArticle.mainImg instanceof File) {
+      formData.append("mainImg", updatedBlogArticle.mainImg);
+    } else {
+      // Si aucune nouvelle image n'a été sélectionnée,
+      // conserver l'URL de l'ancienne image principale dans le FormData
+      formData.append("mainImg", blogArticle.mainImg);
+    }
+    // Vérifiez si de nouvelles illustrations ont été sélectionnées
+    if (updatedBlogArticle.illustrations instanceof Array) {
+      updatedBlogArticle.illustrations.forEach((illustration) => {
+        formData.append("illustrations", illustration);
+      });
+    }
+    console.log("FORM DATA", formData);
     axios
-      .put(`http://localhost:5001/blog/${id}`, updatedBlogArticle)
+      .put(`http://localhost:5001/blog/${id}`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
       .then((res) => {
         // Traitement après la mise à jour réussie
         console.log("Article mis à jour avec succès !");
@@ -77,7 +139,7 @@ const BlogArticle = () => {
   }
 
   console.log(blogArticle.tags);
-  console.log(blogArticle.mainImg);
+  console.log("IMAGE", updatedBlogArticle.mainImg);
   return (
     <>
       {isRootPath ? (
@@ -111,10 +173,19 @@ const BlogArticle = () => {
                       handleTagClick={handleTagClick}
                     />
                   </div>
+
                   <div className="article-img">
+                    {/* Afficher l'image principale */}
                     <img
                       src={updatedBlogArticle.mainImg}
                       alt="image principal actualité"
+                    />
+                    {/* Choisir une nouvelle image principale */}
+                    <input
+                      type="file"
+                      name="mainImg"
+                      onChange={handleInputChange}
+                      accept="image/*"
                     />
                   </div>
                 </div>
@@ -153,12 +224,26 @@ const BlogArticle = () => {
                       onChange={handleInputChange}
                     />
                   </div>
+                  {/* <div className="article-images">
+                    {updatedBlogArticle.illustrations?.map((image, index) => {
+                      return (
+                        <img key={index} src={image} alt="image illustrative" />
+                      );
+                    })}
+                  </div> */}
                   <div className="article-images">
                     {updatedBlogArticle.illustrations?.map((image, index) => {
                       return (
                         <img key={index} src={image} alt="image illustrative" />
                       );
                     })}
+                    <input
+                      type="file"
+                      name="illustrations"
+                      onChange={handleInputChange}
+                      accept="image/*"
+                      multiple
+                    />
                   </div>
                 </div>
                 <div className="artcile-author">
@@ -206,13 +291,13 @@ const BlogArticle = () => {
                     <p>{blogArticle.content2} </p>
                     <p id="conclusion">{blogArticle.conclusion} </p>
                   </div>
-                  <div className="article-images">
+                  {/* <div className="article-images">
                     {blogArticle.illustrations?.map((image, index) => {
                       return (
                         <img key={index} src={image} alt="image illustrative" />
                       );
                     })}
-                  </div>
+                  </div> */}
                 </div>
                 <div className="article-author">
                   <PapillonLogo />
