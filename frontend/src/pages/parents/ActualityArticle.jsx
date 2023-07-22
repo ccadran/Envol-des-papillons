@@ -18,38 +18,56 @@ const ActualityArticle = () => {
   const isRootPath = location.pathname.includes("admin");
   const navigate = useNavigate();
   const { id } = useParams();
+  const dateFormated = (date) => {
+    return new Date(date).toLocaleDateString("fr-FR", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+  };
 
   useEffect(() => {
     axios.get(`http://localhost:5001/actuality/${id}`).then((res) => {
       setActualityArticle(res.data);
       setUpdatedActualityArticle(res.data);
-      console.log(id);
     });
   }, [id]);
-
-  if (!actualityArticle) {
-    return <div>Loading...</div>;
-  }
+  useEffect(() => {
+    console.log("Updated article:", updatedActualityArticle);
+  }, [updatedActualityArticle]);
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setUpdatedActualityArticle((prevArticle) => ({
-      ...prevArticle,
-      [name]: value,
-    }));
+    const { name, value, files } = e.target;
+
+    if (name === "mainImg") {
+      // If it's a file input for mainImg, use the first selected file
+      const file0 = files[0];
+      setUpdatedActualityArticle((prevArticle) => ({
+        ...prevArticle,
+        [name]: file0,
+      }));
+    } else if (name === "illustrations") {
+      // If it's a file input for illustrations, use all selected files
+      const fileList = Array.from(files); // Convert FileList to an array
+      setUpdatedActualityArticle((prevArticle) => ({
+        ...prevArticle,
+        [name]: fileList,
+      }));
+    } else {
+      // For other inputs, set the value directly
+      setUpdatedActualityArticle((prevArticle) => ({
+        ...prevArticle,
+        [name]: value,
+      }));
+    }
   };
-  const handleUpdateArticle = () => {
-    axios
-      .put(`http://localhost:5001/actuality/${id}`, updatedActualityArticle)
-      .then((res) => {
-        console.log("Article mis à jour avec succès !");
-        navigate(`/admin/actualites`);
-      });
-  };
+
   const handleTagClick = (tag) => {
     setUpdatedActualityArticle((prevArticle) => {
       const updatedTags = prevArticle.tags.includes(tag)
         ? prevArticle.tags.filter((t) => t !== tag)
         : [...prevArticle.tags, tag];
+
       console.log("Updated tags:", updatedTags);
 
       return {
@@ -58,7 +76,66 @@ const ActualityArticle = () => {
       };
     });
   };
+  // const handleMainImgChange = (e) => {
+  //   const { files } = e.target;
+  //   const newFile = files[0]; // Utiliser le premier fichier sélectionné
+  //   console.log("NEW FILE", newFile);
 
+  //   setUpdatedActualityArticle((prevArticle) => ({
+  //     ...prevArticle,
+  //     mainImg: newFile, // Remplace l'ancienne image par la nouvelle
+  //   }));
+  // };
+  const handleUpdateArticle = () => {
+    const formData = new FormData();
+
+    formData.append("title", updatedActualityArticle.title);
+    formData.append("accroche", updatedActualityArticle.accroche);
+    formData.append("introduction", updatedActualityArticle.introduction);
+    formData.append("subTitle1", updatedActualityArticle.subTitle1);
+    formData.append("content1", updatedActualityArticle.content1);
+    formData.append("subTitle2", updatedActualityArticle.subTitle2);
+    formData.append("content2", updatedActualityArticle.content2);
+    formData.append("author", actualityArticle.author);
+
+    // Vérifiez si une nouvelle image principale a été sélectionnée
+    if (updatedActualityArticle.mainImg instanceof File) {
+      formData.append("mainImg", updatedActualityArticle.mainImg);
+    } else {
+      // Si aucune nouvelle image n'a été sélectionnée,
+      // conserver l'URL de l'ancienne image principale dans le FormData
+      formData.append("mainImg", actualityArticle.mainImg);
+    }
+    // Vérifiez si de nouvelles illustrations ont été sélectionnées
+    if (updatedActualityArticle.illustrations instanceof Array) {
+      updatedActualityArticle.illustrations.forEach((illustration) => {
+        formData.append("illustrations", illustration);
+      });
+    }
+    console.log("FORM DATA", formData);
+    axios
+      .put(`http://localhost:5001/actuality/${id}`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
+      .then((res) => {
+        // Traitement après la mise à jour réussie
+        console.log("Article mis à jour avec succès !");
+        navigate(`/admin/actualites`);
+      })
+      .catch((error) => {
+        // Traitement en cas d'erreur lors de la mise à jour
+        console.error("Erreur lors de la mise à jour de l'article :", error);
+      });
+  };
+
+  if (!actualityArticle) {
+    return <div>Loading...</div>;
+  }
+
+  console.log(actualityArticle.tags);
+  console.log("IMAGE", updatedActualityArticle.mainImg);
   return (
     <>
       {isRootPath ? (
@@ -68,7 +145,6 @@ const ActualityArticle = () => {
             <section className="actuality-article">
               <div className="back">
                 <img src={chevron} alt="" />
-
                 <Link to="/admin/actualites">retour</Link>
               </div>
               <div className="article-container">
@@ -93,10 +169,19 @@ const ActualityArticle = () => {
                       handleTagClick={handleTagClick}
                     />
                   </div>
+
                   <div className="article-img">
+                    {/* Afficher l'image principale */}
                     <img
                       src={updatedActualityArticle.mainImg}
                       alt="image principal actualité"
+                    />
+                    {/* Choisir une nouvelle image principale */}
+                    <input
+                      type="file"
+                      name="mainImg"
+                      onChange={handleInputChange}
+                      accept="image/*"
                     />
                   </div>
                 </div>
@@ -135,8 +220,14 @@ const ActualityArticle = () => {
                       onChange={handleInputChange}
                     />
                   </div>
+                  {/* <div className="article-images">
+                    {updatedActualityArticle.illustrations?.map((image, index) => {
+                      return (
+                        <img key={index} src={image} alt="image illustrative" />
+                      );
+                    })}
+                  </div> */}
                   <div className="article-images">
-                    {" "}
                     {updatedActualityArticle.illustrations?.map(
                       (image, index) => {
                         return (
@@ -148,6 +239,13 @@ const ActualityArticle = () => {
                         );
                       }
                     )}
+                    <input
+                      type="file"
+                      name="illustrations"
+                      onChange={handleInputChange}
+                      accept="image/*"
+                      multiple
+                    />
                   </div>
                 </div>
                 <div className="artcile-author">
@@ -161,23 +259,23 @@ const ActualityArticle = () => {
             </section>
             <Link onClick={handleUpdateArticle}>Mettre à jour</Link>
           </main>
-          <FooterParents />
+          {/* <FooterGlobal /> */}
         </>
       ) : (
         <>
           <NavigationParents />
+          {/* <NavigationGlobal /> */}
           <main>
             <section className="actuality-article">
               <div className="back">
                 <img src={chevron} alt="" />
-
-                <Link to="/parents/actualites">retour</Link>
+                <Link to="/etablissement/actualites">Retour</Link>
               </div>
               <div className="article-container">
                 <div className="article-header">
                   <div className="article-infos">
                     <h2>{actualityArticle.title}</h2>
-                    <p>{actualityArticle.accroche}</p>
+                    <p>{actualityArticle.accroche} </p>
                     <Tags tags={actualityArticle.tags} />
                   </div>
                   <div className="article-img">
@@ -189,33 +287,33 @@ const ActualityArticle = () => {
                 </div>
                 <div className="article-content">
                   <div className="article-text">
-                    <p>{actualityArticle.accroche}</p>
-                    <h4>{actualityArticle.subTitle1}</h4>
-                    <p>{actualityArticle.content1}</p>
-                    <h4>{actualityArticle.subTitle2}</h4>
-                    <p>{actualityArticle.content2}</p>
-                    <p>{actualityArticle.conclusion}</p>
+                    <p id="intro">{actualityArticle.introduction} </p>
+                    <h4>{actualityArticle.subTitle1} </h4>
+                    <p>{actualityArticle.content1} </p>
+                    <h4>{actualityArticle.subTitle2} </h4>
+                    <p>{actualityArticle.content2} </p>
+                    <p id="conclusion">{actualityArticle.conclusion} </p>
                   </div>
-                  <div className="article-images">
-                    {" "}
+                  {/* <div className="article-images">
                     {actualityArticle.illustrations?.map((image, index) => {
                       return (
                         <img key={index} src={image} alt="image illustrative" />
                       );
                     })}
-                  </div>
+                  </div> */}
                 </div>
-                <div className="artcile-author">
+                <div className="article-author">
                   <PapillonLogo />
                   <div className="author-info">
-                    <h5>{actualityArticle.author}</h5>
-                    <p>{actualityArticle.date}</p>
+                    <h5>{actualityArticle.author} </h5>
+                    <p> {dateFormated(actualityArticle.createdAt)}</p>
                   </div>
                 </div>
               </div>
             </section>
           </main>
           <FooterParents />
+          {/* <FooterGlobal /> */}
         </>
       )}
     </>

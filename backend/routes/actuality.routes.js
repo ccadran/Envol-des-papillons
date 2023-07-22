@@ -21,7 +21,14 @@ router.post(
   ]),
   setActualityPost
 );
-router.put("/:id", editActualityPost);
+router.put(
+  "/:id",
+  upload.fields([
+    { name: "mainImg", maxCount: 1 },
+    { name: "illustrations", maxCount: 10 },
+  ]),
+  editActualityPost
+);
 
 router.delete("/:id", deleteActualityPost);
 
