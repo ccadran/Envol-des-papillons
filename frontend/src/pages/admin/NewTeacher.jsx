@@ -11,8 +11,10 @@ const NewTeacher = () => {
       <NavigationAdmin />
       <main>
         <div className="back">
-          <img src={chevron} alt="" />
-          <Link to="/admin/teachers">Retour</Link>
+          <Link to="/admin/teachers">
+            <img src={chevron} alt="" />
+            Retour
+          </Link>
         </div>
         <div className="intro">
           <h4>Ajouter un professeur</h4>

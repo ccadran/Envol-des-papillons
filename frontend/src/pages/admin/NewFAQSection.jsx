@@ -13,8 +13,10 @@ const NewFAQSection = () => {
       <NavigationAdmin />
       <main>
         <div className="back">
-          <img src={chevron} alt="" />
-          <Link to="/admin/faq">Retour</Link>
+          <Link to="/admin/faq">
+            <img src={chevron} alt="" />
+            Retour
+          </Link>
         </div>
         <div className="intro">
           <h4>Ajouter une section</h4>

@@ -125,10 +125,9 @@ const NewArticle = () => {
           <h2>Ajouter un nouvel article</h2>
           <div className="form-content">
             <div className="back">
-              <img src={chevron} alt="" />
-
               <Link to={isRootPathBlog ? "/admin/blog" : "/admin/actualites"}>
                 {" "}
+                <img src={chevron} alt="" />
                 Retour
               </Link>
             </div>

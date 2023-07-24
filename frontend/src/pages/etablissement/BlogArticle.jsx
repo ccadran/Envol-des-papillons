@@ -10,6 +10,7 @@ import NavigationAdmin from "../../components/admin/NavigationAdmin";
 import Tags from "components/parents/Actualités/Tags";
 import chevron from "assets/logos/chevron.svg";
 import "styles/etablissement/Blog/_blogArticle.scss";
+import "styles/admin/Article/_blogArticleAdmin.scss";
 import BlogTags from "components/etablissement/Blog/BlogTags";
 
 const BlogArticle = () => {
@@ -149,20 +150,22 @@ const BlogArticle = () => {
           <main>
             <section className="blog-article">
               <div className="back">
-                <img src={chevron} alt="" />
-                <Link to="/admin/blog">retour</Link>
+                <Link to="/admin/blog">
+                  <img src={chevron} alt="" />
+                  retour
+                </Link>
               </div>
-              <div className="article-container">
+              <div className="article-container-admin">
                 <div className="article-header">
                   <div className="article-infos">
-                    <h2>Titre</h2>
+                    <h4>Titre</h4>
                     <input
                       type="text"
                       name="title"
                       value={updatedBlogArticle.title}
                       onChange={handleInputChange}
                     />
-                    <p>Accroche</p>
+                    <h4>Accroche</h4>
                     <textarea
                       type="text"
                       name="accroche"
@@ -192,7 +195,7 @@ const BlogArticle = () => {
                 </div>
                 <div className="article-content">
                   <div className="article-text">
-                    <p>Introduction</p>
+                    <h4>Introduction</h4>
                     <textarea
                       name="introduction"
                       value={updatedBlogArticle.introduction}
@@ -205,7 +208,7 @@ const BlogArticle = () => {
                       value={updatedBlogArticle.subTitle1}
                       onChange={handleInputChange}
                     />
-                    <p>Premier bloc de texte</p>
+                    <h4>Premier bloc de texte</h4>
                     <textarea
                       name="content1"
                       value={updatedBlogArticle.content1}
@@ -218,7 +221,7 @@ const BlogArticle = () => {
                       value={updatedBlogArticle.subTitle2}
                       onChange={handleInputChange}
                     />
-                    <p>Deuxième bloc de texte</p>
+                    <h4>Deuxième bloc de texte</h4>
                     <textarea
                       name="content2"
                       value={updatedBlogArticle.content2}
@@ -266,8 +269,10 @@ const BlogArticle = () => {
           <main>
             <section className="blog-article">
               <div className="back">
-                <img src={chevron} alt="" />
-                <Link to="/etablissement/blog">Retour</Link>
+                <Link to="/etablissement/blog">
+                  <img src={chevron} alt="" />
+                  Retour
+                </Link>
               </div>
               <div className="article-container">
                 <div className="article-header">

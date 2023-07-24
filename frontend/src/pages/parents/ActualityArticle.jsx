@@ -150,8 +150,10 @@ const ActualityArticle = () => {
           <main>
             <section className="actuality-article">
               <div className="back">
-                <img src={chevron} alt="" />
-                <Link to="/admin/actualites">retour</Link>
+                <Link to="/admin/actualites">
+                  <img src={chevron} alt="" />
+                  retour
+                </Link>
               </div>
               <div className="article-container">
                 <div className="article-header">
@@ -274,8 +276,10 @@ const ActualityArticle = () => {
           <main>
             <section className="actuality-article">
               <div className="back">
-                <img src={chevron} alt="" />
-                <Link to="/etablissement/actualites">Retour</Link>
+                <Link to="/etablissement/actualites">
+                  <img src={chevron} alt="" />
+                  Retour
+                </Link>
               </div>
               <div className="article-container">
                 <div className="article-header">
