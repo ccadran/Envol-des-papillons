@@ -240,7 +240,7 @@ const ActualityArticle = () => {
                     </div>
                   </div>
                   <div className="article-images">
-                    <CarousselArticle images={blogArticle.illustrations} />
+                    <CarousselArticle images={actualityArticle.illustrations} />
                     <div className="form-part">
                       <h4>Images d'illustrations</h4>
                       <input
@@ -301,7 +301,7 @@ const ActualityArticle = () => {
                     <h4>{actualityArticle.subTitle2} </h4>
                     <p>{actualityArticle.content2} </p>
                     <p id="conclusion">{actualityArticle.conclusion} </p>
-                    <CarousselArticle images={blogArticle.illustrations} />
+                    <CarousselArticle images={actualityArticle.illustrations} />
                   </div>
                 </div>
                 <div className="article-author">
