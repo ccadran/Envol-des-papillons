@@ -8,6 +8,7 @@ import FAQ from "./FAQ";
 import Contact from "../etablissement/Contact";
 import Blog from "../etablissement/Blog";
 import AboutSchool from "./AboutSchool";
+import BlogArticleSchool from "./BlogArticleSchool";
 
 const EcoleRoutes = () => {
   return (
@@ -19,6 +20,7 @@ const EcoleRoutes = () => {
       <Route path="/FAQ" element={<FAQ />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:id" element={<BlogArticleSchool />} />
       <Route path="/qui-sommes-nous" element={<AboutSchool />} />
     </Routes>
   );

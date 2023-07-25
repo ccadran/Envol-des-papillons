@@ -23,6 +23,14 @@ const BlogArticle = () => {
 
   const location = useLocation();
   const isRootPath = location.pathname.includes("admin");
+  let backUrl = "";
+  if (location.pathname.includes("etablissement")) {
+    backUrl = "/etablissement/blog";
+  } else if (location.pathname.includes("college")) {
+    backUrl = "/college/blog";
+  } else {
+    backUrl = "/ecole/blog";
+  }
   const { id } = useParams();
   const navigate = useNavigate();
   const dateFormated = (date) => {
@@ -100,7 +108,7 @@ const BlogArticle = () => {
       formData.append("mainImg", updatedBlogArticle.mainImg);
     } else {
       // Si aucune nouvelle image n'a été sélectionnée,
-      // conserver l'URL de l'ancienne image principale dans le FormData
+      // conserver l'BACKURL de l'ancienne image principale dans le FormData
       formData.append("mainImg", blogArticle.mainImg);
     }
     // Vérifiez si de nouvelles illustrations ont été sélectionnées
@@ -113,7 +121,7 @@ const BlogArticle = () => {
       });
     } else {
       // Si aucune nouvelle illustration n'a été sélectionnée,
-      // conserver les URLs des illustrations existantes dans le FormData
+      // conserver les BACKURLs des illustrations existantes dans le FormData
       blogArticle.illustrations.forEach((illustration) => {
         formData.append("illustrations", illustration);
       });
@@ -283,7 +291,7 @@ const BlogArticle = () => {
           <main>
             <section className="blog-article">
               <div className="back">
-                <Link to="/etablissement/blog">
+                <Link to={backUrl}>
                   <img src={chevron} alt="" />
                   Retour
                 </Link>
@@ -293,7 +301,7 @@ const BlogArticle = () => {
                   <div className="article-infos">
                     <h2>{blogArticle.title}</h2>
                     <p>{blogArticle.accroche} </p>
-                    <Tags tags={blogArticle.tags} />
+                    <Tags tags={blogArticle.tags} isSelected={true} />
                   </div>
                   <div className="article-img">
                     <img

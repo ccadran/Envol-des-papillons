@@ -25,6 +25,14 @@ const BlogPost = ({ article, selectedTags }) => {
   const hasSelectedTags = article.tags.some((tag) =>
     selectedTags.includes(tag)
   );
+  let sitePart = "";
+  if (location.pathname.includes("etablissement")) {
+    sitePart = "etablissement";
+  } else if (location.pathname.includes("college")) {
+    sitePart = "college";
+  } else {
+    sitePart = "ecole";
+  }
 
   return (
     <>
@@ -46,7 +54,7 @@ const BlogPost = ({ article, selectedTags }) => {
           to={
             isRootPath
               ? `/admin/blog/${article._id}`
-              : `/etablissement/blog/${article._id}`
+              : `/${sitePart}/blog/${article._id}`
           }
         >
           <div className="article">

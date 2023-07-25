@@ -201,22 +201,22 @@ const NewArticle = () => {
                 ></textarea>
               </div>
               <div className="form-part">
-                <label htmlFor="illustrations">Image d'ilu :</label>
-                <input
-                  type="file"
-                  name="illustrations"
-                  onChange={handleInputChange}
-                  accept="image/*"
-                  multiple
-                />
-              </div>
-              <div className="form-part">
                 <label htmlFor="mainImg">Image principale :</label>
                 <input
                   type="file"
                   name="mainImg"
                   onChange={handleInputChange}
                   accept="image/*"
+                />
+              </div>
+              <div className="form-part">
+                <label htmlFor="illustrations">Image d'ilustrations :</label>
+                <input
+                  type="file"
+                  name="illustrations"
+                  onChange={handleInputChange}
+                  accept="image/*"
+                  multiple
                 />
               </div>
               <div className="form-part">
@@ -228,7 +228,7 @@ const NewArticle = () => {
               </div>
 
               <button type="button" onClick={handleAddArticle}>
-                Ajouter
+                Ajouter l'article d'actualité
               </button>
             </form>
           </div>
