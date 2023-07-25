@@ -16,6 +16,7 @@ import Button from "components/shared/Button";
 import SingleCaroussel from "components/shared/SingleCaroussel";
 import FooterScolarity from "components/ecole&college/shared/FooterScolarity";
 import NavigationScolarity from "components/ecole&college/shared/NavigationScolarity";
+import CarousselArticle from "components/shared/CarousselArticle";
 
 const BlogArticleSchool = () => {
   const [blogArticle, setBlogArticle] = useState([]);
@@ -183,6 +184,7 @@ const BlogArticleSchool = () => {
                   <h4>{blogArticle.subTitle2} </h4>
                   <p>{blogArticle.content2} </p>
                   <p id="conclusion">{blogArticle.conclusion} </p>
+                  <CarousselArticle images={blogArticle.illustrations} />
                 </div>
               </div>
               <div className="article-author">

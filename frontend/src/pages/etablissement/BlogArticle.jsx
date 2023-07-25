@@ -14,6 +14,7 @@ import "styles/admin/Article/_blogArticleAdmin.scss";
 import BlogTags from "components/etablissement/Blog/BlogTags";
 import Button from "components/shared/Button";
 import SingleCaroussel from "components/shared/SingleCaroussel";
+import CarousselArticle from "components/shared/CarousselArticle";
 
 const BlogArticle = () => {
   const [blogArticle, setBlogArticle] = useState([]);
@@ -253,13 +254,9 @@ const BlogArticle = () => {
                       />
                     </div>
                   </div>
-                  {/* <SingleCaroussel images={blogArticle.illustrations} /> */}
                   <div className="article-images">
-                    {updatedBlogArticle.illustrations?.map((image, index) => {
-                      return (
-                        <img key={index} src={image} alt="image illustrative" />
-                      );
-                    })}
+                    <CarousselArticle images={blogArticle.illustrations} />
+
                     <div className="form-part">
                       <h4>Images d'illustrations</h4>
                       <input
@@ -319,13 +316,7 @@ const BlogArticle = () => {
                     <p>{blogArticle.content2} </p>
                     <p id="conclusion">{blogArticle.conclusion} </p>
                   </div>
-                  {/* <div className="article-images">
-                    {blogArticle.illustrations?.map((image, index) => {
-                      return (
-                        <img key={index} src={image} alt="image illustrative" />
-                      );
-                    })}
-                  </div> */}
+                  <CarousselArticle images={blogArticle.illustrations} />
                 </div>
                 <div className="article-author">
                   <PapillonLogo />

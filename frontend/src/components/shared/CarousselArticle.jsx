@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "styles/shared/_singleCaroussel.scss";
+import "styles/shared/_carousselArticle.scss";
 
-const SingleCaroussel = ({ images }) => {
+const CarousselArticle = ({ images }) => {
   const [slide, setSlide] = useState(0);
   const [startX, setStartX] = useState(0);
   const [endX, setEndX] = useState(0);
@@ -38,7 +38,7 @@ const SingleCaroussel = ({ images }) => {
 
   return (
     <>
-      <div className="single-caroussel">
+      <div className="caroussel-article">
         <i
           className="fa-solid fa-chevron-left chevron chevron-left"
           onClick={prevSlide}
@@ -54,7 +54,7 @@ const SingleCaroussel = ({ images }) => {
                 return (
                   <img
                     key={index}
-                    src={image.src}
+                    src={image}
                     alt="img"
                     className={slide === index ? "slide" : "slide-hidden"}
                   />
@@ -68,17 +68,18 @@ const SingleCaroussel = ({ images }) => {
         ></i>
         <span className="indicators">
           {images && images.length > 0
-            ? images.map((_, index) => {
+            ? images.map((image, index) => {
                 return (
-                  <i
-                    key={index}
+                  <div
+                    onClick={() => setSlide(index)}
                     className={
                       slide === index
-                        ? "fa-solid fa-circle indicator indicator"
-                        : "fa-solid fa-circle indicator indicator indicator-inactive"
+                        ? "indicator"
+                        : "indicator indicator-inactive"
                     }
-                    onClick={() => setSlide(index)}
-                  ></i>
+                  >
+                    <img key={index} src={image} alt="img" />
+                  </div>
                 );
               })
             : null}
@@ -88,4 +89,4 @@ const SingleCaroussel = ({ images }) => {
   );
 };
 
-export default SingleCaroussel;
+export default CarousselArticle;

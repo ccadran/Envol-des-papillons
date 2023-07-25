@@ -15,7 +15,10 @@ const fileFilter = function (req, file, cb) {
   if (
     file.mimetype == "image/png" ||
     file.mimetype == "image/jpg" ||
-    file.mimetype == "image/jpeg"
+    file.mimetype == "image/jpeg" ||
+    file.mimetype == "image/JPG" ||
+    file.mimetype == "image/JPEG" ||
+    file.mimetype == "image/PNG"
   ) {
     cb(null, true);
   } else {
