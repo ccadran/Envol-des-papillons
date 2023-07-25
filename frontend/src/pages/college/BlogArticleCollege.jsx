@@ -14,6 +14,8 @@ import "styles/admin/Article/_blogArticleAdmin.scss";
 import BlogTags from "components/etablissement/Blog/BlogTags";
 import Button from "components/shared/Button";
 import SingleCaroussel from "components/shared/SingleCaroussel";
+import NavigationScolarity from "components/ecole&college/shared/NavigationScolarity";
+import FooterScolarity from "components/ecole&college/shared/FooterScolarity";
 
 const BlogArticleCollege = () => {
   const [blogArticle, setBlogArticle] = useState([]);
@@ -149,197 +151,52 @@ const BlogArticleCollege = () => {
 
   return (
     <>
-      {isRootPath ? (
-        <>
-          <NavigationAdmin />
-          <main>
-            <section className="blog-article">
-              <div className="back">
-                <Link to="/admin/blog">
-                  <img src={chevron} alt="" />
-                  retour
-                </Link>
-              </div>
-              <div className="article-container-admin">
-                <div className="article-header">
-                  <div className="article-infos">
-                    <div className="form-part">
-                      <h4>Titre</h4>
-                      <input
-                        type="text"
-                        name="title"
-                        value={updatedBlogArticle.title}
-                        onChange={handleInputChange}
-                      />
-                    </div>
-                    <div className="form-part">
-                      <h4>Accroche</h4>
-                      <textarea
-                        type="text"
-                        name="accroche"
-                        value={updatedBlogArticle.accroche}
-                        onChange={handleInputChange}
-                      />
-                    </div>
-                    <BlogTags
-                      selectedTags={updatedBlogArticle.tags}
-                      handleTagClick={handleTagClick}
-                    />
-                  </div>
-
-                  <div className="article-img">
-                    {/* Afficher l'image principale */}
-
-                    <div className="img-container">
-                      <img
-                        src={updatedBlogArticle.mainImg}
-                        alt="image principal actualité"
-                      />
-                    </div>
-                    {/* Choisir une nouvelle image principale */}
-                    <div className="form-part">
-                      <h4>Image principale</h4>
-                      <input
-                        type="file"
-                        name="mainImg"
-                        onChange={handleInputChange}
-                        accept="image/*"
-                      />
-                    </div>
-                  </div>
+      <>
+        <NavigationScolarity etablissement="college" />
+        <main>
+          <section className="blog-article">
+            <div className="back">
+              <Link to={backUrl}>
+                <img src={chevron} alt="" />
+                Retour
+              </Link>
+            </div>
+            <div className="article-container">
+              <div className="article-header">
+                <div className="article-infos">
+                  <h2>{blogArticle.title}</h2>
+                  <p>{blogArticle.accroche} </p>
+                  <Tags tags={blogArticle.tags} isSelected={true} />
                 </div>
-                <div className="article-content">
-                  <div className="article-text">
-                    <div className="form-part">
-                      <h4>Introduction</h4>
-                      <textarea
-                        name="introduction"
-                        value={updatedBlogArticle.introduction}
-                        onChange={handleInputChange}
-                      />
-                    </div>
-                    <div className="form-part">
-                      <h4>Sous-titre</h4>
-                      <input
-                        type="text"
-                        name="subTitle1"
-                        value={updatedBlogArticle.subTitle1}
-                        onChange={handleInputChange}
-                      />
-                    </div>
-                    <div className="form-part">
-                      <h4>Premier bloc de texte</h4>
-                      <textarea
-                        name="content1"
-                        value={updatedBlogArticle.content1}
-                        onChange={handleInputChange}
-                      />
-                    </div>
-                    <div className="form-part">
-                      <h4>Deuxième Sous-titre</h4>
-                      <input
-                        type="text"
-                        name="subTitle2"
-                        value={updatedBlogArticle.subTitle2}
-                        onChange={handleInputChange}
-                      />
-                    </div>
-                    <div className="form-part">
-                      <h4>Deuxième bloc de texte</h4>
-                      <textarea
-                        name="content2"
-                        value={updatedBlogArticle.content2}
-                        onChange={handleInputChange}
-                      />
-                    </div>
-                  </div>
-                  {/* <SingleCaroussel images={blogArticle.illustrations} /> */}
-                  <div className="article-images">
-                    {updatedBlogArticle.illustrations?.map((image, index) => {
-                      return (
-                        <img key={index} src={image} alt="image illustrative" />
-                      );
-                    })}
-                    <div className="form-part">
-                      <h4>Images d'illustrations</h4>
-                      <input
-                        type="file"
-                        name="illustrations"
-                        onChange={handleInputChange}
-                        accept="image/*"
-                        multiple
-                      />
-                    </div>
-                  </div>
-                </div>
-                <button onClick={handleUpdateArticle}>Mettre à jour</button>
-                <div className="article-author">
-                  <PapillonLogo />
-                  <div className="author-info">
-                    <h5>{blogArticle.author}</h5>
-                    <p>{blogArticle.date}</p>
-                  </div>
+                <div className="article-img">
+                  <img
+                    src={blogArticle.mainImg}
+                    alt="image principal actualité"
+                  />
                 </div>
               </div>
-            </section>
-          </main>
-          <FooterGlobal />
-        </>
-      ) : (
-        <>
-          <NavigationGlobal />
-          <main>
-            <section className="blog-article">
-              <div className="back">
-                <Link to={backUrl}>
-                  <img src={chevron} alt="" />
-                  Retour
-                </Link>
-              </div>
-              <div className="article-container">
-                <div className="article-header">
-                  <div className="article-infos">
-                    <h2>{blogArticle.title}</h2>
-                    <p>{blogArticle.accroche} </p>
-                    <Tags tags={blogArticle.tags} isSelected={true} />
-                  </div>
-                  <div className="article-img">
-                    <img
-                      src={blogArticle.mainImg}
-                      alt="image principal actualité"
-                    />
-                  </div>
-                </div>
-                <div className="article-content">
-                  <div className="article-text">
-                    <p id="intro">{blogArticle.introduction} </p>
-                    <h4>{blogArticle.subTitle1} </h4>
-                    <p>{blogArticle.content1} </p>
-                    <h4>{blogArticle.subTitle2} </h4>
-                    <p>{blogArticle.content2} </p>
-                    <p id="conclusion">{blogArticle.conclusion} </p>
-                  </div>
-                  {/* <div className="article-images">
-                    {blogArticle.illustrations?.map((image, index) => {
-                      return (
-                        <img key={index} src={image} alt="image illustrative" />
-                      );
-                    })}
-                  </div> */}
-                </div>
-                <div className="article-author">
-                  <PapillonLogo />
-                  <div className="author-info">
-                    <h5>{blogArticle.author} </h5>
-                    <p> {dateFormated(blogArticle.createdAt)}</p>
-                  </div>
+              <div className="article-content">
+                <div className="article-text">
+                  <p id="intro">{blogArticle.introduction} </p>
+                  <h4>{blogArticle.subTitle1} </h4>
+                  <p>{blogArticle.content1} </p>
+                  <h4>{blogArticle.subTitle2} </h4>
+                  <p>{blogArticle.content2} </p>
+                  <p id="conclusion">{blogArticle.conclusion} </p>
                 </div>
               </div>
-            </section>
-          </main>
-          <FooterGlobal />
-        </>
-      )}
+              <div className="article-author">
+                <PapillonLogo />
+                <div className="author-info">
+                  <h5>{blogArticle.author} </h5>
+                  <p> {dateFormated(blogArticle.createdAt)}</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <FooterScolarity etablissement="college" />
+      </>
     </>
   );
 };

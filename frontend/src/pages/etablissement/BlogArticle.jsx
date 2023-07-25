@@ -157,7 +157,7 @@ const BlogArticle = () => {
               <div className="back">
                 <Link to="/admin/blog">
                   <img src={chevron} alt="" />
-                  retour
+                  Retour
                 </Link>
               </div>
               <div className="article-container-admin">

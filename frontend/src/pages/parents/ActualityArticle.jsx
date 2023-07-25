@@ -142,7 +142,7 @@ const ActualityArticle = () => {
               <div className="back">
                 <Link to="/admin/actualites">
                   <img src={chevron} alt="" />
-                  retour
+                  Retour
                 </Link>
               </div>
               <div className="article-container-admin">
