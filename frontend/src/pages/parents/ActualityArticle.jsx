@@ -76,16 +76,7 @@ const ActualityArticle = () => {
       };
     });
   };
-  // const handleMainImgChange = (e) => {
-  //   const { files } = e.target;
-  //   const newFile = files[0]; // Utiliser le premier fichier sélectionné
-  //   console.log("NEW FILE", newFile);
 
-  //   setUpdatedActualityArticle((prevArticle) => ({
-  //     ...prevArticle,
-  //     mainImg: newFile, // Remplace l'ancienne image par la nouvelle
-  //   }));
-  // };
   const handleUpdateArticle = () => {
     const formData = new FormData();
 
@@ -118,7 +109,6 @@ const ActualityArticle = () => {
         formData.append("illustrations", illustration);
       });
     }
-    console.log("FORM DATA", formData);
     axios
       .put(`http://localhost:5001/actuality/${id}`, formData, {
         headers: {
@@ -155,23 +145,27 @@ const ActualityArticle = () => {
                   retour
                 </Link>
               </div>
-              <div className="article-container">
+              <div className="article-container-admin">
                 <div className="article-header">
                   <div className="article-infos">
-                    <h2>Titre</h2>
-                    <input
-                      type="text"
-                      name="title"
-                      value={updatedActualityArticle.title}
-                      onChange={handleInputChange}
-                    />
-                    <p>Accroche</p>
-                    <textarea
-                      type="text"
-                      name="accroche"
-                      value={updatedActualityArticle.accroche}
-                      onChange={handleInputChange}
-                    />
+                    <div className="form-part">
+                      <h4>Titre</h4>
+                      <input
+                        type="text"
+                        name="title"
+                        value={updatedActualityArticle.title}
+                        onChange={handleInputChange}
+                      />
+                    </div>
+                    <div className="form-part">
+                      <h4>Accroche</h4>
+                      <textarea
+                        type="text"
+                        name="accroche"
+                        value={updatedActualityArticle.accroche}
+                        onChange={handleInputChange}
+                      />
+                    </div>
                     <BlogTags
                       selectedTags={updatedActualityArticle.tags}
                       handleTagClick={handleTagClick}
@@ -180,61 +174,70 @@ const ActualityArticle = () => {
 
                   <div className="article-img">
                     {/* Afficher l'image principale */}
-                    <img
-                      src={updatedActualityArticle.mainImg}
-                      alt="image principal actualité"
-                    />
+
+                    <div className="img-container">
+                      <img
+                        src={updatedActualityArticle.mainImg}
+                        alt="image principal actualité"
+                      />
+                    </div>
                     {/* Choisir une nouvelle image principale */}
-                    <input
-                      type="file"
-                      name="mainImg"
-                      onChange={handleInputChange}
-                      accept="image/*"
-                    />
+                    <div className="form-part">
+                      <h4>Image principale</h4>
+                      <input
+                        type="file"
+                        name="mainImg"
+                        onChange={handleInputChange}
+                        accept="image/*"
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className="article-content">
                   <div className="article-text">
-                    <p>Introduction</p>
-                    <textarea
-                      name="introduction"
-                      value={updatedActualityArticle.introduction}
-                      onChange={handleInputChange}
-                    />
-                    <h4>Sous-titre</h4>
-                    <input
-                      type="text"
-                      name="subTitle1"
-                      value={updatedActualityArticle.subTitle1}
-                      onChange={handleInputChange}
-                    />
-                    <p>Premier bloc de texte</p>
-                    <textarea
-                      name="content1"
-                      value={updatedActualityArticle.content1}
-                      onChange={handleInputChange}
-                    />
-                    <h4>Deuxième Sous-titre</h4>
-                    <input
-                      type="text"
-                      name="subTitle2"
-                      value={updatedActualityArticle.subTitle2}
-                      onChange={handleInputChange}
-                    />
-                    <p>Deuxième bloc de texte</p>
-                    <textarea
-                      name="content2"
-                      value={updatedActualityArticle.content2}
-                      onChange={handleInputChange}
-                    />
+                    <div className="form-part">
+                      <h4>Introduction</h4>
+                      <textarea
+                        name="introduction"
+                        value={updatedActualityArticle.introduction}
+                        onChange={handleInputChange}
+                      />
+                    </div>
+                    <div className="form-part">
+                      <h4>Sous-titre</h4>
+                      <input
+                        type="text"
+                        name="subTitle1"
+                        value={updatedActualityArticle.subTitle1}
+                        onChange={handleInputChange}
+                      />
+                    </div>
+                    <div className="form-part">
+                      <h4>Premier bloc de texte</h4>
+                      <textarea
+                        name="content1"
+                        value={updatedActualityArticle.content1}
+                        onChange={handleInputChange}
+                      />
+                    </div>
+                    <div className="form-part">
+                      <h4>Deuxième Sous-titre</h4>
+                      <input
+                        type="text"
+                        name="subTitle2"
+                        value={updatedActualityArticle.subTitle2}
+                        onChange={handleInputChange}
+                      />
+                    </div>
+                    <div className="form-part">
+                      <h4>Deuxième bloc de texte</h4>
+                      <textarea
+                        name="content2"
+                        value={updatedActualityArticle.content2}
+                        onChange={handleInputChange}
+                      />
+                    </div>
                   </div>
-                  {/* <div className="article-images">
-                    {updatedActualityArticle.illustrations?.map((image, index) => {
-                      return (
-                        <img key={index} src={image} alt="image illustrative" />
-                      );
-                    })}
-                  </div> */}
                   <div className="article-images">
                     {updatedActualityArticle.illustrations?.map(
                       (image, index) => {
@@ -247,16 +250,20 @@ const ActualityArticle = () => {
                         );
                       }
                     )}
-                    <input
-                      type="file"
-                      name="illustrations"
-                      onChange={handleInputChange}
-                      accept="image/*"
-                      multiple
-                    />
+                    <div className="form-part">
+                      <h4>Images d'illustrations</h4>
+                      <input
+                        type="file"
+                        name="illustrations"
+                        onChange={handleInputChange}
+                        accept="image/*"
+                        multiple
+                      />
+                    </div>
                   </div>
                 </div>
-                <div className="artcile-author">
+                <button onClick={handleUpdateArticle}>Mettre à jour</button>
+                <div className="article-author">
                   <PapillonLogo />
                   <div className="author-info">
                     <h5>{actualityArticle.author}</h5>

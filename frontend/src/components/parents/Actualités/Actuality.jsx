@@ -25,8 +25,14 @@ const Actuality = ({ actuality }) => {
       <div className="post">
         {isRootPath && (
           <div className="admin-params">
-            <Link to={`/admin/actualites/${actuality._id}`}>modifier</Link>
-            <Link onClick={() => handleDelete(actuality._id)}>Supprimer</Link>
+            <a
+              href={`/admin/actualites/${actuality._id}`}
+              className="fa-solid fa-pen"
+            ></a>
+            <a
+              onClick={() => handleDelete(actuality._id)}
+              className="fa-sharp fa-solid fa-trash"
+            ></a>
           </div>
         )}
         <Link
