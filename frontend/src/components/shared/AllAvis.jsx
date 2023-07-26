@@ -21,15 +21,36 @@ const AllAvis = ({ etablissement }) => {
         setAvis(res.data);
       });
   }, []);
+  const CustomPrevArrow = (props) => {
+    const { onClick } = props;
+    return (
+      <div className="custom-arrow custom-arrow-prev" onClick={onClick}>
+        <i class="fa-solid fa-chevron-left"></i>
+      </div>
+    );
+  };
+
+  const CustomNextArrow = (props) => {
+    const { onClick } = props;
+    return (
+      <div className="custom-arrow custom-arrow-next" onClick={onClick}>
+        <i class="fa-solid fa-chevron-right"></i>{" "}
+      </div>
+    );
+  };
   const settings = {
     dots: true, // Afficher les points indicateurs
     infinite: true, // Faire une boucle infinie
     speed: 500, // Vitesse de défilement en millisecondes
     slidesToShow: 3, // Nombre de cartes à afficher à la fois
     slidesToScroll: 1, // Nombre de cartes à faire défiler à la fois
+    // className: "center",
+    // centerMode: true,
+    // centerPadding: "60px",
+
     responsive: [
       {
-        breakpoint: 1180,
+        breakpoint: 1540,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -38,29 +59,16 @@ const AllAvis = ({ etablissement }) => {
         },
       },
       {
-        breakpoint: 760,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
+        breakpoint: 1160,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          initialSlide: 2,
         },
       },
     ],
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
   };
 
   return (

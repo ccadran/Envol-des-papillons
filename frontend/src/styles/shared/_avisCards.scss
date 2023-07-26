@@ -2,7 +2,6 @@
 
 .avis {
   color: red;
-  margin: 0 0;
   h3 {
     margin-bottom: 72px;
   }
@@ -58,7 +57,7 @@
 .slick-slider {
   padding: 20px;
   .slick-list {
-    padding: 20px;
+    padding: 50px 50px !important;
   }
 }
 
@@ -67,10 +66,30 @@
 }
 
 .slick-dots li button:before {
-  font-size: 12px; /* Ajustez la taille des points indicateurs */
+  font-size: 12px !important; /* Ajustez la taille des points indicateurs */
   color: #333; /* Ajustez la couleur des points indicateurs */
 }
-
+.slick-dots li button:before {
+  font-size: 10px;
+}
 .slick-dots li.slick-active button:before {
   color: #007bff; /* Ajustez la couleur du point indicateur actif */
+}
+.custom-arrow {
+  /* Ajoutez des styles communs pour les flèches de navigation */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.custom-arrow-prev {
+  /* Ajoutez des styles spécifiques pour la flèche précédente */
+  left: 10px;
+}
+
+.custom-arrow-next {
+  /* Ajoutez des styles spécifiques pour la flèche suivante */
+  right: 10px;
 }
