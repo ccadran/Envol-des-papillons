@@ -2,7 +2,8 @@
 
 .teachers-container {
   margin-top: 78px;
-  display: flex;
+  max-width: 100%; /* Ajustez la largeur comme vous le souhaitez */
+
   .teacher-card {
     margin-right: 120px;
     width: 250px;

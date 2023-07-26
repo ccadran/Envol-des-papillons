@@ -52,7 +52,7 @@ const AllAvis = ({ etablissement }) => {
       {
         breakpoint: 1540,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
           dots: true,

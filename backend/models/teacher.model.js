@@ -12,7 +12,6 @@ const TeacherSchema = new mongoose.Schema({
   poste: {
     type: String,
     required: true,
-    unique: true,
   },
   classe: {
     type: String,

@@ -25,7 +25,7 @@ const FormTeacher = () => {
       formation: formation,
       etablissement: selectedOption,
     };
-
+    console.log(newTeacher);
     axios
       .post("http://localhost:5001/teacher", newTeacher)
       .then((response) => {
@@ -96,7 +96,7 @@ const FormTeacher = () => {
             onChange={(e) => setFormation(e.target.value)}
           />
 
-          <button type="submit">Ajouter</button>
+          <button onClick={handleSubmit}>Ajouter</button>
         </form>
       </form>
     </div>

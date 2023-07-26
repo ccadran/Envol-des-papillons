@@ -1,5 +1,6 @@
 import React from "react";
 import PapillonLogo from "../../../shared/PapillonLogo";
+import "styles/ecole&college/Presentation/_pedagogicTeam.scss";
 
 const Teacher = ({ teacher }) => {
   return (
