@@ -3,8 +3,6 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import NavigationParents from "../../components/parents/NavigationParents";
 import PapillonLogo from "../../components/shared/PapillonLogo";
-import FooterGlobal from "../../components/shared/FooterGlobal";
-import NavigationGlobal from "../../components/shared/NavigationGlobal";
 import { useLocation } from "react-router-dom";
 import NavigationAdmin from "../../components/admin/NavigationAdmin";
 import Tags from "components/parents/Actualités/Tags";

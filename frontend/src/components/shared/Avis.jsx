@@ -4,14 +4,14 @@ import PapillonLogo from "./PapillonLogo";
 import "styles/shared/_avisCards.scss";
 
 const Avis = ({ avi }) => {
-  const [papillonColor, setPapillonColor] = useState("orange");
+  // const [papillonColor, setPapillonColor] = useState("orange");
 
-  const colors = ["orange", "blue", "green", "red", "purple"];
+  // const colors = ["orange", "blue", "green", "red", "purple"];
 
-  useEffect(() => {
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    setPapillonColor(randomColor);
-  }, []);
+  // useEffect(() => {
+  //   const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  //   setPapillonColor(randomColor);
+  // }, []);
 
   const dateFormated = (date) => {
     return new Date(date).toLocaleDateString("fr-FR", {
@@ -19,6 +19,11 @@ const Avis = ({ avi }) => {
       month: "numeric",
       year: "numeric",
     });
+  };
+  const [showFullText, setShowFullText] = useState(false); // État pour afficher ou masquer le texte complet de l'avis
+
+  const toggleShowFullText = () => {
+    setShowFullText((prevShowFullText) => !prevShowFullText); // Inverser l'état actuel
   };
 
   return (
@@ -32,10 +37,14 @@ const Avis = ({ avi }) => {
           <p>{dateFormated(avi.createdAt)}</p>
         </div>
       </div>
-      <div className="avis-content">
-        <p>{avi.avis}</p>
+      <div className="avis-text">
+        <p className={showFullText ? "full-text" : "excerpt-text"}>
+          {avi.avis}
+        </p>
       </div>
-      <p id="show-more">Voir +</p>
+      <p id="show-more" onClick={toggleShowFullText}>
+        {showFullText ? " Voir -" : "Voir +"}
+      </p>
     </div>
   );
 };

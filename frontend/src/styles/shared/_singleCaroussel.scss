@@ -7,11 +7,24 @@
   align-items: center;
 
   .slides-container {
+    // width: 100%;
+    // height: 350px;
     width: 100%;
-    height: 350px;
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 45.25%;
+    position: relative;
+    overflow: hidden;
   }
   .slide {
+    // border-radius: $border-radius;
+    // width: 100%;
+    // height: 100%;
+    // object-fit: cover;
     border-radius: $border-radius;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -21,18 +34,20 @@
   }
   .chevron {
     position: absolute;
-    font-size: 1.5rem;
+    font-size: clamp(20px, 3vw, 30px);
     color: $black;
     transition: 0.1s ease-in;
+    padding: 2rem;
     &:hover {
       cursor: pointer;
-      // font-size: 1.7rem;
     }
     &.chevron-left {
-      left: -1.5rem;
+      left: -2rem;
+      transform: translateX(-2rem);
     }
     &.chevron-right {
-      right: -1.5rem;
+      right: -2rem;
+      transform: translateX(2rem);
     }
   }
   .indicators {
