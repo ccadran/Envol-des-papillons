@@ -1,11 +1,14 @@
 @import "../../settings.scss";
 
 .pre-inscription {
+  h4 {
+    margin-bottom: 72px;
+  }
   .download {
-    margin-top: 72px;
     h4 {
       margin-bottom: 34px;
     }
+    margin: 72px 0;
     .buttons {
       display: flex;
       justify-content: space-around;
@@ -13,9 +16,91 @@
       margin: 0 auto;
     }
   }
-  .inscription-form {
-    h4 {
-      margin: 72px 0;
+  .pre-inscription-form {
+    width: 85%;
+    margin: 0 auto;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    padding: 42px 88px;
+    form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr 1fr 1fr 1.5fr 5fr 1.5fr;
+      column-gap: 30px;
+      grid-template-areas:
+        "name firstName"
+        "date place"
+        "classe classe"
+        "lastSchool lastSchool"
+        "tuteurs tuteurs"
+        "message message";
+      .lastName {
+        grid-area: name;
+      }
+      .firstName {
+        grid-area: firstName;
+      }
+      .bornDate {
+        grid-area: date;
+      }
+      .bornPlace {
+        grid-area: place;
+      }
+      .classe {
+        grid-area: classe;
+      }
+      .lastSchool {
+        grid-area: lastSchool;
+        #lastSchool {
+          height: 100px;
+        }
+      }
+      .tuteurs {
+        grid-area: tuteurs;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        .tuteur1 {
+          width: 50%;
+        }
+        .tuteur2 {
+          width: 50%;
+        }
+        .form-part {
+          width: 100%;
+        }
+      }
+      .message {
+        grid-area: message;
+        #message {
+          height: 100px;
+          resize: none;
+        }
+      }
+      .form-part {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 42px;
+        label {
+          font-family: $subtitle-font;
+          font-size: 20px;
+          margin-bottom: 12px;
+        }
+        input,
+        textarea,
+        select {
+          padding: 8px;
+          border: 1px solid $black;
+          border-radius: $border-radius;
+          height: clamp(35px, 5vw, 50px);
+          font-family: $body-font;
+          font-size: 18px;
+        }
+        select {
+          width: 50%;
+          margin: 0;
+        }
+      }
     }
   }
 }

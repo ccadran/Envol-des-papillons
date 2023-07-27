@@ -18,6 +18,7 @@ const PreInscription = () => {
           <Button color="orange" text="Fiche pré-inscription 6-11ans" />
         </div>
       </div>
+      <h4>Formulaire de pré-inscription</h4>
       <FormPreInscription />
     </section>
   );

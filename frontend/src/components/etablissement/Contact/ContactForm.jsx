@@ -4,7 +4,6 @@ import { set } from "mongoose";
 
 export const ContactForm = () => {
   const form = useRef();
-  console.log(process.env.REACT_APP_MAIL_KEY);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -39,16 +38,39 @@ export const ContactForm = () => {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
-      <label>Name</label>
-      <input type="text" name="name" required />
-      <label>Email</label>
-      <input type="email" name="email" required autoComplete="off" />
-      <label>Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Envoyer" />
-      <div className="form-message"></div>
-    </form>
+    <div className="contact-form-container">
+      <form ref={form} onSubmit={sendEmail}>
+        <div className="form-part name">
+          <label>Nom</label>
+          <input type="text" name="name" placeholder="Votre nom" required />
+        </div>
+        <div className="form-part email">
+          <label>Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="abc@mail.com"
+            required
+            autoComplete="off"
+          />
+        </div>
+        <div className="form-part subject">
+          <label>Objet</label>
+          <input
+            type="text"
+            name="subject"
+            placeholder="L'objet de votre message"
+            required
+          />
+        </div>
+        <div className="form-part message">
+          <label>Message</label>
+          <textarea id="text" name="message" placeholder="Votre message" />
+        </div>
+        <button type="submit">Envoyer</button>
+        <div className="form-message"></div>
+      </form>
+    </div>
   );
 };
 export default ContactForm;
