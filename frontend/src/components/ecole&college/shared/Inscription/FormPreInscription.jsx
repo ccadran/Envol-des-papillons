@@ -56,7 +56,7 @@ const FormPreInscription = () => {
           <input type="text" name="bornPlace" placeholder="Bordeaux" required />
         </div>
         <div className="form-part classe">
-          <label>Lieu de naissance</label>
+          <label>Incription en classe de :</label>
           <select name="classe" id="">
             <option value="3-6">Incription en 3-6ans</option>
             <option value="6-8">Incription en 6-8ans</option>
@@ -175,7 +175,7 @@ const FormPreInscription = () => {
             id="message"
             type="text"
             name="message"
-            placeholder=" Votre message"
+            placeholder="Expliquez en quelques mots vos motivations pour l'inscription de votre enfant"
             required
           />
         </div>
