@@ -1,26 +1,10 @@
-// import React from "react";
-// import Button from "../shared/Button";
-
-// const ConnexionFormAdmin = () => {
-//   return (
-//     <section className="connexion-form">
-//       <img src="" alt="illustration co" />
-//       <div className="form">
-//         <h2>Espace parents</h2>
-//         <Button text="connexion" color="violet" />
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default ConnexionFormAdmin;
-
 import React from "react";
 import Button from "../shared/Button";
 
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import test from "assets/img/test.JPG";
 
 const ConnexionFormAdmin = () => {
   const navigate = useNavigate();
@@ -53,23 +37,30 @@ const ConnexionFormAdmin = () => {
   };
 
   return (
-    <div>
-      <h2>Page de connexion</h2>
-      <input
-        type="text"
-        placeholder="Nom d'utilisateur"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Mot de passe"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleLogin}>Se connecter</button>
-      {error && <p>{error}</p>}
-    </div>
+    <section className="connexion-container">
+      <div className="img-container">
+        <img src={test} alt="test" />
+      </div>
+      <div className="form-connexion">
+        <h3>Espace Admin</h3>
+        <div className="form-fields">
+          <input
+            type="text"
+            placeholder="Nom d'utilisateur"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Mot de passe"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <button onClick={handleLogin}>Se connecter</button>
+        {error && <p>{error}</p>}
+      </div>
+    </section>
   );
 };
 
