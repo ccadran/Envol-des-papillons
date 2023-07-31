@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Blog from "./Blog";
 import FAQ from "./FAQ";
@@ -15,10 +15,21 @@ import ActualityArticle from "../parents/ActualityArticle";
 import PedagogicTeamAdmin from "./PedagogicTeamAdmin";
 import NewTeacher from "./NewTeacher";
 const AdminRoutes = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    // Check if the token exists in local storage
+    const token = localStorage.getItem("tokenAdmin");
+
+    if (!token) {
+      // If the token does not exist, navigate to ConnexionAdmins
+      navigate("/admin/connexion-admin");
+    }
+    // Add 'token' to the dependency array to re-run the effect when the token changes.
+  }, [navigate]);
   return (
     <div>
       <Routes>
-        <Route path="/" element={<ConnexionAdmin />} />
+        <Route path="/connexion-admin" element={<ConnexionAdmin />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogArticle />} />
