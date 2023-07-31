@@ -1,4 +1,5 @@
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 
 const ParentModel = require("../models/Parent.model");
 
@@ -70,11 +71,19 @@ exports.login = async (req, res) => {
     if (!passwordMatch) {
       return res.status(401).json({ message: "Mot de passe incorrect" });
     }
-
+    const payload = {
+      user: {
+        id: parent._id,
+        username: parent.username,
+        // Vous pouvez également ajouter d'autres informations liées à l'utilisateur ici
+      },
+    };
     // Ici, vous pouvez créer une session pour le parent ou générer un jeton d'accès JWT pour l'authentification.
-
+    const token = jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, {
+      expiresIn: "5min",
+    });
     // Réponse réussie - Vous pouvez également renvoyer un jeton d'accès JWT ici
-    res.status(200).json({ message: "Connexion réussie" });
+    res.status(200).json({ token });
   } catch (error) {
     console.error("Erreur lors de la connexion du parent :", error);
     res.status(500).json({ message: "Erreur lors de la connexion" });
