@@ -36,6 +36,7 @@ app.use("/parent", require("./routes/parent.routes"));
 app.use("/admin", require("./routes/admin.routes"));
 app.use("/teacher", require("./routes/teacher.routes"));
 app.use("/login-parents", require("./routes/loginParents.routes"));
+app.use("/login-admin", require("./routes/loginAdmin.routes"));
 
 //Lancer le serveur
 app.listen(port, () => console.log("le serveur a démaré au port " + port));
