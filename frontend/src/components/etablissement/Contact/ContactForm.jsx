@@ -11,7 +11,7 @@ export const ContactForm = () => {
 
     emailjs
       .sendForm(
-        "service_zknowls",
+        "service_whqad0d",
         "template_04jhnkj",
         form.current,
         process.env.REACT_APP_MAIL_KEY
@@ -48,7 +48,7 @@ export const ContactForm = () => {
           <label>Email</label>
           <input
             type="email"
-            name="email"
+            name="mail"
             placeholder="abc@mail.com"
             required
             autoComplete="off"

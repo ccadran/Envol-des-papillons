@@ -1,3 +1,5 @@
+const bcrypt = require("bcrypt");
+
 const ParentModel = require("../models/Parent.model");
 
 module.exports.getParent = async (req, res) => {
@@ -9,13 +11,22 @@ module.exports.setParent = async (req, res) => {
   if (!req.body.password) {
     res.status(400).json({ message: "Le mot de passe est obligatoire" });
   }
-  const parent = await ParentModel.create({
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
-    username: req.body.username,
-    password: req.body.password,
-  });
-  res.status(200).json(parent);
+  try {
+    // Générez le hachage du mot de passe
+    const hashedPassword = await bcrypt.hash(req.body.password, 10);
+
+    const parent = await ParentModel.create({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      username: req.body.username,
+      password: hashedPassword, // Stockez le mot de passe haché dans la base de données
+    });
+
+    res.status(200).json(parent);
+  } catch (error) {
+    // Gérez les erreurs liées au hachage du mot de passe ou à l'enregistrement du parent
+    res.status(500).json({ error });
+  }
 };
 
 module.exports.editParent = async (req, res) => {
@@ -40,4 +51,32 @@ module.exports.deleteParent = async (req, res) => {
 
   await parent.deleteOne();
   res.status(200).json("Parent supprimé " + req.params.id);
+};
+
+exports.login = async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    // Vérifiez si l'e-mail du parent existe dans la base de données
+    const parent = await ParentModel.findOne({ username });
+
+    if (!parent) {
+      return res.status(401).json({ message: "Username incorrecte" });
+    }
+
+    // Vérifiez le mot de passe fourni avec le mot de passe haché stocké dans la base de données
+    const passwordMatch = await bcrypt.compare(password, parent.password);
+
+    if (!passwordMatch) {
+      return res.status(401).json({ message: "Mot de passe incorrect" });
+    }
+
+    // Ici, vous pouvez créer une session pour le parent ou générer un jeton d'accès JWT pour l'authentification.
+
+    // Réponse réussie - Vous pouvez également renvoyer un jeton d'accès JWT ici
+    res.status(200).json({ message: "Connexion réussie" });
+  } catch (error) {
+    console.error("Erreur lors de la connexion du parent :", error);
+    res.status(500).json({ message: "Erreur lors de la connexion" });
+  }
 };

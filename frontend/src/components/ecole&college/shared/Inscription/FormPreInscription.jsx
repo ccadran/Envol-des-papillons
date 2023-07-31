@@ -10,7 +10,7 @@ const FormPreInscription = () => {
 
     emailjs
       .sendForm(
-        "service_zknowls",
+        "service_whqad0d",
         "template_1pk9c1f",
         form.current,
         process.env.REACT_APP_MAIL_KEY
