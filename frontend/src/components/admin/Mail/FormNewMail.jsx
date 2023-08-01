@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { set } from "mongoose";
+import { useNavigate } from "react-router-dom";
 
 const FormNewMail = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [childNames, setChildNames] = useState([
     { id: 1, value: "" },
@@ -38,6 +40,7 @@ const FormNewMail = () => {
       .then((res) => {
         // Handle the response if needed
         console.log("Mail added successfully!");
+        navigate("/admin/mails");
       })
       .catch((error) => {
         // Handle any errors that occurred during the request

@@ -1,6 +1,7 @@
 @import "../settings.scss";
 
-.connexion-container {
+.connexion-container,
+.inscription-container {
   width: 90%;
 
   height: 70vh;
@@ -16,18 +17,22 @@
       object-fit: cover;
     }
   }
-  .form-connexion {
+  .form-connexion,
+  .form-inscription {
     width: 50%;
-    padding: 72px 88px;
+    padding: 52px 88px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: 100%;
+    h3 {
+      margin-bottom: 22px;
+    }
     .form-fields {
-      margin: 42px 0;
+      margin: 22px 0;
       input {
         width: 100%;
-        margin-bottom: 42px;
+        margin-bottom: 32px;
         border: none;
         border-bottom: 2px solid $black;
         font-family: $body-font;

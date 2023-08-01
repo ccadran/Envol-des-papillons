@@ -28,7 +28,7 @@ const MailController = () => {
       <div className="mail-controller">
         <input
           type="text"
-          placeholder="&#x1F50D; Rechercher un mail"
+          placeholder="&#x1F50D; Rechercher un enfant"
           onChange={handleSearchChange}
           value={searchText}
         />

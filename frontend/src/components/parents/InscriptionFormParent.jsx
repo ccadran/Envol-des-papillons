@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import test from "assets/img/test.JPG";
 
 const RegistrationForm = () => {
   const navigate = useNavigate();
@@ -31,9 +32,12 @@ const RegistrationForm = () => {
   };
 
   return (
-    <section className="registration-container">
-      <div className="form-registration">
-        <h3>Register as a Parent</h3>
+    <section className="inscription-container">
+      <div className="img-container">
+        <img src={test} alt="test" />
+      </div>{" "}
+      <div className="form-inscription">
+        <h3>Créer un compte parent</h3>
         <div className="form-fields">
           <input
             type="text"
@@ -66,7 +70,7 @@ const RegistrationForm = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button onClick={handleRegister}>Register</button>
+        <button onClick={handleRegister}>Créer</button>
         {error && <p>{error}</p>}
       </div>
     </section>
