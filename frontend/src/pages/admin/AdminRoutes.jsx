@@ -14,6 +14,7 @@ import NewFAQQuestion from "./NewFAQQuestion";
 import ActualityArticle from "../parents/ActualityArticle";
 import PedagogicTeamAdmin from "./PedagogicTeamAdmin";
 import NewTeacher from "./NewTeacher";
+import MailParent from "./MailParent";
 const AdminRoutes = () => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -44,6 +45,7 @@ const AdminRoutes = () => {
         <Route path="/avis" element={<Avis />} />
         <Route path="/teachers" element={<PedagogicTeamAdmin />} />
         <Route path="/teachers/new-teacher" element={<NewTeacher />} />
+        <Route path="/mails" element={<MailParent />} />
       </Routes>
     </div>
   );
