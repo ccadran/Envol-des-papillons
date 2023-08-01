@@ -23,15 +23,17 @@ const FormNewMail = () => {
     // Create the new mail object with the email and childNames fields
     const newMail = {
       email,
-      childNames: childNames.map((child) => child.value),
+      childName: childNames[0].value,
+      childName2: childNames[1].value,
+      childName3: childNames[2].value,
     };
+    console.log(newMail);
 
     // Send the new mail object to the server
     axios
       .post("http://localhost:5001/mail-parent", newMail)
       .then((res) => {
         // Handle the response if needed
-        console.log(newMail);
         console.log("Mail added successfully!");
       })
       .catch((error) => {
