@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { set } from "mongoose";
 
 const FormNewMail = () => {
   const [email, setEmail] = useState("");
@@ -28,6 +29,8 @@ const FormNewMail = () => {
       childName3: childNames[2].value,
     };
     console.log(newMail);
+    setEmail("");
+    setChildNames(["", "", ""]);
 
     // Send the new mail object to the server
     axios
@@ -43,8 +46,8 @@ const FormNewMail = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form onSubmit={handleSubmit} className="add-new-mail">
+      <div className="form-mail">
         <label htmlFor="mail">Titre de la section :</label>
         <input
           type="text"

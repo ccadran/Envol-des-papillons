@@ -3,6 +3,7 @@ import React from "react";
 import chevron from "assets/logos/chevron.svg";
 import FormNewMail from "components/admin/Mail/FormNewMail";
 import { Link } from "react-router-dom";
+import "styles/admin/Mail/_newMail.scss";
 
 const NewMailParent = () => {
   return (

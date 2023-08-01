@@ -1,0 +1,15 @@
+@import "../../settings.scss";
+
+.add-new-mail {
+  .form-mail {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    input {
+      margin-top: 12px;
+      border: 1px solid $black;
+      border-radius: $border-radius;
+      padding: 6px;
+    }
+  }
+}

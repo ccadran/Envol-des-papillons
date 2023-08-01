@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Mail from "./Mail";
+import Button from "components/shared/Button";
 
 const MailController = () => {
   const [mailsData, setMailsData] = useState([]);
@@ -24,15 +25,15 @@ const MailController = () => {
 
   return (
     <section className="mail">
-      <div className="mail-search">
+      <div className="mail-controller">
         <input
           type="text"
           placeholder="&#x1F50D; Rechercher un mail"
           onChange={handleSearchChange}
           value={searchText}
         />
+        <Button text="Ajouter un mail" link="new-mail" color="violet" />
       </div>
-      <div className="new-mail"></div>
       <div className="mail-list">
         {filteredMails.map((mail) => {
           return <Mail key={mail._id} mail={mail} />;

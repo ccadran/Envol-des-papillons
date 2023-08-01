@@ -1,7 +1,9 @@
 @import "../../settings.scss";
 
 .mail {
-  .mail-search {
+  .mail-controller {
+    display: flex;
+    justify-content: space-between;
     input {
       width: 45%;
       border: 1px solid $black;
@@ -15,6 +17,7 @@
       font-size: 18px;
     }
   }
+
   .mail-list {
     margin-top: 122px;
     border-top: 1px solid $black;
