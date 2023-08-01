@@ -20,6 +20,7 @@ module.exports.setParent = async (req, res) => {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       username: req.body.username,
+      // email: req.body.email,
       password: hashedPassword, // Stockez le mot de passe haché dans la base de données
     });
 

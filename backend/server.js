@@ -33,9 +33,10 @@ app.use("/faqQuestionSchool", require("./routes/faqQuestionSchool.routes"));
 app.use("/faqSectionCollege", require("./routes/faqSectionCollege.routes"));
 app.use("/faqQuestionCollege", require("./routes/faqQuestionCollege.routes"));
 app.use("/parent", require("./routes/parent.routes"));
+app.use("/mail-parent", require("./routes/mailParent.routes"));
 app.use("/admin", require("./routes/admin.routes"));
 app.use("/teacher", require("./routes/teacher.routes"));
-app.use("/login-parents", require("./routes/loginParents.routes"));
+app.use("/login-parent", require("./routes/loginParents.routes"));
 app.use("/login-admin", require("./routes/loginAdmin.routes"));
 
 //Lancer le serveur
