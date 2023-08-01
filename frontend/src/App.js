@@ -12,7 +12,7 @@ import About from "./pages/college/AboutCollege";
 import CGU from "./pages/etablissement/CGU";
 import BlogArticle from "./pages/etablissement/BlogArticle";
 import ScrollToTop from "components/shared/ScrollToTop";
-import CreateParentAccount from "pages/etablissement/CreateParentAccount";
+import InscriptionParent from "pages/etablissement/InscriptionParent";
 const App = () => {
   return (
     <BrowserRouter>
@@ -28,7 +28,7 @@ const App = () => {
         <Route path="/parents/*" element={<ParentsRoutes />} />
         <Route path="/admin/*" element={<AdminRoutes />} />
         <Route path="/etablissement/CGU" element={<CGU />} />
-        <Route path="/create-account" element={<CreateParentAccount />} />
+        <Route path="/inscription-parent" element={<InscriptionParent />} />
       </Routes>
     </BrowserRouter>
   );

@@ -17,7 +17,7 @@ const ConnexionForm = () => {
   const handleLogin = async () => {
     try {
       // Faites l'appel API pour vous connecter
-      const response = await axios.post("http://localhost:5001/login-parents", {
+      const response = await axios.post("http://localhost:5001/login-parent", {
         username,
         password,
       });

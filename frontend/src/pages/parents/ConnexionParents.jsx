@@ -7,7 +7,6 @@ const ConnexionParents = () => {
     <>
       <NavigationGlobal />
       <ConnexionFormParents />
-      <div className="margin-bottom"></div>
     </>
   );
 };

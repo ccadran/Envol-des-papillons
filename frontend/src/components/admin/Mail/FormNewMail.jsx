@@ -48,14 +48,14 @@ const FormNewMail = () => {
   return (
     <form onSubmit={handleSubmit} className="add-new-mail">
       <div className="form-mail">
-        <label htmlFor="mail">Titre de la section :</label>
+        <label htmlFor="mail">Mail du parent</label>
         <input
           type="text"
           id="mail"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <label htmlFor="childNames">Le nom des enfants</label>
+        <label htmlFor="childNames">Le nom des enfants :</label>
         {childNames.map((child) => (
           <input
             key={child.id}
@@ -65,7 +65,7 @@ const FormNewMail = () => {
           />
         ))}
       </div>
-      <button type="submit">Ajouter</button>
+      <button type="submit">Ajouter le mail</button>
     </form>
   );
 };

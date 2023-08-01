@@ -4,12 +4,21 @@
   .form-mail {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 60%;
+    margin: 72px auto;
+    label {
+      font-family: $subtitle-font;
+      margin-top: 24px;
+    }
     input {
       margin-top: 12px;
       border: 1px solid $black;
       border-radius: $border-radius;
       padding: 6px;
     }
+  }
+  button {
+    margin-top: 42px;
+    margin-left: 20%;
   }
 }
