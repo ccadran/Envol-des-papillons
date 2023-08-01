@@ -2,6 +2,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 const ParentModel = require("../models/Parent.model");
+const MailParentModel = require("../models/mailParent.model"); // Utilisez le même nom d'importation
 
 module.exports.getParent = async (req, res) => {
   const parent = await ParentModel.find();
@@ -12,6 +13,10 @@ module.exports.setParent = async (req, res) => {
   if (!req.body.password) {
     res.status(400).json({ message: "Le mot de passe est obligatoire" });
   }
+  const mailParent = await MailParentModel.findOne({ email: req.body.email });
+  if (!mailParent) {
+    return res.status(400).json({ message: "L'e-mail n'est pas autorisé" });
+  }
   try {
     // Générez le hachage du mot de passe
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
@@ -20,7 +25,7 @@ module.exports.setParent = async (req, res) => {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       username: req.body.username,
-      // email: req.body.email,
+      email: req.body.email,
       password: hashedPassword, // Stockez le mot de passe haché dans la base de données
     });
 
