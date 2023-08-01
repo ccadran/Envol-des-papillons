@@ -21,6 +21,8 @@ module.exports.setMailParent = async (req, res) => {
     const mailParent = await MailParentModel.create({
       email: req.body.email,
       childName: req.body.childName,
+      childName2: req.body.childName2,
+      childName3: req.body.childName3,
     });
     res.status(200).json(mailParent);
   } catch (error) {
