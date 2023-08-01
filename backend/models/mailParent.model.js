@@ -5,17 +5,9 @@ const mailParentSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  childName: {
-    type: String,
-    required: true,
-  },
-  childName2: {
-    type: String,
-    required: false,
-  },
-  childName3: {
-    type: String,
-    required: false,
+  childNames: {
+    type: [String], // Définir le champ childNames comme un tableau de chaînes de caractères
+    required: false, // Vous pouvez modifier ceci en fonction de votre logique d'application
   },
 });
 

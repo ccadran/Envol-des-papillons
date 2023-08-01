@@ -1,0 +1,62 @@
+@import "../../settings.scss";
+
+.mail {
+  .mail-search {
+    input {
+      width: 45%;
+      border: 1px solid $black;
+      border-radius: $border-radius;
+      font-family: $body-font;
+      padding: 10px 40px 10px 20px;
+      display: flex;
+      align-items: center;
+      line-height: 100%;
+      margin: auto 0;
+      font-size: 18px;
+    }
+  }
+  .mail-list {
+    margin-top: 122px;
+    border-top: 1px solid $black;
+
+    .mail-container {
+      .controller {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+      }
+
+      display: flex;
+      flex-direction: column;
+      padding: 34px;
+      border-bottom: 1px solid $black;
+      .infos-container {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 24px;
+        p {
+          margin-top: 32px;
+        }
+        input {
+          margin-right: 12px;
+          margin-top: 32px;
+          padding: 6px;
+          border-radius: $border-radius;
+          font-family: $body-font;
+          font-size: clamp(16px, 2vw, 18px);
+        }
+        .email-content {
+          width: 50%;
+        }
+        .child-content {
+          .childs {
+            display: flex;
+            p {
+              margin-right: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

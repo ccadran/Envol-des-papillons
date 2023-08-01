@@ -1,9 +1,10 @@
-const MailParentModel = require("../models/mailParent.model"); // Utilisez le même nom d'importation
+const MailParentModel = require("../models/mailParent.model");
 
 module.exports.getMailParent = async (req, res) => {
   const mailParents = await MailParentModel.find();
   res.status(200).json(mailParents);
 };
+
 module.exports.setMailParent = async (req, res) => {
   if (!req.body.email) {
     return res.status(400).json({ message: "Le Mail est obligatoire" });
@@ -20,9 +21,11 @@ module.exports.setMailParent = async (req, res) => {
   try {
     const mailParent = await MailParentModel.create({
       email: req.body.email,
-      childName: req.body.childName,
-      childName2: req.body.childName2,
-      childName3: req.body.childName3,
+      childNames: [
+        req.body.childName,
+        req.body.childName2,
+        req.body.childName3,
+      ], // Stockez les noms des enfants dans un tableau
     });
     res.status(200).json(mailParent);
   } catch (error) {
@@ -37,15 +40,22 @@ module.exports.editMailParent = async (req, res) => {
     res.status(400).json({ message: "Ce Mail n'existe pas" });
   }
 
-  const updateMailParent = await MailParentModel.findByIdAndUpdate(
-    mailParent,
-    req.body,
-    {
-      new: true,
-    }
-  );
+  // Mettez à jour les champs individuels ou tout le tableau si nécessaire
+  mailParent.email = req.body.email;
+  mailParent.childNames = [
+    req.body.childName,
+    req.body.childName2,
+    req.body.childName3,
+  ];
 
-  res.status(200).json(updateMailParent);
+  try {
+    const updateMailParent = await mailParent.save(); // Sauvegardez les modifications dans la base de données
+    res.status(200).json(updateMailParent);
+  } catch (error) {
+    res
+      .status(500)
+      .json({ message: "Erreur lors de la mise à jour de l'e-mail" });
+  }
 };
 
 module.exports.deleteMailParent = async (req, res) => {

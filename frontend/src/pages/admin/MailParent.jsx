@@ -2,6 +2,7 @@ import MailController from "components/admin/Mail/MailController";
 import NavigationAdmin from "components/admin/NavigationAdmin";
 import H1HeroText from "components/shared/H1HeroText";
 import React from "react";
+import "styles/admin/Mail/_mail.scss";
 
 const MailParent = () => {
   return (
