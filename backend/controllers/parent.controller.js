@@ -61,14 +61,21 @@ module.exports.deleteParent = async (req, res) => {
 };
 
 exports.login = async (req, res) => {
-  const { username, password } = req.body;
+  const { email, password } = req.body;
 
   try {
-    // Vérifiez si l'e-mail du parent existe dans la base de données
-    const parent = await ParentModel.findOne({ username });
+    // Vérifiez si l'e-mail du parent existe dans la base de données "mailParents"
+    const mailParent = await MailParentModel.findOne({ email });
+
+    if (!mailParent) {
+      return res.status(401).json({ message: "Email non autorisé" });
+    }
+
+    // Vérifiez si le parent existe dans la base de données "ParentModel"
+    const parent = await ParentModel.findOne({ email });
 
     if (!parent) {
-      return res.status(401).json({ message: "Username incorrecte" });
+      return res.status(401).json({ message: "Email incorrect" });
     }
 
     // Vérifiez le mot de passe fourni avec le mot de passe haché stocké dans la base de données
@@ -77,17 +84,20 @@ exports.login = async (req, res) => {
     if (!passwordMatch) {
       return res.status(401).json({ message: "Mot de passe incorrect" });
     }
+
     const payload = {
       user: {
         id: parent._id,
-        username: parent.username,
+        email: parent.email,
         // Vous pouvez également ajouter d'autres informations liées à l'utilisateur ici
       },
     };
+
     // Ici, vous pouvez créer une session pour le parent ou générer un jeton d'accès JWT pour l'authentification.
     const token = jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, {
       expiresIn: "5min",
     });
+
     // Réponse réussie - Vous pouvez également renvoyer un jeton d'accès JWT ici
     res.status(200).json({ token });
   } catch (error) {
