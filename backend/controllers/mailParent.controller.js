@@ -1,4 +1,5 @@
 const MailParentModel = require("../models/mailParent.model");
+const ParentModel = require("../models/Parent.model");
 
 module.exports.getMailParent = async (req, res) => {
   const mailParents = await MailParentModel.find();
@@ -58,15 +59,25 @@ module.exports.editMailParent = async (req, res) => {
       .json({ message: "Erreur lors de la mise à jour de l'e-mail" });
   }
 };
-
 module.exports.deleteMailParent = async (req, res) => {
-  const mailParent = await MailParentModel.findById(req.params.id);
-  if (!mailParent) {
-    res.status(400).json({ message: "Ce Mail n'existe pas" });
-  }
+  const mailParentId = req.params.id;
 
-  await mailParent.deleteOne();
-  res.status(200).json("Mail supprimé " + req.params.id);
+  try {
+    const mailParent = await MailParentModel.findById(mailParentId);
+    if (!mailParent) {
+      return res.status(400).json({ message: "Ce Mail n'existe pas" });
+    }
+
+    // Supprimez les parents ayant l'email du mailParent avant de supprimer le mailParent
+    await ParentModel.deleteMany({ email: mailParent.email });
+
+    // Supprimez le mailParent lui-même
+    await mailParent.deleteOne();
+
+    res.status(200).json({ message: "Mail supprimé " + mailParentId });
+  } catch (error) {
+    res.status(500).json({ message: "Erreur lors de la suppression du Mail" });
+  }
 };
 
 module.exports.getMailParentById = async (req, res) => {
