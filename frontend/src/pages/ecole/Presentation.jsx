@@ -25,7 +25,7 @@ const Presentation = () => {
     },
   ];
   const visionPoints = [
-    "Viser le développement de l’enfant dans sa globalité",
+    "Viser le développement de l’enfant dans sa globalité iser le développement de l’enfant dans sa globalité iser le développement de l’enfant dans sa globalité",
     "Donner les meilleurs chances de réussir",
   ];
   const objectifPoints = [
