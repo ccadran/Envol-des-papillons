@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../../shared/Button";
+import test from "assets/img/test.JPG";
 
 const Locaux = () => {
   return (
@@ -25,7 +26,7 @@ const Locaux = () => {
               />
             </div>
             <div className="img-container">
-              <img src="" alt="maps API" />
+              <img src={test} alt="maps API" />
             </div>
           </div>
         </div>
@@ -33,7 +34,7 @@ const Locaux = () => {
           <h4>Le collège</h4>
           <div className="local">
             <div className="img-container">
-              <img src="" alt="maps API" />
+              <img src={test} alt="maps API" />
             </div>
             <div className="local-text">
               <p>

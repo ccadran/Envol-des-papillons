@@ -10,7 +10,7 @@ const ConnexionForm = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
@@ -18,7 +18,7 @@ const ConnexionForm = () => {
     try {
       // Faites l'appel API pour vous connecter
       const response = await axios.post("http://localhost:5001/login-parent", {
-        username,
+        email,
         password,
       });
 
@@ -46,9 +46,9 @@ const ConnexionForm = () => {
         <div className="form-fields">
           <input
             type="text"
-            placeholder="Nom d'utilisateur"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="password"

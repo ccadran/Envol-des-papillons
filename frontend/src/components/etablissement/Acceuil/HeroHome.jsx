@@ -1,4 +1,5 @@
 import React from "react";
+import test from "assets/img/test.JPG";
 
 const HeroHome = () => {
   return (
@@ -12,7 +13,7 @@ const HeroHome = () => {
           </p>
         </div>
         <div className="hero-illustration">
-          <img src="" alt="hero-illustration" />
+          <img src={test} alt="hero-illustration" />
         </div>
       </div>
       <div className="hero-presentation">

@@ -82,7 +82,7 @@ const FooterGlobal = () => {
               <li>Contactez-nous</li>
             </NavLink>
             <NavLink
-              to="/parents"
+              to="/parents/actualites"
               className="nav-link"
               activeclassname="active"
             >

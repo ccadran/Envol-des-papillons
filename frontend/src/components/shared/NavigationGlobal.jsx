@@ -65,7 +65,11 @@ const NavigationGlobal = () => {
           >
             <li>Contactez-nous</li>
           </NavLink>
-          <NavLink to="/parents" className="nav-link" activeClassName="active">
+          <NavLink
+            to="/parents/actualites"
+            className="nav-link"
+            activeClassName="active"
+          >
             <li>Parents d'élèves</li>
           </NavLink>
         </ul>
