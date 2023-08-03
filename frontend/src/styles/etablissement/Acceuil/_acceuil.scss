@@ -102,6 +102,17 @@
     }
   }
 }
+@media screen and (max-width: 420px) {
+  .etablissements {
+    .etablissements-container {
+      .etablissement-card {
+        #papillon {
+          width: 80px;
+        }
+      }
+    }
+  }
+}
 .locaux {
   h3 {
     margin-bottom: 72px;
