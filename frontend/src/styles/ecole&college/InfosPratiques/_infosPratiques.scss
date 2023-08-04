@@ -50,9 +50,12 @@
   .roles-container {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 42px;
     .role-parent {
       max-width: 330px;
       margin-top: 72px;
+      margin: 20px;
       padding: 16px 20px 26px;
       box-shadow: $box-shadow;
       border-radius: $border-radius;

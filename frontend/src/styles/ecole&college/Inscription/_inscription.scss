@@ -12,8 +12,12 @@
     .buttons {
       display: flex;
       justify-content: space-around;
-      width: 70%;
+      flex-wrap: wrap;
+      width: 100%;
       margin: 0 auto;
+      a {
+        margin: 20px;
+      }
     }
   }
   .pre-inscription-form {
@@ -48,6 +52,10 @@
       }
       .classe {
         grid-area: classe;
+        select {
+          width: 50%;
+          margin: 0;
+        }
       }
       .lastSchool {
         grid-area: lastSchool;
@@ -96,11 +104,80 @@
           font-family: $body-font;
           font-size: 18px;
         }
-        select {
-          width: 50%;
-          margin: 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 920px) {
+  .pre-inscription {
+    h4 {
+      margin-bottom: 72px;
+    }
+    .download {
+      h4 {
+        margin-bottom: 34px;
+      }
+      margin: 72px 0;
+      .buttons {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 auto;
+        a {
+          margin: 20px;
         }
       }
+    }
+    .pre-inscription-form {
+      width: 85%;
+      margin: 0 auto;
+      box-shadow: $box-shadow;
+      border-radius: $border-radius;
+      padding: 42px 64px;
+      form {
+        display: flex;
+        flex-direction: column;
+        .tuteurs {
+          grid-area: tuteurs;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          gap: 30px;
+          .tuteur1 {
+            width: 100%;
+          }
+          .tuteur2 {
+            width: 100%;
+          }
+          .form-part {
+            width: 100%;
+          }
+        }
+        .classe {
+          select {
+            width: 100%;
+            margin: 0;
+          }
+        }
+        .form-part {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 32px;
+          label {
+            font-family: $subtitle-font;
+            font-size: 20px;
+            margin-bottom: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  .pre-inscription {
+    .pre-inscription-form {
+      padding: 42px 32px;
     }
   }
 }

@@ -17,6 +17,9 @@
       h4 {
         margin-bottom: 26px;
         white-space: nowrap;
+        @media screen and (max-width: 640px) {
+          margin-bottom: 16px;
+        }
         &.orange {
           color: $corail;
         }
