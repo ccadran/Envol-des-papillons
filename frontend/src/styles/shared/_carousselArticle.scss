@@ -35,16 +35,17 @@
     color: $black;
     transition: 0.1s ease-in;
     padding: 2rem;
+    z-index: 2;
     &:hover {
       cursor: pointer;
     }
     &.chevron-left {
-      left: 2rem;
-      transform: translateX(-2rem);
+      left: -25px;
+      // left: 2rem;
+      // transform: translateX(-2rem);
     }
     &.chevron-right {
-      right: 2rem;
-      transform: translateX(2rem);
+      right: -25px;
     }
   }
   .indicators {

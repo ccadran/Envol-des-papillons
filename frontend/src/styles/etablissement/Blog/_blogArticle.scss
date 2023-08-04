@@ -17,8 +17,14 @@
   .article-container {
     .article-header {
       display: flex;
+      @media screen and (max-width: 640px) {
+        flex-direction: column;
+      }
       .article-infos {
         width: 60%;
+        @media screen and (max-width: 640px) {
+          width: 100%;
+        }
         h2 {
           margin-bottom: 42px;
         }
@@ -29,6 +35,9 @@
       .article-img {
         width: 40%;
         height: 300px;
+        @media screen and (max-width: 640px) {
+          width: 100%;
+        }
         img {
           width: 100%;
           height: 100%;
