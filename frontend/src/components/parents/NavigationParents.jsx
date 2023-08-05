@@ -21,6 +21,13 @@ const NavigationParents = ({ etablissement }) => {
   const toggleResponsiveNav = () => {
     setResponsiveNavOpen(!isResponsiveNavOpen);
   };
+  useEffect(() => {
+    if (isResponsiveNavOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isResponsiveNavOpen]);
   return (
     <nav className={className}>
       <div className={isResponsiveNavOpen ? "nav-home active" : "nav-home"}>
