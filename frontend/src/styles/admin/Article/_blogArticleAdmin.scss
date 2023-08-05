@@ -6,6 +6,7 @@
 
     gap: 30px;
     margin-bottom: 72px;
+
     .article-infos {
       width: 60%;
       display: flex;
@@ -16,11 +17,21 @@
     }
     .article-img {
       width: 40%;
-      img {
+      .img-container {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        padding-top: 56.25%; /* Ratio 16:9 (9 / 16 * 100) */
+        position: relative; /* Définir une position relative pour que le pseudo-élément fonctionne */
+        overflow: hidden; /* Cacher le contenu qui dépasse */
         border-radius: $border-radius;
+        img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+          border-radius: $border-radius;
+        }
       }
     }
   }
@@ -49,6 +60,21 @@
     p {
       font-size: 12px;
       margin-top: 6px;
+    }
+  }
+}
+@media screen and (max-width: 920px) {
+  .article-container-admin {
+    .article-header {
+      flex-direction: column;
+
+      .article-infos {
+        width: 100%;
+      }
+      .article-img {
+        margin-top: 32px;
+        width: 100%;
+      }
     }
   }
 }

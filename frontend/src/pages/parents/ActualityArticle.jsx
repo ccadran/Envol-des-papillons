@@ -263,7 +263,6 @@ const ActualityArticle = () => {
                 </div>
               </div>
             </section>
-            <Link onClick={handleUpdateArticle}>Mettre à jour</Link>
           </main>
           {/* <FooterGlobal /> */}
         </>
