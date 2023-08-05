@@ -42,9 +42,6 @@ const PedagogicTeam = ({ text, etablissement }) => {
     slidesToShow: 4, // Nombre de cartes à afficher à la fois
     slidesToScroll: 1, // Nombre de cartes à faire défiler à la fois
     initialSlide: 0,
-    // className: "center",
-    // centerMode: true,
-    // centerPadding: "60px",
 
     responsive: [
       {
