@@ -19,7 +19,7 @@ const NavigationGlobal = () => {
       setAfterColor("violet");
     }
   }, [isRootPath, location.pathname]);
-  const [isResponsiveNavOpen, setResponsiveNavOpen] = useState(false); // Add this state
+  const [isResponsiveNavOpen, setResponsiveNavOpen] = useState(false);
   const toggleResponsiveNav = () => {
     setResponsiveNavOpen(!isResponsiveNavOpen);
   };
@@ -44,7 +44,6 @@ const NavigationGlobal = () => {
             activeClassName="active"
           >
             <li>L'école</li>
-            {/* <div className="active-link"></div> */}
           </NavLink>
           <NavLink
             to="/college/presentation"

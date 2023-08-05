@@ -17,9 +17,13 @@ const NavigationParents = ({ etablissement }) => {
       setAfterColor("violet");
     }
   }, [isRootPath, location.pathname]);
+  const [isResponsiveNavOpen, setResponsiveNavOpen] = useState(false);
+  const toggleResponsiveNav = () => {
+    setResponsiveNavOpen(!isResponsiveNavOpen);
+  };
   return (
     <nav className={className}>
-      <div className="nav-home">
+      <div className={isResponsiveNavOpen ? "nav-home active" : "nav-home"}>
         <NavLink
           to="/etablissement/"
           className="home-link"
@@ -30,6 +34,50 @@ const NavigationParents = ({ etablissement }) => {
         </NavLink>
       </div>
       <div className="nav-links">
+        <ul>
+          <NavLink
+            to={`/parents/actualites`}
+            className="nav-link"
+            activeClassName="active"
+          >
+            <li>Actualités</li>
+          </NavLink>
+          <NavLink
+            to={`/parents/evenements`}
+            className="nav-link"
+            activeClassName="active"
+          >
+            <li>Événements</li>
+          </NavLink>
+          <NavLink
+            to={`/parents/menus`}
+            className="nav-link"
+            activeClassName="active"
+          >
+            <li>Menus</li>
+          </NavLink>
+          <NavLink
+            to={`/parents/avis`}
+            className="nav-link"
+            activeClassName="active"
+          >
+            <li>Avis</li>
+          </NavLink>
+        </ul>
+      </div>
+      <div
+        className={isResponsiveNavOpen ? "toggle-btn active" : "toggle-btn"}
+        onClick={toggleResponsiveNav}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div
+        className={
+          isResponsiveNavOpen ? "responsive-nav active" : "responsive-nav"
+        }
+      >
         <ul>
           <NavLink
             to={`/parents/actualites`}

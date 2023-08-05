@@ -17,15 +17,92 @@ const NavigationAdmin = () => {
       setAfterColor("violet");
     }
   }, [isRootPath, location.pathname]);
+  const [isResponsiveNavOpen, setResponsiveNavOpen] = useState(false); // Add this state
+  const toggleResponsiveNav = () => {
+    setResponsiveNavOpen(!isResponsiveNavOpen);
+  };
   return (
     <nav className={className}>
-      <div className="nav-home">
+      <div className={isResponsiveNavOpen ? "nav-home active" : "nav-home"}>
+        {" "}
         <NavLink to="/etablissement">
           <PapillonLogo />
           <li>Acceuil</li>
         </NavLink>
       </div>
       <div className="nav-links">
+        <ul>
+          <NavLink
+            to="/admin/dashboard"
+            className="nav-link"
+            activeclassname="active"
+          >
+            <li>Dashboard</li>
+          </NavLink>
+          <NavLink
+            to="/admin/blog"
+            className="nav-link"
+            activeclassname="active"
+          >
+            <li>Blog</li>
+          </NavLink>
+          <NavLink
+            to="/admin/faq"
+            className="nav-link"
+            activeclassname="active"
+          >
+            <li>FAQ</li>
+          </NavLink>
+          <NavLink
+            to="/admin/actualites"
+            className="nav-link"
+            activeclassname="active"
+          >
+            <li>Actualités</li>
+          </NavLink>
+          <NavLink
+            to="/admin/evenements"
+            className="nav-link"
+            activeclassname="active"
+          >
+            <li>Événements</li>
+          </NavLink>
+          <NavLink
+            to="/admin/avis"
+            className="nav-link"
+            activeclassname="active"
+          >
+            <li>Avis</li>
+          </NavLink>
+          <NavLink
+            to="/admin/teachers"
+            className="nav-link"
+            activeclassname="active"
+          >
+            <li>Professeurs</li>
+          </NavLink>
+          <NavLink
+            to="/admin/mails"
+            className="nav-link"
+            activeclassname="active"
+          >
+            <li>Mails</li>
+          </NavLink>
+        </ul>
+      </div>
+      <div
+        className={isResponsiveNavOpen ? "toggle-btn active" : "toggle-btn"}
+        onClick={toggleResponsiveNav}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div
+        className={
+          isResponsiveNavOpen ? "responsive-nav active" : "responsive-nav"
+        }
+      >
         <ul>
           <NavLink
             to="/admin/dashboard"
