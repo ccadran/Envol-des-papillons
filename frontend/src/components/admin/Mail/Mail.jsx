@@ -48,7 +48,7 @@ const Mail = ({ mail }) => {
         <>
           <div className="infos-container">
             <div className="email-content">
-              <h4>Le mail</h4>
+              <h4>Le mail :</h4>
               <input
                 type="text"
                 value={editedMail}
@@ -76,7 +76,7 @@ const Mail = ({ mail }) => {
       ) : (
         <div className="infos-container">
           <div className="email-content">
-            <h4>Le mail</h4>
+            <h4>Le mail :</h4>
             <p>{mail.email}</p>
           </div>
           <div className="child-content">

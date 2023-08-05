@@ -27,6 +27,12 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 16px;
+        a {
+          font-size: 1.2rem;
+          @media screen and (max-width: 640px) {
+            font-size: 1rem;
+          }
+        }
       }
 
       display: flex;
@@ -37,25 +43,41 @@
         display: flex;
         gap: 30px;
         margin-bottom: 24px;
-        p {
-          margin-top: 32px;
+        @media screen and (max-width: 640px) {
+          flex-direction: column;
         }
-        input {
-          margin-right: 12px;
-          margin-top: 32px;
-          padding: 6px;
-          border-radius: $border-radius;
-          font-family: $body-font;
-          font-size: clamp(16px, 2vw, 18px);
+      }
+      p {
+        margin-top: 32px;
+      }
+      input {
+        margin-right: 12px;
+        margin-top: 32px;
+        padding: 6px;
+        border-radius: $border-radius;
+        font-family: $body-font;
+        font-size: clamp(16px, 2vw, 18px);
+      }
+      .email-content {
+        width: 50%;
+        @media screen and (max-width: 640px) {
+          width: 100%;
         }
-        .email-content {
-          width: 50%;
+      }
+      .child-content {
+        width: 50%;
+        @media screen and (max-width: 640px) {
+          width: 100%;
         }
-        .child-content {
-          .childs {
-            display: flex;
-            p {
-              margin-right: 18px;
+        .childs {
+          display: flex;
+          p {
+            margin-right: 18px;
+          }
+          input {
+            width: 50%;
+            @media screen and (max-width: 640px) {
+              width: 100%;
             }
           }
         }

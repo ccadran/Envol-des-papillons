@@ -23,7 +23,7 @@ const SectionFAQ = ({ faqSection, etablissement }) => {
   };
 
   const handleEditSection = () => {
-    setIsEditing(true);
+    setIsEditing(!isEditing);
   };
 
   const handleTextareaChange = (event) => {
@@ -60,9 +60,8 @@ const SectionFAQ = ({ faqSection, etablissement }) => {
         {isRootPath && (
           <>
             <div className="controller">
-              {!isEditing && (
-                <a className="fa-solid fa-pen" onClick={handleEditSection}></a>
-              )}
+              <a className="fa-solid fa-pen" onClick={handleEditSection}></a>
+
               <a
                 className="fa-sharp fa-solid fa-trash"
                 onClick={() => handleDeleteSection(faqSection._id)}

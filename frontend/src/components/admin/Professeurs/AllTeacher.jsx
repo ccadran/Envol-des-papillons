@@ -28,6 +28,9 @@ const AllTeacher = () => {
     <section className="teachers">
       <div className="controller-teacher">
         <div className="etablissement">
+          <label htmlFor="selectedEtablissement">
+            Séléctionner un établissement :
+          </label>
           <select
             id="selectedEtablissement"
             onChange={handleEtablissementChange}

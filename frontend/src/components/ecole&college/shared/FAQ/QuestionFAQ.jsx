@@ -27,7 +27,7 @@ const QuestionFAQ = ({ faqQuestion, etablissement }) => {
   };
 
   const handleEditQuestion = () => {
-    setIsEditing(true);
+    setIsEditing(!isEditing);
   };
 
   const handleSaveQuestion = () => {
@@ -50,9 +50,8 @@ const QuestionFAQ = ({ faqQuestion, etablissement }) => {
     <div className="question-container" onClick={toggleVisvibility}>
       {isRootPath && (
         <div className="controller">
-          {!isEditing && (
-            <a className="fa-solid fa-pen" onClick={handleEditQuestion}></a>
-          )}
+          <a className="fa-solid fa-pen" onClick={handleEditQuestion}></a>
+
           <a
             className="fa-sharp fa-solid fa-trash"
             onClick={() => handleDeleteQuestion(faqQuestion._id)}
