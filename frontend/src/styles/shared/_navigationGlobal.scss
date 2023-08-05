@@ -27,6 +27,15 @@ nav {
         }
       }
     }
+    .responsive-nav {
+      ul {
+        a {
+          &:after {
+            background-color: $violet; /* Couleur du fond lors du survol */
+          }
+        }
+      }
+    }
   }
   &.corail {
     .nav-home {
@@ -42,6 +51,15 @@ nav {
       }
     }
     .nav-links {
+      ul {
+        a {
+          &:after {
+            background-color: $corail; /* Couleur du fond lors du survol */
+          }
+        }
+      }
+    }
+    .responsive-nav {
       ul {
         a {
           &:after {
@@ -73,12 +91,26 @@ nav {
         }
       }
     }
+    .responsive-nav {
+      ul {
+        a {
+          &:after {
+            background-color: $blue; /* Couleur du fond lors du survol */
+          }
+        }
+      }
+    }
   }
 }
 .nav-home {
   a {
     align-items: center;
     display: flex;
+    z-index: 2;
+    li {
+      transition: 0.2s ease-in-out;
+      color: $black;
+    }
     img {
       width: 30px;
       transition: transform 0.2s ease;
@@ -107,6 +139,13 @@ nav {
       &:after {
         transform: scaleX(1);
         transform-origin: bottom left;
+      }
+    }
+  }
+  &.active {
+    a {
+      li {
+        color: $white;
       }
     }
   }
@@ -154,22 +193,49 @@ nav {
   }
 }
 
+//RESPONSIVE--------------------------
+
 .toggle-btn {
   display: block;
   position: absolute;
   right: clamp(30px, 6vw, 60px);
   transition: 0.3s;
   z-index: 2;
+
   @media screen and (min-width: 920px) {
     display: none;
   }
+  &.active {
+    span {
+      background-color: $white;
+      &:nth-child(1) {
+        transform: rotate(45deg) translateX(11px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translateX(11px);
+      }
+    }
+  }
   span {
-    height: 5px;
+    height: 3px;
     width: 30px;
     background-color: $black;
     display: flex;
     margin-top: 5px;
-    transition: 0.3s ease;
+    transition: 0.2s ease;
+    &:nth-child(1) {
+      width: 30px;
+    }
+    &:nth-child(2) {
+      width: 15px;
+      margin-left: auto;
+    }
+    &:nth-child(3) {
+      width: 30px;
+    }
   }
 }
 .responsive-nav {
@@ -178,12 +244,13 @@ nav {
   right: 0;
   width: 100%;
   height: 100vh;
-  background-color: $white;
+  background-color: $black;
+  color: $white;
   z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   transform: translateX(100%);
   transition: 0.3s ease;
   &.active {
@@ -192,41 +259,36 @@ nav {
   ul {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    li {
-      margin: 20px 0;
-      a {
-        font-size: 24px;
-        font-family: $subtitle-font;
-        position: relative;
-        &:after {
-          content: "";
-          position: absolute;
-          bottom: -6px;
-          right: 0;
-          width: 70%;
-          transform: scaleX(0);
-          height: 2.5px;
-          transition: transform 0.2s ease; /* Ajouter une transition pour l'animation */
-          transform-origin: bottom right;
-        }
-        &.active::after {
-          content: "";
-          position: absolute;
-          bottom: -6px;
-          left: 0;
-          width: 100%;
-          transform: scaleX(1);
-          height: 2.5px;
-        }
-        &:hover {
-          &:after {
-            width: 100%; /* Agrandir la largeur au survol et lorsque actif */
-            transform: scaleX(1);
-            transform-origin: bottom left;
-          }
-        }
+    transform: none;
+
+    a {
+      margin: 26px clamp(30px, 6vw, 60px);
+      position: relative;
+      display: inline-block;
+      position: relative;
+      width: fit-content;
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        right: 0;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2.5px;
+        transition: transform 0.2s ease; /* Ajouter une transition pour l'animation */
+        transform-origin: bottom right;
+      }
+      &.active::after {
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        width: 100%;
+        transform: scaleX(1);
+        height: 2.5px;
+      }
+      li {
+        color: $white;
       }
     }
   }

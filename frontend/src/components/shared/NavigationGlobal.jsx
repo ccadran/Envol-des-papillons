@@ -26,7 +26,7 @@ const NavigationGlobal = () => {
 
   return (
     <nav className={className}>
-      <div className="nav-home">
+      <div className={isResponsiveNavOpen ? "nav-home active" : "nav-home"}>
         <NavLink
           to="/etablissement/"
           className="home-link"
@@ -78,7 +78,10 @@ const NavigationGlobal = () => {
           </NavLink>
         </ul>
       </div>
-      <div className="toggle-btn" onClick={toggleResponsiveNav}>
+      <div
+        className={isResponsiveNavOpen ? "toggle-btn active" : "toggle-btn"}
+        onClick={toggleResponsiveNav}
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -95,7 +98,6 @@ const NavigationGlobal = () => {
             activeClassName="active"
           >
             <li>L'école</li>
-            {/* <div className="active-link"></div> */}
           </NavLink>
           <NavLink
             to="/college/presentation"
