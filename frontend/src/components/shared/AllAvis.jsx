@@ -44,15 +44,12 @@ const AllAvis = ({ etablissement }) => {
     speed: 500, // Vitesse de défilement en millisecondes
     slidesToShow: 3, // Nombre de cartes à afficher à la fois
     slidesToScroll: 1, // Nombre de cartes à faire défiler à la fois
-    // className: "center",
-    // centerMode: true,
-    // centerPadding: "60px",
-
+    className: "slides",
     responsive: [
       {
         breakpoint: 1540,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
           dots: true,
