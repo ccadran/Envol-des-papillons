@@ -222,14 +222,15 @@ nav {
   &.active {
     span {
       background-color: $white;
+
       &:nth-child(1) {
-        transform: rotate(45deg) translateX(11px);
+        transform: rotate(45deg) translateY(10px);
       }
       &:nth-child(2) {
         opacity: 0;
       }
       &:nth-child(3) {
-        transform: rotate(-45deg) translateX(11px);
+        transform: rotate(-45deg) translateY(-10px);
       }
     }
   }
