@@ -30,8 +30,44 @@ const NavigationGlobal = () => {
       document.body.style.overflow = "auto";
     }
   }, [isResponsiveNavOpen]);
+
+  //FEATURE NAVIGATION HIDE ON SCROLL DOWN
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollDirection, setScrollDirection] = useState("up");
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.pageYOffset);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  useEffect(() => {
+    const handleScrollDirection = () => {
+      const currentScrollPosition = window.pageYOffset;
+      if (currentScrollPosition > scrollPosition) {
+        setScrollDirection("down");
+      } else {
+        setScrollDirection("up");
+      }
+      setScrollPosition(currentScrollPosition);
+    };
+
+    window.addEventListener("scroll", handleScrollDirection);
+
+    return () => {
+      window.removeEventListener("scroll", handleScrollDirection);
+    };
+  }, [scrollPosition]);
+
   return (
-    <nav className={className}>
+    <nav
+      className={`${className} ${scrollDirection === "down" ? "hide" : "show"}`}
+    >
       <div className={isResponsiveNavOpen ? "nav-home active" : "nav-home"}>
         <NavLink
           to="/etablissement/"

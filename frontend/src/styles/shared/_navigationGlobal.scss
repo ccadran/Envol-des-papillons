@@ -1,9 +1,21 @@
 @import "../settings.scss";
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px clamp(30px, 6vw, 60px);
+  position: fixed;
+  width: 100%;
+  background: $white;
+  transition: transform 0.3s ease;
+  z-index: 1;
+  &.hide {
+    transform: translateY(-100%);
+  }
+  &.show {
+    transform: translateY(0);
+  }
   a {
     font-size: 16px;
     font-family: $subtitle-font;
@@ -201,7 +213,9 @@ nav {
   right: clamp(30px, 6vw, 60px);
   transition: 0.3s;
   z-index: 2;
-
+  &:hover {
+    cursor: pointer;
+  }
   @media screen and (min-width: 920px) {
     display: none;
   }
