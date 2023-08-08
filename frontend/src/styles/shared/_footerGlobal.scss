@@ -28,6 +28,25 @@ footer {
         display: flex;
         h5 {
           position: relative;
+          &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            right: 0;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2.5px;
+            transition: transform 0.2s ease; /* Ajouter une transition pour l'animation */
+            transform-origin: bottom right;
+            background: $white;
+          }
+          &:hover {
+            &:after {
+              width: 100%; /* Agrandir la largeur au survol et lorsque actif */
+              transform: scaleX(1);
+              transform-origin: bottom left;
+            }
+          }
         }
 
         img {
@@ -43,14 +62,12 @@ footer {
       h5.active {
         &:after {
           content: "";
-          display: block;
-          width: 100%;
-          height: 2px;
-          margin-top: 2px;
-          background: $white;
           position: absolute;
-
-          // z-index: 5;
+          bottom: -6px;
+          left: 0;
+          width: 100%;
+          transform: scaleX(1);
+          height: 2.5px;
         }
       }
 
@@ -76,6 +93,7 @@ footer {
     }
     .secondary-nav {
       width: 50%;
+
       @media screen and (max-width: 740px) {
         width: 100%;
         ul {
@@ -89,8 +107,37 @@ footer {
         @media screen and (max-width: 440px) {
           flex-direction: column;
         }
-        li {
+        a {
           margin: 0 20px 20px;
+          position: relative;
+
+          &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            width: 70%;
+            transform: scaleX(0);
+            height: 2.5px;
+            transition: transform 0.2s ease; /* Ajouter une transition pour l'animation */
+            transform-origin: bottom right;
+            background: $white;
+          }
+          &.active::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 100%;
+            transform: scaleX(1);
+            height: 2.5px;
+          }
+          &:hover {
+            &:after {
+              width: 100%; /* Agrandir la largeur au survol et lorsque actif */
+              transform: scaleX(1);
+              transform-origin: bottom left;
+            }
+          }
         }
       }
     }
