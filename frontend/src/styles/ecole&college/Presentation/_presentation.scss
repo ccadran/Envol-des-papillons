@@ -133,6 +133,7 @@
     padding: 40px;
     .schedule-class {
       display: flex;
+      flex-wrap: wrap;
       margin-bottom: 36px;
       .classe {
         margin-right: 20px;
@@ -150,6 +151,16 @@
           cursor: pointer;
           transform: scale(1.05);
         }
+        @media screen and (max-width: 920px) {
+          margin-bottom: 12px;
+          font-size: 18px;
+          .classe {
+            padding: 8px 20px;
+          }
+        }
+      }
+      @media screen and (max-width: 640px) {
+        justify-content: center;
       }
     }
     .schedule-moment {
