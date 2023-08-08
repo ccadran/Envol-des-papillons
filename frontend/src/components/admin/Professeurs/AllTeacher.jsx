@@ -25,7 +25,7 @@ const AllTeacher = () => {
   };
 
   return (
-    <section className="teachers">
+    <section className="teachers-admin">
       <div className="controller-teacher">
         <div className="etablissement">
           <label htmlFor="selectedEtablissement">
@@ -47,7 +47,7 @@ const AllTeacher = () => {
           text="Ajouter un professeur"
         ></Button>
       </div>
-      <div className="teachers-container">
+      <div className="teachers-container-admin">
         {selectedEtablissement ? (
           teachers.map((teacher) => (
             <TeacherAdmin key={teacher._id} teacher={teacher} />

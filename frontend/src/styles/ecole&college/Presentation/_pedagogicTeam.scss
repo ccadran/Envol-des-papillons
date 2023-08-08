@@ -19,6 +19,9 @@
     }
     .name-class {
       margin-bottom: 8px;
+      h5 {
+        text-align: center;
+      }
       p {
         margin-top: 4px;
         font-size: 14px;
@@ -27,6 +30,12 @@
     p {
       margin-top: 14px;
       text-align: center;
+    }
+    @media screen and (max-width: 440px) {
+      width: 200px;
+      img {
+        width: 60px;
+      }
     }
   }
 }

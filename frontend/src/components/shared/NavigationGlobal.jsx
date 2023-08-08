@@ -78,7 +78,9 @@ const NavigationGlobal = () => {
           <li>Acceuil</li>
         </NavLink>
       </div>
-      <div className="nav-links">
+      <div
+        className={isResponsiveNavOpen ? "nav-links responsive" : "nav-links"}
+      >
         <ul>
           <NavLink
             to="/ecole/presentation"
@@ -126,51 +128,6 @@ const NavigationGlobal = () => {
         <span></span>
         <span></span>
         <span></span>
-      </div>
-      <div
-        className={
-          isResponsiveNavOpen ? "responsive-nav active" : "responsive-nav"
-        }
-      >
-        <ul>
-          <NavLink
-            to="/ecole/presentation"
-            className="nav-link"
-            activeClassName="active"
-          >
-            <li>L'école</li>
-          </NavLink>
-          <NavLink
-            to="/college/presentation"
-            className="nav-link"
-            activeClassName="active"
-          >
-            <li>Le collège</li>
-          </NavLink>
-          <NavLink
-            to="/etablissement/blog"
-            className="nav-link"
-            activeClassName="active"
-          >
-            <li>Le blog</li>
-            <div className="active-link"></div>
-          </NavLink>
-
-          <NavLink
-            to="/etablissement/contact"
-            className="nav-link"
-            activeClassName="active"
-          >
-            <li>Contactez-nous</li>
-          </NavLink>
-          <NavLink
-            to="/parents/actualites"
-            className="nav-link"
-            activeClassName="active"
-          >
-            <li>Parents d'élèves</li>
-          </NavLink>
-        </ul>
       </div>
     </nav>
   );

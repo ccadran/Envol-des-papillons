@@ -73,7 +73,9 @@ const NavigationParents = ({ etablissement }) => {
           <li>Acceuil</li>
         </NavLink>
       </div>
-      <div className="nav-links">
+      <div
+        className={isResponsiveNavOpen ? "nav-links responsive" : "nav-links"}
+      >
         <ul>
           <NavLink
             to={`/parents/actualites`}
@@ -112,42 +114,6 @@ const NavigationParents = ({ etablissement }) => {
         <span></span>
         <span></span>
         <span></span>
-      </div>
-      <div
-        className={
-          isResponsiveNavOpen ? "responsive-nav active" : "responsive-nav"
-        }
-      >
-        <ul>
-          <NavLink
-            to={`/parents/actualites`}
-            className="nav-link"
-            activeClassName="active"
-          >
-            <li>Actualités</li>
-          </NavLink>
-          <NavLink
-            to={`/parents/evenements`}
-            className="nav-link"
-            activeClassName="active"
-          >
-            <li>Événements</li>
-          </NavLink>
-          <NavLink
-            to={`/parents/menus`}
-            className="nav-link"
-            activeClassName="active"
-          >
-            <li>Menus</li>
-          </NavLink>
-          <NavLink
-            to={`/parents/avis`}
-            className="nav-link"
-            activeClassName="active"
-          >
-            <li>Avis</li>
-          </NavLink>
-        </ul>
       </div>
     </nav>
   );
