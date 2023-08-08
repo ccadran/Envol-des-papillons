@@ -1,30 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import test from "assets/img/test.JPG";
 
 const RegistrationForm = () => {
   const navigate = useNavigate();
+  const formRef = useRef(null);
 
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
   const handleRegister = async () => {
     try {
-      // Make the API call to register the parent
-      const response = await axios.post("http://localhost:5001/parent", {
-        firstName,
-        lastName,
-        username,
-        email,
-        password,
-      });
+      // Collect the form data from the form using the formRef
+      const formData = new FormData(formRef.current);
+
+      // Create an object with the collected form data
+      const newParent = {
+        firstName: formData.get("firstName"),
+        lastName: formData.get("lastName"),
+        email: formData.get("email"),
+        password: formData.get("password"),
+      };
+
+      // Send the data to your backend using POST
+      const response = await axios.post(
+        "http://localhost:5001/parent",
+        newParent
+      );
 
       // Redirect the user to the login page after successful registration
+      navigate("/parents/connexion-parent");
     } catch (error) {
       // Handle registration errors (e.g., username or email already taken)
       setError("Registration failed. Please try again.");
@@ -38,38 +43,12 @@ const RegistrationForm = () => {
       </div>{" "}
       <div className="form-inscription">
         <h3>Créer un compte parent</h3>
-        <div className="form-fields">
-          <input
-            type="text"
-            placeholder="First Name"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Last Name"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
+        <form ref={formRef} className="form-fields">
+          <input type="text" name="firstName" placeholder="First Name" />
+          <input type="text" name="lastName" placeholder="Last Name" />
+          <input type="email" name="email" placeholder="Email" />
+          <input type="password" name="password" placeholder="Password" />
+        </form>
         <button onClick={handleRegister}>Créer</button>
         {error && <p>{error}</p>}
       </div>
