@@ -37,16 +37,16 @@
     font-size: clamp(20px, 3vw, 30px);
     color: $black;
     transition: 0.1s ease-in;
-    padding: 2rem;
+    padding: 1rem;
     &:hover {
       cursor: pointer;
     }
     &.chevron-left {
-      left: -2rem;
+      left: -1.5rem;
       transform: translateX(-2rem);
     }
     &.chevron-right {
-      right: -2rem;
+      right: -1.5rem;
       transform: translateX(2rem);
     }
   }
