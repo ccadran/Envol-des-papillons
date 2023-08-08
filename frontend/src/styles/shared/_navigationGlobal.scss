@@ -181,7 +181,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    transition: 0.3s ease;
+
     ul {
       display: flex;
       flex-direction: column;
@@ -193,79 +193,72 @@ nav {
         display: inline-block;
         position: relative;
         width: fit-content;
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -6px;
+          right: 0;
+          width: 70%;
+          transform: scaleX(0);
+          height: 2.5px;
+          transition: transform 0.2s ease; /* Ajouter une transition pour l'animation */
+          transform-origin: bottom right;
+        }
+        &.active::after {
+          content: "";
+          position: absolute;
+          bottom: -6px;
+          left: 0;
+          width: 100%;
+          transform: scaleX(1);
+          height: 2.5px;
+        }
         li {
           color: $white;
         }
       }
     }
   }
-  ul {
-    display: flex;
+  @media screen and (min-width: 920px) {
+    ul {
+      display: flex;
 
-    a {
-      margin: 0 20px;
-      position: relative;
-      display: inline-block;
-      &:after {
-        content: "";
-        position: absolute;
-        bottom: -6px;
-        right: 0;
-        width: 70%;
-        transform: scaleX(0);
-        height: 2.5px;
-        transition: transform 0.2s ease; /* Ajouter une transition pour l'animation */
-        transform-origin: bottom right;
-      }
-      &.active::after {
-        content: "";
-        position: absolute;
-        bottom: -6px;
-        left: 0;
-        width: 100%;
-        transform: scaleX(1);
-        height: 2.5px;
-      }
-      &:hover {
+      a {
+        margin: 0 20px;
+        position: relative;
+        display: inline-block;
         &:after {
-          width: 100%; /* Agrandir la largeur au survol et lorsque actif */
+          content: "";
+          position: absolute;
+          bottom: -6px;
+          right: 0;
+          width: 70%;
+          transform: scaleX(0);
+          height: 2.5px;
+          transition: transform 0.2s ease; /* Ajouter une transition pour l'animation */
+          transform-origin: bottom right;
+        }
+        &.active::after {
+          content: "";
+          position: absolute;
+          bottom: -6px;
+          left: 0;
+          width: 100%;
           transform: scaleX(1);
-          transform-origin: bottom left;
+          height: 2.5px;
+        }
+        &:hover {
+          &:after {
+            width: 100%; /* Agrandir la largeur au survol et lorsque actif */
+            transform: scaleX(1);
+            transform-origin: bottom left;
+          }
         }
       }
     }
   }
   &.responsive {
     transform: translateX(0%);
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: $black;
-    color: $white;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-
-    ul {
-      display: flex;
-      flex-direction: column;
-      transform: none;
-
-      a {
-        margin: 18px clamp(30px, 6vw, 60px);
-        position: relative;
-        display: inline-block;
-        position: relative;
-        width: fit-content;
-        li {
-          color: $white;
-        }
-      }
-    }
   }
 }
 
