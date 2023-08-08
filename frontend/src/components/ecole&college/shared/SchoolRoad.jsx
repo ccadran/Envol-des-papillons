@@ -22,35 +22,3 @@ const SchoolRoad = ({ text }) => {
 };
 
 export default SchoolRoad;
-
-// import React, { useEffect, useState } from "react";
-// import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-
-// const MapContainer = () => {
-//   const [map, setMap] = useState(null);
-//   const position = { lat: -25.344, lng: 131.031 };
-
-//   const onLoad = (map) => {
-//     setMap(map);
-//   };
-
-//   const options = {
-//     mapId: "DEMO_MAP_ID",
-//   };
-
-//   return (
-//     <LoadScript googleMapsApiKey="AIzaSyCAP99DJFcT1C1v2i5aNip7Fji1oxdH6E8">
-//       <GoogleMap
-//         mapContainerStyle={{ height: "400px", width: "100%" }}
-//         center={position}
-//         zoom={4}
-//         onLoad={onLoad}
-//         options={options}
-//       >
-//         {map && <Marker position={position} title="Uluru" map={map} />}
-//       </GoogleMap>
-//     </LoadScript>
-//   );
-// };
-
-// export default MapContainer;
