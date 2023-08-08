@@ -18,13 +18,24 @@
   flex-wrap: wrap;
   justify-content: center;
   .teacher-card {
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: 16px;
     margin: 26px;
+    min-width: 200px;
     .controller {
       width: 80%;
       display: flex;
       justify-content: space-between;
+      text-align: center;
       margin-top: 0;
+      margin: 0 auto;
       margin-bottom: 8px;
+    }
+    img {
+      width: 60px;
+      display: block;
+      margin: 0 auto;
     }
     input {
       margin: 2px 0;
@@ -32,6 +43,15 @@
     }
     button {
       margin-top: 10px;
+    }
+    .teacher-info-admin {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .name-class {
+        text-align: center;
+      }
     }
   }
 }

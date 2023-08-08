@@ -1,43 +1,33 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import axios from "axios";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const FormTeacher = () => {
-  const [selectedOption, setSelectedOption] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [classe, setClasse] = useState("");
-  const [poste, setPoste] = useState("");
-  const [formation, setFormation] = useState("");
   const navigate = useNavigate();
-  const handleOptionChange = (e) => {
-    setSelectedOption(e.target.value);
-  };
+  const formRef = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const formData = new FormData(formRef.current);
+
     const newTeacher = {
-      firstName: firstName,
-      lastName: lastName,
-      classe: classe,
-      poste: poste,
-      formation: formation,
-      etablissement: selectedOption,
+      firstName: formData.get("firstName"),
+      lastName: formData.get("lastName"),
+      classe: formData.get("classe"),
+      poste: formData.get("poste"),
+      formation: formData.get("formation"),
+      etablissement: formData.get("etablissement"),
     };
+
     console.log(newTeacher);
+
     axios
       .post("http://localhost:5001/teacher", newTeacher)
       .then((response) => {
         navigate("/admin/teachers");
         console.log("Nouveau professeur ajouté avec succès !");
-        // Réinitialiser les champs du formulaire
-        setFirstName("");
-        setLastName("");
-        setClasse("");
-        setPoste("");
-        setFormation("");
-        setSelectedOption("");
+        formRef.current.reset(); // Réinitialisation du formulaire
       })
       .catch((error) => {
         console.error("Erreur lors de l'ajout du professeur :", error);
@@ -46,58 +36,31 @@ const FormTeacher = () => {
 
   return (
     <div className="form-teacher">
-      <form onSubmit={handleSubmit}>
+      <form ref={formRef} onSubmit={handleSubmit}>
         <div className="etablissement-select">
-          <select
-            id="SelectOption"
-            value={selectedOption}
-            onChange={handleOptionChange}
-          >
+          <select id="SelectOption" name="etablissement">
             <option value="">Sélectionner l'établissement</option>
             <option value="collège">Collège</option>
             <option value="école">École</option>
           </select>
         </div>
-        <form action="">
-          <label>Prénom:</label>
-          <input
-            type="text"
-            placeholder="Prénom"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-          />
-          <label>Nom:</label>
-          <input
-            type="text"
-            placeholder="Nom"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-          />
-          <label>Classe:</label>
-          <input
-            type="text"
-            placeholder="Classe"
-            value={classe}
-            onChange={(e) => setClasse(e.target.value)}
-          />
 
-          <label>Poste:</label>
-          <input
-            type="text"
-            placeholder="Poste"
-            value={poste}
-            onChange={(e) => setPoste(e.target.value)}
-          />
-          <label>Formation:</label>
-          <input
-            type="text"
-            placeholder="Formation"
-            value={formation}
-            onChange={(e) => setFormation(e.target.value)}
-          />
+        <label>Prénom:</label>
+        <input type="text" placeholder="Prénom" name="firstName" />
 
-          <button onClick={handleSubmit}>Ajouter</button>
-        </form>
+        <label>Nom:</label>
+        <input type="text" placeholder="Nom" name="lastName" />
+
+        <label>Classe:</label>
+        <input type="text" placeholder="Classe" name="classe" />
+
+        <label>Poste:</label>
+        <input type="text" placeholder="Poste" name="poste" />
+
+        <label>Formation:</label>
+        <input type="text" placeholder="Formation" name="formation" />
+
+        <button type="submit">Ajouter</button>
       </form>
     </div>
   );

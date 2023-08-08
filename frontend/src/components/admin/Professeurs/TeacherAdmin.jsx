@@ -81,7 +81,7 @@ const TeachersAdmin = ({ teacher }) => {
           />
         </>
       ) : (
-        <>
+        <div className="teacher-info-admin">
           <div className="name-class">
             <h5>
               {teacher.firstName} {teacher.lastName}
@@ -90,7 +90,7 @@ const TeachersAdmin = ({ teacher }) => {
           </div>
           <h5>{teacher.poste}</h5>
           <p>{teacher.formation}</p>
-        </>
+        </div>
       )}
 
       {isEditing && <button onClick={handleSaveClick}>Enregistrer</button>}
