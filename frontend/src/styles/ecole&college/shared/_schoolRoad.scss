@@ -5,8 +5,20 @@
   p {
     margin-bottom: 40px;
   }
-  img {
+  .school-road {
     width: 80%;
     margin: 0 auto;
+    @media screen and (max-width: 920px) {
+      width: 90%;
+      iframe {
+        height: 350px;
+      }
+    }
+    @media screen and (max-width: 640px) {
+      width: 100%;
+      iframe {
+        height: 250px;
+      }
+    }
   }
 }
