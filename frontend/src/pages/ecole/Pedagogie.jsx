@@ -8,7 +8,8 @@ import AvantagePedagogie from "../../components/ecole&college/shared/Pedagogie/A
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
 import AvantagesPedagogie from "../../components/ecole&college/shared/Pedagogie/AvantagesPedagogie";
 import "styles/ecole&college/Pedagogie/_pedagogie.scss";
-import test from "assets/img/test.JPG";
+import imgPedagogie from "assets/img/school-pedagogie.jpg";
+import imgAnglais from "assets/img/school-anglais.jpg";
 
 const Pedagogie = () => {
   const imagesMaterials = [
@@ -36,7 +37,7 @@ const Pedagogie = () => {
             praesentium delectus temporibus ipsa consequatur officiis cum vel
             culpa accusantium quis omnis, dolorem fugiat quisquam reprehenderit
             eum."
-          image={test}
+          image={imgPedagogie}
         />
         <Materials
           text="Qorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. 
@@ -53,7 +54,7 @@ Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel 
 Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. 
 
 Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus."
-          image={test}
+          image={imgAnglais}
         />
         <AvantagesPedagogie />
       </main>

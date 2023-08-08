@@ -9,8 +9,9 @@ import PedagogicTeam from "../../components/ecole&college/shared/Presentation/Pe
 import SchoolRoad from "../../components/ecole&college/shared/SchoolRoad";
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
 import AllAvis from "../../components/shared/AllAvis";
-import test from "assets/img/test.JPG";
 import "styles/ecole&college/Presentation/_presentation.scss";
+//IMAGES
+import imgHero from "assets/img/school-presentation.jpg";
 
 const Presentation = () => {
   const imagesLocaux = [
@@ -38,7 +39,7 @@ const Presentation = () => {
       <main>
         <HeroScolarity
           h1="École"
-          img={test}
+          img={imgHero}
           text="Qorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. 
 
         Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. 

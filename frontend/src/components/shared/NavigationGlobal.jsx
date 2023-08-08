@@ -104,7 +104,6 @@ const NavigationGlobal = () => {
             <li>Le blog</li>
             <div className="active-link"></div>
           </NavLink>
-
           <NavLink
             to="/etablissement/contact"
             className="nav-link"

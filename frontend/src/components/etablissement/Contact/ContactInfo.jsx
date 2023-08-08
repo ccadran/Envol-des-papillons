@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import test from "assets/img/test.JPG";
+import imgContact from "assets/img/contact.jpg";
 
 const ContactInfo = () => {
   return (
@@ -19,7 +19,7 @@ const ContactInfo = () => {
         </div>
       </div>
       <div className="img-container">
-        <img src={test} alt="" />
+        <img src={imgContact} alt="" />
       </div>
     </div>
   );
