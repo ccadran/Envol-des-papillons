@@ -10,19 +10,32 @@ import AvantagesPedagogie from "../../components/ecole&college/shared/Pedagogie/
 import "styles/ecole&college/Pedagogie/_pedagogie.scss";
 import imgPedagogie from "assets/img/school-pedagogie.jpg";
 import imgAnglais from "assets/img/school-anglais.jpg";
+import imgMaterial1 from "assets/img/school-materials1.jpg";
+import imgMaterial2 from "assets/img/school-materials2.jpg";
+import imgMaterial3 from "assets/img/school-materials3.jpg";
+import imgMaterial4 from "assets/img/school-materials4.jpg";
+import imgMaterial5 from "assets/img/school-materials5.jpg";
+import imgMaterial6 from "assets/img/school-materials6.jpg";
+import imgMaterial7 from "assets/img/school-materials7.jpg";
 
 const Pedagogie = () => {
-  const imagesMaterials = [
-    {
-      src: "https://images.pexels.com/photos/5088021/pexels-photo-5088021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      src: "https://images.pexels.com/photos/6966323/pexels-photo-6966323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      src: "https://images.pexels.com/photos/8409851/pexels-photo-8409851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-  ];
+  const imagesArray = {
+    imgMaterial1,
+    imgMaterial2,
+    imgMaterial3,
+    imgMaterial4,
+    imgMaterial5,
+    imgMaterial6,
+    imgMaterial7,
+  };
+
+  const imagesMaterials = [];
+
+  for (let i = 1; i <= 7; i++) {
+    const imageKey = `imgMaterial${i}`;
+    imagesMaterials.push({ src: imagesArray[imageKey] });
+  }
+
   return (
     <>
       <NavigationScolarity etablissement="ecole" />

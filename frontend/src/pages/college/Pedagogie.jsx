@@ -6,20 +6,24 @@ import EnglishPedagogie from "../../components/ecole&college/shared/Pedagogie/En
 import AvantagePedagogie from "../../components/ecole&college/shared/Pedagogie/AvantagePedagogie";
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
 import AvantagesPedagogie from "../../components/ecole&college/shared/Pedagogie/AvantagesPedagogie";
+import imgMaterial1 from "assets/img/college-materials1.jpg";
+import imgMaterial2 from "assets/img/college-materials2.jpg";
+import imgMaterial3 from "assets/img/college-materials3.jpg";
 
 const Pedagogie = () => {
-  const imagesMaterials = [
-    {
-      src: "https://images.pexels.com/photos/5088021/pexels-photo-5088021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      src: "https://images.pexels.com/photos/6966323/pexels-photo-6966323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      src: "https://images.pexels.com/photos/8409851/pexels-photo-8409851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-  ];
-  //ajouter un alt dans mon object
+  const imagesArray = {
+    imgMaterial1,
+    imgMaterial2,
+    imgMaterial3,
+  };
+
+  const imagesMaterials = [];
+
+  for (let i = 1; i <= 3; i++) {
+    const imageKey = `imgMaterial${i}`;
+    imagesMaterials.push({ src: imagesArray[imageKey] });
+  }
+  // uter un alt dans mon object
   return (
     <>
       <NavigationScolarity etablissement="college" />
