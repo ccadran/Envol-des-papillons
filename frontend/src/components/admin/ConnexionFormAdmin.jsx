@@ -29,7 +29,7 @@ const ConnexionFormAdmin = () => {
       localStorage.setItem("tokenAdmin", token);
       console.log(location.state?.from);
       // Redirigez l'utilisateur vers la page sécurisée après la connexion réussie
-      navigate(location.state?.from || "/admin/dashboard");
+      navigate(location.state?.from || "/admin/blog");
     } catch (error) {
       // Gérez les erreurs lors de la connexion (par exemple, des informations d'identification incorrectes)
       setError("Identifiants invalides. Veuillez réessayer.");

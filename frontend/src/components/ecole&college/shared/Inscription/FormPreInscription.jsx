@@ -41,7 +41,7 @@ const FormPreInscription = () => {
       <form ref={form} onSubmit={sendEmail}>
         <div className="form-part lastname">
           <label>Nom de l'élève</label>
-          <input type="text" name="lastName" placeholder="John" required />
+          <input type="text" name="lastName" placeholder="Doe" required />
         </div>
         <div className="form-part firstName">
           <label>Prénom de l'élève</label>

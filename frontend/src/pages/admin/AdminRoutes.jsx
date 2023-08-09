@@ -32,7 +32,6 @@ const AdminRoutes = () => {
     <div>
       <Routes>
         <Route path="/connexion-admin" element={<ConnexionAdmin />} />
-        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogArticle />} />
         <Route path="/blog/new-article" element={<NewArticle />} />
