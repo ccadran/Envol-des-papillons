@@ -31,7 +31,7 @@ const Pedagogie = () => {
 
   const imagesMaterials = [];
 
-  for (let i = 1; i <= 7; i++) {
+  for (let i = 1; i <= Object.keys(imagesArray).length; i++) {
     const imageKey = `imgMaterial${i}`;
     imagesMaterials.push({ src: imagesArray[imageKey] });
   }

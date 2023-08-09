@@ -10,19 +10,22 @@ import CollegeRoad from "../../components/ecole&college/shared/CollegeRoad";
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
 import AllAvis from "../../components/shared/AllAvis";
 import "styles/ecole&college/Presentation/_presentation.scss";
+import imgHero from "assets/img/college-presentation.jpg";
+import imgLocal1 from "assets/img/college-local1.jpg";
+import imgLocal2 from "assets/img/college-local2.jpg";
 
 const Presentation = () => {
-  const imagesLocaux = [
-    {
-      src: "https://images.pexels.com/photos/5896843/pexels-photo-5896843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      src: "https://images.pexels.com/photos/1370296/pexels-photo-1370296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      src: "https://images.pexels.com/photos/6602623/pexels-photo-6602623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-  ];
+  const imagesArray = {
+    imgLocal1,
+    imgLocal2,
+  };
+
+  const imagesLocaux = [];
+
+  for (let i = 1; i <= Object.keys(imagesArray).length; i++) {
+    const imageKey = `imgLocal${i}`;
+    imagesLocaux.push({ src: imagesArray[imageKey] });
+  }
   const visionPoints = [
     "Viser le développement de l’enfant dans sa globalité",
     "Donner les meilleurs chances de réussir",
@@ -37,7 +40,7 @@ const Presentation = () => {
       <main>
         <HeroScolarity
           h1="Collège"
-          img=""
+          img={imgHero}
           text="Qorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. 
         
 Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. 

@@ -7,12 +7,10 @@
   align-items: center;
 
   .slides-container {
-    // width: 100%;
-    // height: 350px;
-    width: 100%;
+    width: 90%;
     max-width: 100%;
     height: 0;
-    padding-bottom: 56.25%;
+    padding-bottom: 60.25%;
     position: relative;
     overflow: hidden;
   }
@@ -39,12 +37,12 @@
       cursor: pointer;
     }
     &.chevron-left {
-      left: -1.5rem;
-      transform: translateX(-2rem);
+      left: -1rem;
+      transform: translateX(-1rem);
     }
     &.chevron-right {
-      right: -1.5rem;
-      transform: translateX(2rem);
+      right: -1rem;
+      transform: translateX(1rem);
     }
   }
   .indicators {

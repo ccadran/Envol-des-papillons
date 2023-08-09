@@ -12,19 +12,27 @@ import AllAvis from "../../components/shared/AllAvis";
 import "styles/ecole&college/Presentation/_presentation.scss";
 //IMAGES
 import imgHero from "assets/img/school-presentation.jpg";
+import imgLocal1 from "assets/img/school-local1.jpg";
+import imgLocal2 from "assets/img/school-local2.jpg";
+import imgLocal3 from "assets/img/school-local3.jpg";
+import imgLocal4 from "assets/img/school-local4.jpg";
+import imgLocal5 from "assets/img/school-local5.jpg";
 
 const Presentation = () => {
-  const imagesLocaux = [
-    {
-      src: "https://images.pexels.com/photos/5896843/pexels-photo-5896843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      src: "https://images.pexels.com/photos/1370296/pexels-photo-1370296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      src: "https://images.pexels.com/photos/6602623/pexels-photo-6602623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-  ];
+  const imagesArray = {
+    imgLocal1,
+    imgLocal2,
+    imgLocal3,
+    imgLocal4,
+    imgLocal5,
+  };
+
+  const imagesLocaux = [];
+
+  for (let i = 1; i <= Object.keys(imagesArray).length; i++) {
+    const imageKey = `imgLocal${i}`;
+    imagesLocaux.push({ src: imagesArray[imageKey] });
+  }
   const visionPoints = [
     "Viser le développement de l’enfant dans sa globalité iser le développement de l’enfant dans sa globalité iser le développement de l’enfant dans sa globalité",
     "Donner les meilleurs chances de réussir",
