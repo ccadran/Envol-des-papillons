@@ -106,12 +106,29 @@ const FooterScolarity = ({ etablissement }) => {
           </ul>
         </div>
         <div className="footer-contact">
-          {/* <Link to={`${etablissement}/qui-sommes-nous`}>Notre histoire</Link> */}
           <p>lenvoldespapillons@gmail.com</p>
           <p>06 01 44 17 72</p>
-          <div className="socials-logo">
-            <Link to="https://www.instagram.com/">insta </Link>
-            <Link to="https://www.facebook.com/">facebook </Link>
+          <div className="social-logos">
+            <Link
+              to={
+                location.pathname.includes("college")
+                  ? "https://www.instagram.com/college.lenvol.bordeaux/?utm_medium=copy_link"
+                  : "https://www.instagram.com/ecole.montessori_bordeaux/"
+              }
+              target="_blank"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </Link>
+            <Link
+              to={
+                location.pathname.includes("college")
+                  ? "https://www.facebook.com/lenvolBordeauxmetropole/"
+                  : "https://www.facebook.com/"
+              }
+              target="_blank"
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </Link>
           </div>
         </div>
       </div>

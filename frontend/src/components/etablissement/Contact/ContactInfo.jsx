@@ -13,9 +13,13 @@ const ContactInfo = () => {
       <div className="contact">
         <p>lenvoldespapillons@gmail.com</p>
         <p>06 01 44 17 72</p>
-        <div className="socials-logo">
-          <Link to="https://www.instagram.com/">insta </Link>
-          <Link to="https://www.facebook.com/">facebook </Link>
+        <div className="social-logos">
+          <Link to="https://www.instagram.com/ecole.montessori_bordeaux/">
+            <i class="fa-brands fa-instagram"></i>{" "}
+          </Link>
+          <Link to="https://www.facebook.com/lenvolBordeauxmetropole">
+            <i class="fa-brands fa-facebook"></i>{" "}
+          </Link>
         </div>
       </div>
       <div className="img-container">

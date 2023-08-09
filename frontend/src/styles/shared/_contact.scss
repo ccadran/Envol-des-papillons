@@ -24,6 +24,19 @@
       & p:nth-child(2) {
         margin: 10px 0;
       }
+      .social-logos {
+        i {
+          font-size: 1.5rem;
+          color: black;
+          margin-right: 20px;
+          @media screen and (max-width: 920px) {
+            font-size: 1.3rem;
+          }
+          @media screen and (max-width: 640px) {
+            font-size: 1rem;
+          }
+        }
+      }
     }
     .img-container {
       width: 100%;

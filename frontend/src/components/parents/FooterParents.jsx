@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Route, Routes, useLocation } from "react-router-dom";
+import { NavLink, Route, Routes, useLocation, Link } from "react-router-dom";
 import PapillonLogo from "../shared/PapillonLogo";
 
 const FooterParents = ({ etablissement }) => {
@@ -84,9 +84,13 @@ const FooterParents = ({ etablissement }) => {
         <div className="footer-contact">
           <p>lenvoldespapillons@gmail.com</p>
           <p>06 01 44 17 72</p>
-          <div className="socials-logo">
-            <p>insta</p>
-            <p>facebook</p>
+          <div className="social-logos">
+            <Link to="https://www.instagram.com/ecole.montessori_bordeaux/">
+              <i class="fa-brands fa-instagram"></i>{" "}
+            </Link>
+            <Link to="https://www.facebook.com/lenvolBordeauxmetropole">
+              <i class="fa-brands fa-facebook"></i>{" "}
+            </Link>
           </div>
         </div>
       </div>
