@@ -39,6 +39,13 @@
           width: 100%;
         }
       }
+      &.error {
+        input,
+        textarea,
+        select {
+          border: 2px solid red;
+        }
+      }
     }
     a {
       margin-top: 42px;

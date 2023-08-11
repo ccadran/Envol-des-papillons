@@ -75,13 +75,6 @@ const NavigationAdmin = () => {
       >
         <ul>
           <NavLink
-            to="/admin/dashboard"
-            className="nav-link"
-            activeclassname="active"
-          >
-            <li>Dashboard</li>
-          </NavLink>
-          <NavLink
             to="/admin/blog"
             className="nav-link"
             activeclassname="active"

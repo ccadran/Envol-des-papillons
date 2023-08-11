@@ -100,8 +100,13 @@ const BlogArticle = () => {
     formData.append("introduction", updatedBlogArticle.introduction);
     formData.append("subTitle1", updatedBlogArticle.subTitle1);
     formData.append("content1", updatedBlogArticle.content1);
-    formData.append("subTitle2", updatedBlogArticle.subTitle2);
-    formData.append("content2", updatedBlogArticle.content2);
+    if (updatedBlogArticle.subTitle2) {
+      formData.append("subTitle2", updatedBlogArticle.subTitle2);
+    }
+
+    if (updatedBlogArticle.content2) {
+      formData.append("content2", updatedBlogArticle.content2);
+    }
     formData.append("author", blogArticle.author);
 
     // Vérifiez si une nouvelle image principale a été sélectionnée

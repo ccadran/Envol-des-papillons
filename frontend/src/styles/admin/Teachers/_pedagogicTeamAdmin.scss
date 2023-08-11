@@ -23,6 +23,8 @@
     padding: 16px;
     margin: 26px;
     min-width: 200px;
+    display: flex;
+    flex-direction: column;
     .controller {
       width: 80%;
       display: flex;

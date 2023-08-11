@@ -5,6 +5,7 @@ import BlogTags from "components/etablissement/Blog/BlogTags";
 import "styles/admin/Article/_newArticle.scss";
 import NavigationAdmin from "components/admin/NavigationAdmin";
 import chevron from "assets/logos/chevron.svg";
+import { set } from "mongoose";
 
 const NewArticle = () => {
   const location = useLocation();
@@ -22,28 +23,29 @@ const NewArticle = () => {
     content1: "",
     subTitle2: "",
     content2: "",
+    author: "",
   });
 
   const navigate = useNavigate();
+  const [missingFields, setMissingFields] = useState([]);
+  const [errorText, setErrorText] = useState("");
+
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
 
     if (name === "mainImg") {
-      // If it's a file input for mainImg, use the first selected file
       const file0 = files[0];
       setArticleData((prevData) => ({
         ...prevData,
         [name]: file0,
       }));
     } else if (name === "illustrations") {
-      // If it's a file input for illustrations, use all selected files
-      const fileList = Array.from(files); // Convert FileList to an array
+      const fileList = Array.from(files);
       setArticleData((prevData) => ({
         ...prevData,
         [name]: fileList,
       }));
     } else {
-      // For other inputs, set the value directly
       setArticleData((prevData) => ({
         ...prevData,
         [name]: value,
@@ -53,12 +55,28 @@ const NewArticle = () => {
 
   const handleAddArticle = async () => {
     try {
+      const requiredFields = [
+        "title",
+        "accroche",
+        "introduction",
+        "subTitle1",
+        "content1",
+        "author",
+      ];
+
+      const missing = requiredFields.filter((field) => !articleData[field]);
+
+      if (missing.length > 0) {
+        setMissingFields(missing);
+        setErrorText("Veuillez remplir tous les champs obligatoires");
+        return;
+      }
+
       const formData = new FormData();
       formData.append("title", articleData.title);
       formData.append("accroche", articleData.accroche);
       formData.append("mainImg", articleData.mainImg);
 
-      // Check if illustrations have been selected before trying to loop through them
       if (articleData.illustrations && articleData.illustrations.length > 0) {
         articleData.illustrations.forEach((illustration, index) => {
           formData.append(
@@ -76,8 +94,6 @@ const NewArticle = () => {
       formData.append("content2", articleData.content2);
       formData.append("author", articleData.author);
 
-      console.log(articleData);
-      console.log(formData);
       const response = await axios.post(
         `http://localhost:5001/${page}`,
         formData,
@@ -90,7 +106,6 @@ const NewArticle = () => {
 
       console.log("Article ajouté avec succès !");
       console.log("Nouvel article :", response.data);
-      // Rediriger vers la page de l'article nouvellement créé
       {
         page === "actuality"
           ? navigate(`/admin/actualites`)
@@ -98,6 +113,10 @@ const NewArticle = () => {
       }
     } catch (error) {
       console.error("Erreur lors de l'ajout de l'article :", error);
+      setErrorText(
+        "Erreur lors de l'ajout de l'article, vérifier que tous les champs sont remplis"
+      );
+      console.log(errorText);
     }
   };
 
@@ -132,7 +151,11 @@ const NewArticle = () => {
               </Link>
             </div>
             <form>
-              <div className="form-part">
+              <div
+                className={`form-part ${
+                  missingFields.includes("title") ? "error" : ""
+                }`}
+              >
                 <label htmlFor="title">Titre :</label>
                 <input
                   type="text"
@@ -141,23 +164,37 @@ const NewArticle = () => {
                   onChange={handleInputChange}
                 />
               </div>
-              <div className="form-part">
+              <div
+                className={`form-part ${
+                  missingFields.includes("accroche") ? "error" : ""
+                }`}
+              >
                 <label htmlFor="accroche">Accroche :</label>
                 <textarea
+                  type="text"
                   name="accroche"
                   value={articleData.accroche}
                   onChange={handleInputChange}
-                ></textarea>
+                />
               </div>
-              <div className="form-part">
+              <div
+                className={`form-part ${
+                  missingFields.includes("introduction") ? "error" : ""
+                }`}
+              >
                 <label htmlFor="introduction">Introduction :</label>
                 <textarea
+                  type="text"
                   name="introduction"
                   value={articleData.introduction}
                   onChange={handleInputChange}
-                ></textarea>
+                />
               </div>
-              <div className="form-part">
+              <div
+                className={`form-part ${
+                  missingFields.includes("subTitle1") ? "error" : ""
+                }`}
+              >
                 <label htmlFor="subTitle1">Sous-titre 1 :</label>
                 <input
                   type="text"
@@ -166,13 +203,18 @@ const NewArticle = () => {
                   onChange={handleInputChange}
                 />
               </div>
-              <div className="form-part">
+              <div
+                className={`form-part ${
+                  missingFields.includes("content1") ? "error" : ""
+                }`}
+              >
                 <label htmlFor="content1">Contenu 1 :</label>
                 <textarea
+                  type="text"
                   name="content1"
                   value={articleData.content1}
                   onChange={handleInputChange}
-                ></textarea>
+                />
               </div>
               <div className="form-part">
                 <label htmlFor="subTitle2">Sous-titre 2 :</label>
@@ -191,14 +233,17 @@ const NewArticle = () => {
                   onChange={handleInputChange}
                 ></textarea>
               </div>
-
-              <div className="form-part">
+              <div
+                className={`form-part ${
+                  missingFields.includes("author") ? "error" : ""
+                }`}
+              >
                 <label htmlFor="author">Auteur :</label>
-                <textarea
+                <input
                   name="author"
                   value={articleData.author}
                   onChange={handleInputChange}
-                ></textarea>
+                ></input>
               </div>
               <div className="form-part">
                 <label htmlFor="mainImg">Image principale :</label>
@@ -226,10 +271,10 @@ const NewArticle = () => {
                   selectedTags={articleData.tags}
                 />
               </div>
-
               <button type="button" onClick={handleAddArticle}>
                 Ajouter l'article d'actualité
               </button>
+              {errorText && <p className="error">{errorText}</p>}
             </form>
           </div>
         </div>

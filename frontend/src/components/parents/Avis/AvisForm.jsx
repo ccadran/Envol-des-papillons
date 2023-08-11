@@ -77,7 +77,8 @@ const AvisForm = () => {
         </div>
       ) : (
         <form className="avis" ref={formRef} onSubmit={handleSubmit}>
-          <div className="form-part">
+          <div className={`form-part ${formErrors.prenom ? "error" : ""}`}>
+            {" "}
             <label htmlFor="prenom">Prénom</label>
             <input
               type="text"
@@ -86,10 +87,11 @@ const AvisForm = () => {
               placeholder="Entrez votre prénom"
             />
             {formErrors.prenom && (
-              <p className="error-message">Prénom obligatoire</p>
+              <p className="error-message">Le prénom obligatoire</p>
             )}
           </div>
-          <div className="form-part">
+          <div className={`form-part ${formErrors.nom ? "error" : ""}`}>
+            {" "}
             <label htmlFor="nom">Nom</label>
             <input
               type="text"
@@ -97,10 +99,13 @@ const AvisForm = () => {
               id="nom"
               placeholder="Entrez votre nom"
             />
-            {formErrors.nom && <p className="error-message">Nom obligatoire</p>}
+            {formErrors.nom && (
+              <p className="error-message">Le nom obligatoire</p>
+            )}
           </div>
 
-          <div className="form-part">
+          <div className={`form-part ${formErrors.avis ? "error" : ""}`}>
+            {" "}
             <label htmlFor="message">Avis</label>
             <textarea
               name="message"
@@ -108,10 +113,13 @@ const AvisForm = () => {
               placeholder="Entrez votre avis"
             ></textarea>
             {formErrors.avis && (
-              <p className="error-message">Avis obligatoire</p>
+              <p className="error-message">Un message d'avis obligatoire</p>
             )}
           </div>
-          <div className="form-part">
+          <div
+            className={`form-part ${formErrors.etablissement ? "error" : ""}`}
+          >
+            {" "}
             <label htmlFor="etablissement">Etablissement</label>
             <select name="etablissement" id="selectedEtablissement">
               <option value="">

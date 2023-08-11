@@ -1,12 +1,13 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const FormTeacher = () => {
   const navigate = useNavigate();
   const formRef = useRef(null);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const formData = new FormData(formRef.current);
@@ -20,18 +21,33 @@ const FormTeacher = () => {
       etablissement: formData.get("etablissement"),
     };
 
-    console.log(newTeacher);
-
-    axios
-      .post("http://localhost:5001/teacher", newTeacher)
-      .then((response) => {
-        navigate("/admin/teachers");
-        console.log("Nouveau professeur ajouté avec succès !");
-        formRef.current.reset(); // Réinitialisation du formulaire
-      })
-      .catch((error) => {
-        console.error("Erreur lors de l'ajout du professeur :", error);
-      });
+    if (
+      !newTeacher.firstName ||
+      !newTeacher.lastName ||
+      !newTeacher.classe ||
+      !newTeacher.poste ||
+      !newTeacher.formation
+    ) {
+      setErrorMessage("Veuillez remplir tous les champs obligatoires.");
+      return;
+    }
+    if (newTeacher.etablissement === "") {
+      setErrorMessage("Veuillez sélectionner l'établissement.");
+      return;
+    }
+    try {
+      const response = await axios.post(
+        "http://localhost:5001/teacher",
+        newTeacher
+      );
+      navigate("/admin/teachers");
+      formRef.current.reset();
+    } catch (error) {
+      console.error("Erreur lors de l'ajout du professeur :", error);
+      setErrorMessage(
+        "Une erreur s'est produite lors de l'ajout du professeur."
+      );
+    }
   };
 
   return (
@@ -61,6 +77,7 @@ const FormTeacher = () => {
         <input type="text" placeholder="Formation" name="formation" />
 
         <button type="submit">Ajouter</button>
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
       </form>
     </div>
   );

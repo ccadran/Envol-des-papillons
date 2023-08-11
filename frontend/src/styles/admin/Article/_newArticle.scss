@@ -33,6 +33,12 @@
         height: 200px;
         resize: vertical;
       }
+      &.error {
+        input,
+        textarea {
+          border: 2px solid red;
+        }
+      }
     }
   }
   button {

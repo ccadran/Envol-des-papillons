@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { set } from "mongoose";
 import { useNavigate } from "react-router-dom";
 
 const FormNewMail = () => {
@@ -11,41 +10,49 @@ const FormNewMail = () => {
     { id: 2, value: "" },
     { id: 3, value: "" },
   ]);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleInputChange = (id, value) => {
-    // Update the childNames state based on the id of the input being changed
     const updatedChildNames = childNames.map((child) =>
       child.id === id ? { ...child, value } : child
     );
     setChildNames(updatedChildNames);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Check if at least one child name is filled
+    const hasFilledChildName = childNames.some(
+      (child) => child.value.trim() !== ""
+    );
+
+    if (!hasFilledChildName) {
+      setErrorMessage("Veuillez entrer au moins un nom d'enfant.");
+      return;
+    }
 
     // Create the new mail object with the email and childNames fields
     const newMail = {
       email,
-      childName: childNames[0].value,
-      childName2: childNames[1].value,
-      childName3: childNames[2].value,
+      childNames: childNames.map((child) => child.value.trim()).filter(Boolean),
     };
-    console.log(newMail);
-    setEmail("");
-    setChildNames(["", "", ""]);
 
-    // Send the new mail object to the server
-    axios
-      .post("http://localhost:5001/mail-parent", newMail)
-      .then((res) => {
-        // Handle the response if needed
-        console.log("Mail added successfully!");
-        navigate("/admin/mails");
-      })
-      .catch((error) => {
-        // Handle any errors that occurred during the request
-        console.error("Error adding mail:", error);
-      });
+    try {
+      await axios.post("http://localhost:5001/mail-parent", newMail);
+      console.log("Mail added successfully!");
+      navigate("/admin/mails");
+      setEmail("");
+      setChildNames([
+        { id: 1, value: "" },
+        { id: 2, value: "" },
+        { id: 3, value: "" },
+      ]);
+      setErrorMessage("");
+    } catch (error) {
+      console.error("Error adding mail:", error);
+      setErrorMessage("Veuillez rentrer une adresse mail valide");
+    }
   };
 
   return (
@@ -69,6 +76,7 @@ const FormNewMail = () => {
         ))}
       </div>
       <button type="submit">Ajouter le mail</button>
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
     </form>
   );
 };
