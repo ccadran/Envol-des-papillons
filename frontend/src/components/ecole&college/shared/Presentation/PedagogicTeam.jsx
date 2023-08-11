@@ -41,7 +41,7 @@ const PedagogicTeam = ({ text, etablissement }) => {
     speed: 500, // Vitesse de défilement en millisecondes
     slidesToShow: 4, // Nombre de cartes à afficher à la fois
     slidesToScroll: 1, // Nombre de cartes à faire défiler à la fois
-    initialSlide: 0,
+    initialSlide: 1,
 
     responsive: [
       {

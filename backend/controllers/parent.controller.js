@@ -15,7 +15,9 @@ module.exports.setParent = async (req, res) => {
   }
   const mailParent = await MailParentModel.findOne({ email: req.body.email });
   if (!mailParent) {
-    return res.status(400).json({ message: "L'e-mail n'est pas autorisé" });
+    return res.status(400).json({
+      message: `L'email ne fait pas partie des emails des parents, envoyer un mail à "lenvoldespapillons@gmail.com" pour plus d'informations.`,
+    });
   }
   try {
     // Générez le hachage du mot de passe
@@ -67,14 +69,19 @@ exports.login = async (req, res) => {
     const mailParent = await MailParentModel.findOne({ email });
 
     if (!mailParent) {
-      return res.status(401).json({ message: "Email non autorisé" });
+      return res
+        .status(401)
+        .json({ message: "L'email n'appartient à aucun parent" });
     }
 
     // Vérifiez si le parent existe dans la base de données "ParentModel"
     const parent = await ParentModel.findOne({ email });
 
     if (!parent) {
-      return res.status(401).json({ message: "Email incorrect" });
+      return res.status(401).json({
+        message:
+          "Le compte parent n'a pas encore été créer contactez nous par mail afin de recevoir un lien d'inscription.",
+      });
     }
 
     // Vérifiez le mot de passe fourni avec le mot de passe haché stocké dans la base de données

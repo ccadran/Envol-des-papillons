@@ -32,7 +32,15 @@ const ConnexionForm = () => {
       navigate(location.state?.from || "/parents/actualites");
     } catch (error) {
       // Gérez les erreurs lors de la connexion (par exemple, des informations d'identification incorrectes)
-      setError("Identifiants invalides. Veuillez réessayer.");
+      if (
+        error.response &&
+        error.response.data &&
+        error.response.data.message
+      ) {
+        setError(error.response.data.message);
+      } else {
+        setError("Registration failed. Please try again.");
+      }
     }
   };
 

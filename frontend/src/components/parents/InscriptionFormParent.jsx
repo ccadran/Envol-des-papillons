@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import test from "assets/img/test.JPG";
 
-const RegistrationForm = () => {
+const InscriptionFormParent = () => {
   const navigate = useNavigate();
   const formRef = useRef(null);
 
@@ -31,8 +31,15 @@ const RegistrationForm = () => {
       // Redirect the user to the login page after successful registration
       navigate("/parents/connexion-parent");
     } catch (error) {
-      // Handle registration errors (e.g., username or email already taken)
-      setError("Registration failed. Please try again.");
+      if (
+        error.response &&
+        error.response.data &&
+        error.response.data.message
+      ) {
+        setError(error.response.data.message);
+      } else {
+        setError("Registration failed. Please try again.");
+      }
     }
   };
 
@@ -44,10 +51,10 @@ const RegistrationForm = () => {
       <div className="form-inscription">
         <h3>Créer un compte parent</h3>
         <form ref={formRef} className="form-fields">
-          <input type="text" name="firstName" placeholder="First Name" />
-          <input type="text" name="lastName" placeholder="Last Name" />
+          <input type="text" name="firstName" placeholder="Prénom" />
+          <input type="text" name="lastName" placeholder="Nom" />
           <input type="email" name="email" placeholder="Email" />
-          <input type="password" name="password" placeholder="Password" />
+          <input type="password" name="password" placeholder="Mot de passe" />
         </form>
         <button onClick={handleRegister}>Créer</button>
         {error && <p>{error}</p>}
@@ -56,4 +63,4 @@ const RegistrationForm = () => {
   );
 };
 
-export default RegistrationForm;
+export default InscriptionFormParent;

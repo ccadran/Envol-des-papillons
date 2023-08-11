@@ -5,6 +5,12 @@ import Button from "../../shared/Button";
 const AvisForm = () => {
   const formRef = useRef(null);
   const [submited, setSubmited] = useState(false);
+  const [formErrors, setFormErrors] = useState({
+    prenom: false,
+    nom: false,
+    avis: false,
+    etablissement: false,
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,6 +23,27 @@ const AvisForm = () => {
       avis: formData.get("message"),
       etablissement: formData.get("etablissement"),
     };
+
+    // Vérification des champs et gestion des erreurs
+    const errors = {};
+
+    if (!newAvis.prenom) {
+      errors.prenom = true;
+    }
+    if (!newAvis.nom) {
+      errors.nom = true;
+    }
+    if (!newAvis.avis) {
+      errors.avis = true;
+    }
+    if (!newAvis.etablissement) {
+      errors.etablissement = true;
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return;
+    }
 
     navigator.clipboard.writeText(newAvis.avis);
 
@@ -58,6 +85,9 @@ const AvisForm = () => {
               id="prenom"
               placeholder="Entrez votre prénom"
             />
+            {formErrors.prenom && (
+              <p className="error-message">Prénom obligatoire</p>
+            )}
           </div>
           <div className="form-part">
             <label htmlFor="nom">Nom</label>
@@ -67,6 +97,7 @@ const AvisForm = () => {
               id="nom"
               placeholder="Entrez votre nom"
             />
+            {formErrors.nom && <p className="error-message">Nom obligatoire</p>}
           </div>
 
           <div className="form-part">
@@ -76,6 +107,9 @@ const AvisForm = () => {
               id="message"
               placeholder="Entrez votre avis"
             ></textarea>
+            {formErrors.avis && (
+              <p className="error-message">Avis obligatoire</p>
+            )}
           </div>
           <div className="form-part">
             <label htmlFor="etablissement">Etablissement</label>
@@ -86,6 +120,11 @@ const AvisForm = () => {
               <option value="école">École</option>
               <option value="college">Collège</option>
             </select>
+            {formErrors.etablissement && (
+              <p className="error-message">
+                Choisissez l'établissement dont il est question dans l'avis
+              </p>
+            )}
           </div>
           <button type="submit" value="">
             Laissez votre avis

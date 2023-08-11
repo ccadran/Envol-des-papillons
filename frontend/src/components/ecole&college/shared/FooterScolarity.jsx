@@ -123,7 +123,7 @@ const FooterScolarity = ({ etablissement }) => {
               to={
                 location.pathname.includes("college")
                   ? "https://www.facebook.com/lenvolBordeauxmetropole/"
-                  : "https://www.facebook.com/"
+                  : "https://www.facebook.com/profile.php?id=100070321285628"
               }
               target="_blank"
             >
