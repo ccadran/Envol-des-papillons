@@ -11,9 +11,15 @@ connectDB();
 const app = express();
 
 //Authorisation CORS
+
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://envol-des-papillons.onrender.com/",
+];
+
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: allowedOrigins,
     credentials: true,
     optionsSuccessStatus: 200,
   })
