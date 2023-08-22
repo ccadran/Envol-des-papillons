@@ -106,8 +106,12 @@ const FooterScolarity = ({ etablissement }) => {
           </ul>
         </div>
         <div className="footer-contact">
-          <p>lenvoldespapillons@gmail.com</p>
-          <p>06 01 44 17 72</p>
+          <a href="mailto:contact@lenvoldespapillons33.com ">
+            contact@lenvoldespapillons33.com
+          </a>
+
+          <a href="tel:+33 6 05 39 03 73">06 05 39 03 73</a>
+
           <div className="social-logos">
             <Link
               to={

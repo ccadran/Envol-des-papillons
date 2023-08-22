@@ -142,11 +142,14 @@ footer {
       }
     }
     .footer-contact {
+      display: flex;
+      flex-direction: column;
       @media screen and (max-width: 440px) {
         width: 100%;
         margin-left: 20px;
       }
-      p {
+      p,
+      a {
         font-family: $subtitle-font;
         margin-bottom: 18px;
         font-size: clamp(14px, 2vw, 18px);

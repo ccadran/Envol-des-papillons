@@ -18,10 +18,14 @@
     }
     .contact {
       margin: 24px 0;
-      p {
+      display: flex;
+      flex-direction: column;
+      a {
+        font-size: clamp(16px, 2vw, 18px);
+
         font-family: $subtitle-font;
       }
-      & p:nth-child(2) {
+      & a:nth-child(2) {
         margin: 10px 0;
       }
       .social-logos {
