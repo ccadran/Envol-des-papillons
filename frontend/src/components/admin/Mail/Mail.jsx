@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const Mail = ({ mail }) => {
   const handleDeleteMail = () => {
-    axios.delete(`http://localhost:5001/mail-parent/${mail._id}`);
+    axios.delete(`${process.env.REACT_APP_API_URL}/mail-parent/${mail._id}`);
     console.log("mail supprimé");
   };
   const handleEditMail = () => {
@@ -14,7 +14,7 @@ const Mail = ({ mail }) => {
 
   const handleSaveMail = () => {
     axios
-      .put(`http://localhost:5001/mail-parent/${mail._id}`, {
+      .put(`${process.env.REACT_APP_API_URL}/mail-parent/${mail._id}`, {
         email: editedMail,
         childName: editedChildNames[0], // Update childName
         childName2: editedChildNames[1], // Update childName2

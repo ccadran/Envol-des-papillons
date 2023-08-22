@@ -17,10 +17,13 @@ const ConnexionFormAdmin = () => {
   const handleLogin = async () => {
     try {
       // Faites l'appel API pour vous connecter
-      const response = await axios.post("http://localhost:5001/login-admin", {
-        username,
-        password,
-      });
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_URL}/login-admin`,
+        {
+          username,
+          password,
+        }
+      );
 
       // Récupérez le token de la réponse
       const token = response.data.token;

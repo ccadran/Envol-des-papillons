@@ -37,7 +37,7 @@ const FormTeacher = () => {
     }
     try {
       const response = await axios.post(
-        "http://localhost:5001/teacher",
+        `${process.env.REACT_APP_API_URL}/teacher`,
         newTeacher
       );
       navigate("/admin/teachers");

@@ -13,7 +13,7 @@ const FAQController = () => {
   useEffect(() => {
     if (selectedOption) {
       axios
-        .get(`http://localhost:5001/faqSection${selectedOption}`)
+        .get(`${process.env.REACT_APP_API_URL}/faqSection${selectedOption}`)
         .then((res) => {
           setFaqSections(res.data);
         })

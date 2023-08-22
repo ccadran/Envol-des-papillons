@@ -16,7 +16,9 @@ const SectionFAQ = ({ faqSection, etablissement }) => {
 
   const handleDeleteSection = (sectionId) => {
     axios
-      .delete(`http://localhost:5001/faqSection${etablissement}/${sectionId}`)
+      .delete(
+        `${process.env.REACT_APP_API_URL}/faqSection${etablissement}/${sectionId}`
+      )
       .then((res) => {
         setFetchData(true);
       });
@@ -35,7 +37,7 @@ const SectionFAQ = ({ faqSection, etablissement }) => {
     setIsEditing(false);
     axios
       .put(
-        `http://localhost:5001/faqSection${etablissement}/${faqSection._id}`,
+        `${process.env.REACT_APP_API_URL}/faqSection${etablissement}/${faqSection._id}`,
         { section_title: sectionTitle }
       )
       .then((res) => {});
@@ -44,7 +46,7 @@ const SectionFAQ = ({ faqSection, etablissement }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5001/faqQuestion" + etablissement, {
+      .get(`${process.env.REACT_APP_API_URL}/faqQuestion` + etablissement, {
         params: {
           section_id: faqSection._id,
         },

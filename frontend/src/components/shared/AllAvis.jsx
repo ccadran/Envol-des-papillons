@@ -12,7 +12,7 @@ const AllAvis = ({ etablissement }) => {
   const [avis, setAvis] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5001/avis", {
+      .get(`${process.env.REACT_APP_API_URL}/avis`, {
         params: {
           etablissement: etablissement,
         },

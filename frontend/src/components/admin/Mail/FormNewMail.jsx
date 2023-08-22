@@ -39,7 +39,7 @@ const FormNewMail = () => {
     };
 
     try {
-      await axios.post("http://localhost:5001/mail-parent", newMail);
+      await axios.post(`${process.env.REACT_APP_API_URL}/mail-parent`, newMail);
       console.log("Mail added successfully!");
       navigate("/admin/mails");
       setEmail("");

@@ -8,7 +8,7 @@ const MailController = () => {
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
-    axios.get("http://localhost:5001/mail-parent").then((res) => {
+    axios.get(`${process.env.REACT_APP_API_URL}/mail-parent`).then((res) => {
       setMailsData(res.data);
     });
   }, []);

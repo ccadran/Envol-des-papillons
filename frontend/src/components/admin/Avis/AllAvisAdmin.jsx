@@ -13,7 +13,7 @@ const AllAvisAdmin = () => {
 
     if (selectedValue) {
       axios
-        .get("http://localhost:5001/avis", {
+        .get(`${process.env.REACT_APP_API_URL}/avis`, {
           params: {
             etablissement: selectedValue,
           },

@@ -7,7 +7,7 @@ const ContentFAQ = ({ etablissement }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5001/faqSection" + etablissement)
+      .get(`${process.env.REACT_APP_API_URL}/faqSection` + etablissement)
       .then((res) => {
         setFaqSections(res.data);
       });

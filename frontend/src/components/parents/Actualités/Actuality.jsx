@@ -9,7 +9,9 @@ const Actuality = ({ actuality }) => {
   const isSelected = true;
   const handleDelete = async (postId) => {
     try {
-      await axios.delete(`http://localhost:5001/actuality/${postId}`);
+      await axios.delete(
+        `${process.env.REACT_APP_API_URL}/actuality/${postId}`
+      );
       console.log(`Article ${postId} supprimé avec succès.`);
       window.location.reload();
     } catch (error) {

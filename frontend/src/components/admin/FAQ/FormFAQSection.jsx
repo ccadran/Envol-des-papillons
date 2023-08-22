@@ -30,7 +30,7 @@ const FormFAQSection = ({}) => {
     const newSection = { section_title: sectionTitle.section_title };
     try {
       const response = await axios.post(
-        `http://localhost:5001/faqSection${selectedOption}`,
+        `${process.env.REACT_APP_API_URL}/faqSection${selectedOption}`,
         newSection
       );
 

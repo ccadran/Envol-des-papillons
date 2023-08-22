@@ -29,10 +29,12 @@ const ActualityArticle = () => {
   };
 
   useEffect(() => {
-    axios.get(`http://localhost:5001/actuality/${id}`).then((res) => {
-      setActualityArticle(res.data);
-      setUpdatedActualityArticle(res.data);
-    });
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/actuality/${id}`)
+      .then((res) => {
+        setActualityArticle(res.data);
+        setUpdatedActualityArticle(res.data);
+      });
   }, [id]);
   useEffect(() => {
     console.log("Updated article:", updatedActualityArticle);
@@ -116,7 +118,7 @@ const ActualityArticle = () => {
       });
     }
     axios
-      .put(`http://localhost:5001/actuality/${id}`, formData, {
+      .put(`${process.env.REACT_APP_API_URL}/actuality/${id}`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

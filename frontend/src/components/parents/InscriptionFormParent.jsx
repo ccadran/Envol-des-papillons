@@ -24,7 +24,7 @@ const InscriptionFormParent = () => {
 
       // Send the data to your backend using POST
       const response = await axios.post(
-        "http://localhost:5001/parent",
+        `${process.env.REACT_APP_API_URL}/parent`,
         newParent
       );
 

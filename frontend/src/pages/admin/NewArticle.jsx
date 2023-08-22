@@ -95,7 +95,7 @@ const NewArticle = () => {
       formData.append("author", articleData.author);
 
       const response = await axios.post(
-        `http://localhost:5001/${page}`,
+        `${process.env.REACT_APP_API_URL}/${page}`,
         formData,
         {
           headers: {

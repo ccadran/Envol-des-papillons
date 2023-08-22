@@ -7,7 +7,7 @@ const Tags = ({ tags, isSelected }) => {
   const [blogTags, setBlogTags] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5001/blogTag").then((res) => {
+    axios.get(`${process.env.REACT_APP_API_URL}/blogTag`).then((res) => {
       setBlogTags(res.data);
     });
   }, []);

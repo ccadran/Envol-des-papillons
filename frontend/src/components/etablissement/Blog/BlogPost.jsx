@@ -11,7 +11,7 @@ const BlogPost = ({ article, selectedTags }) => {
 
   const handleDelete = async (postId) => {
     try {
-      await axios.delete(`http://localhost:5001/blog/${postId}`);
+      await axios.delete(`${process.env.REACT_APP_API_URL}/blog/${postId}`);
       console.log(`Article ${postId} supprimé avec succès.`);
       window.location.reload();
     } catch (error) {

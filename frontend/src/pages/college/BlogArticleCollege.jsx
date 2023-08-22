@@ -40,7 +40,7 @@ const BlogArticleCollege = () => {
   };
 
   useEffect(() => {
-    axios.get(`http://localhost:5001/blog/${id}`).then((res) => {
+    axios.get(`${process.env.REACT_APP_API_URL}/blog/${id}`).then((res) => {
       setBlogArticle(res.data);
     });
   }, [id]);

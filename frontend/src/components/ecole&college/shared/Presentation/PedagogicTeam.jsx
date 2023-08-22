@@ -9,7 +9,7 @@ const PedagogicTeam = ({ text, etablissement }) => {
   const [teachers, setTeachers] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5001/teacher", {
+      .get(`${process.env.REACT_APP_API_URL}/teacher`, {
         params: {
           etablissement: etablissement,
         },

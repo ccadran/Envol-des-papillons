@@ -48,7 +48,7 @@ const AvisForm = () => {
     navigator.clipboard.writeText(newAvis.avis);
 
     try {
-      await axios.post("http://localhost:5001/avis", newAvis);
+      await axios.post(`${process.env.REACT_APP_API_URL}/avis`, newAvis);
 
       setSubmited(true);
     } catch (error) {

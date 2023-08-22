@@ -75,11 +75,11 @@ const SearchFilter = () => {
 
   useEffect(() => {
     if (location.pathname.includes("blog")) {
-      axios.get("http://localhost:5001/blog").then((res) => {
+      axios.get(`${process.env.REACT_APP_API_URL}/blog`).then((res) => {
         setBlogPost(res.data);
       });
     } else if (location.pathname.includes("actualites")) {
-      axios.get("http://localhost:5001/actuality").then((res) => {
+      axios.get(`${process.env.REACT_APP_API_URL}/actuality`).then((res) => {
         setActualityPost(res.data);
       });
     }

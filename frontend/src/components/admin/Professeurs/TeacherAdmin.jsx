@@ -25,7 +25,10 @@ const TeachersAdmin = ({ teacher }) => {
     };
 
     axios
-      .put("http://localhost:5001/teacher/" + teacher._id, updatedTeacher)
+      .put(
+        `${process.env.REACT_APP_API_URL}/teacher/` + teacher._id,
+        updatedTeacher
+      )
       .then((response) => {
         console.log("Modifications enregistrées avec succès !");
         setIsEditing(false);
@@ -39,7 +42,7 @@ const TeachersAdmin = ({ teacher }) => {
   };
 
   const deleteTeacher = () => {
-    axios.delete("http://localhost:5001/teacher/" + teacher._id);
+    axios.delete(`${process.env.REACT_APP_API_URL}/teacher/` + teacher._id);
     window.location.reload();
   };
 

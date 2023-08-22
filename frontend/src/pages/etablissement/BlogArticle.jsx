@@ -44,7 +44,7 @@ const BlogArticle = () => {
   };
 
   useEffect(() => {
-    axios.get(`http://localhost:5001/blog/${id}`).then((res) => {
+    axios.get(`${process.env.REACT_APP_API_URL}/blog/${id}`).then((res) => {
       setBlogArticle(res.data);
       setUpdatedBlogArticle(res.data);
     });
@@ -133,7 +133,7 @@ const BlogArticle = () => {
       });
     }
     axios
-      .put(`http://localhost:5001/blog/${id}`, formData, {
+      .put(`${process.env.REACT_APP_API_URL}/blog/${id}`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

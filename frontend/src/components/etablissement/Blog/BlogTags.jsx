@@ -10,7 +10,7 @@ const BlogTags = ({ handleTagClick, selectedTags }) => {
   const isRootPath = location.pathname.includes("/etablissement/");
 
   useEffect(() => {
-    axios.get("http://localhost:5001/blogTag").then((res) => {
+    axios.get(`${process.env.REACT_APP_API_URL}/blogTag`).then((res) => {
       setBlogTags(res.data);
     });
   }, []);

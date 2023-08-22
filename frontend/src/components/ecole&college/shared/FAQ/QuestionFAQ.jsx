@@ -20,7 +20,9 @@ const QuestionFAQ = ({ faqQuestion, etablissement }) => {
 
   const handleDeleteQuestion = (questionId) => {
     axios
-      .delete(`http://localhost:5001/faqQuestion${etablissement}/${questionId}`)
+      .delete(
+        `${process.env.REACT_APP_API_URL}/faqQuestion${etablissement}/${questionId}`
+      )
       .then(() => {
         setFetchData(true);
       });
@@ -34,7 +36,7 @@ const QuestionFAQ = ({ faqQuestion, etablissement }) => {
     // Effectuer la mise à jour de la question sur le serveur
     axios
       .put(
-        `http://localhost:5001/faqQuestion${etablissement}/${faqQuestion._id}`,
+        `${process.env.REACT_APP_API_URL}/faqQuestion${etablissement}/${faqQuestion._id}`,
         {
           question: editedQuestion,
           question_answer: editedAnswer,
