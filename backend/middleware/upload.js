@@ -3,7 +3,7 @@ const multer = require("multer");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    const uploadPath = path.join(__dirname, "../.././backend/uploads");
+    const uploadPath = path.join(__dirname, "backend/uploads");
     cb(null, uploadPath);
     console.log("uploadPath :", uploadPath);
   },
@@ -38,5 +38,3 @@ const upload = multer({
 });
 
 module.exports = upload;
-
-// // const uploadPath = path.join(__dirname, "../../frontend/public/uploads/");
