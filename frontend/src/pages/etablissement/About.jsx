@@ -10,7 +10,10 @@ const About = () => {
     <>
       <Helmet>
         <title>A propos - L'envol des papillons</title>
-        <meta name="description" content="Description de Ma Page" />
+        <meta
+          name="description"
+          content="Découvrez l'histoire de notre établissement L'envol des papilons, de 2012 à aujourd'hui !"
+        />
       </Helmet>
       <NavigationGlobal />
       <main>

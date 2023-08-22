@@ -16,7 +16,11 @@ const Blog = () => {
     <>
       <Helmet>
         <title>Blog - L'envol des papillons</title>
-        <meta name="description" content="Description de Ma Page" />
+        <meta
+          name="description"
+          content="Découvrez les articles de blog de notre établissement L'envol des papillons , traitant de la pédagogie Montessori, de l'actualité des enfants et bien d'autres...
+"
+        />
       </Helmet>
       {isRootPath ? (
         <NavigationGlobal />

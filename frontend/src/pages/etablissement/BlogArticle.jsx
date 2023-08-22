@@ -158,7 +158,7 @@ const BlogArticle = () => {
     <>
       <Helmet>
         <title>Blog - {blogArticle.title}</title>
-        <meta name="description" content="Description de Ma Page" />
+        <meta name="description" content={blogArticle.accroche} />
       </Helmet>
       {isRootPath ? (
         <>
