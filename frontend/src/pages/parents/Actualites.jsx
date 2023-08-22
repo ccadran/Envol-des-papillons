@@ -5,10 +5,15 @@ import NavigationParents from "../../components/parents/NavigationParents";
 import Actualities from "../../components/parents/Actualités/Actualities";
 import FooterParents from "../../components/parents/FooterParents";
 import "styles/etablissement/Blog/_blog.scss";
+import { Helmet } from "react-helmet";
 
 const Actualites = () => {
   return (
     <>
+      <Helmet>
+        <title>Actualités - Parents</title>
+        <meta name="description" content="Description de Ma Page" />
+      </Helmet>
       <NavigationParents />
       <main>
         <H2HeroText

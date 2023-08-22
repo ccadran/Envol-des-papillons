@@ -4,11 +4,16 @@ import React, { useState } from "react";
 import AllTeacher from "components/admin/Professeurs/AllTeacher";
 // import "styles/ecole&college/Presentation/_pedagogicTeam.scss";
 import "styles/admin/Teachers/_pedagogicTeamAdmin.scss";
+import { Helmet } from "react-helmet";
 
 const PedagogicTeamAdmin = () => {
   const [selectedEtablissement, setSelectedEtablissement] = useState("");
   return (
     <>
+      <Helmet>
+        <title>Équipe pédagogique - ADMIN</title>
+        <meta name="description" content="Description de Ma Page" />
+      </Helmet>
       <NavigationAdmin />
       <main>
         <H1HeroText

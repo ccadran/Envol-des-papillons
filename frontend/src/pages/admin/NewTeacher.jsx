@@ -4,10 +4,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "styles/admin/Teachers/_newTeacher.scss";
 import chevron from "assets/logos/chevron.svg";
+import { Helmet } from "react-helmet";
 
 const NewTeacher = () => {
   return (
     <>
+      <Helmet>
+        <title>Nouvel enseignant - ADMIN</title>
+        <meta name="description" content="Description de Ma Page" />
+      </Helmet>
       <NavigationAdmin />
       <main>
         <div className="back">

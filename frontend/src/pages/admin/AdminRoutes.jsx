@@ -16,6 +16,7 @@ import PedagogicTeamAdmin from "./PedagogicTeamAdmin";
 import NewTeacher from "./NewTeacher";
 import MailParent from "./MailParent";
 import NewMailParent from "./NewMailParent";
+import { Helmet } from "react-helmet";
 const AdminRoutes = () => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -30,6 +31,9 @@ const AdminRoutes = () => {
   }, [navigate]);
   return (
     <div>
+      <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <Routes>
         <Route path="/connexion-admin" element={<ConnexionAdmin />} />
         <Route path="/blog" element={<Blog />} />

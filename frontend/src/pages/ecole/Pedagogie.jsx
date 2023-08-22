@@ -8,6 +8,7 @@ import AvantagePedagogie from "../../components/ecole&college/shared/Pedagogie/A
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
 import AvantagesPedagogie from "../../components/ecole&college/shared/Pedagogie/AvantagesPedagogie";
 import "styles/ecole&college/Pedagogie/_pedagogie.scss";
+import { Helmet } from "react-helmet";
 import imgPedagogie from "assets/img/school-pedagogie.jpg";
 import imgAnglais from "assets/img/school-anglais.jpg";
 import imgMaterial1 from "assets/img/school-materials1.jpg";
@@ -38,6 +39,13 @@ const Pedagogie = () => {
 
   return (
     <>
+      <Helmet>
+        <title> Pédagogie - École montessori Bordeaux</title>
+        <meta
+          name="description"
+          content="L'école Montessori L'envol des papillons vous propose de découvrir sa pédagogie grâce à laquelle nous cultivons la curiosité naturelle de chaque enfant pour un apprentissage épanouissant et durable. "
+        />
+      </Helmet>
       <NavigationScolarity etablissement="ecole" />
       <main>
         <HeroPedagogie

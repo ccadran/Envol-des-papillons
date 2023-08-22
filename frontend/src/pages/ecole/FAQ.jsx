@@ -6,10 +6,18 @@ import SectionFAQ from "../../components/ecole&college/shared/FAQ/SectionFAQ";
 import ContentFAQ from "../../components/ecole&college/shared/FAQ/ContentFAQ";
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
 import "styles/ecole&college/FAQ/_faq.scss";
+import { Helmet } from "react-helmet";
 
 const FAQ = () => {
   return (
     <>
+      <Helmet>
+        <title>FAQ - École montessori Bordeaux</title>
+        <meta
+          name="description"
+          content=" Retreouvez les réponses aux questions les plus posées sur notre école Montessori L'envol des papillons."
+        />
+      </Helmet>
       <NavigationScolarity etablissement="ecole" />
       <main>
         <HeroFAQ

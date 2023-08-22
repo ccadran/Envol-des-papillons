@@ -4,10 +4,15 @@ import FooterParents from "../../components/parents/FooterParents";
 import H2HeroText from "../../components/parents/H2HeroText";
 import AvisContent from "../../components/parents/Avis/AvisContent";
 import "styles/parents/Avis/_avis.scss";
+import { Helmet } from "react-helmet";
 
 const Avis = () => {
   return (
     <>
+      <Helmet>
+        <title>Avis - Parents</title>
+        <meta name="description" content="Description de Ma Page" />
+      </Helmet>
       <NavigationParents />
       <main>
         <H2HeroText

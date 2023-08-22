@@ -6,6 +6,7 @@ import "styles/admin/Article/_newArticle.scss";
 import NavigationAdmin from "components/admin/NavigationAdmin";
 import chevron from "assets/logos/chevron.svg";
 import { set } from "mongoose";
+import { Helmet } from "react-helmet";
 
 const NewArticle = () => {
   const location = useLocation();
@@ -138,6 +139,10 @@ const NewArticle = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Nouvel article - ADMIN</title>
+        <meta name="description" content="Description de Ma Page" />
+      </Helmet>
       <NavigationAdmin />
       <main>
         <div className="add-article">

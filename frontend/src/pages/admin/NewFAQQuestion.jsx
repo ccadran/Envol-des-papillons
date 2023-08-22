@@ -4,10 +4,15 @@ import { Link, useNavigate } from "react-router-dom";
 import FormFAQQuestion from "../../components/admin/FAQ/FormFAQQuestion";
 import chevron from "assets/logos/chevron.svg";
 import "styles/admin/FAQ/_newSection.scss";
+import { Helmet } from "react-helmet";
 
 const NewFAQQuestion = () => {
   return (
     <>
+      <Helmet>
+        <title>Nouvel question FAQ - ADMIN</title>
+        <meta name="description" content="Description de Ma Page" />
+      </Helmet>
       <NavigationAdmin />
       <main>
         <div className="back">

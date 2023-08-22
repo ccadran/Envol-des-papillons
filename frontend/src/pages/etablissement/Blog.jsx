@@ -7,12 +7,17 @@ import FooterScolarity from "../../components/ecole&college/shared/FooterScolari
 import H1HeroText from "../../components/shared/H1HeroText";
 import BlogContent from "../../components/etablissement/Blog/BlogContent";
 import "styles/etablissement/Blog/_blog.scss";
+import { Helmet } from "react-helmet";
 const Blog = () => {
   const location = useLocation();
   const isRootPath = location.pathname === "/etablissement/blog";
   const desiredPart = location.pathname.split("/")[1];
   return (
     <>
+      <Helmet>
+        <title>Blog - L'envol des papillons</title>
+        <meta name="description" content="Description de Ma Page" />
+      </Helmet>
       {isRootPath ? (
         <NavigationGlobal />
       ) : (

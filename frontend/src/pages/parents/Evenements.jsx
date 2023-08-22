@@ -3,10 +3,15 @@ import NavigationParents from "../../components/parents/NavigationParents";
 import H2HeroText from "../../components/parents/H2HeroText";
 import ParentsContent from "../../components/parents/menus&events/ParentsContent";
 import FooterParents from "components/parents/FooterParents";
+import { Helmet } from "react-helmet";
 
 const Evenements = () => {
   return (
     <>
+      <Helmet>
+        <title>Événements - Parents</title>
+      </Helmet>
+
       <NavigationParents />
       <main>
         <H2HeroText

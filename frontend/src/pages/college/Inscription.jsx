@@ -5,9 +5,17 @@ import ModalityInscription from "../../components/ecole&college/shared/Inscripti
 import TarifsScolarity from "../../components/ecole&college/shared/TarifsScolarity";
 import PreInscription from "../../components/ecole&college/shared/Inscription/PreInscription";
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
+import { Helmet } from "react-helmet";
 const Inscription = () => {
   return (
     <>
+      <Helmet>
+        <title>Inscription - Collège alternatif Bordeaux</title>
+        <meta
+          name="description"
+          content="Prenez connaissance des tarifs abordables proposés par notre collège alternatif L'envol et remplissez le formulaire de pré-inscription."
+        />
+      </Helmet>
       <NavigationScolarity etablissement="college" />
       <main>
         <H1HeroText

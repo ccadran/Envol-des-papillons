@@ -15,6 +15,7 @@ import SingleCaroussel from "components/shared/SingleCaroussel";
 import FooterScolarity from "components/ecole&college/shared/FooterScolarity";
 import NavigationScolarity from "components/ecole&college/shared/NavigationScolarity";
 import CarousselArticle from "components/shared/CarousselArticle";
+import { Helmet } from "react-helmet";
 
 const BlogArticleSchool = () => {
   const [blogArticle, setBlogArticle] = useState([]);
@@ -47,6 +48,10 @@ const BlogArticleSchool = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Blog - {blogArticle.title}</title>
+        <meta name="description" content={blogArticle.accroche} />
+      </Helmet>
       <>
         <NavigationScolarity etablissement="ecole" />
         <main>

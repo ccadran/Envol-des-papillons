@@ -15,6 +15,7 @@ import BlogTags from "components/etablissement/Blog/BlogTags";
 import Button from "components/shared/Button";
 import SingleCaroussel from "components/shared/SingleCaroussel";
 import CarousselArticle from "components/shared/CarousselArticle";
+import { Helmet } from "react-helmet";
 
 const BlogArticle = () => {
   const [blogArticle, setBlogArticle] = useState([]);
@@ -155,6 +156,10 @@ const BlogArticle = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Blog - {blogArticle.title}</title>
+        <meta name="description" content="Description de Ma Page" />
+      </Helmet>
       {isRootPath ? (
         <>
           <NavigationAdmin />

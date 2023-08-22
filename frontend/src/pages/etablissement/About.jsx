@@ -3,10 +3,15 @@ import React from "react";
 import StylizedH1 from "components/shared/StylizedH1";
 import NavigationGlobal from "components/shared/NavigationGlobal";
 import FooterGlobal from "components/shared/FooterGlobal";
+import { Helmet } from "react-helmet";
 
 const About = () => {
   return (
     <>
+      <Helmet>
+        <title>A propos - L'envol des papillons</title>
+        <meta name="description" content="Description de Ma Page" />
+      </Helmet>
       <NavigationGlobal />
       <main>
         <StylizedH1 h1="Qui sommes-nous ?" />

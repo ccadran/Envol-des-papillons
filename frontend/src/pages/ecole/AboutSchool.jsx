@@ -2,10 +2,18 @@ import NavigationScolarity from "components/ecole&college/shared/NavigationScola
 import React from "react";
 import StylizedH1 from "components/shared/StylizedH1";
 import FooterScolarity from "components/ecole&college/shared/FooterScolarity";
+import { Helmet } from "react-helmet";
 
 const About = () => {
   return (
     <>
+      <Helmet>
+        <title>Histoire - École montessori Bordeaux</title>
+        <meta
+          name="description"
+          content="Découvrez l'histoire de notre école Montessori L'envol des papilons, de 2012 à aujourd'hui !"
+        />
+      </Helmet>
       <NavigationScolarity etablissement="ecole" />
       <main>
         <StylizedH1 h1="Qui sommes-nous ?" />

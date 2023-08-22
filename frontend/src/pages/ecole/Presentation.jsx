@@ -10,6 +10,7 @@ import SchoolRoad from "../../components/ecole&college/shared/SchoolRoad";
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
 import AllAvis from "../../components/shared/AllAvis";
 import "styles/ecole&college/Presentation/_presentation.scss";
+import { Helmet } from "react-helmet";
 //IMAGES
 import imgHero from "assets/img/school-presentation.jpg";
 import imgLocal1 from "assets/img/school-local1.jpg";
@@ -43,6 +44,13 @@ const Presentation = () => {
   ];
   return (
     <>
+      <Helmet>
+        <title>École Montessori Bordeaux - Présentation</title>
+        <meta
+          name="description"
+          content="Découvrez L'Envol des Papillons, un collège alternatif fondée à Bordeaux en 2012, offrant une éducation bienveillante et individualisée à un tarif abordable. Éveillez la passion d'apprendre de votre enfant dès aujourd'hui."
+        />
+      </Helmet>
       <NavigationScolarity etablissement="ecole" />
       <main>
         <HeroScolarity
@@ -57,8 +65,6 @@ Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur ."
           etablissement="ecole"
         />
         <VisionAndObjectifsScolarity
-          // vision="La vision de l'école blablabfdjsbgfvcjdsnvc jdsfjcdshkfcdsnfcv dujfhcgdsichns.
-          // dfbsvhikgfbvsjfvbndsi"
           vision={visionPoints}
           objectif={objectifPoints}
         />

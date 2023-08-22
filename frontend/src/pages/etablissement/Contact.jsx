@@ -8,6 +8,7 @@ import { useLocation } from "react-router-dom";
 import NavigationScolarity from "../../components/ecole&college/shared/NavigationScolarity";
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
 import "styles/shared/_contact.scss";
+import { Helmet } from "react-helmet";
 const Contact = () => {
   const location = useLocation();
   const isRootPath = location.pathname === "/etablissement/contact";
@@ -15,6 +16,11 @@ const Contact = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Contact - L'envol des papillons</title>
+        <meta name="description" content="Description de Ma Page" />
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       {isRootPath ? (
         <NavigationGlobal />
       ) : (

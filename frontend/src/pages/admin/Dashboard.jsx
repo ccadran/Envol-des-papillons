@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import "styles/admin/_dashboard.scss";
 
 const Dashboard = () => {
+  //A SUPPRIMER-----------------------------------------------
+
   return (
     <>
       <NavigationAdmin />

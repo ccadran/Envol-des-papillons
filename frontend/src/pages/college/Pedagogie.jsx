@@ -7,6 +7,7 @@ import AvantagePedagogie from "../../components/ecole&college/shared/Pedagogie/A
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
 import AvantagesPedagogie from "../../components/ecole&college/shared/Pedagogie/AvantagesPedagogie";
 import imgPedagogie from "assets/img/college-pedagogie.jpg";
+import { Helmet } from "react-helmet";
 
 import imgMaterial1 from "assets/img/college-materials1.jpg";
 import imgMaterial2 from "assets/img/college-materials2.jpg";
@@ -28,6 +29,13 @@ const Pedagogie = () => {
   // uter un alt dans mon object
   return (
     <>
+      <Helmet>
+        <title>Pédagogie - Collège alternatif Bordeaux</title>
+        <meta
+          name="description"
+          content="Le collège alternatif L'envol vous propose de découvrir sa pédagogie grâce à laquelle nous cultivons la curiosité naturelle de chaque enfant pour un apprentissage épanouissant et durable. "
+        />
+      </Helmet>
       <NavigationScolarity etablissement="college" />
       <main>
         <HeroPedagogie

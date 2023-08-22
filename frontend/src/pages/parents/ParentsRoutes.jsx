@@ -6,6 +6,7 @@ import Menus from "./Menus";
 import Avis from "./Avis";
 import ActualityArticle from "./ActualityArticle";
 import ConnexionParents from "./ConnexionParents";
+import { Helmet } from "react-helmet";
 
 const ParentsRoutes = () => {
   const navigate = useNavigate();
@@ -22,14 +23,19 @@ const ParentsRoutes = () => {
   }, [navigate]);
 
   return (
-    <Routes>
-      <Route path="/connexion-parent" element={<ConnexionParents />} />
-      <Route path="/actualites" element={<Actualites />} />
-      <Route path="/actualites/:id" element={<ActualityArticle />} />
-      <Route path="/evenements" element={<Evenements />} />
-      <Route path="/menus" element={<Menus />} />
-      <Route path="/avis" element={<Avis />} />
-    </Routes>
+    <>
+      <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
+      <Routes>
+        <Route path="/connexion-parent" element={<ConnexionParents />} />
+        <Route path="/actualites" element={<Actualites />} />
+        <Route path="/actualites/:id" element={<ActualityArticle />} />
+        <Route path="/evenements" element={<Evenements />} />
+        <Route path="/menus" element={<Menus />} />
+        <Route path="/avis" element={<Avis />} />
+      </Routes>
+    </>
   );
 };
 

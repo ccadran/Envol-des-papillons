@@ -3,9 +3,17 @@ import NavigationScolarity from "components/ecole&college/shared/NavigationScola
 import StylizedH1 from "components/shared/StylizedH1";
 import React from "react";
 import "styles/ecole&college/About/_about.scss";
+import { Helmet } from "react-helmet";
 const About = () => {
   return (
     <>
+      <Helmet>
+        <title>Histoire - Collège alternatif Bordeaux</title>
+        <meta
+          name="description"
+          content="Découvrez l'histoire de notre collège alternatif L'envol, de 2020 à aujourd'hui !"
+        />
+      </Helmet>
       <NavigationScolarity etablissement="college" />
       <main>
         <StylizedH1 h1="Qui sommes-nous ?" />

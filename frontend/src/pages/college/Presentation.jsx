@@ -10,6 +10,7 @@ import CollegeRoad from "../../components/ecole&college/shared/CollegeRoad";
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
 import AllAvis from "../../components/shared/AllAvis";
 import "styles/ecole&college/Presentation/_presentation.scss";
+import { Helmet } from "react-helmet";
 import imgHero from "assets/img/college-presentation.jpg";
 import imgLocal1 from "assets/img/college-local1.jpg";
 import imgLocal2 from "assets/img/college-local2.jpg";
@@ -36,6 +37,13 @@ const Presentation = () => {
   ];
   return (
     <>
+      <Helmet>
+        <title>Collège alternatif Bordeaux - Présentation</title>
+        <meta
+          name="description"
+          content="Découvrez L'Envol, un collège alternatif fondée à Bordeaux en 2020, offrant une éducation bienveillante et individualisée à un tarif abordable. Éveillez la passion d'apprendre de votre enfant dès aujourd'hui."
+        />
+      </Helmet>
       <NavigationScolarity etablissement="college" />
       <main>
         <HeroScolarity

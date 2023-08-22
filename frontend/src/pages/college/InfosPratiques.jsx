@@ -7,10 +7,18 @@ import GarderieSchoolPedagogie from "../../components/ecole&college/GarderieScho
 import RolesParentsInfos from "../../components/ecole&college/shared/InfosPratiques/RolesParentsInfos";
 import CollegeRoad from "../../components/ecole&college/shared/CollegeRoad";
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
+import { Helmet } from "react-helmet";
 
 const InfosPratiques = () => {
   return (
     <>
+      <Helmet>
+        <title>Infos pratiques - Collège alternatif Bordeaux</title>
+        <meta
+          name="description"
+          content="Prenez connaissance de l'ensemble des infos pratiques de notre collègte alternatif L'envol ."
+        />
+      </Helmet>
       <NavigationScolarity etablissement="college" />
       <main>
         <H1HeroText

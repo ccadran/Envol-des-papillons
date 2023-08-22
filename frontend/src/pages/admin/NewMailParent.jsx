@@ -4,10 +4,15 @@ import chevron from "assets/logos/chevron.svg";
 import FormNewMail from "components/admin/Mail/FormNewMail";
 import { Link } from "react-router-dom";
 import "styles/admin/Mail/_newMail.scss";
+import { Helmet } from "react-helmet";
 
 const NewMailParent = () => {
   return (
     <>
+      <Helmet>
+        <title>Nouvel email - ADMIN</title>
+        <meta name="description" content="Description de Ma Page" />
+      </Helmet>
       <NavigationAdmin />
       <main>
         <div className="back">

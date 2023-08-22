@@ -9,6 +9,7 @@ import FooterParents from "components/parents/FooterParents";
 import BlogTags from "components/etablissement/Blog/BlogTags";
 import chevron from "assets/logos/chevron.svg";
 import CarousselArticle from "components/shared/CarousselArticle";
+import { Helmet } from "react-helmet";
 
 const ActualityArticle = () => {
   const [actualityArticle, setActualityArticle] = useState([]);
@@ -142,6 +143,11 @@ const ActualityArticle = () => {
   console.log("IMAGE", updatedActualityArticle.mainImg);
   return (
     <>
+      <Helmet>
+        <title>Actualités - {actualityArticle.title}</title>
+        <meta name="description" content="Description de Ma Page" />
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       {isRootPath ? (
         <>
           <NavigationAdmin />

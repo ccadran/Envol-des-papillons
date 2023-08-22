@@ -6,9 +6,17 @@ import TarifsScolarity from "../../components/ecole&college/shared/TarifsScolari
 import PreInscription from "../../components/ecole&college/shared/Inscription/PreInscription";
 import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
 import "styles/ecole&college/Inscription/_inscription.scss";
+import { Helmet } from "react-helmet";
 const Inscription = () => {
   return (
     <>
+      <Helmet>
+        <title>Inscription - École montessori Bordeaux</title>
+        <meta
+          name="description"
+          content="Prenez connaissance des tarifs abordables proposés par notre école Montessori L'envol des papillons et remplissez le formulaire de pré-inscription."
+        />
+      </Helmet>
       <NavigationScolarity etablissement="ecole" />
       <main>
         <H1HeroText
