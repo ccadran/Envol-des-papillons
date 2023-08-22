@@ -1,4 +1,4 @@
-const TeacherModel = require("../models/Teacher.model");
+const TeacherModel = require("../models/teacher.model");
 
 module.exports.getTeacher = async (req, res) => {
   const etablissement = req.query.etablissement; // Récupérer la valeur de l'établissement depuis les paramètres de requête
