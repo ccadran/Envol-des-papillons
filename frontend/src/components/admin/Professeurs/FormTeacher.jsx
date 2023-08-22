@@ -77,7 +77,7 @@ const FormTeacher = () => {
         <input type="text" placeholder="Formation" name="formation" />
 
         <button type="submit">Ajouter</button>
-        {errorMessage && <p className="error-message">{errorMessage}</p>}
+        {errorMessage && <p className="error">{errorMessage}</p>}
       </form>
     </div>
   );

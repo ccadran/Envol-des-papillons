@@ -76,7 +76,7 @@ const FormNewMail = () => {
         ))}
       </div>
       <button type="submit">Ajouter le mail</button>
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
+      {errorMessage && <p className="error">{errorMessage}</p>}
     </form>
   );
 };

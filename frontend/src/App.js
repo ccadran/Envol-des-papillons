@@ -13,6 +13,7 @@ import CGU from "./pages/etablissement/CGU";
 import BlogArticle from "./pages/etablissement/BlogArticle";
 import ScrollToTop from "components/shared/ScrollToTop";
 import InscriptionParent from "pages/etablissement/InscriptionParent";
+import style from "styles/settings.scss";
 const App = () => {
   return (
     <BrowserRouter>

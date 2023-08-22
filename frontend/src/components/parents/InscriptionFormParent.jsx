@@ -57,7 +57,7 @@ const InscriptionFormParent = () => {
           <input type="password" name="password" placeholder="Mot de passe" />
         </form>
         <button onClick={handleRegister}>Créer</button>
-        {error && <p>{error}</p>}
+        {error && <p className="error">{error}</p>}
       </div>
     </section>
   );

@@ -58,7 +58,7 @@ const ConnexionFormAdmin = () => {
           />
         </div>
         <button onClick={handleLogin}>Se connecter</button>
-        {error && <p>{error}</p>}
+        {error && <p className="error">{error}</p>}
       </div>
     </section>
   );

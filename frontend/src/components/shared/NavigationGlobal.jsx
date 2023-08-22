@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import PapillonLogo from "./PapillonLogo";
-import "../../styles/settings.scss";
+import "../../styles/variables.scss";
 import "../../styles/shared/_navigationGlobal.scss";
 
 const NavigationGlobal = () => {

@@ -198,7 +198,7 @@ const FormFAQQuestion = () => {
             <textarea id="answer" name="answer"></textarea>
           </div>
           <button type="submit">Envoyer</button>
-          <p>{error}</p>
+          <p className="error">{error}</p>
         </form>
       ) : (
         <p>
