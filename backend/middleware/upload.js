@@ -3,9 +3,8 @@ const multer = require("multer");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    const uploadPath = path.join(__dirname, "uploads");
-    cb(null, uploadPath);
-    console.log("uploadPath :", uploadPath);
+    cb(null, process.env.UPLOAD_PATH);
+    // console.log("uploadPath :", uploadPath);
   },
   filename: function (req, file, cb) {
     let ext = path.extname(file.originalname);
