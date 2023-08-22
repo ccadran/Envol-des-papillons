@@ -1,5 +1,5 @@
 const MailParentModel = require("../models/mailParent.model");
-const ParentModel = require("../models/Parent.model");
+const ParentModel = require("../models/parent.model");
 
 module.exports.getMailParent = async (req, res) => {
   const mailParents = await MailParentModel.find();

@@ -12,7 +12,7 @@ const mailParentSchema = new mongoose.Schema({
   },
 });
 mailParentSchema.statics.deleteParentsByEmail = async function (email) {
-  const ParentModel = require("./Parent.model");
+  const ParentModel = require("./parent.model");
   await ParentModel.deleteMany({ email });
   console.log(mailParent.email);
 };

@@ -1,7 +1,7 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-const ParentModel = require("../models/Parent.model");
+const ParentModel = require("../models/parent.model");
 const MailParentModel = require("../models/mailParent.model"); // Utilisez le même nom d'importation
 
 module.exports.getParent = async (req, res) => {
