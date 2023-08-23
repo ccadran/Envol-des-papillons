@@ -43,20 +43,14 @@ module.exports.setBlogPost = async (req, res) => {
     const mainImgPaths = mainImages.map(
       (image) => "/uploads/" + image.filename
     );
-    // const mainImgPromises = mainImages.map(async (image) => {
-    //   const blob = bucket.file("uploads/" + image.filename);
-    //   const blobStream = blob.createWriteStream();
-    //   blobStream.end(image.buffer); // Write the buffer to the blob stream
-    //   await new Promise((resolve, reject) => {
-    //     blobStream.on("finish", resolve);
-    //     blobStream.on("error", reject);
-    //   });
-    // });
 
     const mainBlob = bucket.file(
-      "uploads/" + req.files["mainImg"][0].originalname
+      "uploads/" +
+        Math.floor(Math.random() * 100000) +
+        Date.now() +
+        "-" +
+        req.files["mainImg"][0].originalname
     );
-    console.log(req.files["mainImg"]);
 
     const mainBlobStream = mainBlob.createWriteStream();
     mainBlobStream.end(req.files["mainImg"][0].buffer); // Write the buffer to the blob stream
@@ -69,6 +63,23 @@ module.exports.setBlogPost = async (req, res) => {
     const illustrationPaths = illustrationImages.map(
       (image) => "/uploads/" + image.filename
     );
+    for (const illustration of req.files["illustrations"]) {
+      const illustrationBlob = bucket.file(
+        "uploads/" +
+          Math.floor(Math.random() * 100000) +
+          Date.now() +
+          "-" +
+          illustration.originalname
+      );
+
+      const illustrationBlobStream = illustrationBlob.createWriteStream();
+      illustrationBlobStream.end(illustration.buffer);
+
+      await new Promise((resolve, reject) => {
+        illustrationBlobStream.on("finish", resolve);
+        illustrationBlobStream.on("error", reject);
+      });
+    }
 
     const blogPost = new BlogPostModel({
       title,
