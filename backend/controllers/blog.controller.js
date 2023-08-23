@@ -22,7 +22,7 @@ module.exports.setBlogPost = async (req, res) => {
   if (!req.body.title) {
     res.status(400).json({ title: "Le titre est obligatoire" });
   }
-
+  console.log("req.files :", req.files);
   const mainImages = req.files["mainImg"];
   const illustrationImages = req.files["illustrations"];
   // console.log("illustrations iamges :", illustrationImages);
@@ -53,10 +53,14 @@ module.exports.setBlogPost = async (req, res) => {
     //   });
     // });
 
-    const mainBlob = bucket.file("uploads/" + mainImages);
-    console.log(mainImages);
+    const mainBlob = bucket.file(
+      "uploads/" + req.files["mainImg"][0].originalname
+    );
+    console.log(req.files["mainImg"]);
+
     const mainBlobStream = mainBlob.createWriteStream();
-    mainBlobStream.end(mainImages.buffer); // Write the buffer to the blob stream
+    mainBlobStream.end(req.files["mainImg"][0].buffer); // Write the buffer to the blob stream
+
     await new Promise((resolve, reject) => {
       mainBlobStream.on("finish", resolve);
       mainBlobStream.on("error", reject);
