@@ -48,7 +48,7 @@ const Presentation = () => {
         <title>École Montessori Bordeaux - Présentation</title>
         <meta
           name="description"
-          content="Découvrez L'Envol des Papillons, un collège alternatif fondée à Bordeaux en 2012, offrant une éducation bienveillante et individualisée à un tarif abordable. Éveillez la passion d'apprendre de votre enfant dès aujourd'hui."
+          content="Découvrez L'Envol des Papillons, une école Montessori fondée à Bordeaux en 2012, offrant une éducation bienveillante et individualisée à un tarif abordable. Éveillez la passion d'apprendre de votre enfant dès aujourd'hui."
         />
       </Helmet>
       <NavigationScolarity etablissement="ecole" />

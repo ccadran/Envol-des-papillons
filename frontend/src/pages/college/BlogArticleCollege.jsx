@@ -45,12 +45,12 @@ const BlogArticleCollege = () => {
       setBlogArticle(res.data);
     });
   }, [id]);
-
+  const blogTitle = "Blog - " + blogArticle.title;
   return (
     <>
       <Helmet>
-        <title>Blog - {blogArticle.title}</title>
-        <meta name="description" content="Description de Ma Page" />
+        <title>{blogTitle}</title>
+        <meta name="description" content={blogArticle.accroche} />
       </Helmet>
       <>
         <NavigationScolarity etablissement="college" />

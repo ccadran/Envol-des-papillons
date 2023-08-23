@@ -153,11 +153,11 @@ const BlogArticle = () => {
   if (!blogArticle) {
     return <div>Loading...</div>;
   }
-
+  const blogTitle = "Blog - " + blogArticle.title;
   return (
     <>
       <Helmet>
-        <title>Blog - {blogArticle.title}</title>
+        <title>{blogTitle}</title>
         <meta name="description" content={blogArticle.accroche} />
       </Helmet>
       {isRootPath ? (

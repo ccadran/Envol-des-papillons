@@ -45,11 +45,11 @@ const BlogArticleSchool = () => {
       setBlogArticle(res.data);
     });
   }, [id]);
-
+  const blogTitle = "Blog - " + blogArticle.title;
   return (
     <>
       <Helmet>
-        <title>Blog - {blogArticle.title}</title>
+        <title>{blogTitle}</title>
         <meta name="description" content={blogArticle.accroche} />
       </Helmet>
       <>

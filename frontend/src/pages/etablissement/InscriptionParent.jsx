@@ -7,7 +7,7 @@ const InscriptionParent = () => {
   return (
     <>
       <Helmet>
-        <title>Blog - L'envol des papillons</title>
+        <title>Inscription - L'envol des papillons</title>
         <meta name="description" content="Description de Ma Page" />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>

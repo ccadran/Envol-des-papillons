@@ -141,12 +141,12 @@ const ActualityArticle = () => {
 
   console.log(actualityArticle.tags);
   console.log("IMAGE", updatedActualityArticle.mainImg);
+  const actualityTitle = "Actualitées - " + actualityArticle.title;
   return (
     <>
       <Helmet>
-        <title>Actualités - {actualityArticle.title}</title>
-        <meta name="description" content="Description de Ma Page" />
-        <meta name="robots" content="noindex, nofollow" />
+        <title>{actualityTitle}</title>
+        <meta name="description" content={actualityArticle.accroche} />
       </Helmet>
       {isRootPath ? (
         <>

@@ -16,7 +16,14 @@ const Evenements = () => {
           h1="Evenements"
           text="Gérez les évènements de votre établissement"
         />
-        <h1>API Google Agenda</h1>
+        <div className="events-container">
+          <iframe
+            className="events"
+            src="https://calendar.google.com/calendar/embed?src=montessorilenvoldespapillons%40gmail.com&ctz=Europe%2FParis"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
+        </div>
       </main>
     </>
   );
