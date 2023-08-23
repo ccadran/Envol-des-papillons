@@ -166,7 +166,7 @@ nav {
 }
 .nav-links {
   align-items: center;
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: 1120px) {
     transform: translateX(100%);
     transition: 0.3s ease;
     position: fixed;
@@ -219,7 +219,7 @@ nav {
       }
     }
   }
-  @media screen and (min-width: 920px) {
+  @media screen and (min-width: 1120px) {
     ul {
       display: flex;
 
@@ -273,7 +273,7 @@ nav {
   &:hover {
     cursor: pointer;
   }
-  @media screen and (min-width: 920px) {
+  @media screen and (min-width: 1120px) {
     display: none;
   }
   &.active {
