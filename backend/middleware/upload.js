@@ -1,42 +1,22 @@
 const path = require("path");
-const multer = require("multer");
+const Multer = require("multer");
+const { Storage } = require("@google-cloud/storage");
 
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    // const uploadPath = path.join(__dirname, "../.././backend/uploads");
-    // cb(null, uploadPath);
-    cb(null, process.env.UPLOAD_PATH);
-
-    // console.log("uploadPath :", uploadPath);
-  },
-  filename: function (req, file, cb) {
-    let ext = path.extname(file.originalname);
-    cb(null, Date.now() + ext);
-  },
-});
-
-const fileFilter = function (req, file, cb) {
-  if (
-    file.mimetype == "image/png" ||
-    file.mimetype == "image/jpg" ||
-    file.mimetype == "image/jpeg" ||
-    file.mimetype == "image/JPG" ||
-    file.mimetype == "image/JPEG" ||
-    file.mimetype == "image/PNG"
-  ) {
-    cb(null, true);
-  } else {
-    console.log("only jpg & png file supported");
-    cb(null, false);
-  }
-};
-
-const upload = multer({
-  storage: storage,
-  fileFilter: fileFilter,
+// Configuration du module Multer pour le téléchargement de fichiers
+const upload = Multer({
+  storage: Multer.memoryStorage(),
   limits: {
     fileSize: 1024 * 1024 * 3,
   },
 });
+
+// Configuration des informations d'identification Google Cloud Storage
+const projectId = "envol-des-papillons"; // Remplacez par votre projet ID
+const keyFilename = "../mykey.json"; // Chemin vers votre fichier de clé privée JSON
+const storage = new Storage({
+  projectId,
+  keyFilename,
+});
+const bucket = storage.bucket("blog-storage-envol");
 
 module.exports = upload;

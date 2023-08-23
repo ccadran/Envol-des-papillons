@@ -1,4 +1,8 @@
+const { Storage } = require("@google-cloud/storage");
+
 const BlogPostModel = require("../models/blogPost.model");
+const storage = new Storage();
+const bucket = storage.bucket("blog-storage-envol");
 
 module.exports.getBlogPost = async (req, res) => {
   const blogPosts = await BlogPostModel.find();
@@ -39,7 +43,15 @@ module.exports.setBlogPost = async (req, res) => {
     const mainImgPaths = mainImages.map(
       (image) => "/uploads/" + image.filename
     );
-
+    const mainImgPromises = mainImages.map(async (image) => {
+      const blob = bucket.file("uploads/" + image.filename);
+      const blobStream = blob.createWriteStream();
+      blobStream.end(image.buffer); // Write the buffer to the blob stream
+      await new Promise((resolve, reject) => {
+        blobStream.on("finish", resolve);
+        blobStream.on("error", reject);
+      });
+    });
     // Prepare the illustrationPaths array for saving in the database
     const illustrationPaths = illustrationImages.map(
       (image) => "/uploads/" + image.filename
