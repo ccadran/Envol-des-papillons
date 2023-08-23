@@ -12,7 +12,8 @@ const upload = Multer({
 
 // Configuration des informations d'identification Google Cloud Storage
 const projectId = "envol-des-papillons"; // Remplacez par votre projet ID
-const keyFilename = "../mykey.json"; // Chemin vers votre fichier de clé privée JSON
+console.log("projectId :", projectId);
+const keyFilename = process.env.GOOGLE_APPLICATION_CREDENTIALS; // Chemin vers votre fichier de clé privée JSON
 const storage = new Storage({
   projectId,
   keyFilename,

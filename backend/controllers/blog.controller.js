@@ -25,7 +25,7 @@ module.exports.setBlogPost = async (req, res) => {
 
   const mainImages = req.files["mainImg"];
   const illustrationImages = req.files["illustrations"];
-  console.log("illustrations iamges :", illustrationImages);
+  // console.log("illustrations iamges :", illustrationImages);
   const {
     title,
     accroche,
@@ -43,14 +43,23 @@ module.exports.setBlogPost = async (req, res) => {
     const mainImgPaths = mainImages.map(
       (image) => "/uploads/" + image.filename
     );
-    const mainImgPromises = mainImages.map(async (image) => {
-      const blob = bucket.file("uploads/" + image.filename);
-      const blobStream = blob.createWriteStream();
-      blobStream.end(image.buffer); // Write the buffer to the blob stream
-      await new Promise((resolve, reject) => {
-        blobStream.on("finish", resolve);
-        blobStream.on("error", reject);
-      });
+    // const mainImgPromises = mainImages.map(async (image) => {
+    //   const blob = bucket.file("uploads/" + image.filename);
+    //   const blobStream = blob.createWriteStream();
+    //   blobStream.end(image.buffer); // Write the buffer to the blob stream
+    //   await new Promise((resolve, reject) => {
+    //     blobStream.on("finish", resolve);
+    //     blobStream.on("error", reject);
+    //   });
+    // });
+
+    const mainBlob = bucket.file("uploads/" + mainImages);
+    console.log(mainImages);
+    const mainBlobStream = mainBlob.createWriteStream();
+    mainBlobStream.end(mainImages.buffer); // Write the buffer to the blob stream
+    await new Promise((resolve, reject) => {
+      mainBlobStream.on("finish", resolve);
+      mainBlobStream.on("error", reject);
     });
     // Prepare the illustrationPaths array for saving in the database
     const illustrationPaths = illustrationImages.map(
