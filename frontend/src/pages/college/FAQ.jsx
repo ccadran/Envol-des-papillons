@@ -1,9 +1,9 @@
 import React from "react";
-import NavigationScolarity from "../../components/ecole&college/shared/NavigationScolarity";
-import HeroFAQ from "../../components/ecole&college/shared/FAQ/HeroFAQ";
-import SectionFAQ from "../../components/ecole&college/shared/FAQ/SectionFAQ";
-import ContentFAQ from "../../components/ecole&college/shared/FAQ/ContentFAQ";
-import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
+import NavigationScolarity from "../../components/ecole-college/shared/NavigationScolarity";
+import HeroFAQ from "../../components/ecole-college/shared/FAQ/HeroFAQ";
+import SectionFAQ from "../../components/ecole-college/shared/FAQ/SectionFAQ";
+import ContentFAQ from "../../components/ecole-college/shared/FAQ/ContentFAQ";
+import FooterScolarity from "../../components/ecole-college/shared/FooterScolarity";
 import { Helmet } from "react-helmet";
 
 const FAQ = () => {

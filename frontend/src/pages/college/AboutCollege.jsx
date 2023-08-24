@@ -1,8 +1,8 @@
-import FooterScolarity from "components/ecole&college/shared/FooterScolarity";
-import NavigationScolarity from "components/ecole&college/shared/NavigationScolarity";
+import FooterScolarity from "components/ecole-college/shared/FooterScolarity";
+import NavigationScolarity from "components/ecole-college/shared/NavigationScolarity";
 import StylizedH1 from "components/shared/StylizedH1";
 import React from "react";
-import "styles/ecole&college/About/_about.scss";
+import "styles/ecole-college/About/_about.scss";
 import { Helmet } from "react-helmet";
 const About = () => {
   return (

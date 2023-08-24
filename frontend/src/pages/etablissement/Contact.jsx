@@ -5,8 +5,8 @@ import ContactInfo from "../../components/etablissement/Contact/ContactInfo";
 import ContactForm from "../../components/etablissement/Contact/ContactForm";
 import FooterGlobal from "../../components/shared/FooterGlobal";
 import { useLocation } from "react-router-dom";
-import NavigationScolarity from "../../components/ecole&college/shared/NavigationScolarity";
-import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
+import NavigationScolarity from "../../components/ecole-college/shared/NavigationScolarity";
+import FooterScolarity from "../../components/ecole-college/shared/FooterScolarity";
 import "styles/shared/_contact.scss";
 import { Helmet } from "react-helmet";
 const Contact = () => {

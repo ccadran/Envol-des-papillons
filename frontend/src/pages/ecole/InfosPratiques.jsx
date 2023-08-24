@@ -1,13 +1,13 @@
 import React from "react";
-import NavigationScolarity from "../../components/ecole&college/shared/NavigationScolarity";
+import NavigationScolarity from "../../components/ecole-college/shared/NavigationScolarity";
 import H1HeroText from "../../components/shared/H1HeroText";
-import TarifsScolarity from "../../components/ecole&college/shared/TarifsScolarity";
-import RepasInfos from "../../components/ecole&college/shared/InfosPratiques/RepasInfos";
-import GarderieSchoolPedagogie from "../../components/ecole&college/GarderieSchoolPedagogie";
-import RolesParentsInfos from "../../components/ecole&college/shared/InfosPratiques/RolesParentsInfos";
-import SchoolRoad from "../../components/ecole&college/shared/SchoolRoad";
-import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
-import "styles/ecole&college/InfosPratiques/_infosPratiques.scss";
+import TarifsScolarity from "../../components/ecole-college/shared/TarifsScolarity";
+import RepasInfos from "../../components/ecole-college/shared/InfosPratiques/RepasInfos";
+import GarderieSchoolPedagogie from "../../components/ecole-college/GarderieSchoolPedagogie";
+import RolesParentsInfos from "../../components/ecole-college/shared/InfosPratiques/RolesParentsInfos";
+import SchoolRoad from "../../components/ecole-college/shared/SchoolRoad";
+import FooterScolarity from "../../components/ecole-college/shared/FooterScolarity";
+import "styles/ecole-college/InfosPratiques/_infosPratiques.scss";
 import { Helmet } from "react-helmet";
 
 const InfosPratiques = () => {

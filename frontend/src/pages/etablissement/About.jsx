@@ -1,4 +1,4 @@
-import NavigationScolarity from "components/ecole&college/shared/NavigationScolarity";
+import NavigationScolarity from "components/ecole-college/shared/NavigationScolarity";
 import React from "react";
 import StylizedH1 from "components/shared/StylizedH1";
 import NavigationGlobal from "components/shared/NavigationGlobal";

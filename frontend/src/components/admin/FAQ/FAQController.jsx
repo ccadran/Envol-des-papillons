@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Button from "../../shared/Button";
 import axios from "axios";
-import SectionFAQ from "../../ecole&college/shared/FAQ/SectionFAQ";
+import SectionFAQ from "../../ecole-college/shared/FAQ/SectionFAQ";
 
 const FAQController = () => {
   const [selectedOption, setSelectedOption] = useState("");

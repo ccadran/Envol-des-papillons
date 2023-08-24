@@ -1,9 +1,9 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import NavigationGlobal from "../../components/shared/NavigationGlobal";
-import NavigationScolarity from "../../components/ecole&college/shared/NavigationScolarity";
+import NavigationScolarity from "../../components/ecole-college/shared/NavigationScolarity";
 import FooterGlobal from "../../components/shared/FooterGlobal";
-import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
+import FooterScolarity from "../../components/ecole-college/shared/FooterScolarity";
 import H1HeroText from "../../components/shared/H1HeroText";
 import BlogContent from "../../components/etablissement/Blog/BlogContent";
 import "styles/etablissement/Blog/_blog.scss";

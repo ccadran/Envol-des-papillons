@@ -12,8 +12,8 @@ import "styles/admin/Article/_blogArticleAdmin.scss";
 import BlogTags from "components/etablissement/Blog/BlogTags";
 import Button from "components/shared/Button";
 import SingleCaroussel from "components/shared/SingleCaroussel";
-import FooterScolarity from "components/ecole&college/shared/FooterScolarity";
-import NavigationScolarity from "components/ecole&college/shared/NavigationScolarity";
+import FooterScolarity from "components/ecole-college/shared/FooterScolarity";
+import NavigationScolarity from "components/ecole-college/shared/NavigationScolarity";
 import CarousselArticle from "components/shared/CarousselArticle";
 import { Helmet } from "react-helmet";
 

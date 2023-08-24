@@ -1,11 +1,11 @@
 import React from "react";
-import NavigationScolarity from "../../components/ecole&college/shared/NavigationScolarity";
+import NavigationScolarity from "../../components/ecole-college/shared/NavigationScolarity";
 import H1HeroText from "../../components/shared/H1HeroText";
-import ModalityInscription from "../../components/ecole&college/shared/Inscription/ModalityInscription";
-import TarifsScolarity from "../../components/ecole&college/shared/TarifsScolarity";
-import PreInscription from "../../components/ecole&college/shared/Inscription/PreInscription";
-import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
-import "styles/ecole&college/Inscription/_inscription.scss";
+import ModalityInscription from "../../components/ecole-college/shared/Inscription/ModalityInscription";
+import TarifsScolarity from "../../components/ecole-college/shared/TarifsScolarity";
+import PreInscription from "../../components/ecole-college/shared/Inscription/PreInscription";
+import FooterScolarity from "../../components/ecole-college/shared/FooterScolarity";
+import "styles/ecole-college/Inscription/_inscription.scss";
 import { Helmet } from "react-helmet";
 const Inscription = () => {
   return (

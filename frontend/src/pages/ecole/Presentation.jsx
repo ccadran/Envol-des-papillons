@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import NavigationScolarity from "../../components/ecole&college/shared/NavigationScolarity";
-import HeroScolarity from "../../components/ecole&college/shared/Presentation/HeroScolarity";
-import VisionAndObjectifsScolarity from "../../components/ecole&college/shared/Presentation/VisionAndObjectifsScolarity";
-import LocalScolarity from "../../components/ecole&college/shared/Presentation/LocalScolarity";
-import ScheduleScolarity from "../../components/ecole&college/shared/Presentation/ScheduleScolarity";
-import PedagogicTeam from "../../components/ecole&college/shared/Presentation/PedagogicTeam";
-import SchoolRoad from "../../components/ecole&college/shared/SchoolRoad";
-import FooterScolarity from "../../components/ecole&college/shared/FooterScolarity";
+import NavigationScolarity from "../../components/ecole-college/shared/NavigationScolarity";
+import HeroScolarity from "../../components/ecole-college/shared/Presentation/HeroScolarity";
+import VisionAndObjectifsScolarity from "../../components/ecole-college/shared/Presentation/VisionAndObjectifsScolarity";
+import LocalScolarity from "../../components/ecole-college/shared/Presentation/LocalScolarity";
+import ScheduleScolarity from "../../components/ecole-college/shared/Presentation/ScheduleScolarity";
+import PedagogicTeam from "../../components/ecole-college/shared/Presentation/PedagogicTeam";
+import SchoolRoad from "../../components/ecole-college/shared/SchoolRoad";
+import FooterScolarity from "../../components/ecole-college/shared/FooterScolarity";
 import AllAvis from "../../components/shared/AllAvis";
-import "styles/ecole&college/Presentation/_presentation.scss";
+import "styles/ecole-college/Presentation/_presentation.scss";
 import { Helmet } from "react-helmet";
 //IMAGES
 import imgHero from "assets/img/school-presentation.jpg";

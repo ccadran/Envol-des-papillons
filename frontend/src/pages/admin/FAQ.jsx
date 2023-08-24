@@ -2,7 +2,7 @@ import React from "react";
 import NavigationAdmin from "../../components/admin/NavigationAdmin";
 import H1HeroText from "../../components/shared/H1HeroText";
 import FAQController from "../../components/admin/FAQ/FAQController";
-import "styles/ecole&college/FAQ/_faq.scss";
+import "styles/ecole-college/FAQ/_faq.scss";
 import { Helmet } from "react-helmet";
 
 const FAQ = () => {
