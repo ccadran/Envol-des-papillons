@@ -55,11 +55,11 @@ module.exports.setBlogPost = async (req, res) => {
     content2,
     author,
   } = req.body;
-  const secretFilePath = "/etc/secrets/mykey.json";
-  const secretContent = fs.readFileSync(secretFilePath, "utf8");
+  // const secretFilePath = "/etc/secrets/mykey.json";
+  // const secretContent = fs.readFileSync(secretFilePath, "utf8");
 
-  // Now you can use the secret content as needed in your application
-  console.log(secretContent);
+  // // Now you can use the secret content as needed in your application
+  // console.log(secretContent);
 
   try {
     // Prepare the mainImgPaths array for saving in the database
