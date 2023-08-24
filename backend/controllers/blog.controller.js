@@ -4,6 +4,23 @@ const BlogPostModel = require("../models/blogPost.model");
 const storage = new Storage();
 const bucket = storage.bucket("blog-storage-envol");
 
+const addMetadataAfterUpload = async (fileName) => {
+  try {
+    const [file] = await bucket.file(fileName).get();
+
+    // Ajoute la méta-donnée souhaitée au fichier
+    await file.setMetadata({
+      metadata: {
+        "X-Robots-Tag": "noindex", // Ajoutez ici la méta-donnée souhaitée
+      },
+    });
+
+    console.log(`Méta-données ajoutées au fichier : ${fileName}`);
+  } catch (error) {
+    console.error(`Erreur lors de l'ajout des méta-données : ${error}`);
+  }
+};
+
 module.exports.getBlogPost = async (req, res) => {
   const blogPosts = await BlogPostModel.find();
   res.status(200).json(blogPosts);
@@ -40,36 +57,34 @@ module.exports.setBlogPost = async (req, res) => {
 
   try {
     // Prepare the mainImgPaths array for saving in the database
-    const mainImgPaths = mainImages.map(
-      (image) => "/uploads/" + image.filename
-    );
 
+    const fileName = Math.floor(Math.random() * 100000) + Date.now() + "-";
     const mainBlob = bucket.file(
-      "uploads/" +
-        Math.floor(Math.random() * 100000) +
-        Date.now() +
-        "-" +
-        req.files["mainImg"][0].originalname
+      "uploads/" + fileName + req.files["mainImg"][0].originalname
     );
 
     const mainBlobStream = mainBlob.createWriteStream();
+
+    // Ajoutez les méta-données ici
+    await addMetadataAfterUpload(mainBlob.name);
+
     mainBlobStream.end(req.files["mainImg"][0].buffer); // Write the buffer to the blob stream
 
     await new Promise((resolve, reject) => {
       mainBlobStream.on("finish", resolve);
       mainBlobStream.on("error", reject);
     });
+    const mainImgPaths =
+      "https://storage.googleapis.com/blog-storage-envol/uploads/" +
+      fileName +
+      req.files["mainImg"][0].originalname;
     // Prepare the illustrationPaths array for saving in the database
-    const illustrationPaths = illustrationImages.map(
-      (image) => "/uploads/" + image.filename
-    );
+    const illustrationUrls = [];
     for (const illustration of req.files["illustrations"]) {
+      const fileNameIllustrations =
+        Math.floor(Math.random() * 100000) + Date.now() + "-";
       const illustrationBlob = bucket.file(
-        "uploads/" +
-          Math.floor(Math.random() * 100000) +
-          Date.now() +
-          "-" +
-          illustration.originalname
+        "uploads/" + fileNameIllustrations + illustration.originalname
       );
 
       const illustrationBlobStream = illustrationBlob.createWriteStream();
@@ -79,6 +94,11 @@ module.exports.setBlogPost = async (req, res) => {
         illustrationBlobStream.on("finish", resolve);
         illustrationBlobStream.on("error", reject);
       });
+      const illustrationPath =
+        "https://storage.googleapis.com/blog-storage-envol/uploads/" +
+        fileNameIllustrations +
+        illustration.originalname;
+      illustrationUrls.push(illustrationPath);
     }
 
     const blogPost = new BlogPostModel({
@@ -92,7 +112,7 @@ module.exports.setBlogPost = async (req, res) => {
       content2,
       author,
       mainImg: mainImgPaths, // Save the array of main image paths in the database
-      illustrations: illustrationPaths, // Save the array of illustration paths in the database
+      illustrations: illustrationUrls, // Save the array of illustration paths in the database
     });
 
     await blogPost.save();
