@@ -14,6 +14,7 @@ const upload = Multer({
 const projectId = "envol-des-papillons"; // Remplacez par votre projet ID
 console.log("projectId :", projectId);
 const keyFilename = process.env.GOOGLE_APPLICATION_CREDENTIALS; // Chemin vers votre fichier de clé privée JSON
+console.log("keyFilename :", keyFilename);
 const storage = new Storage({
   projectId,
   keyFilename,

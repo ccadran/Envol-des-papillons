@@ -5,22 +5,22 @@ const BlogPostModel = require("../models/blogPost.model");
 const storage = new Storage();
 const bucket = storage.bucket("blog-storage-envol");
 
-const addMetadataAfterUpload = async (fileName) => {
-  try {
-    const [file] = await bucket.file(fileName).get();
+// const addMetadataAfterUpload = async (fileName) => {
+//   try {
+//     const [file] = await bucket.file(fileName).get();
 
-    // Ajoute la méta-donnée souhaitée au fichier
-    await file.setMetadata({
-      metadata: {
-        "X-Robots-Tag": "noindex", // Ajoutez ici la méta-donnée souhaitée
-      },
-    });
+//     // Ajoute la méta-donnée souhaitée au fichier
+//     await file.setMetadata({
+//       metadata: {
+//         "X-Robots-Tag": "noindex", // Ajoutez ici la méta-donnée souhaitée
+//       },
+//     });
 
-    console.log(`Méta-données ajoutées au fichier : ${fileName}`);
-  } catch (error) {
-    console.error(`Erreur lors de l'ajout des méta-données : ${error}`);
-  }
-};
+//     console.log(`Méta-données ajoutées au fichier : ${fileName}`);
+//   } catch (error) {
+//     console.error(`Erreur lors de l'ajout des méta-données : ${error}`);
+//   }
+// };
 
 module.exports.getBlogPost = async (req, res) => {
   const blogPosts = await BlogPostModel.find();
@@ -72,7 +72,7 @@ module.exports.setBlogPost = async (req, res) => {
     const mainBlobStream = mainBlob.createWriteStream();
 
     // Ajoutez les méta-données ici
-    await addMetadataAfterUpload(mainBlob.name);
+    // await addMetadataAfterUpload(mainBlob.name);
 
     mainBlobStream.end(req.files["mainImg"][0].buffer); // Write the buffer to the blob stream
 
