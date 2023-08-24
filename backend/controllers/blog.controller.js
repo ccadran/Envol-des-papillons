@@ -1,4 +1,5 @@
 const { Storage } = require("@google-cloud/storage");
+const fs = require("fs");
 
 const BlogPostModel = require("../models/blogPost.model");
 const storage = new Storage();
@@ -54,6 +55,11 @@ module.exports.setBlogPost = async (req, res) => {
     content2,
     author,
   } = req.body;
+  const secretFilePath = "/etc/secrets/mykey.json";
+  const secretContent = fs.readFileSync(secretFilePath, "utf8");
+
+  // Now you can use the secret content as needed in your application
+  console.log(secretContent);
 
   try {
     // Prepare the mainImgPaths array for saving in the database
