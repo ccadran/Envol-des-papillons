@@ -137,8 +137,8 @@ const FooterScolarity = ({ etablissement }) => {
         </div>
       </div>
       <div className="under-footer">
-        <NavLink to="/cgu" className="nav-link">
-          <li>CGU</li>
+        <NavLink to="/mentions-legales" className="nav-link">
+          <li>Mentions légales</li>
         </NavLink>
       </div>
     </footer>

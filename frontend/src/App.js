@@ -9,11 +9,12 @@ import CollegeRoutes from "./pages/college/CollegeRoutes";
 import ParentsRoutes from "./pages/parents/ParentsRoutes";
 import AdminRoutes from "./pages/admin/AdminRoutes";
 import About from "./pages/college/AboutCollege";
-import CGU from "./pages/etablissement/CGU";
+import CGU from "./pages/etablissement/legalMentions";
 import BlogArticle from "./pages/etablissement/BlogArticle";
 import ScrollToTop from "components/shared/ScrollToTop";
 import InscriptionParent from "pages/etablissement/InscriptionParent";
 import style from "styles/settings.scss";
+import LegalMentions from "./pages/etablissement/legalMentions";
 const App = () => {
   return (
     <BrowserRouter>
@@ -29,7 +30,7 @@ const App = () => {
         <Route path="/etablissement/qui-sommes-nous" element={<About />} />
         <Route path="/parents/*" element={<ParentsRoutes />} />
         <Route path="/admin/*" element={<AdminRoutes />} />
-        <Route path="/etablissement/CGU" element={<CGU />} />
+        <Route path="/mentions-legales" element={<LegalMentions />} />
         <Route path="/inscription-parent" element={<InscriptionParent />} />
       </Routes>
     </BrowserRouter>
