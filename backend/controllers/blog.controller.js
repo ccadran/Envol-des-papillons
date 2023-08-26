@@ -5,23 +5,6 @@ const BlogPostModel = require("../models/blogPost.model");
 const storage = new Storage();
 const bucket = storage.bucket("blog-storage-envol");
 
-// const addMetadataAfterUpload = async (fileName) => {
-//   try {
-//     const [file] = await bucket.file(fileName).get();
-
-//     // Ajoute la méta-donnée souhaitée au fichier
-//     await file.setMetadata({
-//       metadata: {
-//         "X-Robots-Tag": "noindex", // Ajoutez ici la méta-donnée souhaitée
-//       },
-//     });
-
-//     console.log(`Méta-données ajoutées au fichier : ${fileName}`);
-//   } catch (error) {
-//     console.error(`Erreur lors de l'ajout des méta-données : ${error}`);
-//   }
-// };
-
 module.exports.getBlogPost = async (req, res) => {
   const blogPosts = await BlogPostModel.find();
   res.status(200).json(blogPosts);
@@ -55,11 +38,6 @@ module.exports.setBlogPost = async (req, res) => {
     content2,
     author,
   } = req.body;
-  // const secretFilePath = "/etc/secrets/mykey.json";
-  // const secretContent = fs.readFileSync(secretFilePath, "utf8");
-
-  // // Now you can use the secret content as needed in your application
-  // console.log(secretContent);
 
   try {
     // Prepare the mainImgPaths array for saving in the database
@@ -155,21 +133,58 @@ module.exports.editBlogPost = async (req, res) => {
     const illustrationImages = req.files["illustrations"] || [];
 
     // Prepare the mainImgPaths array for saving in the database
-    let mainImgPaths = [];
+    let mainImgPaths = blogPost.mainImg; // Keep the existing main images
     if (mainImages.length > 0) {
-      mainImgPaths = mainImages.map((image) => "/uploads/" + image.filename);
-    } else {
-      mainImgPaths = blogPost.mainImg; // Keep the existing main images
+      const mainImgUrls = [];
+      for (const image of mainImages) {
+        const fileName = Math.floor(Math.random() * 100000) + Date.now() + "-";
+        const mainBlob = bucket.file(
+          "uploads/" + fileName + image.originalname
+        );
+
+        const mainBlobStream = mainBlob.createWriteStream();
+        mainBlobStream.end(image.buffer);
+
+        await new Promise((resolve, reject) => {
+          mainBlobStream.on("finish", resolve);
+          mainBlobStream.on("error", reject);
+        });
+
+        const mainImgUrl =
+          "https://storage.googleapis.com/blog-storage-envol/uploads/" +
+          fileName +
+          image.originalname;
+        mainImgUrls.push(mainImgUrl);
+      }
+      mainImgPaths = mainImgUrls;
     }
 
     // Prepare the illustrationPaths array for saving in the database
-    let illustrationPaths = [];
+    let illustrationPaths = blogPost.illustrations; // Keep the existing illustrations
     if (illustrationImages.length > 0) {
-      illustrationPaths = illustrationImages.map(
-        (image) => "/uploads/" + image.filename
-      );
-    } else {
-      illustrationPaths = blogPost.illustrations; // Keep the existing illustrations
+      const illustrationUrls = [];
+      for (const illustration of illustrationImages) {
+        const fileNameIllustrations =
+          Math.floor(Math.random() * 100000) + Date.now() + "-";
+        const illustrationBlob = bucket.file(
+          "uploads/" + fileNameIllustrations + illustration.originalname
+        );
+
+        const illustrationBlobStream = illustrationBlob.createWriteStream();
+        illustrationBlobStream.end(illustration.buffer);
+
+        await new Promise((resolve, reject) => {
+          illustrationBlobStream.on("finish", resolve);
+          illustrationBlobStream.on("error", reject);
+        });
+
+        const illustrationPath =
+          "https://storage.googleapis.com/blog-storage-envol/uploads/" +
+          fileNameIllustrations +
+          illustration.originalname;
+        illustrationUrls.push(illustrationPath);
+      }
+      illustrationPaths = illustrationUrls;
     }
 
     // Update the blog post document
