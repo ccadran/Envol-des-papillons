@@ -124,20 +124,29 @@ const SearchFilter = () => {
             handleTagClick={handleTagClick}
             selectedTags={selectedTags}
           />
-          {isRootPathBlog && (
-            <Button
-              text="Ajouter un article"
-              link="/admin/blog/new-article"
-              color="violet"
-            />
-          )}
-          {isRootPathActuality && (
-            <Button
-              text="Ajouter un article"
-              link="/admin/actualites/new-article"
-              color="violet"
-            />
-          )}
+          <div className="add-article-tags">
+            {isRootPathBlog && (
+              <Button
+                text="Ajouter un article"
+                link="/admin/blog/new-article"
+                color="violet"
+              />
+            )}
+            {isRootPathActuality && (
+              <Button
+                text="Ajouter un article"
+                link="/admin/actualites/new-article"
+                color="violet"
+              />
+            )}
+            <div className="add-tags">
+              <Button
+                text="Ajouter un tag"
+                link="/admin/new-tag"
+                color="violet"
+              />
+            </div>
+          </div>
         </div>
       </div>
       {location.pathname.includes("blog") ? (
