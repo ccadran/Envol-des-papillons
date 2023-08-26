@@ -203,7 +203,7 @@ module.exports.setActualityPost = async (req, res) => {
       mainBlobStream.on("error", reject);
     });
     const mainImgPaths =
-      "https://storage.googleapis.com/actuality-storage-envol/uploads/" +
+      "https://storage.googleapis.com/blog-storage-envol/uploads/" +
       fileName +
       req.files["mainImg"][0].originalname;
     // Prepare the illustrationPaths array for saving in the database
@@ -223,7 +223,7 @@ module.exports.setActualityPost = async (req, res) => {
         illustrationBlobStream.on("error", reject);
       });
       const illustrationPath =
-        "https://storage.googleapis.com/actuality-storage-envol/uploads/" +
+        "https://storage.googleapis.com/blog-storage-envol/uploads/" +
         fileNameIllustrations +
         illustration.originalname;
       illustrationUrls.push(illustrationPath);
@@ -295,7 +295,7 @@ module.exports.editActualityPost = async (req, res) => {
         });
 
         const mainImgUrl =
-          "https://storage.googleapis.com/actuality-storage-envol/uploads/" +
+          "https://storage.googleapis.com/blog-storage-envol/uploads/" +
           fileName +
           image.originalname;
         mainImgUrls.push(mainImgUrl);
@@ -323,7 +323,7 @@ module.exports.editActualityPost = async (req, res) => {
         });
 
         const illustrationPath =
-          "https://storage.googleapis.com/actuality-storage-envol/uploads/" +
+          "https://storage.googleapis.com/blog-storage-envol/uploads/" +
           fileNameIllustrations +
           illustration.originalname;
         illustrationUrls.push(illustrationPath);
