@@ -109,7 +109,7 @@
 //       illustrationPaths = actualityPost.illustrations; // Keep the existing illustrations
 //     }
 
-//     // Update the actyality post document
+//     // Update the actuality post document
 //     actualityPost.title = title;
 //     actualityPost.accroche = accroche;
 //     actualityPost.tags = Array.isArray(tags) ? tags : [tags];
@@ -145,25 +145,25 @@
 const { Storage } = require("@google-cloud/storage");
 const fs = require("fs");
 
-const ActyalityPostModel = require("../models/actyalityPost.model");
+const ActualityPostModel = require("../models/actualityPost.model");
 const storage = new Storage();
 const bucket = storage.bucket("blog-storage-envol");
 
-module.exports.getActyalityPost = async (req, res) => {
-  const actyalityPosts = await ActyalityPostModel.find();
-  res.status(200).json(actyalityPosts);
+module.exports.getActualityPost = async (req, res) => {
+  const actualityPosts = await ActualityPostModel.find();
+  res.status(200).json(actualityPosts);
 };
 
-module.exports.getActyalityPostById = async (req, res) => {
-  const actyalityPost = await ActyalityPostModel.findById(req.params.id);
-  if (!actyalityPost) {
+module.exports.getActualityPostById = async (req, res) => {
+  const actualityPost = await ActualityPostModel.findById(req.params.id);
+  if (!actualityPost) {
     res.status(404).json({ message: "Cet article d'actualité n'existe pas" });
   } else {
-    res.status(200).json(actyalityPost);
+    res.status(200).json(actualityPost);
   }
 };
 
-module.exports.setActyalityPost = async (req, res) => {
+module.exports.setActualityPost = async (req, res) => {
   if (!req.body.title) {
     res.status(400).json({ title: "Le titre est obligatoire" });
   }
@@ -203,7 +203,7 @@ module.exports.setActyalityPost = async (req, res) => {
       mainBlobStream.on("error", reject);
     });
     const mainImgPaths =
-      "https://storage.googleapis.com/actyality-storage-envol/uploads/" +
+      "https://storage.googleapis.com/actuality-storage-envol/uploads/" +
       fileName +
       req.files["mainImg"][0].originalname;
     // Prepare the illustrationPaths array for saving in the database
@@ -223,13 +223,13 @@ module.exports.setActyalityPost = async (req, res) => {
         illustrationBlobStream.on("error", reject);
       });
       const illustrationPath =
-        "https://storage.googleapis.com/actyality-storage-envol/uploads/" +
+        "https://storage.googleapis.com/actuality-storage-envol/uploads/" +
         fileNameIllustrations +
         illustration.originalname;
       illustrationUrls.push(illustrationPath);
     }
 
-    const actyalityPost = new ActyalityPostModel({
+    const actualityPost = new ActualityPostModel({
       title,
       accroche,
       tags: Array.isArray(tags) ? tags : [tags],
@@ -243,9 +243,9 @@ module.exports.setActyalityPost = async (req, res) => {
       illustrations: illustrationUrls, // Save the array of illustration paths in the database
     });
 
-    await actyalityPost.save();
+    await actualityPost.save();
 
-    res.status(200).json(actyalityPost);
+    res.status(200).json(actualityPost);
   } catch (error) {
     res.status(500).json({
       message: error.message,
@@ -253,10 +253,10 @@ module.exports.setActyalityPost = async (req, res) => {
   }
 };
 
-module.exports.editActyalityPost = async (req, res) => {
-  const actyalityPost = await ActyalityPostModel.findById(req.params.id);
+module.exports.editActualityPost = async (req, res) => {
+  const actualityPost = await ActualityPostModel.findById(req.params.id);
 
-  if (!actyalityPost) {
+  if (!actualityPost) {
     return res.status(400).json({ message: "Ce post n'existe pas" });
   }
 
@@ -277,7 +277,7 @@ module.exports.editActyalityPost = async (req, res) => {
     const illustrationImages = req.files["illustrations"] || [];
 
     // Prepare the mainImgPaths array for saving in the database
-    let mainImgPaths = actyalityPost.mainImg; // Keep the existing main images
+    let mainImgPaths = actualityPost.mainImg; // Keep the existing main images
     if (mainImages.length > 0) {
       const mainImgUrls = [];
       for (const image of mainImages) {
@@ -295,7 +295,7 @@ module.exports.editActyalityPost = async (req, res) => {
         });
 
         const mainImgUrl =
-          "https://storage.googleapis.com/actyality-storage-envol/uploads/" +
+          "https://storage.googleapis.com/actuality-storage-envol/uploads/" +
           fileName +
           image.originalname;
         mainImgUrls.push(mainImgUrl);
@@ -304,7 +304,7 @@ module.exports.editActyalityPost = async (req, res) => {
     }
 
     // Prepare the illustrationPaths array for saving in the database
-    let illustrationPaths = actyalityPost.illustrations; // Keep the existing illustrations
+    let illustrationPaths = actualityPost.illustrations; // Keep the existing illustrations
     if (illustrationImages.length > 0) {
       const illustrationUrls = [];
       for (const illustration of illustrationImages) {
@@ -323,7 +323,7 @@ module.exports.editActyalityPost = async (req, res) => {
         });
 
         const illustrationPath =
-          "https://storage.googleapis.com/actyality-storage-envol/uploads/" +
+          "https://storage.googleapis.com/actuality-storage-envol/uploads/" +
           fileNameIllustrations +
           illustration.originalname;
         illustrationUrls.push(illustrationPath);
@@ -331,22 +331,22 @@ module.exports.editActyalityPost = async (req, res) => {
       illustrationPaths = illustrationUrls;
     }
 
-    // Update the actyality post document
-    actyalityPost.title = title;
-    actyalityPost.accroche = accroche;
-    actyalityPost.tags = Array.isArray(tags) ? tags : [tags];
-    actyalityPost.introduction = introduction;
-    actyalityPost.subTitle1 = subTitle1;
-    actyalityPost.content1 = content1;
-    actyalityPost.subTitle2 = subTitle2;
-    actyalityPost.content2 = content2;
-    actyalityPost.author = author;
-    actyalityPost.mainImg = mainImgPaths;
-    actyalityPost.illustrations = illustrationPaths;
+    // Update the actuality post document
+    actualityPost.title = title;
+    actualityPost.accroche = accroche;
+    actualityPost.tags = Array.isArray(tags) ? tags : [tags];
+    actualityPost.introduction = introduction;
+    actualityPost.subTitle1 = subTitle1;
+    actualityPost.content1 = content1;
+    actualityPost.subTitle2 = subTitle2;
+    actualityPost.content2 = content2;
+    actualityPost.author = author;
+    actualityPost.mainImg = mainImgPaths;
+    actualityPost.illustrations = illustrationPaths;
 
-    await actyalityPost.save();
+    await actualityPost.save();
 
-    res.status(200).json(actyalityPost);
+    res.status(200).json(actualityPost);
   } catch (error) {
     res.status(500).json({
       message: error.message,
@@ -354,12 +354,12 @@ module.exports.editActyalityPost = async (req, res) => {
   }
 };
 
-module.exports.deleteActyalityPost = async (req, res) => {
-  const actyalityPost = await ActyalityPostModel.findById(req.params.id);
-  if (!actyalityPost) {
+module.exports.deleteActualityPost = async (req, res) => {
+  const actualityPost = await ActualityPostModel.findById(req.params.id);
+  if (!actualityPost) {
     res.status(400).json({ message: "Ce post n'existe pas" });
   }
 
-  await actyalityPost.deleteOne();
+  await actualityPost.deleteOne();
   res.status(200).json("Message supprimé " + req.params.id);
 };
