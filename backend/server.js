@@ -16,6 +16,7 @@ const allowedOrigins = [
   "http://localhost:3000",
   "https://envol-des-papillons.onrender.com",
   "https://magnificent-meerkat-c7414f.netlify.app",
+  "https://lenvoldespapillons33.fr/",
 ];
 
 app.use(
