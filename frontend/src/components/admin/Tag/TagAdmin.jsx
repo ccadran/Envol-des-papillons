@@ -50,15 +50,22 @@ const TagAdmin = ({ tag }) => {
           <a className="fa-solid fa-pen" onClick={handleEditClick}></a>
         )}
       </div>
-      {isEditing ? (
-        <input
-          type="text"
-          value={tag_name}
-          onChange={(e) => setTag_name(e.target.value)}
-        />
-      ) : (
-        <p>{tag.tag_name}</p>
-      )}
+      <div className="tag-content">
+        <h4>
+          <span>Tag : </span>{" "}
+        </h4>
+        {isEditing ? (
+          <input
+            type="text"
+            value={tag_name}
+            onChange={(e) => setTag_name(e.target.value)}
+          />
+        ) : (
+          <>
+            <h4>{tag.tag_name}</h4>
+          </>
+        )}
+      </div>
       {isEditing && <button onClick={handleSaveClick}>Enregistrer</button>}
     </div>
   );

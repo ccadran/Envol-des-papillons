@@ -1,0 +1,22 @@
+@import "../../variables.scss";
+
+.form-tag {
+  margin-top: 72px;
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    label {
+      font-family: $subtitle-font;
+    }
+    input {
+      margin-top: 12px;
+      padding: 6px;
+      border-radius: $border-radius;
+    }
+    button {
+      margin-top: 24px;
+    }
+  }
+}

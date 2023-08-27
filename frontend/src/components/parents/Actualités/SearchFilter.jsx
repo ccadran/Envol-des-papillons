@@ -139,13 +139,6 @@ const SearchFilter = () => {
                 color="violet"
               />
             )}
-            <div className="add-tags">
-              <Button
-                text="Ajouter un tag"
-                link="/admin/tags/new-tag"
-                color="violet"
-              />
-            </div>
           </div>
         </div>
       </div>

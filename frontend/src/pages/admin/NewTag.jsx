@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import chevron from "assets/logos/chevron.svg";
 import FormTag from "components/admin/Tag/FormTag";
+import "styles/admin/Tags/_newTag.scss";
 
 const NewTag = () => {
   return (

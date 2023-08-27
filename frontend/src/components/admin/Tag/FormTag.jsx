@@ -20,7 +20,7 @@ const FormTag = () => {
         `${process.env.REACT_APP_API_URL}/blogTag`,
         newTag
       );
-      navigate("/admin/blog");
+      navigate("/admin/tags");
       formRef.current.reset();
     } catch (error) {
       console.error("Erreur lors de l'ajout du tag :", error);

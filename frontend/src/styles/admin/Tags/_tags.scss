@@ -10,10 +10,22 @@
     margin-top: 48px;
     .tag {
       border-top: 1px solid $black;
+      padding-top: 12px;
       .tag-controller {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        a {
+          font-size: 1.2rem;
+          @media screen and (max-width: 640px) {
+            font-size: 1rem;
+          }
+        }
+      }
+      .tag-content {
+        display: flex;
+        margin-top: 12px;
+        margin-bottom: 12px;
       }
     }
   }
