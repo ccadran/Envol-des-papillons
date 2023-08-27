@@ -18,6 +18,7 @@ import MailParent from "./MailParent";
 import NewMailParent from "./NewMailParent";
 import { Helmet } from "react-helmet";
 import NewTag from "./NewTag";
+import TagsAdmin from "./TagsAdmin";
 const AdminRoutes = () => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -52,7 +53,9 @@ const AdminRoutes = () => {
         <Route path="/teachers/new-teacher" element={<NewTeacher />} />
         <Route path="/mails" element={<MailParent />} />
         <Route path="/mails/new-mail" element={<NewMailParent />} />
-        <Route path="/new-tag" element={<NewTag />} />
+        <Route path="/mails/new-mail" element={<NewMailParent />} />
+        <Route path="/tags" element={<TagsAdmin />} />
+        <Route path="/tags/new-tag" element={<NewTag />} />
       </Routes>
     </div>
   );

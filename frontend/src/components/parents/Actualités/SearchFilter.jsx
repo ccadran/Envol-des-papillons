@@ -142,7 +142,7 @@ const SearchFilter = () => {
             <div className="add-tags">
               <Button
                 text="Ajouter un tag"
-                link="/admin/new-tag"
+                link="/admin/tags/new-tag"
                 color="violet"
               />
             </div>

@@ -123,6 +123,13 @@ const NavigationAdmin = () => {
           >
             <li>Mails</li>
           </NavLink>
+          <NavLink
+            to="/admin/tags"
+            className="nav-link"
+            activeclassname="active"
+          >
+            <li>Tags</li>
+          </NavLink>
         </ul>
       </div>
       <div

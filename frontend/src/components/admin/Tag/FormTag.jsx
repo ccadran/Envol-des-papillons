@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import AllTags from "./AllTags";
 
 const FormTag = () => {
   const formRef = useRef(null);

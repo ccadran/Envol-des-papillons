@@ -1,0 +1,20 @@
+@import "../../variables.scss";
+
+.tags-container {
+  margin-top: 122px;
+  .tags-controller {
+    display: flex;
+    justify-content: end;
+  }
+  .all-tags {
+    margin-top: 48px;
+    .tag {
+      border-top: 1px solid $black;
+      .tag-controller {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
