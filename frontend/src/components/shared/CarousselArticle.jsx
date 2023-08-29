@@ -34,7 +34,6 @@ const CarousselArticle = ({ images }) => {
       prevSlide();
     }
   };
-  console.log();
 
   return (
     <>
@@ -55,8 +54,9 @@ const CarousselArticle = ({ images }) => {
                   <img
                     key={index}
                     src={image}
-                    alt="img"
+                    alt={image}
                     className={slide === index ? "slide" : "slide-hidden"}
+                    loading="lazy"
                   />
                 );
               })
@@ -78,7 +78,7 @@ const CarousselArticle = ({ images }) => {
                         : "indicator indicator-inactive"
                     }
                   >
-                    <img key={index} src={image} alt="img" />
+                    <img key={index} src={image} alt={image} loading="lazy" />
                   </div>
                 );
               })

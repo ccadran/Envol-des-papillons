@@ -18,9 +18,9 @@ const Button = ({ color, text, link }) => {
   return (
     <Link to={link}>
       <button style={{ background: backgroundColor }}>
-        <img src={vector} alt="" />
+        <img src={vector} alt="étoiles" loading="lazy" />
         <h5>{text}</h5>
-        <img src={arrow} alt="" id="arrow" />
+        <img src={arrow} alt="flèche" id="arrow" loading="lazy" />
       </button>
     </Link>
   );

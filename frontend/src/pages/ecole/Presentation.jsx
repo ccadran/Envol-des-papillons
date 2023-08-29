@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import NavigationScolarity from "../../components/ecole-college/shared/NavigationScolarity";
 import HeroScolarity from "../../components/ecole-college/shared/Presentation/HeroScolarity";
 import VisionAndObjectifsScolarity from "../../components/ecole-college/shared/Presentation/VisionAndObjectifsScolarity";

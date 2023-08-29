@@ -13,7 +13,6 @@ const AvisAdmin = ({ avis }) => {
   };
   const deleteAvis = () => {
     axios.delete(`${process.env.REACT_APP_API_URL}/avis/` + avis._id);
-    console.log("avis supprimé");
     window.location.reload();
   };
 

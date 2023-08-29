@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import BlogTags from "components/etablissement/Blog/BlogTags";
 import "styles/admin/Article/_newArticle.scss";
 import NavigationAdmin from "components/admin/NavigationAdmin";
-import chevron from "assets/logos/chevron.svg";
 import { set } from "mongoose";
 import { Helmet } from "react-helmet";
+import Back from "components/shared/Back";
 
 const NewArticle = () => {
   const location = useLocation();
@@ -148,13 +148,7 @@ const NewArticle = () => {
         <div className="add-article">
           <h2>Ajouter un nouvel article</h2>
           <div className="form-content">
-            <div className="back">
-              <Link to={isRootPathBlog ? "/admin/blog" : "/admin/actualites"}>
-                {" "}
-                <img src={chevron} alt="" />
-                Retour
-              </Link>
-            </div>
+            <Back link={isRootPathBlog ? "/admin/blog" : "/admin/actualites"} />
             <form>
               <div
                 className={`form-part ${

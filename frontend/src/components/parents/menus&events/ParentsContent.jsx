@@ -4,7 +4,7 @@ import Button from "../../shared/Button";
 const ParentsContent = ({ section }) => {
   return (
     <section className={`content-${section}`}>
-      <img src="" alt={`image des ${section}`} />
+      <img src="" alt={`illustrations des ${section}`} loading="lazy" />
       <Button text="Télécharger" color="violet" />
     </section>
   );

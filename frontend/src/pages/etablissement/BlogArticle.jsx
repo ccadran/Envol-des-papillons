@@ -1,21 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import NavigationParents from "../../components/parents/NavigationParents";
 import PapillonLogo from "../../components/shared/PapillonLogo";
 import FooterGlobal from "../../components/shared/FooterGlobal";
 import NavigationGlobal from "../../components/shared/NavigationGlobal";
 import { useLocation } from "react-router-dom";
 import NavigationAdmin from "../../components/admin/NavigationAdmin";
 import Tags from "components/parents/Actualités/Tags";
-import chevron from "assets/logos/chevron.svg";
 import "styles/etablissement/Blog/_blogArticle.scss";
 import "styles/admin/Article/_blogArticleAdmin.scss";
 import BlogTags from "components/etablissement/Blog/BlogTags";
-import Button from "components/shared/Button";
-import SingleCaroussel from "components/shared/SingleCaroussel";
 import CarousselArticle from "components/shared/CarousselArticle";
 import { Helmet } from "react-helmet";
+import Back from "components/shared/Back";
 
 const BlogArticle = () => {
   const [blogArticle, setBlogArticle] = useState([]);
@@ -75,7 +72,6 @@ const BlogArticle = () => {
         [name]: value,
       }));
     }
-    // console.log("Updated article:", updatedBlogArticle);
   };
 
   const handleTagClick = (tag) => {
@@ -165,12 +161,7 @@ const BlogArticle = () => {
           <NavigationAdmin />
           <main>
             <section className="blog-article">
-              <div className="back">
-                <Link to="/admin/blog">
-                  <img src={chevron} alt="" />
-                  Retour
-                </Link>
-              </div>
+              <Back link="/admin/blog" />
               <div className="article-container-admin">
                 <div className="article-header">
                   <div className="article-infos">
@@ -199,15 +190,13 @@ const BlogArticle = () => {
                   </div>
 
                   <div className="article-img">
-                    {/* Afficher l'image principale */}
-
                     <div className="img-container">
                       <img
                         src={updatedBlogArticle.mainImg}
-                        alt="image principal actualité"
+                        alt="illustration principal actualité"
+                        loading="lazy"
                       />
                     </div>
-                    {/* Choisir une nouvelle image principale */}
                     <div className="form-part">
                       <h4>Image principale</h4>
                       <input
@@ -297,12 +286,7 @@ const BlogArticle = () => {
           <NavigationGlobal />
           <main>
             <section className="blog-article">
-              <div className="back">
-                <Link to={backUrl}>
-                  <img src={chevron} alt="" />
-                  Retour
-                </Link>
-              </div>
+              <Back link={backUrl} />
               <div className="article-container">
                 <div className="article-header">
                   <div className="article-infos">
@@ -313,7 +297,8 @@ const BlogArticle = () => {
                   <div className="article-img">
                     <img
                       src={blogArticle.mainImg}
-                      alt="image principal actualité"
+                      alt="illustration principal actualité"
+                      loading="lazy"
                     />
                   </div>
                 </div>

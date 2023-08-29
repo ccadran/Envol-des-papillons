@@ -1,10 +1,9 @@
 import NavigationAdmin from "components/admin/NavigationAdmin";
 import FormTeacher from "components/admin/Professeurs/FormTeacher";
 import React from "react";
-import { Link } from "react-router-dom";
 import "styles/admin/Teachers/_newTeacher.scss";
-import chevron from "assets/logos/chevron.svg";
 import { Helmet } from "react-helmet";
+import Back from "components/shared/Back";
 
 const NewTeacher = () => {
   return (
@@ -15,12 +14,7 @@ const NewTeacher = () => {
       </Helmet>
       <NavigationAdmin />
       <main>
-        <div className="back">
-          <Link to="/admin/teachers">
-            <img src={chevron} alt="" />
-            Retour
-          </Link>
-        </div>
+        <Back link="/admin/teachers" />
         <div className="intro">
           <h4>Ajouter un professeur</h4>
           <p>

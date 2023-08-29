@@ -11,7 +11,6 @@ const TagAdmin = ({ tag }) => {
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}/blogTag`).then((res) => {
       setTags(res.data);
-      console.log(res.data);
     });
   }, []);
 

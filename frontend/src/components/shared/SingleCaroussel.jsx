@@ -55,8 +55,9 @@ const SingleCaroussel = ({ images }) => {
                   <img
                     key={index}
                     src={image.src}
-                    alt="img"
+                    alt="illustration"
                     className={slide === index ? "slide" : "slide-hidden"}
+                    loading="lazy"
                   />
                 );
               })

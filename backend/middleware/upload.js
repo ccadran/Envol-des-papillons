@@ -21,4 +21,12 @@ const storage = new Storage({
 });
 const bucket = storage.bucket("blog-storage-envol");
 
+function setNoIndexMetadata(req, file, cb) {
+  cb(null, {
+    metadata: {
+      "x-goog-meta-no-index": "true",
+    },
+  });
+}
+
 module.exports = upload;

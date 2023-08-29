@@ -7,6 +7,7 @@ const {
   getActualityPostById,
 } = require("../controllers/actuality.controller");
 const upload = require("../middleware/upload");
+const setNoIndexMetadata = require("../middleware/noIndex");
 
 const router = express.Router();
 
@@ -15,6 +16,7 @@ router.get("/:id", getActualityPostById);
 
 router.post(
   "/",
+  setNoIndexMetadata,
   upload.fields([
     { name: "mainImg", maxCount: 1 },
     { name: "illustrations", maxCount: 10 },

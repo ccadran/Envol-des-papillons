@@ -1,14 +1,11 @@
 import React from "react";
 import NavigationAdmin from "../../components/admin/NavigationAdmin";
-import { Link, useNavigate } from "react-router-dom";
 import FormFAQSection from "../../components/admin/FAQ/FormFAQSection";
 import "styles/admin/FAQ/_newSection.scss";
-import chevron from "assets/logos/chevron.svg";
 import { Helmet } from "react-helmet";
+import Back from "components/shared/Back";
 
 const NewFAQSection = () => {
-  const navigate = useNavigate();
-
   return (
     <>
       <Helmet>
@@ -17,12 +14,7 @@ const NewFAQSection = () => {
       </Helmet>
       <NavigationAdmin />
       <main>
-        <div className="back">
-          <Link to="/admin/faq">
-            <img src={chevron} alt="" />
-            Retour
-          </Link>
-        </div>
+        <Back link="/admin/faq" />
         <div className="intro">
           <h4>Ajouter une section</h4>
           <p>

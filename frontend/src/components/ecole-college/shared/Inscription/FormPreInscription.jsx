@@ -17,7 +17,6 @@ const FormPreInscription = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           form.current.reset();
           formMessage.innerHTML =
             "<p class='success'>Message envoyé avec succès !</p>";
@@ -26,7 +25,6 @@ const FormPreInscription = () => {
           }, 5000);
         },
         (error) => {
-          console.log(error.text);
           formMessage.innerHTML =
             "<p class='error'>Erreur dans le formulaire</p>";
           setTimeout(() => {

@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link, useParams, useLocation, useNavigate } from "react-router-dom";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
 import NavigationParents from "../../components/parents/NavigationParents";
 import Tags from "../../components/parents/Actualités/Tags";
 import PapillonLogo from "../../components/shared/PapillonLogo";
 import NavigationAdmin from "../../components/admin/NavigationAdmin";
 import FooterParents from "components/parents/FooterParents";
 import BlogTags from "components/etablissement/Blog/BlogTags";
-import chevron from "assets/logos/chevron.svg";
 import CarousselArticle from "components/shared/CarousselArticle";
 import { Helmet } from "react-helmet";
+import Back from "components/shared/Back";
 
 const ActualityArticle = () => {
   const [actualityArticle, setActualityArticle] = useState([]);
@@ -37,9 +37,7 @@ const ActualityArticle = () => {
         setUpdatedActualityArticle(res.data);
       });
   }, [id]);
-  useEffect(() => {
-    console.log("Updated article:", updatedActualityArticle);
-  }, [updatedActualityArticle]);
+  useEffect(() => {}, [updatedActualityArticle]);
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
 
@@ -71,8 +69,6 @@ const ActualityArticle = () => {
       const updatedTags = prevArticle.tags.includes(tag)
         ? prevArticle.tags.filter((t) => t !== tag)
         : [...prevArticle.tags, tag];
-
-      console.log("Updated tags:", updatedTags);
 
       return {
         ...prevArticle,
@@ -139,8 +135,6 @@ const ActualityArticle = () => {
     return <div>Loading...</div>;
   }
 
-  console.log(actualityArticle.tags);
-  console.log("IMAGE", updatedActualityArticle.mainImg);
   const actualityTitle = "Actualitées - " + actualityArticle.title;
   return (
     <>
@@ -153,12 +147,7 @@ const ActualityArticle = () => {
           <NavigationAdmin />
           <main>
             <section className="actuality-article">
-              <div className="back">
-                <Link to="/admin/actualites">
-                  <img src={chevron} alt="" />
-                  Retour
-                </Link>
-              </div>
+              <Back link="/admin/actualites" />
               <div className="article-container-admin">
                 <div className="article-header">
                   <div className="article-infos">
@@ -187,15 +176,13 @@ const ActualityArticle = () => {
                   </div>
 
                   <div className="article-img">
-                    {/* Afficher l'image principale */}
-
                     <div className="img-container">
                       <img
                         src={updatedActualityArticle.mainImg}
-                        alt="image principal actualité"
+                        alt="illustration principal actualité"
+                        loading="lazy"
                       />
                     </div>
-                    {/* Choisir une nouvelle image principale */}
                     <div className="form-part">
                       <h4>Image principale</h4>
                       <input
@@ -277,20 +264,13 @@ const ActualityArticle = () => {
               </div>
             </section>
           </main>
-          {/* <FooterGlobal /> */}
         </>
       ) : (
         <>
           <NavigationParents />
-          {/* <NavigationGlobal /> */}
           <main>
             <section className="actuality-article">
-              <div className="back">
-                <Link to="/parents/actualites">
-                  <img src={chevron} alt="" />
-                  Retour
-                </Link>
-              </div>
+              <Back link="/parents/actualites" />
               <div className="article-container">
                 <div className="article-header">
                   <div className="article-infos">
@@ -302,6 +282,7 @@ const ActualityArticle = () => {
                     <img
                       src={actualityArticle.mainImg}
                       alt="image principal actualité"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -327,7 +308,6 @@ const ActualityArticle = () => {
             </section>
           </main>
           <FooterParents />
-          {/* <FooterGlobal /> */}
         </>
       )}
     </>

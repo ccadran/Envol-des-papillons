@@ -7,7 +7,11 @@ const EnglishPedagogie = ({ text, image }) => {
       <div className="english-container">
         <p>{text}</p>
         <div className="img-container">
-          <img src={image} alt="img" />
+          <img
+            src={image}
+            alt="illustraion apprentissage de l'anglais"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>

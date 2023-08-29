@@ -1,21 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
-import NavigationParents from "../../components/parents/NavigationParents";
 import PapillonLogo from "../../components/shared/PapillonLogo";
 import { useLocation } from "react-router-dom";
-import NavigationAdmin from "../../components/admin/NavigationAdmin";
 import Tags from "components/parents/Actualités/Tags";
-import chevron from "assets/logos/chevron.svg";
 import "styles/etablissement/Blog/_blogArticle.scss";
 import "styles/admin/Article/_blogArticleAdmin.scss";
-import BlogTags from "components/etablissement/Blog/BlogTags";
-import Button from "components/shared/Button";
-import SingleCaroussel from "components/shared/SingleCaroussel";
 import FooterScolarity from "components/ecole-college/shared/FooterScolarity";
 import NavigationScolarity from "components/ecole-college/shared/NavigationScolarity";
 import CarousselArticle from "components/shared/CarousselArticle";
 import { Helmet } from "react-helmet";
+import Back from "components/shared/Back";
 
 const BlogArticleSchool = () => {
   const [blogArticle, setBlogArticle] = useState([]);
@@ -30,7 +25,6 @@ const BlogArticleSchool = () => {
     backUrl = "/ecole/blog";
   }
   const { id } = useParams();
-  const navigate = useNavigate();
   const dateFormated = (date) => {
     return new Date(date).toLocaleDateString("fr-FR", {
       weekday: "long",
@@ -56,12 +50,7 @@ const BlogArticleSchool = () => {
         <NavigationScolarity etablissement="ecole" />
         <main>
           <section className="blog-article">
-            <div className="back">
-              <Link to={backUrl}>
-                <img src={chevron} alt="" />
-                Retour
-              </Link>
-            </div>
+            <Back link={backUrl} />
             <div className="article-container">
               <div className="article-header">
                 <div className="article-infos">
@@ -72,7 +61,8 @@ const BlogArticleSchool = () => {
                 <div className="article-img">
                   <img
                     src={blogArticle.mainImg}
-                    alt="image principal actualité"
+                    alt="illustration principal actualité"
+                    loading="lazy"
                   />
                 </div>
               </div>

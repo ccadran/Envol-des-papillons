@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../shared/Button";
 
 import axios from "axios";
 import { useState } from "react";
@@ -30,7 +29,6 @@ const ConnexionFormAdmin = () => {
 
       // Stockez le token dans le local storage
       localStorage.setItem("tokenAdmin", token);
-      console.log(location.state?.from);
       // Redirigez l'utilisateur vers la page sécurisée après la connexion réussie
       navigate(location.state?.from || "/admin/blog");
     } catch (error) {
@@ -42,7 +40,7 @@ const ConnexionFormAdmin = () => {
   return (
     <section className="connexion-container">
       <div className="img-container">
-        <img src={test} alt="test" />
+        <img src={test} alt="test" loading="lazy" />
       </div>
       <div className="form-connexion">
         <h3>Espace Admin</h3>

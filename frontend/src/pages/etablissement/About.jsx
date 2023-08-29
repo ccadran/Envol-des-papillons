@@ -35,7 +35,7 @@ const About = () => {
                 diam sit amet lacinia. Aliquam in elementum tellus.
               </p>
               <div className="img-container">
-                <img src="" alt="img a droite" />
+                <img src="" alt="img a droite" loading="lazy" />
               </div>
             </div>
           </div>
@@ -43,7 +43,7 @@ const About = () => {
             <h3>Les premiers locaux</h3>
             <div className="episode-content">
               <div className="img-container">
-                <img src="" alt="img a droite" />
+                <img src="" alt="img a droite" loading="lazy" />
               </div>
               <p>
                 Porem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
@@ -75,7 +75,7 @@ const About = () => {
                 diam sit amet lacinia. Aliquam in elementum tellus.
               </p>
               <div className="img-container">
-                <img src="" alt="img a droite" />
+                <img src="" alt="img a droite" loading="lazy" />
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@ const About = () => {
             <h3>L'ouverture du collège</h3>
             <div className="episode-content">
               <div className="img-container">
-                <img src="" alt="img a droite" />
+                <img src="" alt="img a droite" loading="lazy" />
               </div>
               <p>
                 Porem ipsum dolor sit amet, consectetur adipiscing elit. Etiam

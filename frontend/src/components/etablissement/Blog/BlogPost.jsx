@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import Button from "../../shared/Button";
 import axios from "axios";
 import Tags from "components/parents/Actualités/Tags";
 
@@ -64,7 +63,11 @@ const BlogPost = ({ article, selectedTags }) => {
               <Tags tags={article.tags} isSelected={isSelected} />
             </div>
             <div className="article-img">
-              <img src={article.mainImg} alt="image principal actualité" />
+              <img
+                src={article.mainImg}
+                alt="illustration principal actualité"
+                loading="lazy"
+              />
             </div>
           </div>
         </Link>

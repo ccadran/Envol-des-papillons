@@ -3,7 +3,13 @@ import logo from "../../assets/logos/papillon.svg";
 
 const PapillonLogo = ({ color }) => {
   return (
-    <img src={logo} alt="Papillon" style={{ fill: color }} id="papillon" />
+    <img
+      src={logo}
+      alt="Papillon"
+      style={{ fill: color }}
+      id="papillon"
+      loading="lazy"
+    />
   );
 };
 

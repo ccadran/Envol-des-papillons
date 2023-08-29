@@ -1,10 +1,9 @@
 import NavigationAdmin from "components/admin/NavigationAdmin";
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
-import chevron from "assets/logos/chevron.svg";
 import FormTag from "components/admin/Tag/FormTag";
 import "styles/admin/Tags/_newTag.scss";
+import Back from "components/shared/Back";
 
 const NewTag = () => {
   return (
@@ -15,12 +14,7 @@ const NewTag = () => {
       </Helmet>
       <NavigationAdmin />
       <main>
-        <div className="back">
-          <Link to="/admin/blog">
-            <img src={chevron} alt="" />
-            Retour
-          </Link>
-        </div>
+        <Back link="/admin/blog" />
         <div className="intro">
           <h4>Ajouter un tag</h4>
           <p>

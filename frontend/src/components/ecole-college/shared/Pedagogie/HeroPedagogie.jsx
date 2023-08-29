@@ -1,6 +1,5 @@
 import React from "react";
 import StylizedH1 from "../../../shared/StylizedH1";
-import { useLocation } from "react-router-dom";
 
 const HeroPedagogie = ({ h1, title, text, image }) => {
   return (
@@ -8,7 +7,11 @@ const HeroPedagogie = ({ h1, title, text, image }) => {
       <StylizedH1 h1={h1} />
       <div className="hero-presentation">
         <div className="img-container">
-          <img src={image} alt="img de presentation" />
+          <img
+            src={image}
+            alt="illustration de la presentation de la pédagogie"
+            loading="lazy"
+          />
         </div>
         <div className="hero-text">
           <h4>{title}</h4>

@@ -1,10 +1,9 @@
 import NavigationAdmin from "components/admin/NavigationAdmin";
 import React from "react";
-import chevron from "assets/logos/chevron.svg";
 import FormNewMail from "components/admin/Mail/FormNewMail";
-import { Link } from "react-router-dom";
 import "styles/admin/Mail/_newMail.scss";
 import { Helmet } from "react-helmet";
+import Back from "components/shared/Back";
 
 const NewMailParent = () => {
   return (
@@ -15,12 +14,7 @@ const NewMailParent = () => {
       </Helmet>
       <NavigationAdmin />
       <main>
-        <div className="back">
-          <Link to="/admin/mails">
-            <img src={chevron} alt="" />
-            Retour
-          </Link>
-        </div>
+        <Back link="/admin/mails" />
         <div className="intro">
           <h4>Ajouter un mail</h4>
           <p>

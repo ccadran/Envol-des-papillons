@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Tags from "./Tags";
 import Button from "../../shared/Button";
 import { useLocation } from "react-router-dom";
 import chevron from "assets/logos/chevron.svg";
@@ -100,7 +99,12 @@ const SearchFilter = () => {
           <div className="filter">
             <div className="change-filter" onClick={showFilter}>
               <p>{sortBy}</p>
-              <img src={chevron} alt="" className={isVisible ? "rotate" : ""} />
+              <img
+                src={chevron}
+                alt="chevron"
+                className={isVisible ? "rotate" : ""}
+                loading="lazy"
+              />
             </div>
             <div className={isVisible ? "filter-menu  " : "filter-menu hidden"}>
               <p

@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../shared/Button";
 
 import axios from "axios";
 import { useState } from "react";
@@ -50,7 +49,7 @@ const ConnexionForm = () => {
   return (
     <section className="connexion-container">
       <div className="img-container">
-        <img src={test} alt="test" />
+        <img src={test} alt="test" loading="lazy" />
       </div>
       <div className="form-connexion">
         <h3>Espace Parents</h3>

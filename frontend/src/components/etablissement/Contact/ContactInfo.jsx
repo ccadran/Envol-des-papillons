@@ -27,7 +27,11 @@ const ContactInfo = () => {
         </div>
       </div>
       <div className="img-container">
-        <img src={imgContact} alt="" />
+        <img
+          src={imgContact}
+          alt="illustration de la prise de contact"
+          loading="lazy"
+        />
       </div>
     </div>
   );

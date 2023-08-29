@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import chevron from "assets/logos/chevron.svg";
 
 const QuestionFAQ = ({ faqQuestion, etablissement }) => {
@@ -78,7 +77,7 @@ const QuestionFAQ = ({ faqQuestion, etablissement }) => {
           <>
             <div className={visible ? "question visible" : "question"}>
               <h5>{faqQuestion.question}</h5>
-              <img src={chevron} alt="" />
+              <img src={chevron} alt="chevron" loading="lazy" />
             </div>
             <div className={visible ? "answer visible" : "answer"}>
               <p>{faqQuestion.question_answer}</p>
