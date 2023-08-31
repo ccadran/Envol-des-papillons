@@ -14,12 +14,12 @@ const TarifsScolarity = ({
     <section className="tarifs">
       <h3>Les infos sur les tarifs</h3>
       <p>{text}</p>
-      <div className="tarifs-container">
+      <article className="tarifs-container">
         <TarifElement title=" Frais de scolarité " price={scolarity} />
         <TarifElement title="Frais d'inscription " price={inscription} />
         <TarifElement title="Adhésion association" price={association} />
-      </div>
-      <div className="modality">
+      </article>
+      <article className="modality">
         <h4>Modalités de paiement</h4>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, atque
@@ -29,7 +29,7 @@ const TarifsScolarity = ({
         {window.location.pathname.includes("infos-pratiques") && (
           <Button text="J'inscris mon enfant" color="orange" link={link} />
         )}
-      </div>
+      </article>
     </section>
   );
 };

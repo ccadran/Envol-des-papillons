@@ -13,11 +13,11 @@ const RepasCard = ({ title, text }) => {
   }, [title]);
 
   return (
-    <div className="repas-card">
+    <article className="repas-card">
       <h4>{title}</h4>
       <p>{text}</p>
       {!isHidden && <Button text="Le menus de Juin" color="orange" />}
-    </div>
+    </article>
   );
 };
 

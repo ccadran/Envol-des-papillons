@@ -56,7 +56,7 @@ const BlogPost = ({ article, selectedTags }) => {
               : `/${sitePart}/blog/${article._id}`
           }
         >
-          <div className="article">
+          <article className="article">
             <div className="article-info">
               <h4>{article.title}</h4>
               <p>{article.accroche}</p>
@@ -69,7 +69,7 @@ const BlogPost = ({ article, selectedTags }) => {
                 loading="lazy"
               />
             </div>
-          </div>
+          </article>
         </Link>
       </div>
     </>

@@ -7,7 +7,7 @@ const ClasseSchoolPedagogie = ({ classe, teachers }) => {
   const teacherNames = teachers.split("\n");
 
   return (
-    <div className="classe-card">
+    <article className="classe-card">
       <h4>{classe}</h4>
       <PapillonLogo />
       <ul className="teacher-list">
@@ -16,7 +16,7 @@ const ClasseSchoolPedagogie = ({ classe, teachers }) => {
         ))}
       </ul>
       <Button text="Les horaires" color="orange" link="/ecole/presentation" />
-    </div>
+    </article>
   );
 };
 

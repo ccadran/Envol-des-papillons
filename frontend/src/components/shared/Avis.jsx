@@ -4,15 +4,6 @@ import PapillonLogo from "./PapillonLogo";
 import "styles/shared/_avisCards.scss";
 
 const Avis = ({ avi }) => {
-  // const [papillonColor, setPapillonColor] = useState("orange");
-
-  // const colors = ["orange", "blue", "green", "red", "purple"];
-
-  // useEffect(() => {
-  //   const randomColor = colors[Math.floor(Math.random() * colors.length)];
-  //   setPapillonColor(randomColor);
-  // }, []);
-
   const dateFormated = (date) => {
     return new Date(date).toLocaleDateString("fr-FR", {
       day: "numeric",
@@ -27,7 +18,7 @@ const Avis = ({ avi }) => {
   };
 
   return (
-    <div className="avis-card">
+    <article className="avis-card">
       <div className="avis-header">
         <PapillonLogo />
         <div className="avis-header-info">
@@ -45,7 +36,7 @@ const Avis = ({ avi }) => {
       <p id="show-more" onClick={toggleShowFullText}>
         {showFullText ? " Voir -" : "Voir +"}
       </p>
-    </div>
+    </article>
   );
 };
 

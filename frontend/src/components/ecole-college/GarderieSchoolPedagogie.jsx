@@ -9,19 +9,19 @@ const GarderieSchoolPedagogie = () => {
         harum deleniti neque quae voluptates?
       </p>
       <div className="garderie-container">
-        <div className="garderie-element">
+        <article className="garderie-element">
           <h4>Le matin</h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, beatae.
           </p>
-        </div>
-        <div className="garderie-element">
+        </article>
+        <article className="garderie-element">
           <h4>Le soir</h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, beatae.
           </p>
-        </div>
-        <div className="garderie-element">
+        </article>
+        <article className="garderie-element">
           <h4>Modalité de facturation</h4>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
@@ -29,7 +29,7 @@ const GarderieSchoolPedagogie = () => {
             praesentium cumque. Molestias laboriosam dolorem adipisci eius vel,
             voluptate odio earum asperiores!
           </p>
-        </div>
+        </article>
       </div>
     </section>
   );

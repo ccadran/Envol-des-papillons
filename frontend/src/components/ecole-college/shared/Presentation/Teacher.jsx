@@ -4,7 +4,7 @@ import "styles/ecole-college/Presentation/_pedagogicTeam.scss";
 
 const Teacher = ({ teacher }) => {
   return (
-    <div className="teacher-card">
+    <article className="teacher-card">
       <PapillonLogo />
       <div className="name-class">
         <h5>
@@ -17,7 +17,7 @@ const Teacher = ({ teacher }) => {
         Formation Lorem, ipsum dolor sit amet consectetur adipisicing elit.
         Fuga, fugit. Dignissimos, dolores.
       </p>
-    </div>
+    </article>
   );
 };
 

@@ -148,7 +148,7 @@ const ActualityArticle = () => {
           <main>
             <section className="actuality-article">
               <Back link="/admin/actualites" />
-              <div className="article-container-admin">
+              <article className="article-container-admin">
                 <div className="article-header">
                   <div className="article-infos">
                     <div className="form-part">
@@ -261,7 +261,7 @@ const ActualityArticle = () => {
                     <p>{actualityArticle.date}</p>
                   </div>
                 </div>
-              </div>
+              </article>
             </section>
           </main>
         </>
@@ -271,7 +271,7 @@ const ActualityArticle = () => {
           <main>
             <section className="actuality-article">
               <Back link="/parents/actualites" />
-              <div className="article-container">
+              <article className="article-container">
                 <div className="article-header">
                   <div className="article-infos">
                     <h2>{actualityArticle.title}</h2>
@@ -304,7 +304,7 @@ const ActualityArticle = () => {
                     <p> {dateFormated(actualityArticle.createdAt)}</p>
                   </div>
                 </div>
-              </div>
+              </article>
             </section>
           </main>
           <FooterParents />

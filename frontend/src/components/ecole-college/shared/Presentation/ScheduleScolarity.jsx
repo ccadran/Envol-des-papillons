@@ -11,100 +11,100 @@ const ScheduleScolarity = () => {
       case "3-6":
         return (
           <>
-            <div className="schedule-moment">
+            <article className="schedule-moment">
               <h4>8h-8h30 : Garderie</h4>
               <p>Description de l'activité durant la période pour 3-6 ans</p>
-            </div>
-            <div className="schedule-moment">
+            </article>
+            <article className="schedule-moment">
               <h4>8h30-8h45 : Accueil</h4>
               <p>Description de l'activité durant la période pour 3-6 ans</p>
-            </div>
-            <div className="schedule-moment">
+            </article>
+            <article className="schedule-moment">
               <h4>8h45-11h45 : Classe</h4>
               <p>Description de l'activité durant la période pour 3-6 ans</p>
-            </div>
-            <div className="schedule-moment">
+            </article>
+            <article className="schedule-moment">
               <h4>11h45-12h45 : Repas</h4>
               <p>Description de l'activité durant la période pour 3-6 ans</p>
-            </div>
-            <div className="schedule-moment">
+            </article>
+            <article className="schedule-moment">
               <h4>12h45-15h : Repas ou sieste</h4>
               <p>Description de l'activité durant la période pour 3-6 ans</p>
-            </div>
-            <div className="schedule-moment">
+            </article>
+            <article className="schedule-moment">
               <h4>15-16h30 : Classe ou parc</h4>
               <p>Description de l'activité durant la période pour 3-6 ans</p>
-            </div>
-            <div className="schedule-moment">
+            </article>
+            <article className="schedule-moment">
               <h4>16h45-18h15 : Garderie</h4>
               <p>Description de l'activité durant la période pour 3-6 ans</p>
-            </div>
+            </article>
           </>
         );
       case "6-8":
         return (
           <>
-            <div className="schedule-moment">
+            <article className="schedule-moment">
               <h4>8h-8h30 : Garderie</h4>
               <p>Description de l'activité durant la période pour 6-8 ans</p>
-            </div>
-            <div className="schedule-moment">
+            </article>
+            <article className="schedule-moment">
               <h4>8h30-8h45 : Accueil</h4>
               <p>Description de l'activité durant la période pour 6-8 ans</p>
-            </div>
-            <div className="schedule-moment">
+            </article>
+            <article className="schedule-moment">
               <h4>8h45-12h : Classe</h4>
               <p>Description de l'activité durant la période pour 6-8 ans</p>
-            </div>
-            <div className="schedule-moment">
+            </article>
+            <article className="schedule-moment">
               <h4>12h-13h : Repas</h4>
               <p>Description de l'activité durant la période pour 6-8 ans</p>
-            </div>
-            <div className="schedule-moment">
+            </article>
+            <article className="schedule-moment">
               <h4>13h-15h : Parc</h4>
               <p>Description de l'activité durant la période pour 6-8 ans</p>
-            </div>
-            <div className="schedule-moment">
+            </article>
+            <article className="schedule-moment">
               <h4>15h-16h30 : Classe</h4>
               <p>Description de l'activité durant la période pour 6-8 ans</p>
-            </div>
-            <div className="schedule-moment">
+            </article>
+            <article className="schedule-moment">
               <h4>16h45-18h15 : Garderie</h4>
               <p>Description de l'activité durant la période pour 6-8 ans</p>
-            </div>
+            </article>
           </>
         );
       case "8-11":
         return (
           <>
-            <div className="schedule-moment">
+            <article className="schedule-moment">
               <h4>8h-8h30 : Garderie</h4>
               <p>Description de l'activité durant la période pour 8-11 ans</p>
-            </div>
-            <div className="schedule-moment">
+            </article>
+            <article className="schedule-moment">
               <h4>8h30-8h45 : Accueil</h4>
               <p>Description de l'activité durant la période pour 8-11 ans</p>
-            </div>
-            <div className="schedule-moment">
+            </article>
+            <article className="schedule-moment">
               <h4>8h45-12h : Classe</h4>
               <p>Description de l'activité durant la période pour 8-11 ans</p>
-            </div>
-            <div className="schedule-moment">
+            </article>
+            <article className="schedule-moment">
               <h4>12h-13h : Repas</h4>
               <p>Description de l'activité durant la période pour 8-11 ans</p>
-            </div>
-            <div className="schedule-moment">
+            </article>
+            <article className="schedule-moment">
               <h4>13h-15h : Classe</h4>
               <p>Description de l'activité durant la période pour 8-11 ans</p>
-            </div>
-            <div className="schedule-moment">
+            </article>
+            <article className="schedule-moment">
               <h4>15h-16h45 : Parc</h4>
               <p>Description de l'activité durant la période pour 8-11 ans</p>
-            </div>
-            <div className="schedule-moment">
+            </article>
+            <article className="schedule-moment">
               <h4>16h45-18h15 : Garderie</h4>
               <p>Description de l'activité durant la période pour 8-11 ans</p>
-            </div>
+            </article>
           </>
         );
       default:
@@ -121,7 +121,7 @@ const ScheduleScolarity = () => {
         aliquam odio officiis dolorum quis excepturi voluptates molestias iure
         nisi.
       </p>
-      <div className="schedule-container">
+      <article className="schedule-container">
         <div className="schedule-class">
           <h4
             onClick={() => handleClick("3-6")}
@@ -144,7 +144,7 @@ const ScheduleScolarity = () => {
         </div>
         {renderAgenda()}{" "}
         {/* Appeler la fonction pour afficher l'agenda correspondant */}
-      </div>
+      </article>
     </section>
   );
 };

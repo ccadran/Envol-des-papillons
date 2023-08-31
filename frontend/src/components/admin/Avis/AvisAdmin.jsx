@@ -17,7 +17,7 @@ const AvisAdmin = ({ avis }) => {
   };
 
   return (
-    <div className="avis-card-admin">
+    <article className="avis-card-admin">
       <div className="avis-header">
         <div className="author">
           <PapillonLogo />
@@ -33,7 +33,7 @@ const AvisAdmin = ({ avis }) => {
       <div className="avis-content">
         <p>{avis.avis}</p>
       </div>
-    </div>
+    </article>
   );
 };
 

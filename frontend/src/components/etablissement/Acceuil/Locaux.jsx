@@ -7,8 +7,8 @@ const Locaux = () => {
   return (
     <section className="locaux">
       <h3>Des locaux au coeur de Bordeaux</h3>
-      <div className="locaux-container">
-        <div className="locaux-school">
+      <article className="locaux-container">
+        <article className="locaux-school">
           <h4>L'école</h4>
           <div className="local">
             <div className="local-text">
@@ -38,8 +38,8 @@ const Locaux = () => {
               ></iframe>
             </div>
           </div>
-        </div>
-        <div className="locaux-college">
+        </article>
+        <article className="locaux-college">
           <h4>Le collège</h4>
           <div className="local">
             <div className="img-container">
@@ -69,8 +69,8 @@ const Locaux = () => {
               />
             </div>
           </div>
-        </div>
-      </div>
+        </article>
+      </article>
     </section>
   );
 };

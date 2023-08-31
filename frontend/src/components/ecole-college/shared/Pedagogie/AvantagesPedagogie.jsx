@@ -5,7 +5,7 @@ const AvantagesPedagogie = () => {
   return (
     <section className="avantages">
       <h3>Les avantages de la pédagogie</h3>
-      <div className="avantages-container">
+      <article className="avantages-container">
         <AvantagePedagogie
           title="Autonomie"
           text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
@@ -22,7 +22,7 @@ const AvantagesPedagogie = () => {
           title="Pédagogique"
           text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
         />
-      </div>
+      </article>
     </section>
   );
 };

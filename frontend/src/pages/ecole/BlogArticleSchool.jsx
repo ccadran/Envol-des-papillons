@@ -51,7 +51,7 @@ const BlogArticleSchool = () => {
         <main>
           <section className="blog-article">
             <Back link={backUrl} />
-            <div className="article-container">
+            <article className="article-container">
               <div className="article-header">
                 <div className="article-infos">
                   <h2>{blogArticle.title}</h2>
@@ -84,7 +84,7 @@ const BlogArticleSchool = () => {
                   <p> {dateFormated(blogArticle.createdAt)}</p>
                 </div>
               </div>
-            </div>
+            </article>
           </section>
         </main>
         <FooterScolarity etablissement="ecole" />

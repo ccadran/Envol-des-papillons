@@ -6,7 +6,7 @@ const RolesParentsInfos = ({ text }) => {
     <section className="roles-parents">
       <h3>Le role des parents</h3>
       <p>{text}</p>
-      <div className="roles-container">
+      <article className="roles-container">
         <RoleParentsInfos
           title="Les fêtes"
           text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. "
@@ -19,7 +19,7 @@ const RolesParentsInfos = ({ text }) => {
           title="Sortie scolaire"
           text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. "
         />
-      </div>
+      </article>
     </section>
   );
 };

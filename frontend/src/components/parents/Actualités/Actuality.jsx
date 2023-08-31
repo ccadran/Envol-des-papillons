@@ -44,7 +44,7 @@ const Actuality = ({ actuality }) => {
               : `/parents/actualites/${actuality._id}`
           }
         >
-          <div className="article">
+          <article className="article">
             <div className="article-info">
               <h4>{actuality.title}</h4>
               <p>{actuality.accroche}</p>
@@ -57,7 +57,7 @@ const Actuality = ({ actuality }) => {
                 loading="lazy"
               />
             </div>
-          </div>
+          </article>
         </Link>
       </div>
     </>

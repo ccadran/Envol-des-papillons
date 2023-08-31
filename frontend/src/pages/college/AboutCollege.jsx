@@ -18,7 +18,7 @@ const About = () => {
       <main>
         <StylizedH1 h1="Qui sommes-nous ?" />
         <section className="about-us">
-          <div className="history-episode">
+          <article className="history-episode">
             <h3>L'origine</h3>
             <div className="episode-content">
               <p>
@@ -37,8 +37,8 @@ const About = () => {
                 <img src="" alt="img a droite" loading="lazy" />
               </div>
             </div>
-          </div>
-          <div className="history-episode">
+          </article>
+          <article className="history-episode">
             <h3>Les premiers locaux</h3>
             <div className="episode-content">
               <div className="img-container">
@@ -57,8 +57,8 @@ const About = () => {
                 diam sit amet lacinia. Aliquam in elementum tellus.
               </p>
             </div>
-          </div>
-          <div className="history-episode">
+          </article>
+          <article className="history-episode">
             <h3>Déménagement</h3>
             <div className="episode-content">
               <p>
@@ -77,8 +77,8 @@ const About = () => {
                 <img src="" alt="img a droite" loading="lazy" />
               </div>
             </div>
-          </div>
-          <div className="history-episode">
+          </article>
+          <article className="history-episode">
             <h3>L'ouverture du collège</h3>
             <div className="episode-content">
               <div className="img-container">
@@ -97,8 +97,8 @@ const About = () => {
                 diam sit amet lacinia. Aliquam in elementum tellus.
               </p>
             </div>
-          </div>
-          <div className="history-episode">
+          </article>
+          <article className="history-episode">
             <h3>La suite</h3>
             <div className="next">
               <p>
@@ -114,7 +114,7 @@ const About = () => {
                 diam sit amet lacinia. Aliquam in elementum tellus.
               </p>
             </div>
-          </div>
+          </article>
         </section>
       </main>
       <FooterScolarity etablissement="college" />

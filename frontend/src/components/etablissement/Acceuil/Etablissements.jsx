@@ -5,7 +5,7 @@ const Etablissements = () => {
   return (
     <section className="etablissements">
       <h3>Nos établissements</h3>
-      <div className="etablissements-container">
+      <article className="etablissements-container">
         <Etablissement
           title="École"
           text="Per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac sceleris nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.
@@ -20,7 +20,7 @@ const Etablissements = () => {
           color="blue"
           link="/college/presentation"
         />
-      </div>
+      </article>
     </section>
   );
 };

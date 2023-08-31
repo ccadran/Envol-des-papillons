@@ -10,7 +10,7 @@ const RepasInfos = () => {
         recusandae doloribus eveniet ipsa libero tempora voluptatem impedit
         vitae corrupti!
       </p>
-      <div className="repas-container">
+      <article className="repas-container">
         <RepasCard
           title="La lunch box"
           text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.ti sociosq"
@@ -19,7 +19,7 @@ const RepasInfos = () => {
           title="Le traiteur"
           text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.ti sociosq"
         />
-      </div>
+      </article>
     </section>
   );
 };

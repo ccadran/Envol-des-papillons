@@ -11,7 +11,7 @@ const LegalMentions = () => {
         <section className="mentions-legales">
           <StylizedH1 h1="Mentions légales" />
 
-          <div className="legal-content">
+          <article className="legal-content">
             <h2>Définitions</h2>
             <p>
               Client : tout professionnel ou personne physique capable au sens
@@ -443,7 +443,7 @@ const LegalMentions = () => {
               dehors des cas où la loi ne le permet pas, il est fait attribution
               exclusive de juridiction aux tribunaux compétents de Bordeaux
             </p>
-          </div>
+          </article>
         </section>{" "}
       </main>
     </>

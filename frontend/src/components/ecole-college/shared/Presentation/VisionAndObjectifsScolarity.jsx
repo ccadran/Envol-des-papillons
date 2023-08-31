@@ -4,22 +4,22 @@ import React from "react";
 const VisionAndObjectifsScolarity = ({ vision, objectif }) => {
   return (
     <section className="visions-objectifs">
-      <div className="vision-objectifs-container">
+      <article className="vision-objectifs-container">
         <h3>Notre vision</h3>
         <ul>
           {vision.map((item) => (
             <li>{item}</li>
           ))}
         </ul>
-      </div>
-      <div className="vision-objectifs-container">
+      </article>
+      <article className="vision-objectifs-container">
         <h3>Notre vision</h3>
         <ul>
           {objectif.map((item) => (
             <li>{item}</li>
           ))}
         </ul>
-      </div>
+      </article>
     </section>
   );
 };
