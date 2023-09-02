@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Acceuil from "./pages/etablissement/Acceuil";
 import Presentation from "./pages/ecole/Presentation";
 import EcoleRoutes from "./pages/ecole/EcoleRoutes";
 import Blog from "./pages/etablissement/Blog";
@@ -15,13 +14,14 @@ import ScrollToTop from "components/shared/ScrollToTop";
 import InscriptionParent from "pages/etablissement/InscriptionParent";
 import style from "styles/settings.scss";
 import LegalMentions from "./pages/etablissement/legalMentions";
+import Accueil from "pages/etablissement/Accueil";
 const App = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Acceuil />} />
-        <Route path="/etablissement/*" element={<Acceuil />} />
+        <Route path="/" element={<Accueil />} />
+        <Route path="/etablissement/*" element={<Accueil />} />
         <Route path="/ecole/*" element={<EcoleRoutes />} />
         <Route path="/college/*" element={<CollegeRoutes />} />
         <Route path="/etablissement/blog" element={<Blog />} />

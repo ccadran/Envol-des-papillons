@@ -70,7 +70,7 @@ const NavigationParents = ({ etablissement }) => {
           activeClassName="active"
         >
           <PapillonLogo />
-          <li>Acceuil</li>
+          <li>Accueil</li>
         </NavLink>
       </div>
       <div

@@ -75,7 +75,7 @@ const NavigationGlobal = () => {
           activeClassName="active"
         >
           <PapillonLogo />
-          <li>Acceuil</li>
+          <li>Accueil</li>
         </NavLink>
       </div>
       <div
