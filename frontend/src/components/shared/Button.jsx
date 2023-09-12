@@ -4,7 +4,7 @@ import "styles/shared/_button.scss";
 import vector from "assets/logos/Vector.svg";
 import arrow from "assets/logos/arrow.svg";
 
-const Button = ({ color, text, link }) => {
+const Button = ({ color, text, link, newTab, isArrow }) => {
   let backgroundColor;
 
   if (color === "orange") {
@@ -16,11 +16,13 @@ const Button = ({ color, text, link }) => {
   }
 
   return (
-    <Link to={link}>
+    <Link to={link} target={newTab === "yes" ? "_blank" : undefined}>
       <button style={{ background: backgroundColor }}>
         <img src={vector} alt="étoiles" loading="lazy" />
         <h5>{text}</h5>
-        <img src={arrow} alt="flèche" id="arrow" loading="lazy" />
+        {isArrow !== "no" && (
+          <img src={arrow} alt="flèche" id="arrow" loading="lazy" />
+        )}
       </button>
     </Link>
   );
