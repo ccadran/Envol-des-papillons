@@ -104,6 +104,7 @@ footer {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+
         @media screen and (max-width: 440px) {
           flex-direction: column;
         }
@@ -115,7 +116,7 @@ footer {
             content: "";
             position: absolute;
             right: 0;
-            width: 70%;
+            width: 100%; /* Modifier la largeur à 100% */
             transform: scaleX(0);
             height: 2.5px;
             transition: transform 0.2s ease; /* Ajouter une transition pour l'animation */
@@ -130,6 +131,9 @@ footer {
             width: 100%;
             transform: scaleX(1);
             height: 2.5px;
+            @media screen and (max-width: 440px) {
+              width: 40%;
+            }
           }
           &:hover {
             &:after {
