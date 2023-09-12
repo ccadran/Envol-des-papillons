@@ -12,7 +12,7 @@ const Accueil = () => {
   return (
     <>
       <Helmet>
-        <title>accueil - L'envol des papillon</title>
+        <title>Accueil - L'envol des papillons</title>
         <meta
           name="description"
           content="Découvrez L'Envol des Papillons, un établissement accueillant une école Montessori ainsi qu'un collège alternatif, fondée à Bordeaux en 2012, nous offrons une éducation bienveillante et individualisée à un tarif abordable. Éveillez la passion d'apprendre de votre enfant dès aujourd'hui."
