@@ -171,11 +171,7 @@
   }
 }
 .pedagogic-team {
-  @media screen and (max-width: 440px) {
-    margin: 0 -60px;
-  }
   h3 {
     margin-bottom: 72px;
-    // margin: clamp(100px, 20vw, 200px) 60px 72px;
   }
 }
