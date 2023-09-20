@@ -34,12 +34,12 @@ const Presentation = () => {
     imagesLocaux.push({ src: imagesArray[imageKey] });
   }
   const visionPoints = [
-    "Viser le développement de l’enfant dans sa globalité iser le développement de l’enfant dans sa globalité iser le développement de l’enfant dans sa globalité",
-    "Donner les meilleurs chances de réussir",
+    "Nous souhaitons que les enfants grandissent et apprennent en développant des valeurs de respect (de soi, des autres, du matériel), d’autonomie, de confiance en soi, de créativité…, le tout dans un cadre bienveillant et sécurisant.",
   ];
   const objectifPoints = [
-    "Viser le développement de l’enfant dans sa",
-    "Donner les meilleurs chances de ",
+    "Que chacque enfant apprenne à son rythme, sans comparaison ni jugement",
+    "Qu'il s’épanouisse, tant sur le plan émotionnel que social",
+    "Qu'il découvre la vie en collectivité et le travail collaboratif",
   ];
   return (
     <>
@@ -55,11 +55,14 @@ const Presentation = () => {
         <HeroScolarity
           h1="École"
           img={imgHero}
-          text="Qorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. 
+          text="L’école L’envol des papillons a ouvert en septembre 2012 dans le quartier des Chartrons à Bordeaux, avec une classe unique de 3-6 ans.
 
-        Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. 
+          En 2015, sous l’impulsion des parents qui souhaitaient que leurs enfants poursuivent leur scolarité dans l’école, la classe des 6-11 ans a été créée, avec un déménagement dans nos locaux actuels à la clé.
 
-Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur ."
+          A ce jour, l’école compte 3 ambiances : les 3-6 ans, les 6-8 ans et les 8-11 ans, réparties sur les trois niveaux du bâtiment.
+
+          L’école propose également un accueil périscolaire le mercredi    lien
+          "
           color="orange"
           etablissement="ecole"
         />

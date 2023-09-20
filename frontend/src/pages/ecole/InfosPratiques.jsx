@@ -24,7 +24,7 @@ const InfosPratiques = () => {
       <main>
         <H1HeroText
           h1="Infos pratiques"
-          text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.ti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis."
+          text="Comment s’inscrire ? Combien ça coûte ? Est ce qu’il y a une cantine ? La réponse à toutes vos questions… et plus encore !"
         />
         <TarifsScolarity
           text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id a fuga

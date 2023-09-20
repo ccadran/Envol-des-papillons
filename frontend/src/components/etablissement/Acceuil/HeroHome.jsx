@@ -30,13 +30,18 @@ const HeroHome = () => {
           />
         </div>
         <div className="pres-text">
-          <h4>Une méthodologie innovante</h4>
+          <h4>
+            L’envol des papillons, c’est le projet d’une scolarité pas comme les
+            autres.
+          </h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-            nam aliquid! Repudiandae placeat ratione velit nulla, harum
-            consequuntur non earum eveniet expedita, quis voluptate fugit.
-            Facilis nostrum ipsum hic molestiae sapiente temporibus ducimus est,
-            quis, ipsa vero atque consectetur tenetur?
+            Nos objectifs : Encadrer et accompagner nos élèves dans une
+            instruction positive et bienveillante et leur donner les moyens de
+            devenir acteurs de leurs apprentissages. Leur offrir les meilleures
+            chances de concrétiser leurs projets, maitriser leurs choix,
+            s’intégrer et s’épanouir dans le monde. <br />
+            Nous encourageons l’autonomie, le respect, la tolérance, la
+            curiosité… et tellement plus encore !
           </p>
         </div>
       </div>

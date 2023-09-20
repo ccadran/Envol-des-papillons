@@ -6,9 +6,8 @@ const ContactInfo = () => {
   return (
     <div className="contact-info">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta expedita
-        dolores in vero illo maiores perferendis, provident nobis, tempore
-        dolore incidunt suscipit alias non sint quibusdam nostrum id rem! Harum.
+        Pour tout renseignement supplémentaire, vous pouvez nous contacter via
+        ce formulaire.
       </p>
       <div className="contact">
         <a href="mailto:contact@lenvoldespapillons33.com ">
