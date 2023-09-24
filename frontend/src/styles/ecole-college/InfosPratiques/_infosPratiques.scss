@@ -35,13 +35,12 @@
     box-shadow: $box-shadow;
     padding: 22px 30px;
     margin-top: 72px;
+    margin: 72px auto 0 auto;
     h4 {
       margin-bottom: 22px;
     }
     @media screen and (min-width: 1024px) {
-      p {
-        width: 70%;
-      }
+      width: 70%;
     }
   }
 }
@@ -105,6 +104,12 @@
       h4 {
         margin-bottom: 34px;
       }
+    }
+  }
+  .role-obligatoire {
+    margin-top: 58px;
+    h4 {
+      margin-bottom: 34px;
     }
   }
 }
