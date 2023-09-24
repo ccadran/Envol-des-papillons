@@ -14,19 +14,7 @@ const HeroScolarity = ({ h1, img, text, color, etablissement }) => {
         <div className="hero-infos">
           <div className="hero-text">
             <h4>Présentation</h4>
-            <p>
-              L’école L’envol des papillons a ouvert en septembre 2012 dans le
-              quartier des Chartrons à Bordeaux, avec une classe unique de 3-6
-              ans. <br /> <br />
-              En 2015, sous l’impulsion des parents qui souhaitaient que leurs
-              enfants poursuivent leur scolarité dans l’école, la classe des
-              6-11 ans a été créée, avec un déménagement dans nos locaux actuels
-              à la clé.
-              <br />
-              <br />A ce jour, l’école compte 3 ambiances : les 3-6 ans, les 6-8
-              ans et les 8-11 ans, réparties sur les trois niveaux du bâtiment.
-              L’école propose également un accueil périscolaire le mercredi lien
-            </p>
+            <p>{text}</p>
           </div>
           <Button color={color} text="Découvrir l'histoire" link={link} />
         </div>

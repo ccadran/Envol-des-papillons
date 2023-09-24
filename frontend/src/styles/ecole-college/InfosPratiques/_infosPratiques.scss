@@ -23,6 +23,27 @@
       }
     }
   }
+  .traiteur-more-info {
+    margin-top: 58px;
+    h4 {
+      font-size: clamp(18px, 2.5vw, 24px);
+      margin-bottom: 12px;
+    }
+  }
+  .collation {
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: 22px 30px;
+    margin-top: 72px;
+    h4 {
+      margin-bottom: 22px;
+    }
+    @media screen and (min-width: 1024px) {
+      p {
+        width: 70%;
+      }
+    }
+  }
 }
 .garderie {
   .garderie-container {

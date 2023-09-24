@@ -43,6 +43,9 @@ li {
 p {
   font-size: clamp(16px, 2vw, 18px);
   font-family: $body-font;
+  span {
+    font-weight: bold;
+  }
 }
 body {
   font-family: $body-font;

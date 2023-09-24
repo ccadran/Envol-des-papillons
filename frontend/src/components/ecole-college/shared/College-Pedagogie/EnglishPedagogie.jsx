@@ -9,16 +9,7 @@ const EnglishPedagogie = ({ text, image }) => {
     <section className="english">
       <h3>L'importance de l'anglais</h3>
       <div className="english-container" style={containerStyle}>
-        <p>
-          L’anglais est pratiqué <span> deux demi-journées par semaine</span>,
-          avec une personne ne parlant qu’en anglais aux enfants, offrant ainsi
-          une immersion importante.
-          <br />
-          <br />
-          Le matériel utilisé pour développer le vocabulaire des enfants est
-          laissé à leur disposition, leur permettant de retravailler ce qui a
-          été vu. "
-        </p>
+        <p>{text}</p>
         <div className="img-container">
           <img
             src={image}

@@ -22,9 +22,12 @@ const TarifsScolarity = ({
       <article className="modality">
         <h4>Modalités de paiement</h4>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, atque
-          sequi? Sapiente nulla atque reprehenderit veniam amet veritatis quos
-          provident.
+          Vous pouvez régler les frais de scolarité en plusieurs fois (jusqu’à
+          10 fois) par virement le 5 du mois ou par chèque à l’ordre de «
+          Apprendre avec Montessori aujourd’hui ». Tous les chèques doivent être
+          remis en septembre et seront encaissés autour du 5 du mois. Les autres
+          frais sont dus en septembre, ou étalés sur 2 mois si besoin, sauf le
+          sport JOINDRE RIB
         </p>
         {window.location.pathname.includes("infos-pratiques") && (
           <Button text="J'inscris mon enfant" color="orange" link={link} />
