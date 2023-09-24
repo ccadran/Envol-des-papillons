@@ -32,6 +32,16 @@
       }
     }
   }
+  .non-include-fees {
+    margin-top: 72px;
+    li {
+      margin-bottom: 16px;
+      font-family: $body-font;
+      span {
+        font-weight: bold;
+      }
+    }
+  }
   .modality {
     margin-top: 72px;
     h4 {

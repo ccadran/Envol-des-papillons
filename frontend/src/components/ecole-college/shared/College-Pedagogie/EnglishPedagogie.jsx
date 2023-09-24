@@ -7,9 +7,22 @@ const EnglishPedagogie = ({ text, image }) => {
 
   return (
     <section className="english">
-      <h3>L'importance de l'anglais</h3>
+      <h3>L'importance des langues</h3>
       <div className="english-container" style={containerStyle}>
-        <p>{text}</p>
+        <p>
+          <span>L’anglais :</span> nos élèves ont des cours d’anglais à raison
+          d’environ 4h/semaine. Le petit effectif permet une pratique orale de
+          chacun, sans jugement. <br />
+          <br /> <span>L’espagnol :</span> notre deuxième langue est initiée dès
+          la 6ème (1h/semaine) puis les élèves des autres niveaux l’étudient 3h
+          par semaine. <br />
+          <br /> Le collège prévoit l’organisation de séjours linguistiques tous
+          les 2 ans (destination Anglophone ou Hispanique). Les élèves
+          participent activement aux préparatifs. Par exemple, ils choisissent
+          ensemble la destination pour se projeter et s’approprier leur voyage.
+          Ils s’engagent dans des recherches d’aides financières, mènent des
+          projets dans ce sens.
+        </p>
         <div className="img-container">
           <img
             src={image}

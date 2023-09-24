@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import NavigationScolarity from "../../components/ecole-college/shared/NavigationScolarity";
-import HeroScolarity from "../../components/ecole-college/shared/Presentation/HeroScolarity";
-import VisionAndObjectifsScolarity from "../../components/ecole-college/shared/Presentation/VisionAndObjectifsScolarity";
+import VisionAndObjectifsScolarity from "components/ecole-college/shared/College-Presentation/VisionAndObjectifsScolarity";
 import LocalScolarity from "../../components/ecole-college/shared/Presentation/LocalScolarity";
-import ScheduleScolarity from "../../components/ecole-college/shared/Presentation/ScheduleScolarity";
+import ScheduleScolarity from "components/ecole-college/shared/College-Presentation/ScheduleScolarity";
 import PedagogicTeam from "../../components/ecole-college/shared/Presentation/PedagogicTeam";
 import CollegeRoad from "../../components/ecole-college/shared/CollegeRoad";
 import FooterScolarity from "../../components/ecole-college/shared/FooterScolarity";
@@ -14,6 +13,7 @@ import { Helmet } from "react-helmet";
 import imgHero from "assets/img/college-presentation.jpg";
 import imgLocal1 from "assets/img/college-local1.jpg";
 import imgLocal2 from "assets/img/college-local2.jpg";
+import HeroScolarity from "components/ecole-college/shared/College-Presentation/HeroScolarity";
 
 const Presentation = () => {
   const imagesArray = {
@@ -27,14 +27,7 @@ const Presentation = () => {
     const imageKey = `imgLocal${i}`;
     imagesLocaux.push({ src: imagesArray[imageKey] });
   }
-  const visionPoints = [
-    "Viser le développement de l’enfant dans sa globalité",
-    "Donner les meilleurs chances de réussir",
-  ];
-  const objectifPoints = [
-    "Viser le développement de l’enfant dans sa",
-    "Donner les meilleurs chances de ",
-  ];
+
   return (
     <>
       <Helmet>
@@ -57,10 +50,7 @@ Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur ."
           color="blue"
           etablissement="college"
         />
-        <VisionAndObjectifsScolarity
-          vision={visionPoints}
-          objectif={objectifPoints}
-        />
+        <VisionAndObjectifsScolarity />
         <LocalScolarity
           text="Description du local de l'collège blablabfdjsbgfvcjdsnvc jdsfjcdshkfcdsnfcv dujfhcgdsichns"
           images={imagesLocaux}

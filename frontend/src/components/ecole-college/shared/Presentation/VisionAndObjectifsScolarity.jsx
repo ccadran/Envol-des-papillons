@@ -13,7 +13,7 @@ const VisionAndObjectifsScolarity = ({ vision, objectif }) => {
         </ul>
       </article>
       <article className="vision-objectifs-container">
-        <h3>Notre vision</h3>
+        <h3>Nos objectifs</h3>
         <ul>
           {objectif.map((item) => (
             <li>{item}</li>

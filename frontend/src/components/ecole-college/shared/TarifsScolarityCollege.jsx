@@ -2,7 +2,7 @@ import React from "react";
 import TarifElement from "./TarifElement";
 import Button from "../../shared/Button";
 import "styles/ecole-college/shared/_tarifs.scss";
-const TarifsScolarity = ({
+const TarifsScolarityCollege = ({
   text,
   scolarity,
   inscription,
@@ -22,7 +22,7 @@ const TarifsScolarity = ({
       <div className="non-include-fees">
         <ul>
           <li>
-            <span>• Les sorties scolaires :</span> 20€/an
+            <span>• Les sorties scolaires :</span> 30€/an
           </li>
           <li>
             {" "}
@@ -32,11 +32,11 @@ const TarifsScolarity = ({
             environ 45€ sur factures
           </li>
           <li>
-            <span>• Les consommables :</span> 15€ en 3-6 ans et 10€ en
-            élémentaire
+            <span>• Les consommables (mouchoir, sopalin...) :</span> 10€/an
           </li>
           <li>
-            <span>• Les fournitures scolaires en 6-11 ans :</span> 25€/an
+            <span>• Les fournitures et livres scolaires :</span> 70€ la première
+            anée et 55€ les suivantes
           </li>
         </ul>
       </div>
@@ -58,4 +58,4 @@ const TarifsScolarity = ({
   );
 };
 
-export default TarifsScolarity;
+export default TarifsScolarityCollege;

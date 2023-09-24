@@ -5,7 +5,11 @@ const CollegeRoad = ({ text }) => {
   return (
     <section className="school-way">
       <h3>Se rendre au collège</h3>
-      <p>{text}</p>
+      <p>
+        Le collège alternatif l’Envol a trouvé sa place dans un local
+        parfaitement situé au cœur du quartier des Chartrons à Bordeaux (109 bis
+        cours du Médoc),<span> facilement accessible en tram ou en bus.</span>
+      </p>
       <div className="college-road">
         <iframe
           width="100%"

@@ -1,8 +1,8 @@
 import React from "react";
 import NavigationScolarity from "../../components/ecole-college/shared/NavigationScolarity";
 import HeroPedagogie from "../../components/ecole-college/shared/Pedagogie/HeroPedagogie";
-import Materials from "../../components/ecole-college/shared/Pedagogie/Materials";
-import EnglishPedagogie from "../../components/ecole-college/shared/Pedagogie/EnglishPedagogie";
+import Materials from "components/ecole-college/shared/College-Pedagogie/Materials";
+import EnglishPedagogie from "components/ecole-college/shared/College-Pedagogie/EnglishPedagogie";
 import AvantagePedagogie from "../../components/ecole-college/shared/Pedagogie/AvantagePedagogie";
 import FooterScolarity from "../../components/ecole-college/shared/FooterScolarity";
 import AvantagesPedagogie from "../../components/ecole-college/shared/Pedagogie/AvantagesPedagogie";
@@ -12,6 +12,7 @@ import { Helmet } from "react-helmet";
 import imgMaterial1 from "assets/img/college-materials1.jpg";
 import imgMaterial2 from "assets/img/college-materials2.jpg";
 import imgMaterial3 from "assets/img/college-materials3.jpg";
+import Brevet from "components/ecole-college/shared/College-Pedagogie/Brevet";
 
 const Pedagogie = () => {
   const imagesArray = {
@@ -66,6 +67,7 @@ Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti so
 Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus."
           image="path/img"
         />
+        <Brevet />
         <AvantagesPedagogie />
       </main>
       <FooterScolarity etablissement="college" />
