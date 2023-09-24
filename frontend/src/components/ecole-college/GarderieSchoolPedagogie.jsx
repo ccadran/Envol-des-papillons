@@ -6,7 +6,8 @@ const GarderieSchoolPedagogie = () => {
       <h3>La garderie</h3>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo odit
-        harum deleniti neque quae voluptates?
+        harum deleniti neque quae voluptates? TEXTE DESCRIPTIF DE CE QUE FONT
+        LES ENFANTS
       </p>
       <div className="garderie-container">
         <article className="garderie-element">

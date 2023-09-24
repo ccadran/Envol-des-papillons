@@ -9,6 +9,7 @@ import SchoolRoad from "../../components/ecole-college/shared/SchoolRoad";
 import FooterScolarity from "../../components/ecole-college/shared/FooterScolarity";
 import "styles/ecole-college/InfosPratiques/_infosPratiques.scss";
 import { Helmet } from "react-helmet";
+import Periscolaire from "components/ecole-college/shared/InfosPratiques/Periscolaire";
 
 const InfosPratiques = () => {
   return (
@@ -37,6 +38,7 @@ const InfosPratiques = () => {
         />
         <RepasInfos />
         <GarderieSchoolPedagogie />
+        <Periscolaire />
         <RolesParentsInfos
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit optio
         qui recusandae eius labore quas excepturi eaque pariatur officia eos."

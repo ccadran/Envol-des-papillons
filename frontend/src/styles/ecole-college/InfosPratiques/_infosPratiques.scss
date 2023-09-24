@@ -67,6 +67,28 @@
   }
 }
 
+.periscolaire {
+  .periscolaire-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .children {
+      width: 350px;
+      border-radius: $border-radius;
+      box-shadow: $box-shadow;
+      padding: 22px 30px;
+      margin-top: 72px;
+      h5 {
+        margin-bottom: 18px;
+      }
+      li {
+        font-family: $body-font;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
 .roles-parents {
   .roles-container {
     display: flex;
