@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-const FormPreInscription = () => {
+const FormPreInscriptionCollege = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -56,9 +56,10 @@ const FormPreInscription = () => {
         <div className="form-part classe">
           <label>Incription en classe de :</label>
           <select name="classe" id="">
-            <option value="3-6">Incription en 3-6ans</option>
-            <option value="6-8">Incription en 6-8ans</option>
-            <option value="8-11">Incription en 8-11ans</option>
+            <option value="6eme">Incription en 6ème</option>
+            <option value="5eme">Incription en 5ème</option>
+            <option value="4eme">Incription en 4ème</option>
+            <option value="3eme">Incription en 3ème</option>
           </select>
         </div>
         <div className="form-part lastSchool">
@@ -185,4 +186,4 @@ const FormPreInscription = () => {
   );
 };
 
-export default FormPreInscription;
+export default FormPreInscriptionCollege;

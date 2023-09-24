@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../../../shared/Button";
 import FormPreInscription from "./FormPreInscription";
 import { useLocation } from "react-router-dom";
+import FormPreInscriptionCollege from "../College-Inscription/FormPreInscriptionCollege";
 
 const PreInscription = () => {
   const location = useLocation();
@@ -48,7 +49,7 @@ const PreInscription = () => {
         )}
       </div>
       <h4>Formulaire de pré-inscription</h4>
-      <FormPreInscription />
+      {isCollege ? <FormPreInscriptionCollege /> : <FormPreInscription />}
     </section>
   );
 };
