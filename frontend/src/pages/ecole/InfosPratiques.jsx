@@ -28,9 +28,7 @@ const InfosPratiques = () => {
           text="Comment s’inscrire ? Combien ça coûte ? Est ce qu’il y a une cantine ? La réponse à toutes vos questions… et plus encore !"
         />
         <TarifsScolarity
-          text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id a fuga
-        autem? Eos saepe corrupti sint architecto ab pariatur a dolores quas
-        velit aperiam, doloribus, magnam esse rem facilis quisquam."
+          text="Nous essayons de maintenir les tarifs le plus bas possible tout en vous proposant une offre pédagogique de qualité."
           scolarity="380€ /mois"
           inscription="200€"
           association="30€ /an"

@@ -4,19 +4,14 @@ import FormPreInscription from "./FormPreInscription";
 import { useLocation } from "react-router-dom";
 import FormPreInscriptionCollege from "../College-Inscription/FormPreInscriptionCollege";
 
-const PreInscription = () => {
+const PreInscription = ({ text }) => {
   const location = useLocation();
   const isCollege = location.pathname.includes("college");
 
   return (
     <section className="pre-inscription">
       <h3>Pré-inscription</h3>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam
-        temporibus fugiat nemo labore debitis a fuga, aliquam possimus,
-        delectus, deserunt sit iste animi quisquam perferendis earum ad sequi
-        libero eum.
-      </p>
+      <p>{text}</p>
       <div className="download">
         <h4>Replissez ou téléchargez</h4>
         {isCollege ? (

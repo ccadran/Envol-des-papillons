@@ -55,12 +55,10 @@ const Locaux = () => {
             </div>
             <div className="local-text">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-                numquam debitis officia veritatis corporis incidunt ratione est?
-                Praesentium ipsum dolore dolores distinctio, consequatur quidem
-                aliquam ullam at itaque veritatis aspernatur minima! Blanditiis,
-                distinctio accusantium quidem dolor magni est a consequuntur
-                beatae explicabo voluptatibus! Quibusdam, animi.
+                Le collège alternatif l’Envol a trouvé sa place dans un local
+                parfaitement situé au cœur du quartier des Chartrons à Bordeaux
+                (109 bis cours du Médoc),{" "}
+                <span>facilement accessible en tram ou en bus</span>.
               </p>
               <Button
                 color="blue"

@@ -39,7 +39,7 @@ const HeroHome = () => {
             instruction positive et bienveillante et leur donner les moyens de
             devenir acteurs de leurs apprentissages. Leur offrir les meilleures
             chances de concrétiser leurs projets, maitriser leurs choix,
-            s’intégrer et s’épanouir dans le monde. <br />
+            s’intégrer et s’épanouir dans le monde. <br /> <br />
             Nous encourageons l’autonomie, le respect, la tolérance, la
             curiosité… et tellement plus encore !
           </p>

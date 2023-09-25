@@ -7,7 +7,7 @@ const ContactInfo = () => {
     <div className="contact-info">
       <p>
         Pour tout renseignement supplémentaire, vous pouvez nous contacter via
-        ce formulaire.
+        ce formulaire ou avec les informations de contact ci-dessous.
       </p>
       <div className="contact">
         <a href="mailto:contact@lenvoldespapillons33.com ">

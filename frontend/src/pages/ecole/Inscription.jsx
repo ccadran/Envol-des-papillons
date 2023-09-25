@@ -21,23 +21,16 @@ const Inscription = () => {
       <main>
         <H1HeroText
           h1="Inscription"
-          text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.ti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis."
+          text="Découvrez toutes les informations relatives à l'inscription et comprenez facilement toutes les démarches à suivres pour inscrire votre enfant dans notre école Montessori."
         />
         <ModalityInscription />
         <TarifsScolarity
-          text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id a fuga
-        autem? Eos saepe corrupti sint architecto ab pariatur a dolores quas
-        velit aperiam, doloribus, magnam esse rem facilis quisquam."
+          text="Nous essayons de maintenir les tarifs le plus bas possible tout en vous proposant une offre pédagogique de qualité."
           scolarity="380€ /mois"
           inscription="200€"
           association="30€ /an"
         />
-        <PreInscription
-          text=" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam
-        temporibus fugiat nemo labore debitis a fuga, aliquam possimus,
-        delectus, deserunt sit iste animi quisquam perferendis earum ad sequi
-        libero eum."
-        />
+        <PreInscription text="Remplissez notre formulaire de pré-inscription le plus rapidement possible afin d'engager la démarche d'inscription. Vous recevrez un mail confirmant la bonne récéption du formulaire et la directrice vous contactera en suivant afin de planifier un rendez-vous." />
       </main>
       <FooterScolarity etablissement="ecole" />
     </>

@@ -48,7 +48,10 @@ const TarifsScolarity = ({
           Apprendre avec Montessori aujourd’hui ». Tous les chèques doivent être
           remis en septembre et seront encaissés autour du 5 du mois. Les autres
           frais sont dus en septembre, ou étalés sur 2 mois si besoin, sauf le
-          sport JOINDRE RIB
+          sport.
+        </p>
+        <p>
+          Voici le RIB de l'association: <span>RIBBBBB</span>
         </p>
         {window.location.pathname.includes("infos-pratiques") && (
           <Button text="J'inscris mon enfant" color="orange" link={link} />

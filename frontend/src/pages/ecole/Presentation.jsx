@@ -76,7 +76,7 @@ const Presentation = () => {
         />
         <ScheduleScolarity textIntro="text intro du calendrier de l'école " />
         <PedagogicTeam
-          text="text de l'équipe pédagogique de l'école"
+          text="Découvrez l'ensemble des profesionnels qui sont là pour votre enfant au quotidien et font vivre les valeurs de l'établissement."
           etablissement="école"
         />
         <AllAvis etablissement="école" />
