@@ -18,7 +18,7 @@ const PedagogicTeamAdmin = () => {
       <main>
         <H1HeroText
           h1="Équipe pédagogique"
-          text="Gérez l'équipe pédagogique de votre établissement"
+          text="Gérez l'équipe pédagogique de votre établissement."
         />
         <AllTeacher />
       </main>

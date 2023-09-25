@@ -13,7 +13,10 @@ const Avis = () => {
       </Helmet>
       <NavigationAdmin />
       <main>
-        <H1HeroText h1="Avis" text="Gérez les avis de votre établissement" />
+        <H1HeroText
+          h1="Avis"
+          text="Gérez l'ensemble des avis reçus. Supprimez des avis si nécessaire."
+        />
         <AllAvisAdmin />
       </main>
     </>

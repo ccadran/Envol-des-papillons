@@ -13,7 +13,10 @@ const Actualites = () => {
       </Helmet>
       <NavigationAdmin />
       <main>
-        <H1HeroText h1="Actualités" text="Gérez les articles d'actualités" />
+        <H1HeroText
+          h1="Actualités"
+          text="Gérez l'ensemble des articles d'actualités de l'établissement. Ajoutez, modifiez ou supprimez des articles d'actualité."
+        />
         <Actualities />
       </main>
     </>

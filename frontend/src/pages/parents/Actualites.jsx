@@ -18,7 +18,7 @@ const Actualites = () => {
       <main>
         <H2HeroText
           h2="Les dernières actualités"
-          text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
+          text="Suivez régulièrement les articles d'actualités afin d'y découvrir des informations dédiés aux parents, tels que des photos de vos enfants en classe, des événements à venir ou des projets en cours."
         />
         <Actualities />
       </main>

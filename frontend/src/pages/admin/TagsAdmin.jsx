@@ -14,7 +14,10 @@ const Tags = () => {
       </Helmet>
       <NavigationAdmin />
       <main>
-        <H1HeroText h1="Tags" text="Gérez les tags de votre blog" />
+        <H1HeroText
+          h1="Tags"
+          text="Gérez les tags permettant de trier les articles de Blog et d'actualités."
+        />
         <AllTags />
       </main>
     </>

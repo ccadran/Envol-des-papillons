@@ -17,7 +17,7 @@ const Avis = () => {
       <main>
         <H2HeroText
           h2="Laisser un avis"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad  diam sit amet lacinia. Aliquam in elementum tellus."
+          text="Les avis sont un excellent moyen de nous faire part de vos retours sur notre établissement. N'hésitez pas à partager vos impressions et commentaires pour nous aider à nous améliorer."
         />
         <AvisContent />
       </main>

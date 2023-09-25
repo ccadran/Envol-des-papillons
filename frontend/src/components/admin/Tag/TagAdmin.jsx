@@ -61,7 +61,7 @@ const TagAdmin = ({ tag }) => {
           />
         ) : (
           <>
-            <h4>{tag.tag_name}</h4>
+            <h4> {tag.tag_name}</h4>
           </>
         )}
       </div>

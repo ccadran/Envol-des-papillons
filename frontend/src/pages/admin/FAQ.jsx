@@ -14,7 +14,10 @@ const FAQ = () => {
       </Helmet>
       <NavigationAdmin />
       <main>
-        <H1HeroText h1="FAQ" text="Gérez les questions fréquemment posées" />
+        <H1HeroText
+          h1="FAQ"
+          text="Gérez l'ensemble des questions fréquemment posées. Ajoutez, modifiez ou supprimez des questions."
+        />
         <FAQController />
       </main>
     </>

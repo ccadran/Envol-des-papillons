@@ -13,7 +13,10 @@ const Blog = () => {
       </Helmet>
       <NavigationAdmin />
       <main>
-        <H1HeroText h1="Blog" text="Gérez les articles de votre blog" />
+        <H1HeroText
+          h1="Blog"
+          text="Gérez l'ensemble des articles du blog de l'établissement. Ajoutez, modifiez ou supprimez des articles de Blog."
+        />
         <BlogContent />
       </main>
     </>

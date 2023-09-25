@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import NavigationScolarity from "../../components/ecole-college/shared/NavigationScolarity";
 import VisionAndObjectifsScolarity from "components/ecole-college/shared/College-Presentation/VisionAndObjectifsScolarity";
-import LocalScolarity from "../../components/ecole-college/shared/Presentation/LocalScolarity";
+import LocalScolarity from "../../components/ecole-college/shared/College-Presentation/LocalScolarity";
 import ScheduleScolarity from "components/ecole-college/shared/College-Presentation/ScheduleScolarity";
 import PedagogicTeam from "../../components/ecole-college/shared/Presentation/PedagogicTeam";
 import CollegeRoad from "../../components/ecole-college/shared/CollegeRoad";
@@ -57,7 +57,7 @@ Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur ."
         />
         <ScheduleScolarity textIntro="text intro du calendrier de l'collège " />
         <PedagogicTeam
-          text="text de l'équipe pédagogique de l'collège"
+          text="Découvrez l'ensemble des profesionnels qui sont là pour votre enfant au quotidien et font vivre les valeurs du collège."
           etablissement="collège"
         />
         <AllAvis etablissement="collège" />

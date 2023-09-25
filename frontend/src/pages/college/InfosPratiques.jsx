@@ -24,12 +24,14 @@ const InfosPratiques = () => {
       <main>
         <H1HeroText
           h1="Infos pratiques"
-          text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.ti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis."
+          text="Comment s’inscrire ? Combien ça coûte ? Est ce qu’il y a une cantine ? La réponse à toutes vos questions… et plus encore !
+
+          "
         />
         <TarifsScolarityCollege
-          text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id a fuga
-        autem? Eos saepe corrupti sint architecto ab pariatur a dolores quas
-        velit aperiam, doloribus, magnam esse rem facilis quisquam."
+          text="Nous essayons de maintenir les tarifs le plus bas possible tout en vous proposant une offre pédagogique de qualité.
+
+          "
           scolarity="430€ /mois"
           inscription="200€"
           association="30€ /an"

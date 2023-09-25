@@ -17,7 +17,7 @@ const Evenements = () => {
       <main>
         <H2HeroText
           h2="Le calendrier des événements"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad  diam sit amet lacinia. Aliquam in elementum tellus."
+          text="A partir de cette page, rendez vous sur notre calendrier en ligne pour découvrir les événements à venir, les sorties scolaires, les réunions parents-professeurs, les fêtes de fin d'année..."
         />
         <div className="events-container">
           <iframe

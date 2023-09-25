@@ -14,7 +14,7 @@ const NewTag = () => {
       </Helmet>
       <NavigationAdmin />
       <main>
-        <Back link="/admin/blog" />
+        <Back link="/admin/tags" />
         <div className="intro">
           <h4>Ajouter un tag</h4>
           <p>

@@ -16,7 +16,7 @@ const MailParent = () => {
       <main>
         <H1HeroText
           h1="Mails des parents"
-          text="Gestion des mails des parents"
+          text="Gérez les mails des parents. Un mail ajouté pourra permettre de créer un compte parent. N'oubliez pas de supprimer le mail lorsque l'enfant ne fais plus partie de l'établissement."
         />
         <MailController />
       </main>
