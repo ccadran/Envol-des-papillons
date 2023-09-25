@@ -4,7 +4,7 @@ import AvantagePedagogie from "./AvantagePedagogie";
 const AvantagesPedagogie = () => {
   return (
     <section className="avantages">
-      <h3>Les avantages de la pédagogie</h3>
+      <h3>Les avantages de la pédagogie college</h3>
       <article className="avantages-container">
         <AvantagePedagogie
           title="Autonomie"

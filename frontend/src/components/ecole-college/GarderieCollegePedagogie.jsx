@@ -9,7 +9,7 @@ const GarderieCollegePedagogie = () => {
         accompagné à l’école pour bénéficier de l’accueil périscolaire du soir
         jusqu’à 18h15.
       </p>
-      <div className="garderie-container">
+      <div className="garderie-college-container">
         <article className="garderie-element">
           <p>En voici les tarifs :</p>
           <ul>
