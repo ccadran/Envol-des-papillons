@@ -39,11 +39,11 @@ const FormPreInscription = () => {
       <form ref={form} onSubmit={sendEmail}>
         <div className="form-part lastname">
           <label>Nom de l'élève</label>
-          <input type="text" name="lastName" placeholder="Doe" required />
+          <input type="text" name="lastName" placeholder="Nom" required />
         </div>
         <div className="form-part firstName">
           <label>Prénom de l'élève</label>
-          <input type="text" name="firstName" placeholder="John" required />
+          <input type="text" name="firstName" placeholder="Prénom" required />
         </div>
         <div className="form-part bornDate">
           <label>Date de naissance</label>
@@ -78,7 +78,7 @@ const FormPreInscription = () => {
               <input
                 type="text"
                 name="lastName_tuteur1"
-                placeholder="Nom du tuteur 1"
+                placeholder="Nom "
                 required
               />
             </div>
@@ -87,7 +87,7 @@ const FormPreInscription = () => {
               <input
                 type="text"
                 name="firstName_tuteur1"
-                placeholder="Prénom du tuteur 1"
+                placeholder="Prénom "
                 required
               />
             </div>
@@ -96,7 +96,7 @@ const FormPreInscription = () => {
               <input
                 type="email"
                 name="email_tuteur1"
-                placeholder="Prénom du tuteur 1"
+                placeholder="Email "
                 required
               />
             </div>
@@ -105,7 +105,7 @@ const FormPreInscription = () => {
               <input
                 type="text"
                 name="adress_tuteur1"
-                placeholder="Adresse du tuteur 1"
+                placeholder="Adresse postale"
                 required
               />
             </div>
@@ -114,7 +114,7 @@ const FormPreInscription = () => {
               <input
                 type="text"
                 name="phone_tuteur1"
-                placeholder="Téléphone du tuteur 1"
+                placeholder=" Numéro de téléphone "
                 required
               />
             </div>
@@ -125,7 +125,7 @@ const FormPreInscription = () => {
               <input
                 type="text"
                 name="lastName_tuteur2"
-                placeholder="Nom du tuteur 2"
+                placeholder="Nom "
                 required
               />
             </div>
@@ -134,7 +134,7 @@ const FormPreInscription = () => {
               <input
                 type="text"
                 name="firstName_tuteur2"
-                placeholder="Prénom du tuteur 2"
+                placeholder="Prénom "
                 required
               />
             </div>
@@ -143,7 +143,7 @@ const FormPreInscription = () => {
               <input
                 type="email"
                 name="email_tuteur2"
-                placeholder="Prénom du tuteur 2"
+                placeholder="Email"
                 required
               />
             </div>
@@ -152,7 +152,7 @@ const FormPreInscription = () => {
               <input
                 type="text"
                 name="adress_tuteur2"
-                placeholder="Adresse du tuteur 2"
+                placeholder="Adresse postale"
                 required
               />
             </div>
@@ -161,7 +161,7 @@ const FormPreInscription = () => {
               <input
                 type="text"
                 name="phone_tuteur2"
-                placeholder="Téléphone du tuteur 2"
+                placeholder="Numéro de téléphone"
                 required
               />
             </div>
