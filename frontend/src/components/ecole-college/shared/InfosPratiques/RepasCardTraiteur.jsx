@@ -18,11 +18,14 @@ const RepasCard = ({ title, text }) => {
       <p>
         {" "}
         Nous fonctionnons avec un traiteur spécialisé dans les repas pour
-        enfants, <a href="">«Papilles de petits»</a> qui fournit des repas
-        équilibrés, frais et variés chaque jour, avec une formule végétarienne
-        possible.
+        enfants,{" "}
+        <a href="https://papilles-des-petits.eatbu.com/?lang=fr">
+          «Papilles de petits»
+        </a>{" "}
+        qui fournit des repas équilibrés, frais et variés chaque jour, avec une
+        formule végétarienne possible.
       </p>
-      {!isHidden && <Button text="Le menus de Juin" color="orange" />}
+      {/* {!isHidden && <Button text="Le menus de Juin" color="orange" />} */}
     </article>
   );
 };

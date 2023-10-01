@@ -4,7 +4,7 @@ import RoleParentsInfos from "./RoleParentsInfos";
 const RolesParentsInfos = ({ text }) => {
   return (
     <section className="roles-parents">
-      <h3>Le role des parents</h3>
+      <h3>Le rôle des parents</h3>
       <p>{text}</p>
       <article className="roles-container">
         <RoleParentsInfos

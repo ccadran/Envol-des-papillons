@@ -41,7 +41,12 @@ const InfosPratiques = () => {
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit optio
         qui recusandae eius labore quas excepturi eaque pariatur officia eos."
         />
-        <SchoolRoad text="texte de se rendre à l'école" />
+        <SchoolRoad
+          text="  L’école est située dans le quartier des Chartrons à Bordeaux
+                (125 cours Journu Auber), à 15-20’ du centre de Bordeaux,
+                facilement accessible en tram (ligne C – Arrêt Grand Parc) ou en
+                bus (liane 5)."
+        />
       </main>
       <FooterScolarity etablissement="ecole" />
     </>

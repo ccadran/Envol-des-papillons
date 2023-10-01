@@ -21,7 +21,7 @@ const RepasInfos = () => {
       <article className="repas-container">
         <RepasCard
           title="La lunch box"
-          text="votre enfant apporte chaque jour son repas dans une boite hermétique maintenant au chaud (pas de réchauffage sur place)"
+          text="Votre enfant apporte chaque jour son repas dans une boite hermétique maintenant au chaud (pas de réchauffage sur place)"
         />
         <RepasCardTraiteur title="Le traiteur" />
       </article>

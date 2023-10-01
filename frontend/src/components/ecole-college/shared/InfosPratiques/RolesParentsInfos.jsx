@@ -4,7 +4,7 @@ import RoleParentsInfos from "./RoleParentsInfos";
 const RolesParentsInfos = ({ text }) => {
   return (
     <section className="roles-parents">
-      <h3>Le role des parents</h3>
+      <h3>Le rôle des parents</h3>
       <p>
         L’ensemble scolaire alternatif « L’envol des papillons » est géré par
         une association loi 1901 à but non lucratif avec le statut d’école
@@ -18,26 +18,25 @@ const RolesParentsInfos = ({ text }) => {
       <article className="roles-container">
         <RoleParentsInfos
           title="Les fêtes"
-          text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. "
+          text="Deux fêtes ont lieu chaque année : en décembre et en juin. Nous avons besoin de votre aide pour leur organisation, la tenue des stands de la kermesse, la recherche de lots pour la tombola, l’aide à l’installation …"
         />
         <RoleParentsInfos
           title="Nettoyage"
-          text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. "
+          text="  Nous demandons que chaque famille participe au nettoyage du matériel
+pédagogique : ce temps a lieu le samedi matin de 9h à 12h (un par an
+par enfant). Un planning est mis en place en début d’année pour que
+vous puissiez vous inscrire à l’une des sessions de nettoyage (une
+toutes les 6 semaines). "
         />
         <RoleParentsInfos
           title="Sortie scolaire"
-          text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. "
+          text="Les enseignantes sont susceptibles de vous solliciter pour accompagner les enfants lors des sorties scolaires ponctuelles. La demande sera faite par mail.
+"
         />
       </article>
       <div className="role-obligatoire">
         <h4>Obligatoire : </h4>
         <p>
-          Nous demandons que chaque famille participe au nettoyage du matériel
-          pédagogique : ce temps a lieu le samedi matin de 9h à 12h (un par an
-          par enfant). Un planning est mis en place en début d’année pour que
-          vous puissiez vous inscrire à l’une des sessions de nettoyage (une
-          toutes les 6 semaines). <br />
-          <br />
           Si une famille ne peut pas participer (ou ne veut pas), nous
           souhaitons qu’elle fasse un don de 50€ à l’association que nous
           pourrons déduire d’une cotisation pour ceux qui le feraient plus

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Periscolaire() {
   return (
-    <section className="periscolaire">
+    <section className="periscolaire" id="periscolaire">
       <h3>Périscolaire (Mercredi)</h3>
       <p>
         L’école propose aux enfants de l’école un temps d’accueil ludique le
