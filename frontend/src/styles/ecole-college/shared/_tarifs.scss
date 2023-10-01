@@ -11,12 +11,13 @@
       max-height: 300px;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       padding: 22px 25px 35px;
       box-shadow: $box-shadow;
       border-radius: $border-radius;
       h4 {
         margin-bottom: 26px;
-        white-space: nowrap;
+        white-space: wrap;
         @media screen and (max-width: 640px) {
           margin-bottom: 16px;
         }

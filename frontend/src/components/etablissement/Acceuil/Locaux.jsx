@@ -13,12 +13,10 @@ const Locaux = () => {
           <div className="local">
             <div className="local-text">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ea
-                quae perspiciatis obcaecati similique impedit, facere fugit quia
-                dicta. Inventore commodi neque, iure eius cumque iusto autem ex!
-                Nisi voluptate explicabo minus optio rem culpa et quasi vitae!
-                Repudiandae tenetur architecto recusandae, alias asperiores
-                modi!
+                L’école est située dans le quartier des Chartrons à Bordeaux
+                (125 cours Journu Auber), à 15-20’ du centre de Bordeaux,
+                facilement accessible en tram (ligne C – Arrêt Grand Parc) ou en
+                bus (liane 5).
               </p>
               <Button
                 color="orange"

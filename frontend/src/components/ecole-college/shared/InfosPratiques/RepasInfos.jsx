@@ -1,5 +1,6 @@
 import React from "react";
 import RepasCard from "./RepasCard";
+import RepasCardTraiteur from "./RepasCardTraiteur";
 
 const RepasInfos = () => {
   return (
@@ -22,10 +23,7 @@ const RepasInfos = () => {
           title="La lunch box"
           text="votre enfant apporte chaque jour son repas dans une boite hermétique maintenant au chaud (pas de réchauffage sur place)"
         />
-        <RepasCard
-          title="Le traiteur"
-          text="nous fonctionnons avec un traiteur spécialisé dans les repas pour enfants, «Papilles de petits» qui fournit des repas équilibrés, frais et variés chaque jour, avec une formule végétarienne possible."
-        />
+        <RepasCardTraiteur title="Le traiteur" />
       </article>
       <article className="traiteur-more-info">
         <h4>En savoir plus sur le traiteur</h4>

@@ -8,7 +8,22 @@ const LocalScolarity = ({ text, images }) => {
     <section className="local" id="local">
       <h3>Un local au coeur de Bordeaux</h3>
       <div className="local-container">
-        <p>{text}</p>
+        <p>
+          L’école est située dans le quartier des Chartrons à Bordeaux (125
+          cours Journu Auber), à 15-20’ du centre de Bordeaux,{" "}
+          <span>facilement accessible en tram</span> (ligne C – Arrêt Grand
+          Parc) ou en bus (liane 5). <br />
+          <br />
+          Les <span>classes</span>, très lumineuses, sont équipées de tout le{" "}
+          <span>matériel Montessori</span>, accessible aux élèves pour
+          manipuler, apprendre, découvrir… <br />
+          <br />
+          Un <span>petit parc </span>(parc de la Grenouillère) à proximité de
+          l’école leur permet de s’aérer en toute sécurité, ainsi que le Jardin
+          public, et de nombreuses sorties sont organisées pour leur permettre
+          de bouger, découvrir et changer d’air ! Les élèves ne sont pas limités
+          à cet espace.
+        </p>
         <div className="caroussel-container">
           <SingleCaroussel images={images} />
         </div>

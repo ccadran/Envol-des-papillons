@@ -29,9 +29,9 @@ const InfosPratiques = () => {
         />
         <TarifsScolarity
           text="Nous essayons de maintenir les tarifs le plus bas possible tout en vous proposant une offre pédagogique de qualité."
-          scolarity="380€ /mois"
+          scolarity="400€ /mois"
           inscription="200€"
-          association="30€ /an"
+          association="20€+150€ /an"
           etablissement="ecole"
         />
         <RepasInfos />

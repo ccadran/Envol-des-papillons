@@ -12,52 +12,62 @@ const ScheduleScolarity = () => {
         return (
           <>
             <article className="schedule-moment">
-              <h4>8h-8h30 : Garderie</h4>
-              <p>Description de l'activité durant la période pour 3-6 ans</p>
-            </article>
-            <article className="schedule-moment">
               <h4>8h30-8h45 : Accueil</h4>
               <p>
                 C’est le moment où l’on investit la classe, on se dit bonjour,
                 on se retrouve…et on se met au travail. Afin de ne pas perturber
-                la concentration des enfants débutant leur activité, l’horaire
-                d’arrivée ne doit pas excéder 8h45.
+                la concentration des enfants débutant leur activité,{" "}
+                <span>l’horaire d’arrivée ne doit pas excéder 8h45</span>.
               </p>
             </article>
             <article className="schedule-moment">
               <h4>8h45-11h45 : Classe</h4>
               <p>
-                C’est le moment où l’on investit la classe, on se dit bonjour,
-                on se retrouve…et on se met au travail. Afin de ne pas perturber
-                la concentration des enfants débutant leur activité, l’horaire
-                d’arrivée ne doit pas excéder 8h45.
+                Dans la matinée, il y a un temps de
+                <span> regroupement</span> pour les rituels de date, météo…
+                C’est un moment pour raconter les activités culturelles ou
+                ludiques vécues en famille. C’est aussi un temps de chansons,
+                comptines, lecture d’albums. Ce rituel est effectué{" "}
+                <span>un jour/deux en anglais</span>. <br /> Par ailleurs, les
+                enfants travaillent avec le
+                <span> matériel Montessori</span> selon un temps de travail
+                personnalisé en fonction de{" "}
+                <span>l’évolution et du rythme de chacun</span>. L’enfant
+                travaille seul, en petit groupe ou avec les éducatrices pour une
+                présentation du matériel.
               </p>
             </article>
             <article className="schedule-moment">
-              <h4>12h-15h : Repas & pause</h4>
+              <h4>12h-15h : Repas & parc</h4>
               <p>
                 Les enfants déjeunent dans la classe avec leur repas ou celui du
-                traiteur (en savoir + sur l’organisation des repas) La sieste
-                est proposée aux plus jeunes, pendant que les autres élèves se
-                rendent au parc de la Grenouillère ou au Jardin public pour un
-                temps de jeux libres.
+                traiteur (
+                <a href="/ecole/infos-pratiques">
+                  en savoir + sur l’organisation des repas
+                </a>
+                ) La sieste est proposée aux plus jeunes, pendant que les autres
+                élèves se rendent au parc de la Grenouillère ou au Jardin public
+                pour un temps de jeux libres.
               </p>
             </article>
             <article className="schedule-moment">
-              <h4>15h-16h30 : Classe & pause</h4>
+              <h4>15h-16h30 : Classe </h4>
               <p>
                 Les élèves qui ont dormi vont jouer au parc de la Grenouillère.
-                Pour les autres, retour à l’école pour une reprise des activités
+                Pour les autres, retour à l’école pour une{" "}
+                <span>reprise des activités</span>
                 dans la classe. L’après-midi est consacré principalement aux
-                matières culturelles.
+                <span> matières culturelles</span>.
               </p>
             </article>
             <article className="schedule-moment">
-              <h4>16h30-18h15 : Classe ou parc</h4>
+              <h4>16h30-18h15 : Garderie</h4>
               <p>
-                Accueil périscolaire (garderie) dans la salle du rdc. Si votre
-                enfant reste à la garderie, il faut lui prévoir un goûter. Vous
-                le récupérez à l’heure qui vous convient.
+                L'accueil périscolaire (
+                <a href="/ecole/infos-pratiques">garderie</a>) s'effectue dans
+                la salle du rdv. Si votre enfant reste à la garderie, il faut
+                lui prévoir un goûter. Vous le récupérez à l’heure qui vous
+                convient.
               </p>
             </article>
           </>
@@ -71,44 +81,50 @@ const ScheduleScolarity = () => {
                 C’est le moment où l’on investit la classe, on se dit bonjour,
                 on se retrouve…et on se met au travail avec différents rituels.
                 Afin de ne pas perturber la concentration des enfants débutant
-                leur activité, l’horaire d’arrivée ne doit pas excéder 8h45.
+                leur activité,
+                <span> l’horaire d’arrivée ne doit pas excéder 8h45</span>.
               </p>
             </article>
             <article className="schedule-moment">
               <h4>8h45-11h45 : Classe</h4>
               <p>
-                La matinée débute par un temps de regroupement de 15-20’. Le
-                matin, la concentration des enfants étant optimale, même si elle
-                fluctue selon les heures, le travail est donc essentiellement
-                consacré aux matières dites fondamentales (maths et français).
+                La matinée débute par un <span>temps de regroupement </span>de
+                15-20’. Le matin, la concentration des enfants étant optimale,
+                même si elle fluctue selon les heures, le travail est donc
+                essentiellement consacré aux{" "}
+                <span>matières dites fondamentales</span> (maths et français).
               </p>
             </article>
             <article className="schedule-moment">
               <h4>12h-14h45 : Classe & parc</h4>
               <p>
                 Les enfants déjeunent dans les classes avec leur repas ou celui
-                du traiteur (en savoir + sur l’organisation des repas). Ils
-                partent ensuite en récréation.
+                du traiteur (
+                <a href="/ecole/infos-pratiques">
+                  en savoir + sur l’organisation des repas
+                </a>
+                ). Ils partent ensuite en récréation.
               </p>
             </article>
             <article className="schedule-moment">
               <h4>14h45-16h30 : Classe</h4>
               <p>
-                Au retour de la récréation, un petit temps calme est le bienvenu
-                avant de reprendre la classe. Les élèves sont ensuite répartis
-                en demi-groupes et travaillent autour de matières telles que
-                l’histoire, la géographie, la botanique, la zoologie. L’art
-                plastique et le sport sont faits en groupe entier.
+                Au retour de la récréation, un petit <span>temps calme</span>{" "}
+                est le bienvenu avant de reprendre la classe. Les élèves sont
+                ensuite répartis en <span>demi-groupes</span> et travaillent
+                autour de matières telles que l’histoire, la géographie, la
+                botanique, la zoologie. L’art plastique et le sport sont faits
+                en groupe entier.
               </p>
             </article>
             <article className="schedule-moment">
               <h4>16h30-18h15 : Garderie</h4>
               <p>
-                Au retour de la récréation, un petit temps calme est le bienvenu
-                avant de reprendre la classe. Les élèves sont ensuite répartis
-                en demi-groupes et travaillent autour de matières telles que
-                l’histoire, la géographie, la botanique, la zoologie. L’art
-                plastique et le sport sont faits en groupe entier.
+                L'accueil périscolaire (
+                <a href="/ecole/infos-pratiques">garderie</a>) s'effectue dans
+                la salle du premier étage. Si votre enfant reste à la garderie,
+                il faut lui prévoir un goûter. Vous le récupérez à l’heure qui
+                vous convient.
               </p>
             </article>
           </>
@@ -117,49 +133,51 @@ const ScheduleScolarity = () => {
         return (
           <>
             <article className="schedule-moment">
-              <h4>8h30-8h45 : Garderie</h4>
+              <h4>8h30-8h45 : Accueil</h4>
               <p>
                 C’est le moment où l’on investit la classe, on se dit bonjour,
-                on se retrouve…et on se met au travail avec différents rituels.
-                Afin de ne pas perturber la concentration des enfants débutant
-                leur activité, l’horaire d’arrivée ne doit pas excéder 8h45.
+                on se retrouve…et on se met au travail. Afin de ne pas perturber
+                la concentration des enfants débutant leur activité,{" "}
+                <span>l’horaire d’arrivée ne doit pas excéder 8h45</span>.
               </p>
             </article>
             <article className="schedule-moment">
-              <h4>8h45-11h45 : Classe</h4>
+              <h4>8h45-12h : Classe</h4>
               <p>
-                C’est le moment où l’on investit la classe, on se dit bonjour,
-                on se retrouve…et on se met au travail avec différents rituels.
-                Afin de ne pas perturber la concentration des enfants débutant
-                leur activité, l’horaire d’arrivée ne doit pas excéder 8h45.
+                La matinée débute par{" "}
+                <span>un temps de regroupement de 15-20’</span>. Le matin, la
+                concentration des enfants est optimale, même si elle fluctue
+                selon les heures, le travail est donc essentiellement consacré
+                aux <span>matières dites fondamentales</span> (maths et
+                français).
               </p>
             </article>
             <article className="schedule-moment">
-              <h4>12h-14h45 : Repas & Parc</h4>
+              <h4>12h-15h : Repas & Classe</h4>
               <p>
                 Les enfants déjeunent dans les classes avec leur repas ou celui
-                du traiteur (en savoir + sur l’organisation des repas). Ils
-                partent ensuite en récréation.
+                du traiteur (
+                <a href="/ecole/infos-pratiques">
+                  en savoir + sur l’organisation des repas
+                </a>
+                ). Après le déjeuner, les enfants sont partagés en deux groupes
+                pour aborder les programmes d’histoire, de géographie et de
+                sciences ainsi que l’anglais 2 fois/semaine. Le sport et l’art
+                plastique sont réalisés en groupe entier.
               </p>
             </article>
             <article className="schedule-moment">
-              <h4>14h45-16h30 : Classe</h4>
-              <p>
-                Au retour de la récréation, un petit temps calme est le bienvenu
-                avant de reprendre la classe. Les élèves sont ensuite répartis
-                en demi-groupes et travaillent autour de matières telles que
-                l’histoire, la géographie, la botanique, la zoologie. L’art
-                plastique et le sport sont faits en groupe entier.
-              </p>
+              <h4>15h-16h45 : Parc</h4>
+              <p>Fin des activités et sortie au parc.</p>
             </article>
             <article className="schedule-moment">
-              <h4>16h30-18h15 : Garderie</h4>
+              <h4>16h45-18h15 : Garderie</h4>
               <p>
-                Au retour de la récréation, un petit temps calme est le bienvenu
-                avant de reprendre la classe. Les élèves sont ensuite répartis
-                en demi-groupes et travaillent autour de matières telles que
-                l’histoire, la géographie, la botanique, la zoologie. L’art
-                plastique et le sport sont faits en groupe entier.
+                L'accueil périscolaire (
+                <a href="/ecole/infos-pratiques">garderie</a>) s'effectue dans
+                la salle du premier étage. Si votre enfant reste à la garderie,
+                il faut lui prévoir un goûter. Vous le récupérez à l’heure qui
+                vous convient.
               </p>
             </article>
           </>

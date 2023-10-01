@@ -1,21 +1,20 @@
 import React from "react";
-import Etablissement from "./Etablissement";
+import EtablissementSchool from "./EtablissementSchool";
+import EtablissementCollege from "./EtablissementCollege";
 
 const Etablissements = () => {
   return (
     <section className="etablissements">
       <h3>Nos établissements</h3>
       <article className="etablissements-container">
-        <Etablissement
+        <EtablissementSchool
           title="École"
-          text="Per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac sceleris nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.
-"
           color="orange"
           link="/ecole/presentation"
         />
-        <Etablissement
+        <EtablissementCollege
           title="Collège"
-          text="Per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac sceleris nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.
+          text="L’école L’envol des papillons, présente depuis plus de 10 ans à Bordeaux dans le quartier des Chartrons, accueille vos enfants de 3 à 12 ans. L’ensemble de l’équipe, formée à la pédagogie Montessori, accompagne vos enfants avec bienveillance et apporte le cadre nécessaire à l’épanouissement de vos enfants.
 "
           color="blue"
           link="/college/presentation"
