@@ -11,6 +11,7 @@ import { Helmet } from "react-helmet";
 import imgMaterial1 from "assets/img/college-materials1.jpg";
 import imgMaterial2 from "assets/img/college-materials2.jpg";
 import imgMaterial3 from "assets/img/college-materials3.jpg";
+import imgEnglish from "assets/img/college-english.jpg";
 import Brevet from "components/ecole-college/shared/College-Pedagogie/Brevet";
 
 const Pedagogie = () => {
@@ -50,7 +51,7 @@ const Pedagogie = () => {
 Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. 
 
 Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus."
-          image="path/img"
+          image={imgEnglish}
         />
         <Brevet />
       </main>
