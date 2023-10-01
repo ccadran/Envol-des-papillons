@@ -19,50 +19,41 @@ const ScheduleScolarity = () => {
           <h4>Journée Type : </h4>
         </div>
         <article className="schedule-moment">
-          <h4>8h20: Ouvertire du collège</h4>
+          <h4>8h20: Ouverture du collège</h4>
           <p>
-            texte descriptif
-            {/* C’est le moment où l’on investit la classe, on se dit bonjour, on se
-            retrouve…et on se met au travail avec différents rituels. Afin de ne
-            pas perturber la concentration des enfants débutant leur activité,
-            l’horaire d’arrivée ne doit pas excéder 8h45. */}
+            Si vous avez besoin de déposer votre enfant avant, il peut se rendre
+            à l’école L’envol des papillons toute proche à partir de 8h.
           </p>
         </article>
         <article className="schedule-moment">
           <h4>8h30/9h - 12h30 : Classe</h4>
           <p>
-            C’est le moment où l’on investit la classe, on se dit bonjour, on se
-            retrouve…et on se met au travail avec différents rituels. Afin de ne
-            pas perturber la concentration des enfants débutant leur activité,
-            l’horaire d’arrivée ne doit pas excéder 8h45.
+            Les élèves ont en moyenne 3 cours dans la matinée, avec une ou deux
+            pauses.
           </p>
         </article>
         <article className="schedule-moment">
           <h4>12h30-13h30 : Pause déjeuner </h4>
           <p>
-            Les enfants déjeunent dans les classes avec leur repas ou celui du
-            traiteur (en savoir + sur l’organisation des repas). Ils partent
-            ensuite en récréation.
+            Les élèves peuvent manger au collège (traiteur ou lunch box) ou
+            peuvent sortir manger à l’extérieur. Le collège rouvre 10’ avant la
+            reprise des cours.
           </p>
         </article>
         <article className="schedule-moment">
           <h4>13h30 - 15h : Classe</h4>
           <p>
-            Au retour de la récréation, un petit temps calme est le bienvenu
-            avant de reprendre la classe. Les élèves sont ensuite répartis en
-            demi-groupes et travaillent autour de matières telles que
-            l’histoire, la géographie, la botanique, la zoologie. L’art
-            plastique et le sport sont faits en groupe entier.
+            Le début d’après-midi, il y a essentiellement les cours de langues,
+            et le vendredi ont lieu les cours d’art et d’histoire de l’art.
           </p>
         </article>
         <article className="schedule-moment">
           <h4>15h00 - 17h00 : Projets ou Sport</h4>
           <p>
-            Au retour de la récréation, un petit temps calme est le bienvenu
-            avant de reprendre la classe. Les élèves sont ensuite répartis en
-            demi-groupes et travaillent autour de matières telles que
-            l’histoire, la géographie, la botanique, la zoologie. L’art
-            plastique et le sport sont faits en groupe entier.
+            Les lundi et jeudi sont consacrés aux “projets” et sorties
+            scolaires. Le vendredi après-midi est réservé au sport, avec des
+            cycles de différents sports (athlétisme, patin à glace, sports
+            collectifs…)
           </p>
         </article>
       </article>

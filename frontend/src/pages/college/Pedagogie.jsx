@@ -53,7 +53,6 @@ Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel 
           image="path/img"
         />
         <Brevet />
-        <AvantagesPedagogie />
       </main>
       <FooterScolarity etablissement="college" />
     </>

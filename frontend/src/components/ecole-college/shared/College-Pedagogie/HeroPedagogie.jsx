@@ -16,19 +16,11 @@ const HeroPedagogie = ({ h1, title, text, image }) => {
         <div className="hero-text">
           <h4>{title}</h4>
           <p>
-            {" "}
-            (pas vrai text) Le collège L’envol des papillons est une école
-            alternative fonctionnant principalement avec la pédagogie de Maria
-            Montessori, tout particulièrement en maternelle. <br /> En
-            élémentaire, nous utilisons également d’autres méthodes, qui nous
-            permettent de correspondre au mieux aux différents profils
-            d’enfants.
-            <br />
-            <br />
-            L’écoute, l’harmonie, la créativité et la confiance en soi…
-            l’adaptation aux besoins fondamentaux des enfants sont au cœur de
-            notre projet, tout cela dans le respect du socle commun de
-            l’Education Nationale.
+            Le collège souhaite rester fidèle aux valeurs de l’école d’origine :
+            <span>écoute, harmonie, créativité et confiance en soi</span>.
+            L’adaptation aux besoins fondamentaux des enfants et des adolescents
+            est au cœur du projet du collège, tout cela dans le{" "}
+            <span> respect du socle commun de l’Education Nationale</span>.
           </p>
         </div>
       </div>

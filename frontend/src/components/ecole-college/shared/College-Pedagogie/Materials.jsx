@@ -1,25 +1,25 @@
 import React from "react";
 import SingleCaroussel from "../../../shared/SingleCaroussel";
 
-const Materials = ({ text, images }) => {
+const Professeurs = ({ text, images }) => {
   return (
-    <section className="materials">
-      <h3>Un matériel adapté</h3>
-      <div className="materials-container">
+    <section className="professeurs">
+      <h3>Des professeurs impliqués</h3>
+      <div className="professeurs-container">
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
-          similique non enim fugiat deleniti ut qui commodi doloremque,
-          doloribus neque at sit fugit, nisi culpa quisquam quo quod corporis
-          laboriosam obcaecati. Sapiente quo enim nemo dignissimos autem odio
-          sed incidunt rerum numquam sint! Earum sequi qui optio aliquam
-          voluptatem laboriosam.
+          Les professeurs exerçant dans notre établissement sont pour certains
+          professeurs dans d’autres collèges ou lycées de l’agglomération
+          bordelaise, ou venant d’autres horizons. Ils suivent les préceptes de
+          notre établissement, notamment en donnant <span>peu de devoirs</span>{" "}
+          et en <span>évaluant de façon épisodique et respectueuse</span>.
+          <br />
+          <br />
+          Ils font cours <span>à tous les niveaux</span>, ce qui leur permet de
+          suivre au plus près les élèves et de bien les connaître.
         </p>
-        <div className="caroussel-container">
-          <SingleCaroussel images={images} />
-        </div>
       </div>
     </section>
   );
 };
 
-export default Materials;
+export default Professeurs;

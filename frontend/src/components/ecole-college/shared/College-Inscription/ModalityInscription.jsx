@@ -22,8 +22,8 @@ const ModalityInscription = () => {
           préinscription.
         </li>
         <li>
-          4. Un <span>essai de 2 jours</span> est à effectuer avant toute
-          inscription définitive : cet essai sert autant à l’enfant qu’à
+          4. Un <span>essai de 2 jours minimum</span> est à effectuer avant
+          toute inscription définitive : cet essai sert autant à l’enfant qu’à
           l’équipe pédagogique. Nous vous dirons ensuite si nous pouvons
           accueillir votre enfant.
         </li>

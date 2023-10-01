@@ -6,6 +6,7 @@ import TarifsScolarity from "../../components/ecole-college/shared/TarifsScolari
 import FooterScolarity from "../../components/ecole-college/shared/FooterScolarity";
 import { Helmet } from "react-helmet";
 import PreInscription from "components/ecole-college/shared/Inscription/PreInscription";
+import TarifsScolarityCollege from "components/ecole-college/shared/TarifsScolarityCollege";
 const Inscription = () => {
   return (
     <>
@@ -23,12 +24,12 @@ const Inscription = () => {
           text="Découvrez toutes les informations relatives à l'inscription et comprenez facilement toutes les démarches à suivres pour inscrire votre enfant dans notre collège alternatif."
         />
         <ModalityInscription />
-        <TarifsScolarity
+        <TarifsScolarityCollege
           text="Nous essayons de maintenir les tarifs le plus bas possible tout en vous proposant une offre pédagogique de qualité.
         "
-          scolarity="430€ /mois"
+          scolarity="460€ /mois"
           inscription="200€"
-          association="30€ /an"
+          association="20€+150€ /an"
         />
         <PreInscription text="Remplissez notre formulaire de pré-inscription le plus rapidement possible afin d'engager la démarche d'inscription. En suivant vous recevrez un mail confirmant la bonne récéption du formulaire et la directrice vous contactera sous un délai d'une semaine afin de planifier un rendez-vous." />
       </main>

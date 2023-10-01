@@ -8,19 +8,16 @@ const AvantagesPedagogie = () => {
       <article className="avantages-container">
         <AvantagePedagogie
           title="Autonomie"
-          text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
+          text="Le matériel pédagogique Montessori est en grande partie auto-correctif, favorisant l’autonomie des enfants. Le matériel de vie pratique leur permet de s’exercer aux gestes de la vie quotidienne. 
+          "
         />
         <AvantagePedagogie
-          title="Ce'ntré sur l'enfant"
-          text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
+          title="Centré sur l'enfant"
+          text="Tout est mis en place pour permettre l’épanouissement des enfants. Le matériel est à leur hauteur, disponible et attrayant. Les enfants sont libres de circuler dans la classe, d’observer ce que font les autres, à partir du moment où ils ne dérangent pas le travail des autres enfants."
         />
         <AvantagePedagogie
           title="Inclusif"
-          text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
-        />
-        <AvantagePedagogie
-          title="Pédagogique"
-          text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
+          text="L’école accueille des enfants ayant des difficultés scolaires ou en situation de handicap lorsque nous pensons que cela relève de nos compétences. Le fonctionnement d’une classe Montessori peut leur permettre de s’épanouir. "
         />
       </article>
     </section>

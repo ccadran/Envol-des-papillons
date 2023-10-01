@@ -32,9 +32,9 @@ const InfosPratiques = () => {
           text="Nous essayons de maintenir les tarifs le plus bas possible tout en vous proposant une offre pédagogique de qualité.
 
           "
-          scolarity="430€ /mois"
+          scolarity="460€ /mois"
           inscription="200€"
-          association="30€ /an"
+          association="20€+150€ /an"
           etablissement="college"
         />
         <GarderieCollegePedagogie />

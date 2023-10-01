@@ -12,12 +12,25 @@ const TarifsScolarityCollege = ({
   const link = `/${etablissement}/inscription`;
   return (
     <section className="tarifs">
-      <h3>Les infos sur les tarifs</h3>
+      <h3>Les infos sur les tarifs </h3>
       <p>{text}</p>
       <article className="tarifs-container">
-        <TarifElement title=" Frais de scolarité " price={scolarity} />
-        <TarifElement title="Frais d'inscription " price={inscription} />
-        <TarifElement title="Adhésion association" price={association} />
+        <TarifElement
+          title=" Frais de scolarité "
+          price={scolarity}
+          text="Les frais de scolarité doivent être réglés en début de mois. Une réduction s’applique au 2ème enfant."
+        />
+        <TarifElement
+          title="Frais d'inscription "
+          price={inscription}
+          text="Ils sont dus à l’entrée au collège. Une réduction s’applique au 2ème enfant."
+        />
+        <TarifElement
+          title="Adhésion + frais administratif"
+          price={association}
+          text="Ces frais sont à régler chaque année au mois de septembre. Une réduction s’applique au 2ème enfant.
+"
+        />
       </article>
       <div className="non-include-fees">
         <ul>
@@ -51,7 +64,10 @@ const TarifsScolarityCollege = ({
           sport.
         </p>
         <p>
-          Voici le RIB de l'association: <span>RIBBBBB</span>
+          Voici le RIB de l'association:{" "}
+          <span>FR76 1558 9335 4407 6444 6128 018</span> <br />
+          <br />
+          Ainsi que son BIC : <span>CMBRFR2BXXX</span>
         </p>
         {window.location.pathname.includes("infos-pratiques") && (
           <Button text="J'inscris mon enfant" color="orange" link={link} />
