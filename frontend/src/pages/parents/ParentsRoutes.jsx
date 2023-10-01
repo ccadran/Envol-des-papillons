@@ -32,7 +32,7 @@ const ParentsRoutes = () => {
         <Route path="/actualites" element={<Actualites />} />
         <Route path="/actualites/:id" element={<ActualityArticle />} />
         <Route path="/evenements" element={<Evenements />} />
-        <Route path="/menus" element={<Menus />} />
+        {/* <Route path="/menus" element={<Menus />} /> */}
         <Route path="/avis" element={<Avis />} />
       </Routes>
     </>

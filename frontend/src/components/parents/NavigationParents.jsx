@@ -91,13 +91,13 @@ const NavigationParents = ({ etablissement }) => {
           >
             <li>Événements</li>
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to={`/parents/menus`}
             className="nav-link"
             activeClassName="active"
           >
             <li>Menus</li>
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to={`/parents/avis`}
             className="nav-link"

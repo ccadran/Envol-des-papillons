@@ -5,6 +5,7 @@ import ParentsContent from "../../components/parents/menus&events/ParentsContent
 import FooterParents from "components/parents/FooterParents";
 import "styles/parents/Evenements/_evenements.scss";
 import { Helmet } from "react-helmet";
+import Button from "components/shared/Button";
 
 const Evenements = () => {
   return (
@@ -19,6 +20,17 @@ const Evenements = () => {
           h2="Le calendrier des événements"
           text="A partir de cette page, rendez vous sur notre calendrier en ligne pour découvrir les événements à venir, les sorties scolaires, les réunions parents-professeurs, les fêtes de fin d'année..."
         />
+        <div className="add-schedule">
+          <p>
+            Vous pouvez <span>ajouter l'agenda</span> à votre compte Goggle en
+            cliquant sur le Bouton ci-dessous.
+          </p>
+          <Button
+            text="Ajouter le calendrier"
+            color="violet"
+            link="https://calendar.google.com/calendar/u/5/r?cid=bW9udGVzc29yaWxlbnZvbGRlc3BhcGlsbG9uc0BnbWFpbC5jb20"
+          />
+        </div>
         <div className="events-container">
           <iframe
             className="events"

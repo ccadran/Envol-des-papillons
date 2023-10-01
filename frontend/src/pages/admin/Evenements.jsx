@@ -2,6 +2,7 @@ import React from "react";
 import NavigationAdmin from "../../components/admin/NavigationAdmin";
 import H1HeroText from "../../components/shared/H1HeroText";
 import { Helmet } from "react-helmet";
+import Button from "components/shared/Button";
 
 const Evenements = () => {
   return (

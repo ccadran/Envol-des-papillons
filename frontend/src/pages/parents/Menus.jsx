@@ -16,7 +16,7 @@ const Menus = () => {
       <main>
         <H2HeroText
           h2="Les menus de vos enfants"
-          text="Le menu mensuel proposé par notre traiteur partenaire spécialisé pour enfants : «Papilles de petits» . Découvrez les repas préparés pour vos enfants au quotidien."
+          text="Les menus hebdomadaires de vos enfants vous seront communiqués par mail à l'avance. Voici ci-dessous "
         />
         <ParentsContent section="menus" />
       </main>

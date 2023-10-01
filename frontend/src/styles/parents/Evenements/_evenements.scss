@@ -1,5 +1,12 @@
 @import "../../variables.scss";
 
+.add-schedule {
+  margin-top: 72px;
+  p {
+    margin-bottom: 34px;
+  }
+}
+
 .events-container {
   display: flex;
   justify-content: center;
