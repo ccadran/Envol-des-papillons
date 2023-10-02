@@ -1,10 +1,28 @@
 import React from "react";
-import logo from "../../assets/logos/papillon.svg";
+import logoViolet from "../../assets/logos/papillon.svg";
+import logoBlue from "../../assets/logos/papillonBlue.svg";
+import logoCorail from "../../assets/logos/papillonCorail.svg";
 
 const PapillonLogo = ({ color }) => {
+  let logoSrc;
+
+  switch (color) {
+    case "violet":
+      logoSrc = logoViolet;
+      break;
+    case "blue":
+      logoSrc = logoBlue;
+      break;
+    case "orange":
+      logoSrc = logoCorail;
+      break;
+    default:
+      logoSrc = logoViolet;
+  }
+
   return (
     <img
-      src={logo}
+      src={logoSrc}
       alt="Papillon"
       style={{ fill: color }}
       id="papillon"

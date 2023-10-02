@@ -5,7 +5,7 @@ import PapillonLogo from "../../shared/PapillonLogo";
 const EtablissementCollege = ({ title, text, color, link }) => {
   return (
     <article className="etablissement-card">
-      <PapillonLogo color="orange" />
+      <PapillonLogo color="blue" />
       <h4>{title}</h4>
       <p>
         Le collège alternatif L’envol, ouvert depuis 2020, accueille vos élèves

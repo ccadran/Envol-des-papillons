@@ -117,6 +117,7 @@
       max-width: 420px;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       padding: 22px 34px;
       border-radius: $border-radius;
       box-shadow: $box-shadow;
@@ -132,6 +133,7 @@
       }
       button {
         margin-left: auto;
+        margin-top: auto;
       }
     }
   }
