@@ -11,7 +11,7 @@ const FooterScolarity = ({ etablissement }) => {
       <div className="main-nav">
         <ul>
           <NavLink to="/ecole/presentation">
-            <PapillonLogo />
+            <PapillonLogo color="orange" />
             <h5
               className={`nav-link ${
                 location.pathname.includes("/ecole") ? "active" : ""
@@ -22,7 +22,7 @@ const FooterScolarity = ({ etablissement }) => {
           </NavLink>
           <NavLink to="/college/presentation">
             {" "}
-            <PapillonLogo />
+            <PapillonLogo color="blue" />
             <h5
               className={`nav-link ${
                 location.pathname.includes("/college") ? "active" : ""
@@ -36,7 +36,7 @@ const FooterScolarity = ({ etablissement }) => {
             className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
           >
             {" "}
-            <PapillonLogo />
+            <PapillonLogo color="violet" />
             <h5
               className={`nav-link ${
                 location.pathname.includes("/etablissement") ? "active" : ""

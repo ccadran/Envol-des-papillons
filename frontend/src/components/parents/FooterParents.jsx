@@ -12,7 +12,7 @@ const FooterParents = ({ etablissement }) => {
       <div className="main-nav">
         <ul>
           <NavLink to="/ecole/presentation">
-            <PapillonLogo />
+            <PapillonLogo color="orange" />
             <h5
               className={`nav-link ${
                 location.pathname.includes("/ecole") ? "active" : ""
@@ -23,7 +23,7 @@ const FooterParents = ({ etablissement }) => {
           </NavLink>
           <NavLink to="/college/presentation">
             {" "}
-            <PapillonLogo />
+            <PapillonLogo color="blue" />
             <h5
               className={`nav-link ${
                 location.pathname.includes("/college") ? "active" : ""
@@ -37,7 +37,7 @@ const FooterParents = ({ etablissement }) => {
             //
           >
             {" "}
-            <PapillonLogo />
+            <PapillonLogo color="violet" />
             <h5
               className={`nav-link ${
                 location.pathname.includes("/etablissement") ? "active" : ""
