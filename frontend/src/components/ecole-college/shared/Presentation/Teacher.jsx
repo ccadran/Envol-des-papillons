@@ -13,10 +13,7 @@ const Teacher = ({ teacher }) => {
         <p>{teacher.classe}</p>
       </div>
       <h5>{teacher.poste}</h5>
-      <p>
-        Formation Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Fuga, fugit. Dignissimos, dolores.
-      </p>
+      <p>{teacher.formation}</p>
     </article>
   );
 };
