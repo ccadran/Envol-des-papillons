@@ -28,8 +28,6 @@ const AdminRoutes = () => {
     if (!token) {
       // If the token does not exist, navigate to ConnexionAdmins
       navigate("/admin/connexion-admin");
-    } else {
-      navigate("/admin/blog");
     }
     // Add 'token' to the dependency array to re-run the effect when the token changes.
   }, [navigate]);
@@ -40,6 +38,7 @@ const AdminRoutes = () => {
       </Helmet>
       <Routes>
         <Route path="/connexion-admin" element={<ConnexionAdmin />} />
+        <Route path="/admin" element={<Blog />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogArticle />} />
         <Route path="/blog/new-article" element={<NewArticle />} />

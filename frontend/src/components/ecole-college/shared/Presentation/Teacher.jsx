@@ -5,7 +5,11 @@ import "styles/ecole-college/Presentation/_pedagogicTeam.scss";
 const Teacher = ({ teacher }) => {
   return (
     <article className="teacher-card">
-      <PapillonLogo />
+      {teacher.etablissement === "école" ? (
+        <PapillonLogo color="orange" />
+      ) : (
+        <PapillonLogo color="blue" />
+      )}
       <div className="name-class">
         <h5>
           {teacher.firstName} {teacher.lastName}

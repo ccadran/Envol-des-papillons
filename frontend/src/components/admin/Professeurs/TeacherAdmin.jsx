@@ -77,7 +77,7 @@ const TeachersAdmin = ({ teacher }) => {
             value={poste}
             onChange={(e) => setPoste(e.target.value)}
           />
-          <input
+          <textarea
             type="text"
             value={formation}
             onChange={(e) => setFormation(e.target.value)}
