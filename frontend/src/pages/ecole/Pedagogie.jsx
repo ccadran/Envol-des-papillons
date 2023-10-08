@@ -51,10 +51,6 @@ const Pedagogie = () => {
         <HeroPedagogie
           h1="Notre pédagogie"
           title="Une pédagogie à l'écoute de l'enfant"
-          text="L’école L’envol des papillons est une école alternative fonctionnant principalement avec la pédagogie de Maria Montessori, tout particulièrement en maternelle. En élémentaire, nous utilisons également d’autres méthodes, qui nous permettent de correspondre au mieux aux différents profils d’enfants. 
-          
-L’écoute, l’harmonie, la créativité et la confiance en soi… l’adaptation aux besoins fondamentaux des enfants sont au cœur de notre projet, tout cela dans le respect du socle commun de l’Education Nationale.
-"
           image={imgPedagogie}
         />
         <Materials

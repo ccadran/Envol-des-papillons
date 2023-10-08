@@ -21,7 +21,7 @@ const Inscription = () => {
       <main>
         <H1HeroText
           h1="Inscription"
-          text="Découvrez toutes les informations relatives à l'inscription et comprenez facilement toutes les démarches à suivres pour inscrire votre enfant dans notre école Montessori."
+          text="Découvrez toutes les informations relatives à l'inscription et comprenez facilement toutes les démarches à suivre pour inscrire votre enfant dans notre école Montessori."
         />
         <ModalityInscription />
         <TarifsScolarity

@@ -43,7 +43,7 @@ const InfosPratiques = () => {
         />
         <SchoolRoad
           text="  L’école est située dans le quartier des Chartrons à Bordeaux
-                (125 cours Journu Auber), à 15-20’ du centre de Bordeaux,
+                (125 cours Journu Auber), à 15’ du centre de Bordeaux,
                 facilement accessible en tram (ligne C – Arrêt Grand Parc) ou en
                 bus (liane 5)."
         />

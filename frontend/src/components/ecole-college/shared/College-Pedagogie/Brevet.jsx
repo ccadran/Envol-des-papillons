@@ -4,17 +4,17 @@ export default function Brevet() {
       <h3>Le brevet</h3>
       <p>
         Etant un collège hors contrat, les élèves ne peuvent bénéficier du
-        contrôle continu. Ils sont donc évalués uniquement sur les épreuves du
-        mois de juin, le tout sur 400 points : <br />
+        contrôle continu. Ils sont donc évalués uniquement sur les épreuves
+        brevet de fin d'année, le tout sur <span>400 points</span> : <br />
         <br />
-        Français (3 heures) : 100 points <br /> <br />
-        Mathématiques (2 heures) : 100 points <br />
+        <span>Français</span> (3 heures) : 100 points <br /> <br />
+        <span>Mathématiques</span> (2 heures) : 100 points <br />
         <br />
-        Histoire-géographie (2 heures) : 50 points <br />
+        <span>Histoire-géographie</span> (2 heures) : 50 points <br />
         <br />
-        Sciences (2 matières entre physique, svt et technologie) 1 heure : 50
-        points <br />
-        <br /> Anglais (1 heure) : 100 points <br />
+        <span>Sciences</span> (2 matières tirées au sort entre physique, svt et
+        technologie) 1 heure : 50 points <br />
+        <br /> <span>Anglais</span> (1 heure) : 100 points <br />
         <br /> L’inscription est faite par la direction. <br />
         <br /> Nos élèves le passent au collège Edouard Vaillant, proche du
         collège.

@@ -17,16 +17,18 @@ const HeroPedagogie = ({ h1, title, text, image }) => {
           <h4>{title}</h4>
           <p>
             L’école L’envol des papillons est une école alternative fonctionnant
-            principalement avec la pédagogie de Maria Montessori, tout
-            particulièrement en maternelle. <br /> En élémentaire, nous
+            principalement avec la pédagogie de <span> Maria Montessori</span>,
+            tout particulièrement en maternelle. <br /> En élémentaire, nous
             utilisons également d’autres méthodes, qui nous permettent de
-            correspondre au mieux aux différents profils d’enfants.
+            correspondre au mieux aux différents profils des enfants.
             <br />
             <br />
-            L’écoute, l’harmonie, la créativité et la confiance en soi…
+            <span>
+              L’écoute, l’harmonie, la créativité et la confiance en soi…
+            </span>
             l’adaptation aux besoins fondamentaux des enfants sont au cœur de
             notre projet, tout cela dans le respect du socle commun de
-            l’Education Nationale.
+            connaissances de l’Education Nationale.
           </p>
         </div>
       </div>

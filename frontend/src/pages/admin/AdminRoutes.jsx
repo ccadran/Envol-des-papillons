@@ -28,6 +28,8 @@ const AdminRoutes = () => {
     if (!token) {
       // If the token does not exist, navigate to ConnexionAdmins
       navigate("/admin/connexion-admin");
+    } else {
+      navigate("/admin/blog");
     }
     // Add 'token' to the dependency array to re-run the effect when the token changes.
   }, [navigate]);

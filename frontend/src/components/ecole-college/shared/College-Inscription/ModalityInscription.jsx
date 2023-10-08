@@ -28,9 +28,9 @@ const ModalityInscription = () => {
           accueillir votre enfant.
         </li>
         <li>
-          5. Dès la confirmation d’une place pour votre enfant, vous devrez vous
-          acquitter des frais d’inscription (200€) permettant de bloquer
-          définitivement la place, et ensuite remettre le{" "}
+          5. Dès la confirmation d’une place pour votre enfant, vous devrez{" "}
+          <span>vous acquitter des frais d’inscription</span> (200€) permettant
+          de bloquer définitivement la place, et ensuite remettre le{" "}
           <span>dossier d’inscription</span> complet début juin.
         </li>
       </ol>

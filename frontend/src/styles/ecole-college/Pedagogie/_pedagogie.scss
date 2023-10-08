@@ -185,8 +185,11 @@
     justify-content: space-between;
 
     .avantage-card {
-      max-width: 300px;
+      max-width: 350px;
       margin: 20px;
+      padding: 20px;
+      border-radius: $border-radius;
+      box-shadow: $box-shadow;
       h4 {
         margin-bottom: 20px;
       }

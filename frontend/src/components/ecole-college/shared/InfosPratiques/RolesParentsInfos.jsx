@@ -1,7 +1,9 @@
 import React from "react";
 import RoleParentsInfos from "./RoleParentsInfos";
+import { useLocation } from "react-router-dom";
 
 const RolesParentsInfos = ({ text }) => {
+  const location = useLocation();
   return (
     <section className="roles-parents">
       <h3>Le rôle des parents</h3>
@@ -34,15 +36,18 @@ toutes les 6 semaines). "
 "
         />
       </article>
-      <div className="role-obligatoire">
-        <h4>Obligatoire : </h4>
-        <p>
-          Si une famille ne peut pas participer (ou ne veut pas), nous
-          souhaitons qu’elle fasse un don de 50€ à l’association que nous
-          pourrons déduire d’une cotisation pour ceux qui le feraient plus
-          souvent. Cette décision a été votée en assemblée générale.
-        </p>
-      </div>
+      {location.pathname.includes("ecole") && (
+        <div className="role-obligatoire">
+          <h4>Obligatoire : </h4>
+          <p>
+            Si une famille ne peut pas participer au temps de nettoyage (ou ne
+            veut pas), nous souhaitons qu’elle fasse un don de 50€ à
+            l’association que nous pourrons déduire d’une cotisation pour ceux
+            qui le feraient plus souvent. Cette décision a été votée en
+            assemblée générale.
+          </p>
+        </div>
+      )}
     </section>
   );
 };

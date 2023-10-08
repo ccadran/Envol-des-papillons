@@ -26,13 +26,14 @@ const TarifsScolarityCollege = ({
           text="Ils sont dus à l’entrée au collège. Une réduction s’applique au 2ème enfant."
         />
         <TarifElement
-          title="Adhésion + frais administratif"
+          title="Adhésion + frais administratifs"
           price={association}
           text="Ces frais sont à régler chaque année au mois de septembre. Une réduction s’applique au 2ème enfant.
 "
         />
       </article>
       <div className="non-include-fees">
+        <h4>En supplément :</h4>
         <ul>
           <li>
             <span>• Les sorties scolaires :</span> 30€/an
@@ -49,7 +50,7 @@ const TarifsScolarityCollege = ({
           </li>
           <li>
             <span>• Les fournitures et livres scolaires :</span> 70€ la première
-            anée et 55€ les suivantes
+            année et 45€ les suivantes
           </li>
         </ul>
       </div>

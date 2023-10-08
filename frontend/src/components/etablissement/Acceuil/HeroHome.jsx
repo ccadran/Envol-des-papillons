@@ -8,7 +8,7 @@ const HeroHome = () => {
       <div className="hero-banner">
         <div className="hero-text">
           <h1>L'envol des papillons</h1>
-          <p id="sub-hero">École & Collège Montessori</p>
+          <p id="sub-hero">École & Collège d'inspiration Montessori</p>
           <p id="catch-phrase">
             L'école alternative dont votre enfant a besoin
           </p>

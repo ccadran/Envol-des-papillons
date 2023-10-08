@@ -137,6 +137,9 @@
       display: flex;
       flex-wrap: wrap;
       margin-bottom: 36px;
+      h4 {
+        color: $blue;
+      }
       .classe {
         margin-right: 20px;
         background: $corail;

@@ -17,7 +17,7 @@ const EnglishPedagogie = ({ text, image }) => {
           <br />
           Le matériel utilisé pour développer le vocabulaire des enfants est
           laissé à leur disposition, leur permettant de retravailler ce qui a
-          été vu. "
+          été vu.
         </p>
         <div className="img-container">
           <img

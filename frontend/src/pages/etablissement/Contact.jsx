@@ -27,7 +27,7 @@ const Contact = () => {
         <NavigationScolarity etablissement={desiredPart} />
       )}{" "}
       <main>
-        <StylizedH1 h1="Contactez Nous" />
+        <StylizedH1 h1="Contactez-nous" />
         <section className="contact-container">
           <ContactInfo />
           <ContactForm />

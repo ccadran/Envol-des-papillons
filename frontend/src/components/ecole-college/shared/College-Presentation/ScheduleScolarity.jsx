@@ -43,8 +43,9 @@ const ScheduleScolarity = () => {
         <article className="schedule-moment">
           <h4>13h30 - 15h : Classe</h4>
           <p>
-            Le début d’après-midi, il y a essentiellement les cours de langues,
-            et le vendredi ont lieu les cours d’art et d’histoire de l’art.
+            1h30 de cours avant de terminer la journée avec les projets ou le
+            sport (vendredi). <br /> Seul l'après midi du mardi est enièrement
+            consacré à des cours.
           </p>
         </article>
         <article className="schedule-moment">

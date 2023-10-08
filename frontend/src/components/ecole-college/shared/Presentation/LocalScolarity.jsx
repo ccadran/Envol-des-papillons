@@ -10,7 +10,7 @@ const LocalScolarity = ({ text, images }) => {
       <div className="local-container">
         <p>
           L’école est située dans le quartier des Chartrons à Bordeaux (125
-          cours Journu Auber), à 15-20’ du centre de Bordeaux,{" "}
+          cours Journu Auber), à 15’ du centre de Bordeaux,{" "}
           <span>facilement accessible en tram</span> (ligne C – Arrêt Grand
           Parc) ou en bus (liane 5). <br />
           <br />

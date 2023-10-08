@@ -119,6 +119,15 @@ const FormPreInscriptionCollege = () => {
                 required
               />
             </div>
+            <div className="form-part">
+              <label>Profession du tuteur 1</label>
+              <input
+                type="text"
+                name="profession_tuteur1"
+                placeholder=" Profession  "
+                required
+              />
+            </div>
           </div>
           <div className="tuteur2">
             <div className="form-part">
@@ -163,6 +172,15 @@ const FormPreInscriptionCollege = () => {
                 type="text"
                 name="phone_tuteur2"
                 placeholder="Numéro de téléphone"
+                required
+              />
+            </div>
+            <div className="form-part">
+              <label>Profession du tuteur 2</label>
+              <input
+                type="text"
+                name="profession_tuteur"
+                placeholder=" Profession  "
                 required
               />
             </div>

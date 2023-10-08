@@ -8,7 +8,7 @@ const EtablissementCollege = ({ title, text, color, link }) => {
       <PapillonLogo color="blue" />
       <h4>{title}</h4>
       <p>
-        Le collège alternatif L’envol, ouvert depuis 2020, accueille vos élèves
+        Le collège alternatif L’envol, ouvert depuis 2020, accueille vos enfants
         de la sixième à la troisième. Les classes comptent au maximum une
         douzaine d'élèves, permettant de les accompagner au mieux en fonction de
         leurs besoins.

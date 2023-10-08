@@ -45,9 +45,9 @@ const ScheduleScolarity = () => {
                 <a href="/ecole/infos-pratiques">
                   en savoir + sur l’organisation des repas
                 </a>
-                ) La sieste est proposée aux plus jeunes, pendant que les autres
-                élèves se rendent au parc de la Grenouillère ou au Jardin public
-                pour un temps de jeux libres.
+                ). Après le repas, la sieste est proposée aux plus jeunes,
+                pendant que les autres élèves se rendent au parc de la
+                Grenouillère ou au Jardin public pour un temps de jeux libres.
               </p>
             </article>
             <article className="schedule-moment">
@@ -55,9 +55,13 @@ const ScheduleScolarity = () => {
               <p>
                 Les élèves qui ont dormi vont jouer au parc de la Grenouillère.
                 Pour les autres, retour à l’école pour une{" "}
-                <span>reprise des activités</span>
+                <span>reprise des activités </span>
                 dans la classe. L’après-midi est consacré principalement aux
-                <span> matières culturelles</span>.
+                <span>
+                  {" "}
+                  matières culturelles, aux arts plastiques et aux sports.
+                </span>
+                .
               </p>
             </article>
             <article className="schedule-moment">
@@ -65,7 +69,7 @@ const ScheduleScolarity = () => {
               <p>
                 L'accueil périscolaire (
                 <a href="/ecole/infos-pratiques">garderie</a>) s'effectue dans
-                la salle du rdv. Si votre enfant reste à la garderie, il faut
+                la salle du rdc. Si votre enfant reste à la garderie, il faut
                 lui prévoir un goûter. Vous le récupérez à l’heure qui vous
                 convient.
               </p>
@@ -82,11 +86,11 @@ const ScheduleScolarity = () => {
                 on se retrouve…et on se met au travail avec différents rituels.
                 Afin de ne pas perturber la concentration des enfants débutant
                 leur activité,
-                <span> l’horaire d’arrivée ne doit pas excéder 8h45</span>.
+                <span> l’horaire d’arrivée ne doit pas excéder 8h45.</span>.
               </p>
             </article>
             <article className="schedule-moment">
-              <h4>8h45-11h45 : Classe</h4>
+              <h4>8h45-12h : Classe</h4>
               <p>
                 La matinée débute par un <span>temps de regroupement </span>de
                 15-20’. Le matin, la concentration des enfants étant optimale,
@@ -98,8 +102,8 @@ const ScheduleScolarity = () => {
             <article className="schedule-moment">
               <h4>12h-14h45 : Classe & parc</h4>
               <p>
-                Les enfants déjeunent dans les classes avec leur repas ou celui
-                du traiteur (
+                Les enfants déjeunent dans la classe avec leur repas ou celui du
+                traiteur (
                 <a href="/ecole/infos-pratiques">
                   en savoir + sur l’organisation des repas
                 </a>
@@ -155,8 +159,8 @@ const ScheduleScolarity = () => {
             <article className="schedule-moment">
               <h4>12h-15h : Repas & Classe</h4>
               <p>
-                Les enfants déjeunent dans les classes avec leur repas ou celui
-                du traiteur (
+                Les enfants déjeunent dans la classe avec leur repas ou celui du
+                traiteur (
                 <a href="/ecole/infos-pratiques">
                   en savoir + sur l’organisation des repas
                 </a>
@@ -201,19 +205,19 @@ const ScheduleScolarity = () => {
             onClick={() => handleClick("3-6")}
             className={classe === "3-6" ? "classe active" : "classe"}
           >
-            3-6ans
+            3-6 ans
           </h4>
           <h4
             onClick={() => handleClick("6-8")}
             className={classe === "6-8" ? "classe active" : "classe"}
           >
-            6-8ans
+            6-8 ans
           </h4>
           <h4
             onClick={() => handleClick("8-11")}
             className={classe === "8-11" ? "classe active" : "classe"}
           >
-            8-11ans
+            8-11 ans
           </h4>
         </div>
         {renderAgenda()}{" "}

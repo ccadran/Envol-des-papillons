@@ -17,10 +17,14 @@ const HeroPedagogie = ({ h1, title, text, image }) => {
           <h4>{title}</h4>
           <p>
             Le collège souhaite rester fidèle aux valeurs de l’école d’origine :
-            <span>écoute, harmonie, créativité et confiance en soi</span>.
+            <span> écoute, harmonie, créativité et confiance en soi</span>.
             L’adaptation aux besoins fondamentaux des enfants et des adolescents
             est au cœur du projet du collège, tout cela dans le{" "}
-            <span> respect du socle commun de l’Education Nationale</span>.
+            <span>
+              {" "}
+              respect du socle commun de connaissances de l’Education Nationale
+            </span>
+            .
           </p>
         </div>
       </div>

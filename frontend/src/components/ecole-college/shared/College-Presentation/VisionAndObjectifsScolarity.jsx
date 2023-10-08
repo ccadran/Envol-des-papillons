@@ -15,11 +15,11 @@ const VisionAndObjectifsScolarity = ({ vision, objectif }) => {
           <li>
             Une place réelle à la <span>créativité</span> et à la{" "}
             <span>libre expression</span> nécessaires à l’adolescent, dans le
-            <span>respect</span> de sa personnalité et de ses spécificités.
+            <span> respect</span> de sa personnalité et de ses spécificités.
             <span> Chaque élève est important !</span>
           </li>
           <li>
-            Deux après-midi « projets » de 15h à 17h : projet
+            Deux après-midi « projets » de 15h à 17h : projets
             pluridisciplinaires, projet philo, d’écriture, conseil d’école,
             expression créatrice, exposés, sorties scolaires…
           </li>

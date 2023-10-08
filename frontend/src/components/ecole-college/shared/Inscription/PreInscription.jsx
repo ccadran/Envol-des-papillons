@@ -18,7 +18,7 @@ const PreInscription = ({ text }) => {
           <div className="buttons">
             <Button
               color="blue"
-              text="Fiche pré-inscription 6e - 3e"
+              text="Fiche de pré-inscription 6e - 3e"
               link="https://lenvoldespapillons33.com/wp-content/uploads/2021/11/PreInscription_College.pdf"
               newTab="yes"
               isArrow="no"
@@ -28,14 +28,14 @@ const PreInscription = ({ text }) => {
           <div className="buttons">
             <Button
               color="orange"
-              text="Fiche pré-inscription 3-6ans"
+              text="Fiche de pré-inscription 3-6 ans"
               link="https://lenvoldespapillons33.com/wp-content/uploads/2022/01/PreInscription_3-6ans.pdf"
               newTab="yes"
               isArrow="no"
             />
             <Button
               color="orange"
-              text="Fiche pré-inscription 6-11ans"
+              text="Fiche de pré-inscription 6-11 ans"
               link="https://lenvoldespapillons33.com/wp-content/uploads/2022/01/PreInscription_6-8et8-11ans.pdf"
               newTab="yes"
               isArrow="no"

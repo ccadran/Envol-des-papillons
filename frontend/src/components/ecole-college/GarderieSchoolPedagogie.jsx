@@ -21,7 +21,9 @@ const GarderieSchoolPedagogie = () => {
           <p>
             Après un goûter fourni par les parents, les enfants se rendent dans
             les salles dédiées à leur âge. Vous les récupérez à l’heure que vous
-            souhaitez.
+            souhaitez. <br />
+            <br />
+            <span>Voici les tarifs proposés:</span>
             <br />
             <br />
             jusqu’à 17h15 : 1€50

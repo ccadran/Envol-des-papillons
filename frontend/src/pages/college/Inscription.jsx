@@ -29,7 +29,7 @@ const Inscription = () => {
         "
           scolarity="460€ /mois"
           inscription="200€"
-          association="20€+150€ /an"
+          association="20€+120€ /an"
         />
         <PreInscription text="Remplissez notre formulaire de pré-inscription le plus rapidement possible afin d'engager la démarche d'inscription. En suivant vous recevrez un mail confirmant la bonne récéption du formulaire et la directrice vous contactera sous un délai d'une semaine afin de planifier un rendez-vous." />
       </main>

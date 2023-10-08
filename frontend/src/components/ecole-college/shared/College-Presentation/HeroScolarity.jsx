@@ -17,12 +17,11 @@ const HeroScolarity = ({ h1, img, text, color, etablissement }) => {
             <p>
               Le collège alternatif L’envol a été créé en 2020, dans la démarche
               d’assurer la continuité de l’école élémentaire « L’envol des
-              papillons ». C’est un collège à très petit effectif (jusqu’à 40
-              élèves environ), permettant de répondre aux besoins de chacun et
-              permettant aux jeunes de s’épanouir pleinement.
+              papillons ». C’est un collège à très petits effectifs (une dizaine
+              d'élèves par niveau), permettant de répondre aux besoins de chacun
+              et favorisant leur épanouissement.
             </p>
           </div>
-          <Button color={color} text="Découvrir l'histoire" link={link} />
         </div>
       </div>
     </section>

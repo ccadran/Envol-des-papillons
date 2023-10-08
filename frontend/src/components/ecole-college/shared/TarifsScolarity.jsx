@@ -23,7 +23,7 @@ const TarifsScolarity = ({
         <TarifElement
           title="Frais d'inscription "
           price={inscription}
-          text="Ils sont dus à l’entrée en 3-6 ans puis à l’entrée en élémentaire.Une réduction s’applique au 2ème enfant.(-20€/enfant)
+          text="Ils sont dus à l’entrée en 3-6 ans puis à l’entrée en élémentaire. Une réduction s’applique au 2ème enfant.(-20€/enfant)
 "
         />
         <TarifElement
@@ -34,6 +34,7 @@ const TarifsScolarity = ({
         />
       </article>
       <div className="non-include-fees">
+        <h4>En supplément : </h4>
         <ul>
           <li>
             <span>• Les sorties scolaires :</span> 20€/an
@@ -62,7 +63,7 @@ const TarifsScolarity = ({
           Apprendre avec Montessori aujourd’hui ». Tous les chèques doivent être
           remis en septembre et seront encaissés autour du 5 du mois. Les autres
           frais sont dus en septembre, ou étalés sur 2 mois si besoin, sauf le
-          sport. <br />
+          sport (sur facture). <br />
           <br />
           En cas de défaut de paiement, nous vous demanderons de nous remettre
           les chèques des mensualités restantes à payer. <br />

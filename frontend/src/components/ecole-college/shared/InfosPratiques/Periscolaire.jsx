@@ -6,7 +6,7 @@ export default function Periscolaire() {
       <h3>Périscolaire (Mercredi)</h3>
       <p>
         L’école propose aux enfants de l’école un temps d’accueil ludique le
-        mercredi hors vacances scolaires, de 8h30 à 18h00. <br />
+        mercredi hors vacances scolaires, de 8h30 à 17h30. <br />
         <br />
         Prix : 35€ la journée, goûter compris <br />
         <br />
@@ -20,8 +20,8 @@ export default function Periscolaire() {
             <li>- 8h30 - 9h30 : Accueil libre</li>
             <li>- 9h30 – 12h00 : activités</li>
             <li>- 12h00 – 14h00 : temps du midi (repas et temps calme)</li>
-            <li>- 14h00 – 17h00 : activités et goûter</li>
-            <li>- 17h00 – 18h00 : départ</li>
+            <li>- 14h00 – 16h30 : activités et goûter</li>
+            <li>- 16h30 – 17h30 : départ</li>
           </ul>
         </div>
         <div className="persicolaire-activity children">
@@ -33,7 +33,7 @@ export default function Periscolaire() {
               - Cuisine (préparation du goûter en alternance par les 3-6 ans et
               les 6-11 ans)
             </li>
-            <li>- Sorties, visites</li>
+            <li>- Sorties, visites, cinéma</li>
             <li>- Autres</li>
           </ul>
         </div>

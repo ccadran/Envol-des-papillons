@@ -89,6 +89,7 @@
 }
 
 .periscolaire {
+  margin-top: clamp(50px, 10vw, 100px);
   .periscolaire-container {
     display: flex;
     flex-wrap: wrap;

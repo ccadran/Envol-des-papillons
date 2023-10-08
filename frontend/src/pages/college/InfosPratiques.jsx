@@ -1,7 +1,7 @@
 import React from "react";
 import NavigationScolarity from "../../components/ecole-college/shared/NavigationScolarity";
 import H1HeroText from "../../components/shared/H1HeroText";
-import RepasInfos from "../../components/ecole-college/shared/InfosPratiques/RepasInfos";
+import RepasInfosCollege from "../../components/ecole-college/shared/College-InfosPratiques/RepasInfosCollege";
 import RolesParentsInfos from "../../components/ecole-college/shared/InfosPratiques/RolesParentsInfos";
 import CollegeRoad from "../../components/ecole-college/shared/CollegeRoad";
 import FooterScolarity from "../../components/ecole-college/shared/FooterScolarity";
@@ -34,11 +34,11 @@ const InfosPratiques = () => {
           "
           scolarity="460€ /mois"
           inscription="200€"
-          association="20€+150€ /an"
+          association="20€+120€ /an"
           etablissement="college"
         />
         <GarderieCollegePedagogie />
-        <RepasInfos />
+        <RepasInfosCollege />
         <RolesParentsInfos
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit optio
         qui recusandae eius labore quas excepturi eaque pariatur officia eos."
