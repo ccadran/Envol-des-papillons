@@ -10,6 +10,7 @@ const AllAvisAdmin = () => {
   const handleEtablissementChange = (e) => {
     const selectedValue = e.target.value;
     setSelectedEtablissement(selectedValue);
+    console.log(selectedValue);
 
     if (selectedValue) {
       axios
@@ -35,8 +36,8 @@ const AllAvisAdmin = () => {
           value={selectedEtablissement}
         >
           <option value="">Sélectionner l'établissement</option>
-          <option value="collège">école</option>
-          <option value="école">collège</option>
+          <option value="collège">collège</option>
+          <option value="école">école</option>
         </select>
       </div>
       <div className="avis-container">

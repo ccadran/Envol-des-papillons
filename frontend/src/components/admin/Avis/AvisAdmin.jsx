@@ -20,7 +20,11 @@ const AvisAdmin = ({ avis }) => {
     <article className="avis-card-admin">
       <div className="avis-header">
         <div className="author">
-          <PapillonLogo />
+          {avis.etablissement === "école" ? (
+            <PapillonLogo color="orange" />
+          ) : (
+            <PapillonLogo color="blue" />
+          )}
           <div className="author-info">
             <h5>
               {avis.prenom} {avis.nom}
