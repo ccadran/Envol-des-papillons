@@ -22,7 +22,7 @@ const Evenements = () => {
         />
         <div className="add-schedule">
           <p>
-            Vous pouvez <span>ajouter l'agenda</span> à votre compte Goggle en
+            Vous pouvez <span>ajouter l'agenda</span> à votre compte Google en
             cliquant sur le Bouton ci-dessous.
           </p>
           <Button

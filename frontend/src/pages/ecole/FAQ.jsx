@@ -21,7 +21,7 @@ const FAQ = () => {
       <NavigationScolarity etablissement="ecole" />
       <main>
         <HeroFAQ
-          subTitle="Retrouvez les réponses aux questions les plus posées (pour l’école)"
+          subTitle="Retrouvez les réponses aux questions les plus posées "
           text="Nous avons développé notre site de manière à ce que chaque information soit facilement accecible, mais s'il vous reste une petite interrogation, sa réponse se trouve sans doute ici !
         "
         />

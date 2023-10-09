@@ -19,7 +19,7 @@ const AvisForm = () => {
 
     const newAvis = {
       prenom: formData.get("prenom"),
-      nom: formData.get("nom"),
+      nom: formData.get("nom").toUpperCase(),
       avis: formData.get("message"),
       etablissement: formData.get("etablissement"),
     };

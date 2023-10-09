@@ -25,6 +25,7 @@ const QuestionFAQ = ({ faqQuestion, etablissement }) => {
       .then(() => {
         setFetchData(true);
       });
+    window.location.reload();
   };
 
   const handleEditQuestion = () => {

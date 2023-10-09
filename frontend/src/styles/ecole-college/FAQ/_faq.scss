@@ -29,7 +29,7 @@
 }
 .faq-content {
   .controller {
-    margin-bottom: 12px;
+    margin-bottom: 18px;
     display: flex;
     justify-content: space-between;
     .fa-sharp {
@@ -60,6 +60,7 @@
     }
   }
   .question-container {
+    margin-top: 12px;
     padding-bottom: 30px;
     border-bottom: 2px solid $black;
     display: flex;

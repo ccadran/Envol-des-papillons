@@ -20,7 +20,11 @@ const Avis = ({ avi }) => {
   return (
     <article className="avis-card">
       <div className="avis-header">
-        <PapillonLogo />
+        {avi.etablissement === "école" ? (
+          <PapillonLogo color="orange" />
+        ) : (
+          <PapillonLogo color="blue" />
+        )}
         <div className="avis-header-info">
           <h5>
             {avi.prenom} {avi.nom}

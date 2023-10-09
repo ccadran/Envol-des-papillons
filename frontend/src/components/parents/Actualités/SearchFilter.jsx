@@ -149,7 +149,10 @@ const SearchFilter = () => {
       {location.pathname.includes("blog") ? (
         <div className="blog-container">
           {sortedPosts.length === 0 ? (
-            <p id="no-result">Aucun article ne correspond à votre recherche.</p>
+            <p id="no-result">
+              Aucun article ne correspond à votre recherche ou l'école n'a pas
+              encore publier d'article.
+            </p>
           ) : (
             sortedPosts.map((blogPost) => (
               <BlogPost
@@ -163,7 +166,10 @@ const SearchFilter = () => {
       ) : location.pathname.includes("actualites") ? (
         <div className="actuality-container">
           {sortedPosts.length === 0 ? (
-            <p id="no-result">Aucun article ne correspond à votre recherche.</p>
+            <p id="no-result">
+              Aucun article ne correspond à votre recherche ou l'école n'a pas
+              encore publier d'article.
+            </p>
           ) : (
             sortedPosts.map((actualityPost) => (
               <Actuality

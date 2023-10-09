@@ -22,6 +22,7 @@ const SectionFAQ = ({ faqSection, etablissement }) => {
       .then((res) => {
         setFetchData(true);
       });
+    window.location.reload();
   };
 
   const handleEditSection = () => {

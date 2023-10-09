@@ -79,7 +79,7 @@ const AllAvis = ({ etablissement }) => {
             ))}
           </Slider>
         ) : (
-          <p>Chargement des avis...</p>
+          <p>Pas encore d'avis...</p>
         )}
       </div>
     </section>
