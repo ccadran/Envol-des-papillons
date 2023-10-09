@@ -9,7 +9,7 @@ const ClasseSchoolPedagogie = ({ classe, teachers }) => {
   return (
     <article className="classe-card">
       <h4>{classe}</h4>
-      <PapillonLogo />
+      <PapillonLogo color="orange" />
       <ul className="teacher-list">
         {teacherNames.map((name, index) => (
           <li key={index}>{name}</li>

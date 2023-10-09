@@ -10,20 +10,17 @@ const ClassesSchoolPedagogie = () => {
           classe="3-6ans"
           teachers={`Solène BELLEC
 Caroline TISSERAND
-Sandrine DUBUS
-`}
+Sandrine DUBUS`}
         />
         <ClasseSchoolPedagogie
           classe="6-8ans"
           teachers={`Sabine MERLATEAU
-          Claire ENGEL
-`}
+          Claire ENGEL`}
         />
         <ClasseSchoolPedagogie
           classe="8-11ans"
           teachers={`Sibylle YARHI
-          Séverine CHEVALIER
-`}
+          Séverine CHEVALIER`}
         />
       </div>
     </section>

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b850247e.css",
-    "main.js": "/static/js/main.d644542c.js",
+    "main.js": "/static/js/main.fc6c9184.js",
     "static/media/college-english.jpg": "/static/media/college-english.cf34d9f6cc016f415e48.jpg",
     "static/media/school-local4.jpg": "/static/media/school-local4.e2f9f11709258e952c7e.jpg",
     "static/media/etablissement-methodo.jpg": "/static/media/etablissement-methodo.30a17f643be789e1e9bd.jpg",
@@ -48,10 +48,10 @@
     "static/media/arrow.svg": "/static/media/arrow.7c77aca23caec6a408a33de840eb9859.svg",
     "static/media/chevron.svg": "/static/media/chevron.76a8ae0d8177ec7f9c61634e352150cd.svg",
     "main.b850247e.css.map": "/static/css/main.b850247e.css.map",
-    "main.d644542c.js.map": "/static/js/main.d644542c.js.map"
+    "main.fc6c9184.js.map": "/static/js/main.fc6c9184.js.map"
   },
   "entrypoints": [
     "static/css/main.b850247e.css",
-    "static/js/main.d644542c.js"
+    "static/js/main.fc6c9184.js"
   ]
 }
