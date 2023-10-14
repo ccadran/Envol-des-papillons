@@ -1,6 +1,4 @@
 import React from "react";
-import img from "assets/img/etablissement-methodo.jpg";
-import imgHero from "assets/img/Group 1.svg";
 
 const HeroHome = () => {
   return (
@@ -15,18 +13,18 @@ const HeroHome = () => {
         </div>
         <div className="hero-illustration">
           <img
-            src={imgHero}
+            src={process.env.PUBLIC_URL + "/assets/img/Group 1.svg"}
             alt="Ensemble des logos des établissements"
-            loading="lazy"
           />
         </div>
       </div>
       <div className="hero-presentation">
         <div className="img-container">
           <img
-            src={img}
+            src={
+              process.env.PUBLIC_URL + "/assets/img/etablissement-methodo.jpg"
+            }
             alt="illustration Montessori de la page d'accueil"
-            loading="lazy"
           />
         </div>
         <div className="pres-text">

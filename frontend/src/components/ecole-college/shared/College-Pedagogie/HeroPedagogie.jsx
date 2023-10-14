@@ -10,7 +10,6 @@ const HeroPedagogie = ({ h1, title, text, image }) => {
           <img
             src={image}
             alt="illustration de la presentation de la pédagogie"
-            loading="lazy"
           />
         </div>
         <div className="hero-text">

@@ -32,7 +32,6 @@ const FormNewMail = () => {
       return;
     }
 
-    // Create the new mail object with the email and childNames fields
     const newMail = {
       email,
       childNames: childNames.map((child) => child.value.trim()).filter(Boolean),

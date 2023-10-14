@@ -18,11 +18,9 @@ const Button = ({ color, text, link, newTab, isArrow }) => {
   return (
     <Link to={link} target={newTab === "yes" ? "_blank" : undefined}>
       <button style={{ background: backgroundColor }}>
-        <img src={vector} alt="étoiles" loading="lazy" />
+        <img src={vector} alt="étoiles" />
         <h5>{text}</h5>
-        {isArrow !== "no" && (
-          <img src={arrow} alt="flèche" id="arrow" loading="lazy" />
-        )}
+        {isArrow !== "no" && <img src={arrow} alt="flèche" id="arrow" />}
       </button>
     </Link>
   );

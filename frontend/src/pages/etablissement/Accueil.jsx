@@ -20,6 +20,7 @@ const Accueil = () => {
         <meta
           property="og:image"
           content="../../../public/images/Accueil.png"
+          content={`${process.env.PUBLIC_URL}/images/Accueil.png`}
         />
       </Helmet>
       <NavigationGlobal />

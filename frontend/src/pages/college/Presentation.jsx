@@ -10,24 +10,9 @@ import FooterScolarity from "../../components/ecole-college/shared/FooterScolari
 import AllAvis from "../../components/shared/AllAvis";
 import "styles/ecole-college/Presentation/_presentation.scss";
 import { Helmet } from "react-helmet";
-import imgHero from "assets/img/college-presentation.jpg";
-import imgLocal1 from "assets/img/college-local1.jpg";
-import imgLocal2 from "assets/img/college-local2.jpg";
 import HeroScolarity from "components/ecole-college/shared/College-Presentation/HeroScolarity";
 
 const Presentation = () => {
-  const imagesArray = {
-    imgLocal1,
-    imgLocal2,
-  };
-
-  const imagesLocaux = [];
-
-  for (let i = 1; i <= Object.keys(imagesArray).length; i++) {
-    const imageKey = `imgLocal${i}`;
-    imagesLocaux.push({ src: imagesArray[imageKey] });
-  }
-
   return (
     <>
       <Helmet>
@@ -41,22 +26,29 @@ const Presentation = () => {
       <main>
         <HeroScolarity
           h1="Collège"
-          img={imgHero}
+          img={process.env.PUBLIC_URL + "/assets/img/college-presentation.jpg"}
           color="blue"
           etablissement="college"
         />
         <VisionAndObjectifsScolarity />
         <LocalScolarity
           text="Description du local de l'collège blablabfdjsbgfvcjdsnvc jdsfjcdshkfcdsnfcv dujfhcgdsichns"
-          images={imagesLocaux}
+          images={[
+            {
+              src: process.env.PUBLIC_URL + "/assets/img/college-local1.jpg",
+            },
+            {
+              src: process.env.PUBLIC_URL + "/assets/img/college-local2.jpg",
+            },
+          ]}
         />
         <ScheduleScolarity textIntro="text intro du calendrier de l'collège " />
         <PedagogicTeam
-          text="Découvrez l'ensemble des profesionnels qui sont là pour votre enfant au quotidien et font vivre les valeurs du collège."
+          text="Découvrez l'ensemble des professionnels qui sont là pour votre enfant au quotidien et font vivre les valeurs du collège."
           etablissement="collège"
         />
         <AllAvis etablissement="collège" />
-        <CollegeRoad text="texte de se rendre a l'collège" />
+        <CollegeRoad text="texte pour se rendre au collège" />
       </main>
       <FooterScolarity etablissement="college" />
     </>

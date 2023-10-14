@@ -3,7 +3,6 @@ import React from "react";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import test from "assets/img/test.JPG";
 
 const ConnexionForm = () => {
   const navigate = useNavigate();
@@ -49,7 +48,10 @@ const ConnexionForm = () => {
   return (
     <section className="connexion-container">
       <div className="img-container">
-        <img src={test} alt="test" loading="lazy" />
+        <img
+          src={process.env.PUBLIC_URL + "/assets/img/school-local4.jpg"}
+          alt="test"
+        />
       </div>
       <div className="form-connexion">
         <h3>Espace Parents</h3>

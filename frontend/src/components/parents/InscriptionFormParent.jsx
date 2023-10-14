@@ -46,7 +46,7 @@ const InscriptionFormParent = () => {
   return (
     <section className="inscription-container">
       <div className="img-container">
-        <img src={test} alt="test" loading="lazy" />
+        <img src={test} alt="test" />
       </div>{" "}
       <div className="form-inscription">
         <h3>Créer un compte parent</h3>

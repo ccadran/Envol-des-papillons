@@ -1,7 +1,8 @@
 import React from "react";
-import logoViolet from "../../assets/logos/papillon.svg";
-import logoBlue from "../../assets/logos/papillonBlue.svg";
-import logoCorail from "../../assets/logos/papillonCorail.svg";
+
+const logoViolet = process.env.PUBLIC_URL + "/assets/logos/papillon.svg";
+const logoBlue = process.env.PUBLIC_URL + "/assets/logos/papillonBlue.svg";
+const logoCorail = process.env.PUBLIC_URL + "/assets/logos/papillonCorail.svg";
 
 const PapillonLogo = ({ color }) => {
   let logoSrc;
@@ -21,13 +22,7 @@ const PapillonLogo = ({ color }) => {
   }
 
   return (
-    <img
-      src={logoSrc}
-      alt="Papillon"
-      style={{ fill: color }}
-      id="papillon"
-      loading="lazy"
-    />
+    <img src={logoSrc} alt="Papillon" style={{ fill: color }} id="papillon" />
   );
 };
 

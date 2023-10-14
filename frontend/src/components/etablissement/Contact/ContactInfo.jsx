@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import imgContact from "assets/img/contact.jpg";
 
 const ContactInfo = () => {
   return (
@@ -20,18 +19,17 @@ const ContactInfo = () => {
 
         <div className="social-logos">
           <Link to="https://www.instagram.com/ecole.montessori_bordeaux/">
-            <i class="fa-brands fa-instagram"></i>{" "}
+            <i className="fa-brands fa-instagram"></i>{" "}
           </Link>
           <Link to="https://www.facebook.com/lenvolBordeauxmetropole">
-            <i class="fa-brands fa-facebook"></i>{" "}
+            <i className="fa-brands fa-facebook"></i>{" "}
           </Link>
         </div>
       </div>
       <div className="img-container">
         <img
-          src={imgContact}
+          src={process.env.PUBLIC_URL + "/assets/img/contact.jpg"}
           alt="illustration de la prise de contact"
-          loading="lazy"
         />
       </div>
     </div>

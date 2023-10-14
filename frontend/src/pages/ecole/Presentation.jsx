@@ -10,34 +10,13 @@ import FooterScolarity from "../../components/ecole-college/shared/FooterScolari
 import AllAvis from "../../components/shared/AllAvis";
 import "styles/ecole-college/Presentation/_presentation.scss";
 import { Helmet } from "react-helmet";
-//IMAGES
-import imgHero from "assets/img/school-presentation.jpg";
-import imgLocal1 from "assets/img/school-local1.jpg";
-import imgLocal2 from "assets/img/school-local2.jpg";
-import imgLocal3 from "assets/img/school-local3.jpg";
-import imgLocal4 from "assets/img/school-local4.jpg";
-import imgLocal5 from "assets/img/school-local5.jpg";
 
 const Presentation = () => {
-  const imagesArray = {
-    imgLocal1,
-    imgLocal2,
-    imgLocal3,
-    imgLocal4,
-    imgLocal5,
-  };
-
-  const imagesLocaux = [];
-
-  for (let i = 1; i <= Object.keys(imagesArray).length; i++) {
-    const imageKey = `imgLocal${i}`;
-    imagesLocaux.push({ src: imagesArray[imageKey] });
-  }
   const visionPoints = [
     "Nous souhaitons que les enfants grandissent et apprennent en développant des valeurs de respect (de soi, des autres, du matériel), d’autonomie, de confiance en soi, de créativité…, le tout dans un cadre bienveillant et sécurisant.",
   ];
   const objectifPoints = [
-    "Que chacque enfant apprenne à son rythme, sans comparaison ni jugement",
+    "Que chaque enfant apprenne à son rythme, sans comparaison ni jugement",
     "Qu'il s’épanouisse, tant sur le plan émotionnel que social",
     "Qu'il découvre la vie en collectivité et le travail collaboratif",
   ];
@@ -54,7 +33,7 @@ const Presentation = () => {
       <main>
         <HeroScolarity
           h1="École"
-          img={imgHero}
+          img={process.env.PUBLIC_URL + "/assets/img/school-presentation.jpg"}
           color="orange"
           etablissement="ecole"
         />
@@ -64,11 +43,27 @@ const Presentation = () => {
         />
         <LocalScolarity
           text="Description du local de l'école blablabfdjsbgfvcjdsnvc jdsfjcdshkfcdsnfcv dujfhcgdsichns"
-          images={imagesLocaux}
+          images={[
+            {
+              src: process.env.PUBLIC_URL + "/assets/img/school-local1.jpg",
+            },
+            {
+              src: process.env.PUBLIC_URL + "/assets/img/school-local2.jpg",
+            },
+            {
+              src: process.env.PUBLIC_URL + "/assets/img/school-local3.jpg",
+            },
+            {
+              src: process.env.PUBLIC_URL + "/assets/img/school-local4.jpg",
+            },
+            {
+              src: process.env.PUBLIC_URL + "/assets/img/school-local5.jpg",
+            },
+          ]}
         />
         <ScheduleScolarity textIntro="text intro du calendrier de l'école " />
         <PedagogicTeam
-          text="Découvrez l'ensemble des profesionnels qui sont là pour votre enfant au quotidien et font vivre les valeurs de l'école."
+          text="Découvrez l'ensemble des professionnels qui sont là pour votre enfant au quotidien et font vivre les valeurs de l'école."
           etablissement="école"
         />
         <AllAvis etablissement="école" />

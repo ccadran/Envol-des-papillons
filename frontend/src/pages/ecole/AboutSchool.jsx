@@ -31,7 +31,7 @@ const About = () => {
                 voit le jour en septembre 2012, sous une forme associative.
               </p>
               <div className="img-container">
-                <img src="" alt="img a droite" loading="lazy" />
+                <img src="" alt="img a droite" />
               </div>
             </div>
           </article>
@@ -39,7 +39,7 @@ const About = () => {
             <h3>Les premiers locaux</h3>
             <div className="episode-content">
               <div className="img-container">
-                <img src="" alt="img a droite" loading="lazy" />
+                <img src="" alt="img a droite" />
               </div>
               <p>
                 L’école ouvre ses portes dans le quartier des Chartrons, au
