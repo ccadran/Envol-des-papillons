@@ -13,10 +13,12 @@ const FormNewMail = () => {
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleInputChange = (id, value) => {
+    console.log(id, value);
     const updatedChildNames = childNames.map((child) =>
       child.id === id ? { ...child, value } : child
     );
     setChildNames(updatedChildNames);
+    console.log(childNames);
   };
 
   const handleSubmit = async (e) => {
@@ -36,10 +38,10 @@ const FormNewMail = () => {
       email,
       childNames: childNames.map((child) => child.value.trim()).filter(Boolean),
     };
-
+    console.log(newMail);
     try {
       await axios.post(`${process.env.REACT_APP_API_URL}/mail-parent`, newMail);
-      console.log("Mail added successfully!");
+      console.log("Mail added successfully!", newMail);
       navigate("/admin/mails");
       setEmail("");
       setChildNames([

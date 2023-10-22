@@ -89,6 +89,7 @@
 }
 .custom-arrow {
   /* Ajoutez des styles communs pour les flèches de navigation */
+  z-index: 5;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
