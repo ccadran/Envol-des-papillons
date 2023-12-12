@@ -6,7 +6,7 @@ import Button from "../../../shared/Button";
 const LocalScolarity = ({ text, images }) => {
   return (
     <section className="local" id="local">
-      <h3>Un local au coeur de Bordeaux</h3>
+      <h3>Un local au cœur de Bordeaux</h3>
       <div className="local-container">
         <p>
           {" "}
@@ -24,6 +24,8 @@ const LocalScolarity = ({ text, images }) => {
           <span>
             Bordeaux est aussi un magnifique terrain d’apprentissage !
           </span>
+          <br /><br />
+          Le collège intégrera ses <span>nouveaux locaux</span> juste à côté de l'école, au 127 cours journu auber, dans le courant de l'année scolaire 2024-2025. 
         </p>
         <div className="caroussel-container">
           <SingleCaroussel images={images} />

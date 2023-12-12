@@ -6,7 +6,7 @@ import Button from "../../../shared/Button";
 const LocalScolarity = ({ text, images }) => {
   return (
     <section className="local" id="local">
-      <h3>Un local au coeur de Bordeaux</h3>
+      <h3>Un local au cœur de Bordeaux</h3>
       <div className="local-container">
         <p>
           L’école est située dans le quartier des Chartrons à Bordeaux (125

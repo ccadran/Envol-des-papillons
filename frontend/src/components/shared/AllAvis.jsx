@@ -42,7 +42,7 @@ const AllAvis = ({ etablissement }) => {
     dots: true, // Afficher les points indicateurs
     infinite: true, // Faire une boucle infinie
     speed: 500, // Vitesse de défilement en millisecondes
-    slidesToShow: 3, // Nombre de cartes à afficher à la fois
+    slidesToShow: 2, // Nombre de cartes à afficher à la fois
     slidesToScroll: 1, // Nombre de cartes à faire défiler à la fois
     className: "slides",
     responsive: [

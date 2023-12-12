@@ -30,9 +30,9 @@ const ModalityInscription = () => {
           <span>dossier d’inscription</span> complet début juin.
         </li>
         <li>
-          5. Tous les enfants inscrits sont conviés fin juinà une visite de la
-          classe et à une rencontre avec les enseignantes, afin de leur
-          permettre de découvir leur futut environnement.
+          5. Tous les enfants inscrits sont conviés <span>fin juin</span> à une <span>visite</span> de la
+          classe et à une <span>rencontre avec les enseignantes</span>, afin de leur
+          permettre de découvir leur futur environnement.
         </li>
       </ol>
     </section>
