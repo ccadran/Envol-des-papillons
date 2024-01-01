@@ -13,7 +13,7 @@ const PreInscription = ({ text }) => {
       <h3>Pré-inscription</h3>
       <p>{text}</p>
       <div className="download">
-        <h4>Replissez ou téléchargez</h4>
+        <h4>Remplissez ou téléchargez</h4>
         {isCollege ? (
           <div className="buttons">
             <Button

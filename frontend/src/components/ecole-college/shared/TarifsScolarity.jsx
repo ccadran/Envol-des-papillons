@@ -73,7 +73,7 @@ const TarifsScolarity = ({
         </p>
         <p>
           Voici le RIB de l'association:{" "}
-          <span>FR76 1558 9335 4407 6444 6128 018</span> <br />
+          <span>FR76 1558 9335 4407 6444 6124 018</span> <br />
           <br />
           Ainsi que son BIC : <span>CMBRFR2BXXX</span>
         </p>
