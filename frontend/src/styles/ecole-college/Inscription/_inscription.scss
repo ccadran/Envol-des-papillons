@@ -49,7 +49,7 @@
       grid-template-areas:
         "name firstName"
         "date place"
-        "classe classe"
+        "classe year"
         "lastSchool lastSchool"
         "tuteurs tuteurs"
         "message message";
@@ -68,7 +68,14 @@
       .classe {
         grid-area: classe;
         select {
-          width: 50%;
+          width: 100%;
+          margin: 0;
+        }
+      }
+      .year {
+        grid-area: year;
+        select {
+          width: 100%;
           margin: 0;
         }
       }

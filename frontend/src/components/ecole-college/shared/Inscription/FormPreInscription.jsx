@@ -56,9 +56,17 @@ const FormPreInscription = () => {
         <div className="form-part classe">
           <label>Incription en classe de :</label>
           <select name="classe" id="">
-            <option value="3-6">Incription en 3-6ans</option>
-            <option value="6-8">Incription en 6-8ans</option>
-            <option value="8-11">Incription en 8-11ans</option>
+            <option value="3-6 ans">Incription en 3-6ans </option>
+            <option value="6-9 ans">Incription en 6-9ans (CP-CE2)</option>
+            <option value="9-11 ans">Incription en 9-11ans (CM1-CM2)</option>
+          </select>
+        </div>
+        <div className="form-part year">
+          <label>Pour l'année scolaire : </label>
+          <select name="year" id="year">
+            <option value="2024/2025">2024/2025</option>
+            <option value="2025/2026">2025/2026</option>
+            <option value="2026/2027">2026/2027</option>
           </select>
         </div>
         <div className="form-part lastSchool">

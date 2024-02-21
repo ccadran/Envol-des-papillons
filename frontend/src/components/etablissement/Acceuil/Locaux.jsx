@@ -25,8 +25,15 @@ const Locaux = () => {
               />
             </div>
             <div className="img-container">
-           
-              <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=125%20cours%20journu%20auber+(L'envol%20des%20papillons)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+              <iframe
+                width="100%"
+                height="600"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=125%20cours%20journu%20auber+(L'envol%20des%20papillons)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              ></iframe>
             </div>
           </div>
         </article>
@@ -50,8 +57,6 @@ const Locaux = () => {
                 parfaitement situé au cœur du quartier des Chartrons à Bordeaux
                 (109 bis cours du Médoc),{" "}
                 <span>facilement accessible en tram ou en bus</span>.
-                <br /><br />
-                Le collège intégrera ses <span>nouveaux locaux</span> juste à côté de l'école, au 127 cours journu auber, dans le courant de l'année scolaire 2024-2025. 
               </p>
               <Button
                 color="blue"

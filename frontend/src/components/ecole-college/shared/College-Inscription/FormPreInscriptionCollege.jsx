@@ -62,6 +62,14 @@ const FormPreInscriptionCollege = () => {
             <option value="3eme">Incription en 3ème</option>
           </select>
         </div>
+        <div className="form-part year">
+          <label>Pour l'année scolaire : </label>
+          <select name="year" id="year">
+            <option value="2024/2025">2024/2025</option>
+            <option value="2025/2026">2025/2026</option>
+            <option value="2026/2027">2026/2027</option>
+          </select>
+        </div>
         <div className="form-part lastSchool">
           <label>Établissement précédent</label>
           <textarea

@@ -85,7 +85,7 @@ const About = () => {
               </p>
             </div>
           </article>
-          <article className="history-episode">
+          {/* <article className="history-episode">
             <h3>La suite</h3>
             <div className="next">
               <p>
@@ -98,7 +98,7 @@ const About = () => {
                 jardiner, bâtir des cabanes…
               </p>
             </div>
-          </article>
+          </article> */}
         </section>
       </main>
       <FooterScolarity etablissement="ecole" />

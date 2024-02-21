@@ -24,8 +24,6 @@ const LocalScolarity = ({ text, images }) => {
           <span>
             Bordeaux est aussi un magnifique terrain d’apprentissage !
           </span>
-          <br /><br />
-          Le collège intégrera ses <span>nouveaux locaux</span> juste à côté de l'école, au 127 cours journu auber, dans le courant de l'année scolaire 2024-2025. 
         </p>
         <div className="caroussel-container">
           <SingleCaroussel images={images} />
