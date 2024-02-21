@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "https://lenvoldespapillons33.fr/static/css/main.f596f3f6.css",
-    "main.js": "https://lenvoldespapillons33.fr/static/js/main.1c3961fb.js",
+    "main.css": "https://lenvoldespapillons33.fr/static/css/main.d3f5087a.css",
+    "main.js": "https://lenvoldespapillons33.fr/static/js/main.c579a44e.js",
     "static/media/test.JPG": "https://lenvoldespapillons33.fr/static/media/test.7ec1d727cb6cfec529a7.JPG",
     "static/media/SILKA-BOLD-WEBFONT.TTF": "https://lenvoldespapillons33.fr/static/media/SILKA-BOLD-WEBFONT.6dd1ed26fa0e22dd865f.TTF",
     "static/media/GENERALSANS-SEMIBOLD.OTF": "https://lenvoldespapillons33.fr/static/media/GENERALSANS-SEMIBOLD.04ff270253cd881ac35e.OTF",
@@ -19,11 +19,11 @@
     "static/media/Vector.svg": "https://lenvoldespapillons33.fr/static/media/Vector.c0a7189de674c5bfbe7131b6db02726d.svg",
     "static/media/arrow.svg": "https://lenvoldespapillons33.fr/static/media/arrow.7c77aca23caec6a408a33de840eb9859.svg",
     "static/media/chevron.svg": "https://lenvoldespapillons33.fr/static/media/chevron.76a8ae0d8177ec7f9c61634e352150cd.svg",
-    "main.f596f3f6.css.map": "https://lenvoldespapillons33.fr/static/css/main.f596f3f6.css.map",
-    "main.1c3961fb.js.map": "https://lenvoldespapillons33.fr/static/js/main.1c3961fb.js.map"
+    "main.d3f5087a.css.map": "https://lenvoldespapillons33.fr/static/css/main.d3f5087a.css.map",
+    "main.c579a44e.js.map": "https://lenvoldespapillons33.fr/static/js/main.c579a44e.js.map"
   },
   "entrypoints": [
-    "static/css/main.f596f3f6.css",
-    "static/js/main.1c3961fb.js"
+    "static/css/main.d3f5087a.css",
+    "static/js/main.c579a44e.js"
   ]
 }

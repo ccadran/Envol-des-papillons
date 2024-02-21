@@ -51,7 +51,7 @@ const FormPreInscriptionCollege = () => {
         </div>
         <div className="form-part bornPlace">
           <label>Lieu de naissance</label>
-          <input type="text" name="bornPlace" placeholder="Bordeaux" required />
+          <input type="text" name="bornPlace" placeholder="Ville" required />
         </div>
         <div className="form-part classe">
           <label>Incription en classe de :</label>
