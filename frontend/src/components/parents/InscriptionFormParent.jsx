@@ -11,24 +11,28 @@ const InscriptionFormParent = () => {
 
   const handleRegister = async () => {
     try {
-      // Collect the form data from the form using the formRef
       const formData = new FormData(formRef.current);
 
-      // Create an object with the collected form data
+      const password = formData.get("password");
+      const confirmPassword = formData.get("confirmPassword");
+
+      if (password !== confirmPassword) {
+        setError("Les mots de passe ne correspondent pas.");
+        return;
+      }
+
       const newParent = {
         firstName: formData.get("firstName"),
         lastName: formData.get("lastName"),
         email: formData.get("email"),
-        password: formData.get("password"),
+        password: password,
       };
 
-      // Send the data to your backend using POST
       const response = await axios.post(
         `${process.env.REACT_APP_API_URL}/parent`,
         newParent
       );
 
-      // Redirect the user to the login page after successful registration
       navigate("/parents/connexion-parent");
     } catch (error) {
       if (
@@ -38,7 +42,7 @@ const InscriptionFormParent = () => {
       ) {
         setError(error.response.data.message);
       } else {
-        setError("Registration failed. Please try again.");
+        setError("L'inscription a échoué. Veuillez réessayer.");
       }
     }
   };
@@ -47,7 +51,7 @@ const InscriptionFormParent = () => {
     <section className="inscription-container">
       <div className="img-container">
         <img src={test} alt="test" />
-      </div>{" "}
+      </div>
       <div className="form-inscription">
         <h3>Créer un compte parent</h3>
         <form ref={formRef} className="form-fields">
@@ -55,6 +59,11 @@ const InscriptionFormParent = () => {
           <input type="text" name="lastName" placeholder="Nom" />
           <input type="email" name="email" placeholder="Email" />
           <input type="password" name="password" placeholder="Mot de passe" />
+          <input
+            type="password"
+            name="confirmPassword"
+            placeholder="Confirmer le mot de passe"
+          />
         </form>
         <button onClick={handleRegister}>Créer</button>
         {error && <p className="error">{error}</p>}
