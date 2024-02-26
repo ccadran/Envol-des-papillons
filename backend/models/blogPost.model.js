@@ -53,7 +53,7 @@ const BlogPostSchema = mongoose.Schema(
     illustrations: [
       {
         type: String, // Le type doit être String pour stocker les chemins d'URL complets
-        required: true,
+        required: false,
       },
     ],
   },
