@@ -17,7 +17,7 @@ const allowedOrigins = [
   "https://envol-des-papillons.onrender.com",
   "https://magnificent-meerkat-c7414f.netlify.app",
   "https://envol-des-papillons.ew.r.appspot.com",
-  "https://",
+  "https://lenvoldespapillons33.fr",
 ];
 
 app.use(
