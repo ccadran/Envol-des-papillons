@@ -25,7 +25,7 @@ module.exports.setActualityPost = async (req, res) => {
   }
   console.log("req.files :", req.files);
   const mainImages = req.files["mainImg"];
-  const illustrationImages = req.files["illustrations"];
+  const illustrationImages = req.files["illustrations"] || [];
   const {
     title,
     accroche,
@@ -57,27 +57,28 @@ module.exports.setActualityPost = async (req, res) => {
       fileName +
       req.files["mainImg"][0].originalname;
     const illustrationUrls = [];
-    for (const illustration of req.files["illustrations"]) {
-      const fileNameIllustrations =
-        Math.floor(Math.random() * 100000) + Date.now() + "-";
-      const illustrationBlob = bucket.file(
-        "uploads/" + fileNameIllustrations + illustration.originalname
-      );
+    if (illustrationImages.length > 0) {
+      for (const illustration of req.files["illustrations"]) {
+        const fileNameIllustrations =
+          Math.floor(Math.random() * 100000) + Date.now() + "-";
+        const illustrationBlob = bucket.file(
+          "uploads/" + fileNameIllustrations + illustration.originalname
+        );
 
-      const illustrationBlobStream = illustrationBlob.createWriteStream();
-      illustrationBlobStream.end(illustration.buffer);
+        const illustrationBlobStream = illustrationBlob.createWriteStream();
+        illustrationBlobStream.end(illustration.buffer);
 
-      await new Promise((resolve, reject) => {
-        illustrationBlobStream.on("finish", resolve);
-        illustrationBlobStream.on("error", reject);
-      });
-      const illustrationPath =
-        "https://storage.googleapis.com/blog-storage-envol/uploads/" +
-        fileNameIllustrations +
-        illustration.originalname;
-      illustrationUrls.push(illustrationPath);
+        await new Promise((resolve, reject) => {
+          illustrationBlobStream.on("finish", resolve);
+          illustrationBlobStream.on("error", reject);
+        });
+        const illustrationPath =
+          "https://storage.googleapis.com/blog-storage-envol/uploads/" +
+          fileNameIllustrations +
+          illustration.originalname;
+        illustrationUrls.push(illustrationPath);
+      }
     }
-
     const actualityPost = new ActualityPostModel({
       title,
       accroche,
