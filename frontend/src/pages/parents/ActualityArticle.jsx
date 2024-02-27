@@ -86,6 +86,7 @@ const ActualityArticle = () => {
     formData.append("subTitle1", updatedActualityArticle.subTitle1);
     formData.append("content1", updatedActualityArticle.content1);
     updatedActualityArticle.tags.forEach((tag, index) => {
+      console.log(tag);
       formData.append(`tags[${index}]`, tag);
     });
     if (updatedActualityArticle.subTitle2) {
@@ -117,6 +118,7 @@ const ActualityArticle = () => {
         formData.append("illustrations", illustration);
       });
     }
+    console.log(updatedActualityArticle);
     axios
       .put(`${process.env.REACT_APP_API_URL}/actuality/${id}`, formData, {
         headers: {
