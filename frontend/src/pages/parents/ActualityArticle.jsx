@@ -85,6 +85,9 @@ const ActualityArticle = () => {
     formData.append("introduction", updatedActualityArticle.introduction);
     formData.append("subTitle1", updatedActualityArticle.subTitle1);
     formData.append("content1", updatedActualityArticle.content1);
+    updatedActualityArticle.tags.forEach((tag, index) => {
+      formData.append(`tags[${index}]`, tag);
+    });
     if (updatedActualityArticle.subTitle2) {
       formData.append("subTitle2", updatedActualityArticle.subTitle2);
     }

@@ -70,6 +70,7 @@ const NewArticle = () => {
       if (missing.length > 0) {
         setMissingFields(missing);
         setErrorText("Veuillez remplir tous les champs obligatoires");
+        console.log(missingFields);
         return;
       }
 

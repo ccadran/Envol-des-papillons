@@ -63,25 +63,27 @@ module.exports.setBlogPost = async (req, res) => {
       req.files["mainImg"][0].originalname;
     // Prepare the illustrationPaths array for saving in the database
     const illustrationUrls = [];
-    for (const illustration of req.files["illustrations"]) {
-      const fileNameIllustrations =
-        Math.floor(Math.random() * 100000) + Date.now() + "-";
-      const illustrationBlob = bucket.file(
-        "uploads/" + fileNameIllustrations + illustration.originalname
-      );
+    if (illustrationImages.length > 0) {
+      for (const illustration of req.files["illustrations"]) {
+        const fileNameIllustrations =
+          Math.floor(Math.random() * 100000) + Date.now() + "-";
+        const illustrationBlob = bucket.file(
+          "uploads/" + fileNameIllustrations + illustration.originalname
+        );
 
-      const illustrationBlobStream = illustrationBlob.createWriteStream();
-      illustrationBlobStream.end(illustration.buffer);
+        const illustrationBlobStream = illustrationBlob.createWriteStream();
+        illustrationBlobStream.end(illustration.buffer);
 
-      await new Promise((resolve, reject) => {
-        illustrationBlobStream.on("finish", resolve);
-        illustrationBlobStream.on("error", reject);
-      });
-      const illustrationPath =
-        "https://storage.googleapis.com/blog-storage-envol/uploads/" +
-        fileNameIllustrations +
-        illustration.originalname;
-      illustrationUrls.push(illustrationPath);
+        await new Promise((resolve, reject) => {
+          illustrationBlobStream.on("finish", resolve);
+          illustrationBlobStream.on("error", reject);
+        });
+        const illustrationPath =
+          "https://storage.googleapis.com/blog-storage-envol/uploads/" +
+          fileNameIllustrations +
+          illustration.originalname;
+        illustrationUrls.push(illustrationPath);
+      }
     }
 
     const blogPost = new BlogPostModel({
