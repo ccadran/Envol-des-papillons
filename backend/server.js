@@ -14,6 +14,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:3000",
+  "http://localhost:5001",
   "https://envol-des-papillons.onrender.com",
   "https://magnificent-meerkat-c7414f.netlify.app",
   "https://envol-des-papillons.ew.r.appspot.com",

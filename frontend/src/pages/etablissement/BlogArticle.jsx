@@ -97,6 +97,11 @@ const BlogArticle = () => {
     formData.append("introduction", updatedBlogArticle.introduction);
     formData.append("subTitle1", updatedBlogArticle.subTitle1);
     formData.append("content1", updatedBlogArticle.content1);
+
+    updatedBlogArticle.tags.forEach((tag, index) => {
+      formData.append(`tags[${index}]`, tag);
+    });
+
     if (updatedBlogArticle.subTitle2) {
       formData.append("subTitle2", updatedBlogArticle.subTitle2);
     }
@@ -129,6 +134,7 @@ const BlogArticle = () => {
         formData.append("illustrations", illustration);
       });
     }
+
     axios
       .put(`${process.env.REACT_APP_API_URL}/blog/${id}`, formData, {
         headers: {

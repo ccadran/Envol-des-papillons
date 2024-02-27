@@ -94,6 +94,9 @@ const NewArticle = () => {
       formData.append("subTitle2", articleData.subTitle2);
       formData.append("content2", articleData.content2);
       formData.append("author", articleData.author);
+      articleData.tags.forEach((tag, index) => {
+        formData.append(`tags[${index}]`, tag);
+      });
 
       const response = await axios.post(
         `${process.env.REACT_APP_API_URL}/${page}`,
