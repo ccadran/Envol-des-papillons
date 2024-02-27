@@ -134,6 +134,7 @@ const BlogArticle = () => {
         formData.append("illustrations", illustration);
       });
     }
+    console.log(updatedBlogArticle);
 
     axios
       .put(`${process.env.REACT_APP_API_URL}/blog/${id}`, formData, {

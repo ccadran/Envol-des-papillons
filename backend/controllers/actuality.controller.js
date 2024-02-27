@@ -180,14 +180,11 @@ module.exports.editActualityPost = async (req, res) => {
       }
       illustrationPaths = illustrationUrls;
     }
-    // Filter out empty or null tags
-    const filteredTags = tags.filter((tag) => tag); // Remove empty or null tags
+
     // Update the actuality post document
     actualityPost.title = title;
     actualityPost.accroche = accroche;
-    actualityPost.tags = Array.isArray(filteredTags)
-      ? filteredTags
-      : [filteredTags];
+    actualityPost.tags = Array.isArray(tags) ? tags : [tags];
     actualityPost.introduction = introduction;
     actualityPost.subTitle1 = subTitle1;
     actualityPost.content1 = content1;
