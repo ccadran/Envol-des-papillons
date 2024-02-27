@@ -62,4 +62,8 @@ const BlogPostSchema = mongoose.Schema(
   }
 );
 
+BlogPostSchema.path("tags").validate(function (value) {
+  return value && value.length > 0;
+}, "Au moins un tag est requis.");
+
 module.exports = mongoose.model("blog", BlogPostSchema);

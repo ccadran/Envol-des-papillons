@@ -69,6 +69,7 @@ const ActualityArticle = () => {
       const updatedTags = prevArticle.tags.includes(tag)
         ? prevArticle.tags.filter((t) => t !== tag)
         : [...prevArticle.tags, tag];
+      console.log("Updated tags:", updatedTags);
 
       return {
         ...prevArticle,
