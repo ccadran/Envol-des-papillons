@@ -25,7 +25,7 @@ module.exports.setBlogPost = async (req, res) => {
   }
   console.log("req.files :", req.files);
   const mainImages = req.files["mainImg"];
-  const illustrationImages = req.files["illustrations"];
+  const illustrationImages = req.files["illustrations"] || [];
   const {
     title,
     accroche,
