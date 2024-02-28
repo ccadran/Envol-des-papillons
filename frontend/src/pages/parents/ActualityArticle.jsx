@@ -16,6 +16,8 @@ const ActualityArticle = () => {
   const [updatedActualityArticle, setUpdatedActualityArticle] = useState({
     tags: [],
   });
+  const [errorText, setErrorText] = useState();
+
   const location = useLocation();
   const isRootPath = location.pathname.includes("admin");
   const navigate = useNavigate();
@@ -119,6 +121,11 @@ const ActualityArticle = () => {
         formData.append("illustrations", illustration);
       });
     }
+    if (updatedActualityArticle.tags.length === 0) {
+      setErrorText("N'oubliez pas d'ajouter un tag au minimum");
+
+      return; // Arrêter l'exécution de la fonction
+    }
     console.log(updatedActualityArticle);
     axios
       .put(`${process.env.REACT_APP_API_URL}/actuality/${id}`, formData, {
@@ -133,6 +140,8 @@ const ActualityArticle = () => {
       })
       .catch((error) => {
         // Traitement en cas d'erreur lors de la mise à jour
+        setErrorText("Verifiez que tous les champs sont bien remplis");
+
         console.error("Erreur lors de la mise à jour de l'article :", error);
       });
   };
@@ -246,7 +255,11 @@ const ActualityArticle = () => {
                     </div>
                   </div>
                   <div className="article-images">
-                    <CarousselArticle images={actualityArticle.illustrations} />
+                    {actualityArticle.illustrations > 0 && (
+                      <CarousselArticle
+                        images={actualityArticle.illustrations}
+                      />
+                    )}
                     <div className="form-part">
                       <h4>Images d'illustrations</h4>
                       <input
@@ -267,6 +280,7 @@ const ActualityArticle = () => {
                     <p>{actualityArticle.date}</p>
                   </div>
                 </div>
+                {errorText && <p className="error">{errorText}</p>}
               </article>
             </section>
           </main>
@@ -300,7 +314,11 @@ const ActualityArticle = () => {
                     <h4>{actualityArticle.subTitle2} </h4>
                     <p>{actualityArticle.content2} </p>
                     <p id="conclusion">{actualityArticle.conclusion} </p>
-                    <CarousselArticle images={actualityArticle.illustrations} />
+                    {actualityArticle.illustrations > 0 && (
+                      <CarousselArticle
+                        images={actualityArticle.illustrations}
+                      />
+                    )}{" "}
                   </div>
                 </div>
                 <div className="article-author">

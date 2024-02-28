@@ -22,7 +22,9 @@
       }
       .article-infos {
         width: 60%;
+        margin-right: 12px;
         @media screen and (max-width: 640px) {
+          margin-right: 0;
           width: 100%;
         }
         h2 {

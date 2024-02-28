@@ -19,6 +19,7 @@ const BlogArticle = () => {
   const [updatedBlogArticle, setUpdatedBlogArticle] = useState({
     tags: [],
   });
+  const [errorText, setErrorText] = useState();
 
   const location = useLocation();
   const isRootPath = location.pathname.includes("admin");
@@ -135,7 +136,10 @@ const BlogArticle = () => {
       });
     }
     console.log(updatedBlogArticle);
-
+    if (updatedBlogArticle.tags.length === 0) {
+      setErrorText("N'oubliez pas d'ajouter un tag au minimum");
+      return; // Arrêter l'exécution de la fonction
+    }
     axios
       .put(`${process.env.REACT_APP_API_URL}/blog/${id}`, formData, {
         headers: {
@@ -149,6 +153,7 @@ const BlogArticle = () => {
       })
       .catch((error) => {
         // Traitement en cas d'erreur lors de la mise à jour
+        setErrorText("Verifiez que tous les champs sont bien remplis");
         console.error("Erreur lors de la mise à jour de l'article :", error);
       });
   };
@@ -157,6 +162,8 @@ const BlogArticle = () => {
     return <div>Loading...</div>;
   }
   const blogTitle = "Blog - " + blogArticle.title;
+
+  console.log(blogArticle.illustrations);
   return (
     <>
       <Helmet>
@@ -261,8 +268,9 @@ const BlogArticle = () => {
                     </div>
                   </div>
                   <div className="article-images">
-                    <CarousselArticle images={blogArticle.illustrations} />
-
+                    {blogArticle.illustrations > 0 && (
+                      <CarousselArticle images={blogArticle.illustrations} />
+                    )}
                     <div className="form-part">
                       <h4>Images d'illustrations</h4>
                       <input
@@ -283,6 +291,7 @@ const BlogArticle = () => {
                     <p>{blogArticle.date}</p>
                   </div>
                 </div>
+                {errorText && <p className="error">{errorText}</p>}
               </article>
             </section>
           </main>
@@ -318,7 +327,9 @@ const BlogArticle = () => {
                     <p>{blogArticle.content2} </p>
                     <p id="conclusion">{blogArticle.conclusion} </p>
                   </div>
-                  <CarousselArticle images={blogArticle.illustrations} />
+                  {blogArticle.illustrations > 0 && (
+                    <CarousselArticle images={blogArticle.illustrations} />
+                  )}
                 </div>
                 <div className="article-author">
                   <PapillonLogo />

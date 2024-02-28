@@ -72,6 +72,10 @@ const NewArticle = () => {
         setErrorText("Veuillez remplir tous les champs obligatoires");
         console.log(missingFields);
         return;
+      } else if (articleData.tags.length === 0) {
+        setMissingFields(missing);
+        setErrorText("Veuillez choisir un tag au minimum");
+        return;
       }
 
       const formData = new FormData();
