@@ -123,7 +123,7 @@ const NewArticle = () => {
     } catch (error) {
       console.error("Erreur lors de l'ajout de l'article :", error);
       setErrorText(
-        "Erreur lors de l'ajout de l'article, vérifier que tous les champs sont remplis"
+        "Erreur lors de l'ajout de l'article, vérifier que tous les champs sont remplis et que votre image ne dépasse pas 3Mo"
       );
       console.log(errorText);
     }
