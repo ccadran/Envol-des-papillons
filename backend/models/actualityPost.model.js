@@ -63,7 +63,4 @@ const ActualityPostSchema = mongoose.Schema(
   }
 );
 
-ActualityPostSchema.path("tags").validate(function (value) {
-  return value && value.length > 0;
-}, "Au moins un tag est requis.");
 module.exports = mongoose.model("actuality", ActualityPostSchema);

@@ -151,7 +151,7 @@ const SearchFilter = () => {
           {sortedPosts.length === 0 ? (
             <p id="no-result">
               Aucun article ne correspond à votre recherche ou l'école n'a pas
-              encore publier d'article.
+              encore publié d'article.
             </p>
           ) : (
             sortedPosts.map((blogPost) => (
@@ -168,7 +168,7 @@ const SearchFilter = () => {
           {sortedPosts.length === 0 ? (
             <p id="no-result">
               Aucun article ne correspond à votre recherche ou l'école n'a pas
-              encore publier d'article.
+              encore publié d'article.
             </p>
           ) : (
             sortedPosts.map((actualityPost) => (
