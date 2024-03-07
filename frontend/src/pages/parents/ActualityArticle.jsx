@@ -17,6 +17,7 @@ const ActualityArticle = () => {
     tags: [],
   });
   const [errorText, setErrorText] = useState();
+  const [checkHasIllustrations, setCheckHasIllustrations] = useState(false);
 
   const location = useLocation();
   const isRootPath = location.pathname.includes("admin");
@@ -37,6 +38,7 @@ const ActualityArticle = () => {
       .then((res) => {
         setActualityArticle(res.data);
         setUpdatedActualityArticle(res.data);
+        setCheckHasIllustrations(true);
       });
   }, [id]);
   useEffect(() => {}, [updatedActualityArticle]);
@@ -255,11 +257,12 @@ const ActualityArticle = () => {
                     </div>
                   </div>
                   <div className="article-images">
-                    {actualityArticle.illustrations > 0 && (
-                      <CarousselArticle
-                        images={actualityArticle.illustrations}
-                      />
-                    )}
+                    {checkHasIllustrations &&
+                      actualityArticle.illustrations.length > 0 && (
+                        <CarousselArticle
+                          images={actualityArticle.illustrations}
+                        />
+                      )}
                     <div className="form-part">
                       <h4>Images d'illustrations</h4>
                       <input
@@ -314,11 +317,12 @@ const ActualityArticle = () => {
                     <h4>{actualityArticle.subTitle2} </h4>
                     <p>{actualityArticle.content2} </p>
                     <p id="conclusion">{actualityArticle.conclusion} </p>
-                    {actualityArticle.illustrations > 0 && (
-                      <CarousselArticle
-                        images={actualityArticle.illustrations}
-                      />
-                    )}{" "}
+                    {checkHasIllustrations &&
+                      actualityArticle.illustrations.length > 0 && (
+                        <CarousselArticle
+                          images={actualityArticle.illustrations}
+                        />
+                      )}{" "}
                   </div>
                 </div>
                 <div className="article-author">

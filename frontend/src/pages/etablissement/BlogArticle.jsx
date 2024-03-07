@@ -20,6 +20,7 @@ const BlogArticle = () => {
     tags: [],
   });
   const [errorText, setErrorText] = useState();
+  const [checkHasIllustrations, setCheckHasIllustrations] = useState(false);
 
   const location = useLocation();
   const isRootPath = location.pathname.includes("admin");
@@ -46,6 +47,7 @@ const BlogArticle = () => {
     axios.get(`${process.env.REACT_APP_API_URL}/blog/${id}`).then((res) => {
       setBlogArticle(res.data);
       setUpdatedBlogArticle(res.data);
+      setCheckHasIllustrations(true);
     });
   }, [id]);
 
@@ -163,7 +165,9 @@ const BlogArticle = () => {
   }
   const blogTitle = "Blog - " + blogArticle.title;
 
-  console.log(blogArticle.illustrations);
+  if (checkHasIllustrations) {
+    console.log("illustrations", blogArticle.illustrations);
+  }
   return (
     <>
       <Helmet>
@@ -268,9 +272,12 @@ const BlogArticle = () => {
                     </div>
                   </div>
                   <div className="article-images">
-                    {blogArticle.illustrations > 0 && (
-                      <CarousselArticle images={blogArticle.illustrations} />
-                    )}
+                    {checkHasIllustrations &&
+                      updatedBlogArticle.illustrations.length > 0 && (
+                        <CarousselArticle
+                          images={updatedBlogArticle.illustrations}
+                        />
+                      )}
                     <div className="form-part">
                       <h4>Images d'illustrations</h4>
                       <input
@@ -327,9 +334,10 @@ const BlogArticle = () => {
                     <p>{blogArticle.content2} </p>
                     <p id="conclusion">{blogArticle.conclusion} </p>
                   </div>
-                  {blogArticle.illustrations > 0 && (
-                    <CarousselArticle images={blogArticle.illustrations} />
-                  )}
+                  {checkHasIllustrations &&
+                    blogArticle.illustrations.length > 0 && (
+                      <CarousselArticle images={blogArticle.illustrations} />
+                    )}
                 </div>
                 <div className="article-author">
                   <PapillonLogo />
