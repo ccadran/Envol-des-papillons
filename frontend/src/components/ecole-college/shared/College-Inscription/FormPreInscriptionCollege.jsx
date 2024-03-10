@@ -140,12 +140,7 @@ const FormPreInscriptionCollege = () => {
           <div className="tuteur2">
             <div className="form-part">
               <label>Nom du tuteur 2</label>
-              <input
-                type="text"
-                name="lastName_tuteur2"
-                placeholder="Nom "
-                required
-              />
+              <input type="text" name="lastName_tuteur2" placeholder="Nom " />
             </div>
             <div className="form-part">
               <label>Prénom du tuteur 2</label>
@@ -153,17 +148,11 @@ const FormPreInscriptionCollege = () => {
                 type="text"
                 name="firstName_tuteur2"
                 placeholder="Prénom "
-                required
               />
             </div>
             <div className="form-part">
               <label>Email du tuteur 2</label>
-              <input
-                type="email"
-                name="email_tuteur2"
-                placeholder="Email"
-                required
-              />
+              <input type="email" name="email_tuteur2" placeholder="Email" />
             </div>
             <div className="form-part">
               <label>Adresse postale du tuteur 2</label>
@@ -171,7 +160,6 @@ const FormPreInscriptionCollege = () => {
                 type="text"
                 name="adress_tuteur2"
                 placeholder="Adresse postale"
-                required
               />
             </div>
             <div className="form-part">
@@ -180,7 +168,6 @@ const FormPreInscriptionCollege = () => {
                 type="text"
                 name="phone_tuteur2"
                 placeholder="Numéro de téléphone"
-                required
               />
             </div>
             <div className="form-part">
@@ -189,7 +176,6 @@ const FormPreInscriptionCollege = () => {
                 type="text"
                 name="profession_tuteur"
                 placeholder=" Profession  "
-                required
               />
             </div>
           </div>
