@@ -82,8 +82,8 @@ const FooterParents = ({ etablissement }) => {
           </ul>
         </div>
         <div className="footer-contact">
-          <a href="mailto:contact@lenvoldespapillons33.com ">
-            contact@lenvoldespapillons33.com
+          <a href="mailto:envoldespapillons33@outlook.fr ">
+            envoldespapillons33@outlook.fr
           </a>
 
           <a href="tel:+33 6 05 39 03 73">06 05 39 03 73</a>

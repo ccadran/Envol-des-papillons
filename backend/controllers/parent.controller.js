@@ -16,7 +16,7 @@ module.exports.setParent = async (req, res) => {
   const mailParent = await MailParentModel.findOne({ email: req.body.email });
   if (!mailParent) {
     return res.status(400).json({
-      message: `L'email ne fait pas partie des emails des parents, envoyer un mail à "contact@lenvoldespapillons33.com" pour plus d'informations.`,
+      message: `L'email ne fait pas partie des emails des parents, envoyer un mail à "envoldespapillons33@outlook.fr" pour plus d'informations.`,
     });
   }
   try {
