@@ -64,10 +64,11 @@
     form {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 1fr 1fr 300px;
+      grid-template-rows: 1fr 1fr 1fr 300px;
       column-gap: 30px;
       grid-template-areas:
-        "name email"
+        "name firstName"
+        "email phone"
         "subject subject"
         "message message";
       @media screen and (max-width: 640px) {
@@ -77,8 +78,14 @@
       .name {
         grid-area: name;
       }
+      .name {
+        grid-area: firstName;
+      }
       .email {
         grid-area: email;
+      }
+      .phone {
+        grid-area: phone;
       }
       .subject {
         grid-area: subject;

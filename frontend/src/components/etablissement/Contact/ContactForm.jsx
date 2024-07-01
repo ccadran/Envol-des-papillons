@@ -42,6 +42,19 @@ export const ContactForm = () => {
           <label>Nom</label>
           <input type="text" name="name" placeholder="Votre nom" required />
         </div>
+        <div className="form-part firstName">
+          <label>Prénom</label>
+          <input
+            type="text"
+            name="firstName"
+            placeholder="Votre prénom"
+            required
+          />
+        </div>
+        <div className="form-part phone">
+          <label>Numéro</label>
+          <input type="tel" name="phone" required />
+        </div>
         <div className="form-part email">
           <label>Email</label>
           <input
