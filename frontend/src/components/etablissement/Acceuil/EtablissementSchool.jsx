@@ -12,7 +12,7 @@ const EtablissementSchool = ({ title, text, color, link }) => {
         dans le quartier des Chartrons, accueille vos enfants de 3 à 12 ans.{" "}
         <br /> L’ensemble de l’équipe, formée à la pédagogie Montessori,
         accompagne vos enfants avec bienveillance et apporte le cadre nécessaire
-        à leur épanouissement de vos enfants.
+        à leur épanouissement.
       </p>
       <Button color={color} text="Je découvre" link={link} />
     </article>

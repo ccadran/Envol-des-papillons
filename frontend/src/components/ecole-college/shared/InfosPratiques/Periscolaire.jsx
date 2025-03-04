@@ -6,7 +6,9 @@ export default function Periscolaire() {
       <h3>Périscolaire (Mercredi)</h3>
       <p>
         L’école propose aux enfants de l’école un temps d’accueil ludique le
-        mercredi hors vacances scolaires, de 8h30 à 17h30. <br />
+        mercredi hors vacances scolaires, de 8h30 à 17h30, si le nombre
+        d'enfants inscrits est suffisant.
+        <br />
         <br />
         Prix : 35€ la journée, goûter compris <br />
         <br />

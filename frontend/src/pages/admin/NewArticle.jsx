@@ -59,8 +59,8 @@ const NewArticle = () => {
       const requiredFields = [
         "title",
         "accroche",
-        "introduction",
-        "subTitle1",
+        // "introduction",
+        // "subTitle1",
         "content1",
         "author",
       ];

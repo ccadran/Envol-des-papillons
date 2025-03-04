@@ -18,18 +18,18 @@ const TarifsScolarity = ({
         <TarifElement
           title=" Frais de scolarité "
           price={scolarity}
-          text="Les frais de scolarité doivent être réglés en début de mois. Une réduction s’applique au 2ème enfant.(-200€/enfant) "
+          text="Les frais de scolarité doivent être réglés en début de mois. Les frais pour un 2ème enfant sont de 360€/mois."
         />
         <TarifElement
           title="Frais d'inscription "
           price={inscription}
-          text="Ils sont dus à l’entrée en 3-6 ans puis à l’entrée en élémentaire. Une réduction s’applique au 2ème enfant.(-20€/enfant)
+          text="Ils sont dus à l’entrée en 3-6 ans puis à l’entrée en élémentaire. Une réduction s’applique au 2ème enfant.(-40€)
 "
         />
         <TarifElement
           title="Adhésion + frais administratifs"
           price={association}
-          text="Ces frais sont à régler chaque année au mois de septembre. Une réduction s’applique au 2ème enfant.(-20€/enfant)
+          text="Ces frais sont à régler chaque année au mois de septembre. Une réduction s’applique au 2ème enfant.(-40€)
           "
         />
       </article>
@@ -51,7 +51,7 @@ const TarifsScolarity = ({
             élémentaire (mouchoirs, savons...)
           </li>
           <li>
-            <span>• Les fournitures scolaires en 6-11 ans :</span> 25€/an
+            <span>• Les fournitures scolaires en 6-11 ans :</span> 35€/an
           </li>
         </ul>
       </div>

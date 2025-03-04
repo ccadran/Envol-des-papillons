@@ -15,11 +15,10 @@ export default function Brevet() {
         <span>Sciences</span> (2 matières tirées au sort entre physique, svt et
         technologie) 1 heure : 50 points <br />
         <br /> <span>Anglais</span> (1 heure) : 100 points <br />
-        <br /> L’inscription est faite par la direction. <br />
-        <br /> Nos élèves le passent au collège Edouard Vaillant, proche du
-        collège.
+        <br /> L’inscription est faite par la direction.
       </p>
       <h4>Réussite de 100% sur l'année 2022/2023 !</h4>
+      <h4>En 2023/2024 80% des élèves ont obtenu une mention.</h4>
     </section>
   );
 }

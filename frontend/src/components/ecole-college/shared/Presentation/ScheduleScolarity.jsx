@@ -76,7 +76,7 @@ const ScheduleScolarity = () => {
             </article>
           </>
         );
-      case "6-8":
+      case "6-9":
         return (
           <>
             <article className="schedule-moment">
@@ -133,7 +133,7 @@ const ScheduleScolarity = () => {
             </article>
           </>
         );
-      case "8-11":
+      case "9-11":
         return (
           <>
             <article className="schedule-moment">
@@ -208,16 +208,16 @@ const ScheduleScolarity = () => {
             3-6 ans
           </h4>
           <h4
-            onClick={() => handleClick("6-8")}
-            className={classe === "6-8" ? "classe active" : "classe"}
+            onClick={() => handleClick("6-9")}
+            className={classe === "6-9" ? "classe active" : "classe"}
           >
-            6-8 ans
+            6-9 ans
           </h4>
           <h4
-            onClick={() => handleClick("8-11")}
-            className={classe === "8-11" ? "classe active" : "classe"}
+            onClick={() => handleClick("9-11")}
+            className={classe === "9-11" ? "classe active" : "classe"}
           >
-            8-11 ans
+            9-11 ans
           </h4>
         </div>
         {renderAgenda()}{" "}

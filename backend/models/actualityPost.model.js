@@ -27,11 +27,11 @@ const ActualityPostSchema = mongoose.Schema(
     ],
     introduction: {
       type: String,
-      required: true,
+      required: false,
     },
     subTitle1: {
       type: String,
-      required: true,
+      required: false,
     },
     content1: {
       type: String,

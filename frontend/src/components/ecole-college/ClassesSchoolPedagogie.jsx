@@ -8,17 +8,16 @@ const ClassesSchoolPedagogie = () => {
       <div className="classes-container">
         <ClasseSchoolPedagogie
           classe="3-6 ans"
-          teachers={`Solène BELLEC
-Caroline TISSERAND
+          teachers={`Caroline TISSERAND
 Sandrine DUBUS`}
         />
         <ClasseSchoolPedagogie
-          classe="6-8 ans"
+          classe="6-9 ans"
           teachers={`Sabine MERLATEAU
-          Claire ENGEL`}
+          Laurence CADRAN`}
         />
         <ClasseSchoolPedagogie
-          classe="8-11 ans"
+          classe="9-11 ans"
           teachers={`Sibylle YARHI
           Séverine CHEVALIER`}
         />

@@ -61,7 +61,7 @@ const About = () => {
                 2015, l’école emménage dans ses locaux actuels, au 125 cours
                 Journu Auber. Trois grandes salles de classe lumineuses de 70 M2
                 accueillent les enfants de 2 ans ½ à 12 ans, répartis en trois
-                groupes (maternelle, 6-8 ans et 8-11 ans).
+                groupes (maternelle, 6-9 ans et 9-11 ans).
               </p>
               <div className="img-container">
                 <img src="" alt="img a droite" loading="lazy" />
