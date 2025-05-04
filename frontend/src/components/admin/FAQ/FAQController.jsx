@@ -63,7 +63,7 @@ const FAQController = () => {
           ))
         ) : (
           <p>
-            Veuillez séléctionner l'établissement dont vous voulez voir les
+            Veuillez sélectionner l'établissement dont vous voulez voir les
             questions !
           </p>
         )}

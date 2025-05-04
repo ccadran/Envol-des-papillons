@@ -29,7 +29,7 @@ const AllTeacher = () => {
       <div className="controller-teacher">
         <div className="etablissement">
           <label htmlFor="selectedEtablissement">
-            Séléctionner un établissement :
+            sélectionner un établissement :
           </label>
           <select
             id="selectedEtablissement"
@@ -53,7 +53,7 @@ const AllTeacher = () => {
             <TeacherAdmin key={teacher._id} teacher={teacher} />
           ))
         ) : (
-          <h3>Veuillez séléctionner un établissement</h3>
+          <h3>Veuillez sélectionner un établissement</h3>
         )}
       </div>
     </section>

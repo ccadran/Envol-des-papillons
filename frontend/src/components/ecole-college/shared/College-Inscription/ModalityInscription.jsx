@@ -3,7 +3,7 @@ import React from "react";
 const ModalityInscription = () => {
   return (
     <section className="inscription-modality">
-      <h3>Les modalités d'inscriptions</h3>
+      <h3>Les modalités d'inscription</h3>
       <h4>L'inscription se fait en plusieurs étapes : </h4>
       <ol>
         <li>

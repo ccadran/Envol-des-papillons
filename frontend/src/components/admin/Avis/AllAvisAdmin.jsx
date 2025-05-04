@@ -44,7 +44,7 @@ const AllAvisAdmin = () => {
         {selectedEtablissement ? (
           avis.map((avi) => <AvisAdmin key={avi._id} avis={avi} />)
         ) : (
-          <h3>Veuillez séléctionner un établissement</h3>
+          <h3>Veuillez sélectionner un établissement</h3>
         )}
       </div>
     </section>

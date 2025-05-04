@@ -19,11 +19,7 @@ const ScheduleScolarity = () => {
           <h4>Journée Type : </h4>
         </div>
         <article className="schedule-moment">
-          <h4>8h20: Ouverture du collège</h4>
-          <p>
-            Si vous avez besoin de déposer votre enfant avant, il peut se rendre
-            à l’école L’envol des papillons toute proche à partir de 8h.
-          </p>
+          <h4>8h: Ouverture du collège</h4>
         </article>
         <article className="schedule-moment">
           <h4>8h30/9h - 12h30 : Classe</h4>
@@ -35,26 +31,25 @@ const ScheduleScolarity = () => {
         <article className="schedule-moment">
           <h4>12h30-13h30 : Pause déjeuner </h4>
           <p>
-            Les élèves peuvent manger au collège (traiteur ou lunch box) ou
-            peuvent sortir manger à l’extérieur. Le collège rouvre 10’ avant la
-            reprise des cours.
+            Les élèves peuvent manger au collège (lunch box) ou peuvent sortir
+            manger à l’extérieur. Le collège rouvre 10’ avant la reprise des
+            cours.
           </p>
         </article>
         <article className="schedule-moment">
           <h4>13h30 - 15h : Classe</h4>
           <p>
             1h30 de cours avant de terminer la journée avec les projets ou le
-            sport (vendredi). <br /> Seul l'après midi du mardi est enièrement
-            consacré à des cours.
+            sport (vendredi). <br /> Une seule après-midi par semaine est
+            enièrement consacré à des cours.
           </p>
         </article>
         <article className="schedule-moment">
           <h4>15h00 - 17h00 : Projets ou Sport</h4>
           <p>
-            Les lundi et jeudi sont consacrés aux “projets” et sorties
-            scolaires. Le vendredi après-midi est réservé au sport, avec des
-            cycles de différents sports (athlétisme, patin à glace, sports
-            collectifs…)
+            Deux après-midis sont consacrés aux “projets” et sorties scolaires.
+            Le vendredi après-midi est réservé au sport, avec des cycles de
+            différents sports (athlétisme, patin à glace, sports collectifs…)
           </p>
         </article>
       </article>

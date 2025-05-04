@@ -3,17 +3,17 @@ import React from "react";
 export default function Periscolaire() {
   return (
     <section className="periscolaire" id="periscolaire">
-      <h3>Périscolaire (Mercredi)</h3>
+      <h3>Périscolaire (Mercredi et vacances scolaires)</h3>
       <p>
         L’école propose aux enfants de l’école un temps d’accueil ludique le
         mercredi hors vacances scolaires, de 8h30 à 17h30, si le nombre
         d'enfants inscrits est suffisant.
         <br />
         <br />
-        Prix : 35€ la journée, goûter compris <br />
+        Prix : Entre <span>25€</span> et <span>30€</span> la journée, goûter
+        compris <br />
         <br />
-        Possibilité de demi-journées pour les 3-6 ans (20€ la demi-journée),
-        jusqu’à 12h45 maximum.
+        Possibilité de demi-journées pour les 3-6 ans, jusqu’à 12h45 maximum.
       </p>
       <div className="periscolaire-container">
         <div className="periscolaire-schedule children">

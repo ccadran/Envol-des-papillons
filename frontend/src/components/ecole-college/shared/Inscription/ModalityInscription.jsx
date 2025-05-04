@@ -3,7 +3,7 @@ import React from "react";
 const ModalityInscription = () => {
   return (
     <section className="inscription-modality">
-      <h3>Les modalités d'inscriptions</h3>
+      <h3>Les modalités d'inscription</h3>
       <h4>L'inscription se fait en plusieurs étapes : </h4>
       <ol>
         <li>
@@ -30,9 +30,10 @@ const ModalityInscription = () => {
           <span>dossier d’inscription</span> complet début juin.
         </li>
         <li>
-          5. Tous les enfants inscrits sont conviés <span>fin juin</span> à une <span>visite</span> de la
-          classe et à une <span>rencontre avec les enseignantes</span>, afin de leur
-          permettre de découvir leur futur environnement.
+          5. Tous les enfants inscrits sont conviés <span>fin juin</span> à une{" "}
+          <span>visite</span> de la classe et à une{" "}
+          <span>rencontre avec les enseignantes</span>, afin de leur permettre
+          de découvir leur futur environnement.
         </li>
       </ol>
     </section>

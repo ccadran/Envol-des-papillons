@@ -59,7 +59,9 @@ Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel 
         />
         <ClassesSchoolPedagogie />
         <EnglishPedagogie
-          text="L’anglais est pratiqué deux demi-journées par semaine, avec une personne ne parlant qu’en anglais aux enfants, offrant ainsi une immersion importante.
+          text="L’anglais est pratiqué trois demi-journées par semaine, avec une personne ne parlant qu’en anglais aux enfants, offrant ainsi une immersion importante.
+
+          À partir de 2026, l'école basculera sur un mode de fonctionnement bilingue(4 demi-journées par semaines).
           
           Le matériel utilisé pour développer le vocabulaire des enfants est laissé à leur disposition, leur permettant de retravailler ce qui a été vu."
           image={process.env.PUBLIC_URL + "/assets/img/school-anglais.jpg"}

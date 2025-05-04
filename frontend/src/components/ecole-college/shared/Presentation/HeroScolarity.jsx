@@ -26,10 +26,8 @@ const HeroScolarity = ({ h1, img, text, color, etablissement }) => {
               <br />A ce jour, l’école compte 3 ambiances : les 3-6 ans, les 6-9
               ans et les 9-11 ans, réparties sur les trois niveaux du bâtiment.
               L’école est susceptible de proposer un{" "}
-              <a href="/ecole/infos-pratiques">
-                accueil périscolaire le mercredi
-              </a>{" "}
-              toute la journée en fonction de la demande.
+              <a href="/ecole/infos-pratiques">accueil périscolaire</a> le
+              mercredi, ainsi que pendant les vacances scolaires.
             </p>
           </div>
           <Button color={color} text="Découvrir l'histoire" link={link} />

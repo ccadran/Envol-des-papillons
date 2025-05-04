@@ -11,7 +11,8 @@ const EtablissementCollege = ({ title, text, color, link }) => {
         Le collège alternatif L’envol, ouvert depuis 2020, accueille vos enfants
         de la sixième à la troisième. Les classes comptent au maximum une
         douzaine d'élèves, permettant de les accompagner au mieux en fonction de
-        leurs besoins.
+        leurs besoins. Le collège emménagera dans ses nouveaux locaux en
+        septembre 2027.
       </p>
       <Button color={color} text="Je découvre" link={link} />
     </article>
