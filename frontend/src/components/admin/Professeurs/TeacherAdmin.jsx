@@ -42,8 +42,11 @@ const TeachersAdmin = ({ teacher }) => {
   };
 
   const deleteTeacher = () => {
-    axios.delete(`${process.env.REACT_APP_API_URL}/teacher/` + teacher._id);
-    window.location.reload();
+    axios
+      .delete(`${process.env.REACT_APP_API_URL}/teacher/` + teacher._id)
+      .then((response) => {
+        window.location.reload();
+      });
   };
 
   return (
