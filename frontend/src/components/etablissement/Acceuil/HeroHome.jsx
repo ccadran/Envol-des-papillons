@@ -10,6 +10,9 @@ const HeroHome = () => {
           <p id="catch-phrase">
             L'école alternative dont votre enfant a besoin
           </p>
+          <p className="porte-ouverte">
+            Journée portes ouvertes le 15/11 de 9h à 12h
+          </p>
         </div>
         <div className="hero-illustration">
           <img

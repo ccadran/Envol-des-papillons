@@ -23,9 +23,10 @@ const HeroScolarity = ({ h1, img, text, color, etablissement }) => {
               6-11 ans a été créée, avec un déménagement dans nos locaux actuels
               à la clé.
               <br />
-              <br />A ce jour, l’école compte 3 ambiances : les 3-6 ans, les 6-9
-              ans et les 9-11 ans, réparties sur les trois niveaux du bâtiment.
-              L’école est susceptible de proposer un{" "}
+              <br />A ce jour, l’école compte 3 ambiances : les 3-6 ans{" "}
+              <span>(3 places encore disponible)</span>, les 6-9 ans et les 9-11
+              ans, réparties sur les trois niveaux du bâtiment. L’école est
+              susceptible de proposer un{" "}
               <a href="/ecole/infos-pratiques">accueil périscolaire</a> le
               mercredi, ainsi que pendant les vacances scolaires.
             </p>

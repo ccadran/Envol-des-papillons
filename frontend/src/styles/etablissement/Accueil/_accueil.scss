@@ -19,6 +19,12 @@
         font-size: clamp(18px, 2.5vw, 24px);
         font-family: $subtitle-font;
       }
+      .porte-ouverte {
+        margin-top: 112px;
+        font-size: 34px;
+        font-weight: bold;
+        font-family: "general-sans-semibold", sans-serif;
+      }
     }
     .hero-illustration {
       width: 50%;
@@ -83,6 +89,12 @@
       flex-direction: column;
       .hero-text {
         width: 100%;
+        .porte-ouverte {
+          margin-top: 64px;
+          font-size: 26px;
+          font-weight: bold;
+          font-family: "general-sans-semibold", sans-serif;
+        }
       }
       .hero-illustration {
         width: 100%;
