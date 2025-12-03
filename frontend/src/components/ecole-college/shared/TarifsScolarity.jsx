@@ -55,6 +55,39 @@ const TarifsScolarity = ({
           </li>
         </ul>
       </div>
+      <div className="inclusion">
+        <h4>Critères de réduction :</h4>
+        <ul>
+          <li>
+            <span>
+              • Enfants en situation de handicap justifiant d'un temps partiel :
+            </span>{" "}
+            au prorata du temps de scolarisation
+          </li>
+          <li>
+            <span>• Enfant en situation de handicap :</span> -20%
+          </li>
+          <li>
+            <span>• Fratrie :</span> -10% sur le 2ème enfant
+          </li>
+          <li>
+            <span>
+              • Famille nombreuse (à partir de 3 enfants scolarisés) :
+            </span>{" "}
+            -10% pour chaque enfant
+          </li>
+          <li>
+            <span>• Enfant de salarié :</span> -30%
+          </li>
+          <li>
+            <span>
+              • Enfant dont le parent intervient pédagogiquement (mini 4h/mois)
+              :
+            </span>{" "}
+            -10%
+          </li>
+        </ul>
+      </div>
       <article className="modality">
         <h4>Modalités de paiement</h4>
         <p>

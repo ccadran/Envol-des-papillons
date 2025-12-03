@@ -46,6 +46,19 @@
       }
     }
   }
+  .inclusion {
+    margin-top: 72px;
+    h4 {
+      margin-bottom: 28px;
+    }
+    li {
+      margin-bottom: 16px;
+      font-family: $body-font;
+      span {
+        font-weight: bold;
+      }
+    }
+  }
   .modality {
     margin-top: 72px;
     h4 {
